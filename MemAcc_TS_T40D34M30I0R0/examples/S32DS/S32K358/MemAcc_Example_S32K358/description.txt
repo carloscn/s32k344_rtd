@@ -1,0 +1,52 @@
+1. Example Description
+    This application demonstrates the usage of MemAcc driver.
+    The application includes a Design Studio project, that uses predefined configurations for the MemAcc and uses the its APIs to erase, write, read an address area.
+    1.1 The application software functionalities
+            - ExampleInitBuffers
+                    Initialize data buffer which are used in the example.
+            - MemAcc_Init
+                    Initialize the MemAcc driver.
+            - MemAcc_Erase, MemAcc_MainFunction, MemAcc_GetJobStatus
+                    Erase the address area configured. MemAcc_Erase is used to set job erase, MemAcc_MainFunction to start executing erase job and MemAcc_GetJobStatus checks status of erase execution.
+            - MemAcc_Write, MemAcc_MainFunction, MemAcc_GetJobStatus
+                    Write data to the address area.
+            - MemAcc_Read, MemAcc_MainFunction, MemAcc_GetJobStatus
+                    Read data from the address area.
+            - ExampleCheckData
+                    Check data which is read from the address area.
+
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            - EVB: XS32K3X8CVB-Q289 PCB 53108 RevX3 SCH RevA1. Silicon: P32K358GVS 0P14E CTZF2233B
+        2.1.2 Connections
+            Powered board through power Adapter 12V
+        2.1.3 Debugger
+            - The debugger must be connected to J52 10-pin JTAG Cortex Debug connector.
+    2.2 Software installation
+        2.2.1 Importing the S32 Design Studio project
+            - After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" select this example. Then click on "Finish".
+            - The project should now be copied into your current workspace.
+
+3. Generating, building and running the example application
+    3.1 Generating the S32 configuration
+        - Before running the example, a configuration needs to be generated.
+        - First go to Project Explorer View in S32 DS and select the current project.
+        - Select the "S32 Configuration Tool" menu then click on the desired configuration tool (Pins, Clocks, Peripherals, etc).
+        - Clicking on any one of those will generate all the components.
+        - Make the desired changes (if any) then click on the "S32 Configuration Tool -> Update Code" button.
+    3.2 Compiling the application
+        - Select the configuration to be built: Debug_RAM or Debug_FLASH by left clicking on the downward arrow corresponding to the build button in eclipse.
+        - Use Project > Build to build the project.
+        - Wait for the build action to be completed before continuing to the next step.
+        - Check the compiler console for error messages; upon completion, the *.elf binary file should be created.
+    3.2 Running the application on the board
+        - Go to Run and select Debug Configurations. There will be a debug configuration for this project:
+
+            Configuration Name                              Description
+            -------------------------------                 -----------------------
+            MemAcc_Example_S32K358_Debug_RAM_PNE               Debug the RAM configuration using PEmicro probe
+            MemAcc_Example_S32K358_Debug_FLASH_PNE             Debug the FLASH configuration using PEmicro probe
+
+        - Select the desired debug configuration and click on Launch. Now the perspective will change to the Debug Perspective.
+        - Use the controls to control the program flow.

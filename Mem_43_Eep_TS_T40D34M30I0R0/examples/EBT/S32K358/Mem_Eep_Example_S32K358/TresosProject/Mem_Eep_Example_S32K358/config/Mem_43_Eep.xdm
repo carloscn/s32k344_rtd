@@ -1,0 +1,336 @@
+<?xml version='1.0'?>
+<datamodel version="7.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/16/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/16/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+         xmlns:f="http://www.tresos.de/_projects/DataModel2/14/formulaexpr.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+         xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Mem_43_Eep" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Mem" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/Mem_43_Eep_TS_T40D34M30I0R0/Mem"/>
+              <a:a name="IMPORTER_INFO" value="mem_43_eep"/>
+              <d:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN" value="false">
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" 
+                     value="VariantPreCompile"/>
+              <d:lst name="MemInstance" type="MAP">
+                <d:ctr name="MemInstance_0" type="IDENTIFIABLE">
+                  <d:var name="MemInstanceId" type="INTEGER" value="0">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:lst name="MemSectorBatch" type="MAP">
+                    <d:ctr name="MemSectorBatch_0" type="IDENTIFIABLE">
+                      <d:var name="MemEraseSectorSize" type="INTEGER" 
+                             value="5120"/>
+                      <d:var name="MemNumberOfSectors" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:var name="MemReadPageSize" type="INTEGER" value="512"/>
+                      <d:var name="MemSpecifiedEraseCycles" type="INTEGER" 
+                             value="16"/>
+                      <d:var name="MemStartAddress" type="INTEGER" value="0"/>
+                      <d:var name="MemWritePageSize" type="INTEGER" value="512"/>
+                      <d:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="true"/>
+                        <d:var name="MemEraseBurstSize" type="INTEGER" 
+                               value="5120"/>
+                        <d:var name="MemReadBurstSize" type="INTEGER" 
+                               value="512"/>
+                        <d:var name="MemWriteBurstSize" type="INTEGER" 
+                               value="512"/>
+                      </d:ctr>
+                    </d:ctr>
+                  </d:lst>
+                </d:ctr>
+              </d:lst>
+              <d:lst name="Mem_43_EepUsdhcControllerCfg" type="MAP">
+                <d:ctr name="Mem_43_EepUsdhcControllerCfg_0" 
+                       type="IDENTIFIABLE">
+                  <d:var name="cardDetectDat3" type="BOOLEAN" value="true"/>
+                  <d:var name="EnableAutoCMD12" type="BOOLEAN" value="true"/>
+                  <d:var name="Mem_43_EepUsdhcIpDevErrorDetect" type="BOOLEAN" 
+                         value="true"/>
+                  <d:var name="endianMode" type="ENUMERATION" 
+                         value="USDHC_ENDIAN_MODE_BIG"/>
+                  <d:var name="Mem_43_EepSynchronizeCache" type="BOOLEAN" 
+                         value="false"/>
+                  <d:var name="EnableADMA1Mode" type="BOOLEAN" value="false"/>
+                  <d:var name="dmaMode" type="ENUMERATION" 
+                         value="USDHC_DMA_MODE_NO_DMA"/>
+                  <d:var name="admaTable" type="STRING" 
+                         value="usdhc1_admaTable0">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="admaTableSize" type="INTEGER" value="8">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="WriteWatermarkLevel" type="INTEGER" value="128">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="ReadWatermarkLevel" type="INTEGER" value="16"/>
+                  <d:var name="Mem_43_EepTimeoutMethod" type="ENUMERATION" 
+                         value="OSIF_COUNTER_DUMMY">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="cardActiveTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="SwitchVoltageTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="GetPresentStatusTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="AbortTransferTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="setBusClkTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="ResetUsdhcTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="transferSyncTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="transferAsyncTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="getInterfaceTimeout" type="INTEGER" 
+                         value="268435456">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:ctr name="voltageSupport" type="IDENTIFIABLE">
+                    <d:var name="Support33V" type="BOOLEAN" value="true">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="Support30V" type="BOOLEAN" value="false"/>
+                    <d:var name="Support18V" type="BOOLEAN" value="false"/>
+                  </d:ctr>
+                  <d:var name="cardInsertCallback" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="ENABLE" value="false"/>
+                  </d:var>
+                  <d:var name="cardRemoveCallback" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="ENABLE" value="false"/>
+                  </d:var>
+                  <d:var name="transferCompleteCallback" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="ENABLE" value="false"/>
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="transferErrorCallback" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="ENABLE" value="false"/>
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="blockGapCallback" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="ENABLE" value="false"/>
+                  </d:var>
+                  <d:var name="cardIntCallback" type="FUNCTION-NAME" 
+                         value="NULL_PTR">
+                    <a:a name="ENABLE" value="false"/>
+                  </d:var>
+                  <d:ctr name="BootHostConfig" type="IDENTIFIABLE">
+                    <a:a name="ENABLE" value="false"/>
+                    <d:var name="ackFlag" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="ackTimeout" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO">
+                        <a:v>@DEF</a:v>
+                        <a:v>@CALC</a:v>
+                      </a:a>
+                    </d:var>
+                    <d:var name="disChkTimeout" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="autoBlkGap" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="ddrEnable" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bootMode" type="ENUMERATION" 
+                           value="USDHC_NORMAL_MMC_BOOT">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bootBusWidth" type="ENUMERATION" 
+                           value="USDHC_DATA_BUS_WIDTH_1BIT">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="stopBlockGapCount" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                </d:ctr>
+              </d:lst>
+              <d:lst name="Mem_43_EepSdCfg" type="MAP">
+                <d:ctr name="Mem_43_EepSdCfg_0" type="IDENTIFIABLE">
+                  <d:var name="Mem_43_EepEnableOperationsOnEmmc" type="BOOLEAN" 
+                         value="false"/>
+                  <d:var name="Mem_43_EepBusWidthMode" type="ENUMERATION" 
+                         value="SD_IP_DATABUSWIDTH_1BIT"/>
+                  <d:var name="Mem_43_EepCardDriverStrength" type="INTEGER" 
+                         value="0"/>
+                  <d:var name="Mem_43_EepSdIpDevErrorDetect" type="BOOLEAN" 
+                         value="true"/>
+                  <d:ref name="usdhcCfgReference" type="REFERENCE" 
+                         value="ASPath:/Mem_43_Eep/Mem/Mem_43_EepUsdhcControllerCfg_0"/>
+                  <d:var name="afrequencyTable" type="INTEGER" value="16000000"/>
+                  <d:var name="Mem_43_EepSdAutoDiscoverFrequency" 
+                         type="BOOLEAN" value="false">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:ref name="SdClockReference" type="REFERENCE" 
+                         value="ASPath:/Mcu/Mcu/McuModuleConfiguration/McuClockSettingConfig_0/McuClockReferencePoint_0"/>
+                  <d:var name="u32McuClock" type="INTEGER" value="48000000"/>
+                  <d:var name="SdMaxVoltRetries" type="INTEGER" value="100">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="SdMaxCmd55Retries" type="INTEGER" value="30">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:var name="SdMaxSendStatusRetries" type="INTEGER" 
+                         value="65535">
+                    <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  </d:var>
+                  <d:ctr name="BootCardConfig" type="IDENTIFIABLE">
+                    <a:a name="ENABLE" value="false"/>
+                    <d:var name="bootPartitionSelect" type="ENUMERATION" 
+                           value="SD_IP_MMCBOOT_PARTITION_1">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="ackEnable" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bootSpeed" type="ENUMERATION" 
+                           value="SD_IP_MMCBOOT_SDR_LOW_SPEED">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                    <d:var name="bootBusWidth" type="ENUMERATION" 
+                           value="SD_IP_MMCBOOT_DBW_1BIT">
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:var>
+                  </d:ctr>
+                </d:ctr>
+              </d:lst>
+              <d:ctr name="MemGeneral" type="IDENTIFIABLE">
+                <d:var name="MemDevErrorDetect" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:ctr name="Mem_43_EepInitConfiguration" type="IDENTIFIABLE">
+                <d:var name="Mem_43_EepMaxReadBlockSize" type="INTEGER" 
+                       value="5120"/>
+                <d:var name="Mem_43_EepMaxWriteBlockSize" type="INTEGER" 
+                       value="5120"/>
+              </d:ctr>
+              <d:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="mem_43_eep"/>
+                <d:var name="ArReleaseMajorVersion" type="INTEGER" value="4">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseMinorVersion" type="INTEGER" value="7">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseRevisionVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ModuleId" type="INTEGER" value="90">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMajorVersion" type="INTEGER" value="3"/>
+                <d:var name="SwMinorVersion" type="INTEGER" value="0"/>
+                <d:var name="SwPatchVersion" type="INTEGER" value="0"/>
+                <d:var name="VendorApiInfix" type="STRING" value="43">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorId" type="INTEGER" value="43">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:ctr name="MemPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="mem_43_eep"/>
+                <d:var name="MemErasedValue" type="INTEGER" value="255">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:ctr name="AutosarExt" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="mem_43_eep"/>
+                <d:var name="Mem_43_EepSuspendApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepResumeApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepPropageErrorApi" type="BOOLEAN" 
+                       value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepEraseApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepReadApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepWriteApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepBankCheckApi" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepServiceCompare" type="BOOLEAN" 
+                       value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepVersionInfoApi" type="BOOLEAN" 
+                       value="true">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepBlockSizeWriteAsynchBehaviorEn" 
+                       type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepBlockSizeEraseAsynchBehaviorEn" 
+                       type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepEnableUserModeSupport" type="BOOLEAN" 
+                       value="false">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="Mem_43_EepGetJobResultApi" type="BOOLEAN" 
+                       value="true">
+                  <a:a name="IMPORTER_INFO" value="mem_43_eep"/>
+                </d:var>
+              </d:ctr>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

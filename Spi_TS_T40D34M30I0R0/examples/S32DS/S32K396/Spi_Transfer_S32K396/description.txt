@@ -1,0 +1,61 @@
+1. Example Description
+    This application demonstrates the usage of a subset of Real Time Drivers that are included in this code drop. It is not part of the production code deliverables.
+    The application includes an DS project that configures Base, Dem, EcuC, Mcl, Mcu, Platform, Port, Resource, Rm and Spi drivers.
+    1.1 The application software functionality
+            - Spi_Init
+                    Initialization of spi physical units which are configured on SpiPhyUnit tab of configuration tools.
+            - Spi_SetAsyncMode
+                    Set asynchronous transfer mode.
+            - Spi_SetupEB
+                    Setting up external buffers to transmission and reception of the master.
+            - Spi_WriteIB
+                    Writing slave data transmission to internal buffer.
+            - Spi_AsyncTransmit
+                    The slave prepares transfer by asynchronous transfer method.
+            - Spi_SyncTransmit
+                    The master starts transfer with slave by synchronous transfer.
+            - Spi_GetSequenceResult
+                    Get status of the slave sequence to make sure that the transfer completed.
+            - Spi_ReadIB
+                    Reading slave data reception from internal buffer.
+    1.2 The application description
+            - The application uses the SPI driver to transfer data in full-duplex mode.
+            - Transfer 10 frames 16 bits via LPSPI_2(MASTER) and 10 frames 16 bits via FLEXIO_0(SLAVE).
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            - Motherboard:   X-S32X-MB SPF-54935
+            - Daughter card: XS32K396-BGA-DC SPF-54614
+        2.2.2 Connections
+            ---------------------------------------------------------------------------
+                         |                       X-S32X-MB
+            PIN FUNCTION |-------------------------------------------------------------
+                         |       MASTER (LPSPI_2)      |      SLAVE (FLEXIO_0)
+            ------------ |-------------------------------------------------------------
+                CLK      |  P22.14 (PTE15) motherboard |  P13.7  (D12_PTC8) motherboard
+                MISO     |  P11.10 (PTB28) motherboard |  P10.8  (D6_PTE4 ) motherboard
+                MOSI     |  P27.8  (PTF2 ) motherboard |  P18.12 (D3_PTE0 ) motherboard
+                CS0      |  P23.9  (PTF3 ) motherboard |  P17.4  (D14_PTB0) motherboard
+            ---------------------------------------------------------------------------
+            Connecting the same name pins of master and slave together.
+
+        2.1.3 Debugger
+            PNE Debugger (optional, users can use Open SDA)PNE Debugger (optional, users can use Open SDA)
+
+    2.2 Software installation
+        2.2.1 Importing the S32 Design Studio project
+            After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select "Spi_Transfer_S32K344". Then click on "Finish".
+            The project should now be copied into you current workspace.
+
+3. Building the example application
+    3.1 Generation the code by switch to Peripherals/Pin/Clock tools and click the button "Update Code"
+    3.2 Compiling the application
+        Select the configuration to be built: RAM (Debug_RAM), or FLASH (Debug_FLASH) by left clicking on the downward arrow corresponding to the build button in eclipse. 
+        Wait for the build action to be completed before continuing to the next step. Check the compiler console for error messages; upon completion, Spi_Transfer_LpspiMaster_FlexioSLave_S32K312.elf binary file should be created.
+    3.3 Running the application on the board in one of two ways below:
+        3.3.1 To execute the example application load the executable file to the evaluation board using the Lauterbach debugger and the s32k3xx.cmm script.
+        Open the cmm script in a text editor and replace the following strings:
+            - __TARGET_MEMORY - replace with RAM (for RAM configuration), or FLASH (for FLASH configuration)
+            - __PATH_TO_ELF - replace with the path to the elf binary files built with S32 DS
+        Run this script using T32 Lauterbach debugger after making the changes.
+        3.3.2 Click button "Run" or "Debug" on S32 Design Studio.

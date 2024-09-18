@@ -1,0 +1,1020 @@
+<?xml version='1.0'?>
+<datamodel version="3.0"
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    Dpga.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Dpga - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Dpga Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : DPGA
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   Copyright 2022 NXP
+*
+*   NXP Confidential. This software is owned or controlled by NXP and may only be
+*   used strictly in accordance with the applicable license terms. By expressly
+*   accepting such terms or by downloading, installing, activating and/or otherwise
+*   using the software, you are agreeing that you have read, and that you agree to
+*   comply with and are bound by, such license terms. If you do not agree to be
+*   bound by the applicable license terms, then you may not retain, install,
+*   activate or otherwise use the software.
+
+====================================================================================================
+-->
+    <d:ctr type="AUTOSAR" factory="autosar"
+        xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+        xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+        xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+        <d:lst type="TOP-LEVEL-PACKAGES">
+            <!-- /*  Dpga_Object */ -->
+            <d:ctr name="TS_T40D34M30I0R0" type="AR-PACKAGE">
+                <a:a name="UUID" value="ECUC:a104ed8d-c01e-40ef-b536-8e8865c0ca9b"/>
+                <d:lst type="ELEMENTS">
+                    <d:chc name="Dpga" type="AR-ELEMENT" value="MODULE-DEF">
+                        <v:ctr type="MODULE-DEF">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:<html>Configuration of the Differential Programmable Gain Amplifier (DPGA) module.</html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="LOWER-MULTIPLICITY" value="1" />
+                            <a:a name="UPPER-MULTIPLICITY" value="1" />
+                            <a:a name="RELEASE" value="asc:4.7"/>
+                            <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                                <ad:ADMIN-DATA>
+                                    <ad:LANGUAGE>EN</ad:LANGUAGE>
+                                    <ad:DOC-REVISIONS>
+                                        <ad:DOC-REVISION>
+                                            <ad:REVISION-LABEL>3.0.0</ad:REVISION-LABEL>
+                                            <ad:ISSUED-BY>NXP</ad:ISSUED-BY>
+                                            <ad:DATE>2010-12-03</ad:DATE>
+                                        </ad:DOC-REVISION>
+                                    </ad:DOC-REVISIONS>
+                                </ad:ADMIN-DATA>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTSUPPORT" value="true"/>
+                            <a:a name="UUID" value="ECUC:7d21bb27-e65f-4715-8bb0-2e6adb76544e"/>
+
+                            <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                            <a:a name="DESC"
+                                    value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Post Build Variant Used"/>
+                            <a:a name="ORIGIN" value="EB"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="READONLY" value="FALSE"/>
+                            <a:da name="TOOLTIP"
+                                    value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                            </v:var>
+
+                            <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                                <a:a name="LABEL" value="Config Variant"/>
+                                <a:a name="UUID" value="ECUC:7299d652-b207-2b0c-b62d-daf3c25a1f58"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            VariantPreCompile: Only precompile time configuration parameters. Only one set of parameters.<p/>
+                                            VariantPostBuild: Mix of precompile and postbuild time configuration parameters. Only one set of parameters.<p/>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:da name="DEFAULT" value="VariantPostBuild"/>
+                                <a:da name="RANGE">
+                                    <a:v>VariantPostBuild</a:v>
+                                    <a:v>VariantPreCompile</a:v>
+                                </a:da>
+                            </v:var>
+
+                            <!-- @implements GeneralConfiguration_Object -->
+                            <v:ctr name="GeneralConfiguration" type="IDENTIFIABLE">
+                              <a:a name="UUID" value="ECUC:8f702fd2-4069-4667-7247-2092f90da676"/>
+                              <a:a name="DESC">
+                                  <a:v><![CDATA[EN:<html><p>This container contains the global configuration parameters of the Non-Autosar Dpga driver.</p></html>]]>
+                                  </a:v>
+                              </a:a>
+
+                                <v:var name="DpgaEnableVoltageMonitoring" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Enable Voltage Monitoring"/>
+                                    <a:a name="DESC">
+                                     <a:v><![CDATA[EN:<html><p>Enable/Disable Voltage Monitoring</p></html>]]>
+                                     </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:410b0ab0-6e30-41a1-b28a-b119182a1210"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                    <a:da name="EDITABLE" value="true"/>
+                                </v:var>
+
+                                <!-- @implements DpgaDevErrorDetect_Object -->
+                                <v:var name="DpgaDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Dpga Development Error Detection"/>
+                                    <a:a name="DESC">
+                                     <a:v><![CDATA[EN:<html><p>Switches the Development Error Detection and Notification ON or OFF.</p></html>]]>
+                                     </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                         type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:410a0af5-6e93-44a4-b28a-b189582e3235"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <v:var name="DpgaIpDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Dpga Ip Dev Error Detect"/>
+                                    <a:a name="DESC">
+                                     <a:v><![CDATA[EN:<html><p>Enables/disables development error detection for Dpga Ip.</p></html>]]>
+                                     </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                         type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:410a0af5-6e93-44a4-b28a-b189682e3235"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <v:var name="DpgaMulticoreSupport" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Dpga Multicore Support"/>
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Multicore is not supported for DPGA module.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:3803f88d-f19a-44ca-8fea-a090aa1410b4"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                    <a:da name="EDITABLE" value="false"/>
+                                </v:var>
+
+                                <v:var name="DpgaEnableUserModeSupport" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Dpga Enable User Mode Support"/>
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>User Mode is not supported for DPGA module.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:40301cd6-8ee0-446f-be15-ffde7311af96"/>
+                                    <a:a name="EDITABLE" value="false"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                </v:var>
+
+                                <!-- @implements DpgaVersionInfoApi_Object -->
+                                <v:var name="DpgaVersionInfoApi" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Dpga VersionInfo API"/>
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html><p>Adds / removes the service Dpga_GetVersionInfo() from the code.</p></html>]]></a:v>
+                                    </a:a>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                        type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:b3a4eb3b-2c28-4741-8088-4a9766a6a2c2"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                  <v:var name="DpgaTimeoutMethod" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Dpga Timeout Method"/>
+                                    <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>
+                                        <p>Configures the timeout method for Dpga</p>
+                                        <p>Based on this selection a certain timeout method from OsIf will be used in the driver.</p>
+                                        <p>Note: If OSIF_COUNTER_SYSTEM or OSIF_COUNTER_CUSTOM are selected make sure the corresponding timer is enabled in OsIf General configuration.</p></p></html>]]>
+                                    </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:37e442af-87a3-4263-8d51-83f752bc4db5"/>
+                                    <a:a name="DEFAULT" value="OSIF_COUNTER_DUMMY"/>
+                                    <a:da name="INVALID" type="XPath">
+                                      <a:tst expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseCustomTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_CUSTOM'" true="Custom Timer is not enabled in OsIf (OsIfGeneral/OsIfUseCustomTimer checkbox)"/>
+                                      <a:tst expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseSystemTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_SYSTEM'" true="System Timer is not enabled in OsIf (OsIfGeneral/OsIfUseSystemTimer checkbox)"/>
+                                    </a:da>
+                                    <a:da name="RANGE">
+                                      <a:v>OSIF_COUNTER_DUMMY</a:v>
+                                      <a:v>OSIF_COUNTER_SYSTEM</a:v>
+                                      <a:v>OSIF_COUNTER_CUSTOM</a:v>
+                                    </a:da>
+                                  </v:var>
+
+                                  <!-- @implements DpgaTimeoutValue_Object -->
+                                  <v:var name="DpgaTimeoutValue" type="INTEGER">
+                                  <a:a name="LABEL" value="Dpga Timeout"/>
+                                  <a:a name="DESC">
+                                      <a:v><![CDATA[EN:<html><p>This is a timeout (microseconds) value which is used to wait for each synchronization transfer</p></html>]]>
+                                      </a:v>
+                                  </a:a>
+                                  <a:a name="SCOPE" value="LOCAL"/>
+                                  <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                  <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                      type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                  </a:a>
+                                  <a:a name="ORIGIN" value="NXP"/>
+                                  <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                  <a:a name="UUID" value="ECUC:0a2316cf-d292-4428-b8cd-f6d08bd6992a" />
+                                  <a:da name="DEFAULT" value="65535" />
+                                  <a:da name="INVALID" type="Range">
+                                      <a:tst expr="&lt;=4294967295" />
+                                      <a:tst expr="&gt;=1" />
+                                  </a:da>
+                                  </v:var>
+                            </v:ctr>
+
+                            <!-- @implements DpgaChannel_Object -->
+                            <v:lst name="DpgaChannel" type="MAP">
+                                <a:a name="LABEL" value="Dpga Channels"/>
+                                <a:da name="MIN" value="1"/>
+                                <a:da name="INVALID" type="XPath">
+                                   <a:tst expr="num:i(count(node:current()/*)) &gt; num:i(1)"
+                                   true="Maximum DPGA Hardware Units available for the selected derivative was exceeded."/>
+                                </a:da>
+                                <v:ctr name="DpgaChannel" type="IDENTIFIABLE">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html><p>This container contains the configuration (parameters) of the Dpga Controller(s).</p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:b305390a-4f25-448d-ae17-7b7c52d57cc1"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+
+                                    <!-- @implements DpgaChannelId_Object -->
+                                    <v:var name="DpgaChannelId" type="INTEGER">
+                                        <a:a name="DESC">
+                                            <a:v><![CDATA[EN:<html><p>Identifies the Dpga channel</p><p/></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Dpga Channel ID" />
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                            type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                                        <a:a name="UUID" value="ECUC:49331118-5757-4a01-ae70-84f6802cef4f"/>
+                                        <a:da name="DEFAULT"  type="XPath" expr="node:fallback(node:current()/../@index, num:i(0))"/>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;num:i(2)"/>
+                                            <a:tst expr="&gt;=0"/>
+                                        </a:da>
+                                        <a:da name="RANGE" type="XPath">
+                                            <a:tst expr="(. &gt;= 0) and (.&lt; num:i(count(node:current()/../../*)))"
+                                                false="Value out of range: must be in range 0 to N-1 (N is number of configured channels). Use the 'Calculate Value' button to calculate correct default value."/>
+                                            <a:tst expr="text:uniq(../../*/DpgaChannelId, .)"
+                                                false="Duplicated value: DpgaChannelId must be unique across all Dpga channels. Use the 'Calculate Value' button to calculate correct default value."/>
+                                        </a:da>
+                                    </v:var>
+
+                                    <v:var name="DpgaHwChannel" type="ENUMERATION">
+                                        <a:a name="DESC">
+                                            <a:v><![CDATA[EN:<html><p>Selects hardware channel.</p><p/></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Dpga Hardware Channel" />
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                            type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                        <a:a name="UUID" value="ECUC:c637ece2-cfa9-683a-8ee0-607e7b0a9802"/>
+                                        <a:da name="DEFAULT" value="DPGA_0" />
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="text:uniq(node:fallback(../../*/DpgaHwChannel, 0 ), node:fallback( ., 1 ))"
+                                                false="Duplicate physical Dpga channel: DpgaHwChannel must be unique across all Dpga channels. Use the 'Calculate Value' button to calculate correct default value."/>
+                                        </a:da>
+                                        <a:da name="RANGE">
+                                            <a:v>DPGA_0</a:v>
+                                        </a:da>
+                                    </v:var>
+
+                                    <v:ctr name="DpgaConfiguration" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v><![CDATA[EN:<html><p>This container contains the configuration (parameters) of the Dpga Controller(s).</p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:3f0824d1-5853-4a9f-99da-bfc3933f6e9f"/>
+
+                                        <v:var name="DpgaAmplifierGain" type="ENUMERATION">
+                                            <a:a name="LABEL" value="Amplifier Gain" />
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>Select the gain of the differential amplifier.
+                                                    <ul>
+                                                        <li>GAIN_8: Amplify by 8</li>
+                                                        <li>GAIN_16: Amplify by 16</li>
+                                                        <li>GAIN_24: Amplify by 24</li>
+                                                        <li>GAIN_32: Amplify by 32</li>
+                                                        <li>GAIN_40: Amplify by 40</li>
+                                                        <li>GAIN_50: Amplify by 50</li>
+                                                        <li>GAIN_65: Amplify by 65</li>
+                                                        <li>GAIN_80: Amplify by 80</li>
+                                                    </ul></p><p/></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="UUID" value="ECUC:7acd00c5-f17f-4611-bda4-864c12a94291"/>
+                                            <a:da name="DEFAULT" value="GAIN_8"/>
+                                            <a:da name="RANGE">
+                                                <a:v>GAIN_8</a:v>
+                                                <a:v>GAIN_16</a:v>
+                                                <a:v>GAIN_24</a:v>
+                                                <a:v>GAIN_32</a:v>
+                                                <a:v>GAIN_40</a:v>
+                                                <a:v>GAIN_50</a:v>
+                                                <a:v>GAIN_65</a:v>
+                                                <a:v>GAIN_80</a:v>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaOutCommonModeVoltage" type="ENUMERATION">
+                                            <a:a name="LABEL" value="Output Common Mode Voltage" />
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>Configure the common mode voltage of the output of the amplifier.
+                                                    <ul>
+                                                        <li>VREF_DIV_12: Reference voltage divided by 12</li>
+                                                        <li>VREF_DIV_6: Reference voltage divided by 6</li>
+                                                        <li>VREF_DIV_4: Reference voltage divided by 4</li>
+                                                        <li>VREF_DIV_2: Reference voltage divided by 2</li>
+                                                    </ul></p><p/></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="UUID" value="ECUC:7aca02c5-f17f-4611-bda4-864c12c94791"/>
+                                            <a:da name="DEFAULT" value="VREF_DIV_2"/>
+                                            <a:da name="RANGE">
+                                                <a:v>VREF_DIV_12</a:v>
+                                                <a:v>VREF_DIV_6</a:v>
+                                                <a:v>VREF_DIV_4</a:v>
+                                                <a:v>VREF_DIV_2</a:v>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaOffset" type="INTEGER">
+                                            <a:a name="LABEL" value="Offset compensation"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        Configure the value to compensate the offset of the differential amplifier.
+                                                        <li>0: No offset</li>
+                                                        <li>1: +3mV</li>
+                                                        <li>2: +6mV</li>
+                                                        <li>---------------------------------------------------------</li>
+                                                        <li>7: +21mV</li>
+                                                        <li>8: No offset</li>
+                                                        <li>9: -3mV</li>
+                                                        <li>10: -6mV</li>
+                                                        <li>---------------------------------------------------------</li>
+                                                        <li>15: -21mV</li>
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:c00b52c0-9f33-451f-b167-6df2c5b2be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=15"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaInCommonModeCoarse" type="ENUMERATION">
+                                            <a:a name="LABEL" value="Input Common Mode Coarse" />
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>Configure the common mode of the differential inputs of the amplifier.
+                                                    <ul>
+                                                        <li>NO_SHIFT: No shift</li>
+                                                        <li>SHIFT_200: Shift with 200 uA current out of both inputs</li>
+                                                        <li>SHIFT_100: Shift with 100 uA current out of both inputs</li>
+                                                        <li>SHIFT_50: Shift with 50 uA current out of both inputs</li>
+                                                    </ul></p><p/></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="UUID" value="ECUC:7acd0025-f13f-4211-bda4-864c12c94791"/>
+                                            <a:da name="DEFAULT" value="SHIFT_0"/>
+                                            <a:da name="RANGE">
+                                                <a:v>SHIFT_0</a:v>
+                                                <a:v>SHIFT_200</a:v>
+                                                <a:v>SHIFT_100</a:v>
+                                                <a:v>SHIFT_50</a:v>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaInCommonModeFine" type="INTEGER">
+                                            <a:a name="LABEL" value="Input Common Mode Fine"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        Adjust the common mode of the differential inputs of the amplifier by
+                                                        changing the current out of one of the differential inputs.
+                                                        <li>0: Input Common Mode Coarse * 1.0000 out of minus input</li>
+                                                        <li>1: Input Common Mode Coarse * 1.0025 out of minus input</li>
+                                                        <li>2: Input Common Mode Coarse * 1.0050 out of minus input</li>
+                                                        <li>---------------------------------------------------------</li>
+                                                        <li>31: Input Common Mode Coarse * 1.0775 out of minus input</li>
+                                                        <li>32: Input Common Mode Coarse * 1.0000 out of plus input</li>
+                                                        <li>33: Input Common Mode Coarse * 1.0025 out of plus input</li>
+                                                        <li>34: Input Common Mode Coarse * 1.0050 out of plus input</li>
+                                                        <li>---------------------------------------------------------</li>
+                                                        <li>63: Input Common Mode Coarse * 1.0775 out of plus input</li>
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:a00b1210-9f33-451f-b167-6df2f5b4be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=63"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaBlankingTimeDuration" type="INTEGER">
+                                            <a:a name="LABEL" value="Blanking Time duration"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        Blanking Time duration, in number of module clock cycles.
+                                                        The actual number of clock cycles is this number + 1.
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:c00b52c0-9f33-451f-b167-6da1f5b4be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:lst name="DpgaBlankingTimeTriggerList" type="MAP">
+                                            <a:a name="LABEL" value="Blanking Time Triggers"/>
+                                            <a:da name="MIN" value="0"/>
+                                            <a:da name="MAX" value="6"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="num:i(count(node:current()/*)) &lt; num:i(6)"
+                                                       true="All Blanking Time triggers should be configured."/>
+                                            </a:da>
+
+                                            <v:ctr name="DpgaBlankingTimeTriggerList" type="IDENTIFIABLE">
+                                                <a:a name="DESC">
+                                                    <a:v><![CDATA[EN:<html><p>List of the Blanking Time triggers</p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:8ccd30a2-03fa-4f6a-ad23-aa40bc42295e"/>
+                                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                    <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                                </a:a>
+
+                                                <v:var name="DpgaBTTriggerState" type="ENUMERATION">
+                                                    <a:a name="LABEL" value="Trigger State" />
+                                                    <a:a name="DESC">
+                                                        <a:v><![CDATA[EN:<html><p>Select the state of the blanking time trigger that enables the blanking time counter.
+                                                            <ul>
+                                                                <li>NO_EDGE: This trigger cannot start the BT counter</li>
+                                                                <li>FALLING_EDGE: The falling edge of this trigger starts the BT counter from 0</li>
+                                                                <li>RISING_EDGE: The rising edge of this trigger starts the BT counter from 0</li>
+                                                                <li>BOTH_EDGES: Both edges of this trigger start the BT counter from 0</li>
+                                                            </ul></p><p/></html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                        type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                                    <a:a name="UUID" value="ECUC:7acd00c5-f17f-4611-bda4-899c12c94791"/>
+                                                    <a:da name="DEFAULT" value="NO_EDGE"/>
+                                                    <a:da name="RANGE">
+                                                        <a:v>NO_EDGE</a:v>
+                                                        <a:v>FALLING_EDGE</a:v>
+                                                        <a:v>RISING_EDGE</a:v>
+                                                        <a:v>BOTH_EDGES</a:v>
+                                                    </a:da>
+                                                </v:var>
+                                            </v:ctr>
+                                        </v:lst>
+
+                                        <v:var name="DpgaEnableBipolarDetector" type="BOOLEAN">
+                                            <a:a name="LABEL" value="Enable Bipolar Voltage Detector"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>Enable the low detector. Use the low detector for bipolar measurements.</p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:3deb2818-14e6-4a91-b820-e2505fccc592"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="(node:value(../../../../GeneralConfiguration/DpgaEnableVoltageMonitoring) = 'true')"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                        </v:var>
+
+                                        <v:var name="DpgaLowDetectLimit" type="INTEGER">
+                                            <a:a name="LABEL" value="Low detect limit"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        When the output of the amplifier is lower than the limit defined here, a low detect event is generated.
+                                                        The low detect limit is actually (1 + this value) / 64 of the supply voltage.
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:c00b35c0-9f33-451f-b167-6df2f5b4be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="(node:value(../../../../GeneralConfiguration/DpgaEnableVoltageMonitoring) = 'true')"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=15"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaLowDetectFilterDuration" type="INTEGER">
+                                            <a:a name="LABEL" value="Low detect filter duration"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        The minimal time duration that the low detect must be activer before a low detect output flag is set.
+                                                        This value + 1 is the actual minimal time duration in number of module clock cycles.
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:c00b52c0-9f33-091f-b167-6df2f5b4be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="(node:value(../../../../GeneralConfiguration/DpgaEnableVoltageMonitoring) = 'true')"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaHighDetectLimit" type="INTEGER">
+                                            <a:a name="LABEL" value="High detect limit"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        When the output of the amplifier is higher than the limit defined here, a high detect event is generated.
+                                                        The high detect limit is actually (48 + this value) / 64 of the supply voltage.
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:c00b52c0-8233-451f-b167-6df2f5b4be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="(node:value(../../../../GeneralConfiguration/DpgaEnableVoltageMonitoring) = 'true')"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=15"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaHighDetectFilterDuration" type="INTEGER">
+                                            <a:a name="LABEL" value="High detect filter duration"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>
+                                                        The minimal time duration that the high detect must be activer before a high detect output flag is set.
+                                                        This value + 1 is the actual minimal time duration in number of module clock cycles.
+                                                    </p></html>]]>
+                                                </a:v>
+                                                <a:v><![CDATA[EN:<html><p></p><p/></html>]]>
+                                            </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                    type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="UUID" value="ECUC:c00a62c0-9f33-451f-b167-6df2f5b4be7a"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="(node:value(../../../../GeneralConfiguration/DpgaEnableVoltageMonitoring) = 'true')"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <v:var name="DpgaCallback" type="FUNCTION-NAME">
+                                            <a:a name="LABEL" value="Dpga Callback"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html><p>Dpga callback. This function will be called for all Dpga events.</p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:35e8be17-4c2c-4520-a94c-f26e412c9e89"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:da name="DEFAULT" value="NULL_PTR"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="not(text:match(normalize-space(.),'^[_a-zA-Z]+[_0-9a-zA-Z]*$'))"
+                                                true="Invalid identifier. The field must specify a valid C function identifier (i.e. an arbitrarily long sequence of digits, underscores, lowercase and uppercase Latin letters, that must begin with a non-digit character)"/>
+                                            </a:da>
+                                        </v:var>
+                                    </v:ctr>
+                                </v:ctr>
+                            </v:lst>
+
+                            <!-- /** @implements CommonPublishedInformation_Object */ -->
+                            <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>Common container, aggregated by all modules. It contains published information about vendor and versions.</html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:993c0061-e0ca-4ddd-9bde-0d61b4781f46"/>
+
+                                <!-- @implements ArReleaseMajorVersion_Object -->
+                                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Ar Release Major Version" />
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Major version number of AUTOSAR specification on which the appropriate implementation is based on.<p/></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:41932f98-e8ba-4b12-98ed-8bb8acd26fd8"/>
+                                    <a:da name="DEFAULT" value="4"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=4"/>
+                                        <a:tst expr="&lt;=4"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements ArReleaseMinorVersion_Object -->
+                                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Ar Release Minor Version" />
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Minor version number of AUTOSAR specification on which the appropriate implementation is based on.<p/></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:e9455f41-1a92-4796-b703-dec01913f75a"/>
+                                    <a:da name="DEFAULT" value="7"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=7"/>
+                                        <a:tst expr="&lt;=7"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements ArReleaseRevisionVersion_Object -->
+                                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Ar Release Revision Version" />
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Revision version number of AUTOSAR specification on which the appropriate implementation is based on.<p/></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:8367bb42-509e-4bb3-b637-72e151d18ceb"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements ModuleId_Object -->
+                                <v:var name="ModuleId" type="INTEGER_LABEL">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Module ID of this module from Module List.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:57c729ef-bd9a-46a1-b3b8-b2babfc50b0c"/>
+                                    <a:da name="DEFAULT" value="255"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=255"/>
+                                        <a:tst expr="&lt;=255"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements SwMajorVersion_Object -->
+                                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:c6f10ce4-05f4-4b1f-b303-cc11d01d2fc8"/>
+                                    <a:da name="DEFAULT" value="3"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=3"/>
+                                        <a:tst expr="&lt;=3"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements SwMinorVersion_Object -->
+                                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:d4d22d48-7a3a-40d3-8407-7eae11b14150"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements SwPatchVersion_Object -->
+                                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:389ba326-1b74-45bf-a341-7cb55fad67b9"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements VendorApiInfix_Object -->
+                                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>
+                                         In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                         This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                         &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                         E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                         This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:13b4abc2-5727-48bd-b109-7fb321852ea7"/>
+                                    <a:da name="DEFAULT" value=""/>
+                                     <a:da name="READONLY" value="true"/>
+                                </v:var>
+
+                                <!-- @implements VendorId_Object -->
+                                <v:var name="VendorId" type="INTEGER_LABEL">
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:<html>Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:962b16d0-ad38-4645-9443-25c254e05c29"/>
+                                    <a:da name="DEFAULT" value="43"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=43"/>
+                                        <a:tst expr="&lt;=43"/>
+                                    </a:da>
+                                </v:var>
+                            </v:ctr>
+                        </v:ctr>
+                    </d:chc>
+
+                    <d:chc name="Dpga_EcuParameterDefinition" type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="UUID" value="ECUC:adb9a39b-4975-4664-996b-4c1f7d88d567"/>
+                            <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                            <d:lst name="MODULE_REF">
+                                <d:ref type="MODULE_REF" value="ASPath:/TS_T40D34M30I0R0/Dpga"/>
+                            </d:lst>
+                        </d:ctr>
+                    </d:chc>
+                    <d:chc name="Dpga_ModuleDescription" type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                            <d:var name="MODULE_ID" type="INTEGER" >
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:ref type="RECOMMENDED_CONFIGURATION" >
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:ref>
+                            <d:ref type="PRE_CONFIGURED_CONF" >
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:ref>
+                            <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" value="ASPath:/TS_T40D34M30I0R0/Dpga"/>
+                        </d:ctr>
+                    </d:chc>
+                </d:lst>
+            </d:ctr>
+        </d:lst>
+    </d:ctr>
+</datamodel>

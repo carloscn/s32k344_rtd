@@ -1,0 +1,71 @@
+
+Name: generate_PC/include/Qspi_Ip_Features.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773972092475229719102088726197976768805264255301505
+ 535246362565196863617976998441092671663457792017448280
+
+Name: generate_PC/include/Mem_43_ExFls_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423047870191239028883907513261326277976259581893356
+ 3246524608859886583551337909816509505471899921784187
+
+Name: config/Mem_43_ExFls.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377425583522508791023866249588422102102325173621713577
+ 9005567662548998536648404252251211568093089419401929
+
+Name: generate_PC/Mem_43_ExFls_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424176136464586271652703371241928983668584835028590
+ 4390538746117519885820652964277438658238805205072239
+
+Name: generate_PC/include/Mem_43_ExFls_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423469055920960534964069115286949229057303707223744
+ 8000071910951661401748816763087240255428200765121041
+
+Name: generate_PC/include/Qspi_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426764106261152348232747772675213652108965613318623
+ 7625638560814944930733102748372016130534168321271983
+
+Name: generate_PC/src/Qspi_Ip_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594741947442656600257570626798219156443260316511602774
+ 544888104774006948159241104899234212598176603743289140
+
+Name: generate_swcd/swcd/Mem_43_ExFls_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426294099795485357313988068256444613158370701124188
+ 4155866117839242683567834349197907223504552414636155
+
+Name: generate_PC/include/Qspi_Ip_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423092140882630928471035857104363536265912895081333
+ 3175016175739692678620401130631226114786808197870495
+
+Name: generate_PC/src/Mem_43_ExFls_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773972324713304879678471203575006297551200818839606
+ 491054224375450966065506065857322156356151235678448556
+

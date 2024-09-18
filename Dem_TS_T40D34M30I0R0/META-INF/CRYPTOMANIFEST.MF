@@ -1,0 +1,15 @@
+
+Name: config/Dem.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420501548493204487343243461053433176772818950955800
+ 5023763720309248572151178465926360556441100521913017
+
+Name: generate_PC/include/Dem_IntErrId.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594738867564505304913317520868369059159343622118668954
+ 295891633544685025323057933467535339496500191585859339
+

@@ -1,0 +1,1645 @@
+<?xml version="1.0"?>
+<datamodel version="3.0" xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+                         xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+                         xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+                         xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    CanTrcv.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR CanTrcv_43_AE - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and CanTrcv_43_AE Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : AE
+*   Dependencies         : 
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   Copyright 2020 - 2023 NXP Semiconductors
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->
+<d:ctr type="AUTOSAR" factory="autosar"
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+        <!-- /** @implements CanTrcv_Object */ -->
+        <d:ctr name="CanTrcv_43_AE_TS_T40D34M30I0R0" type="AR-PACKAGE">
+            <a:a name="UUID" value="ECUC:181f65b6-f772-4dd7-b9a6-1186c4c7eba8"/>
+            <d:lst type="ELEMENTS">
+                <d:chc name="CanTrcv" type="AR-ELEMENT" value="MODULE-DEF">
+                    <v:ctr type="MODULE-DEF">
+                        <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                            <ad:ADMIN-DATA>
+                                <ad:DOC-REVISIONS>
+                                    <ad:DOC-REVISION>
+                                        <ad:REVISION-LABEL>4.6.0</ad:REVISION-LABEL>
+                                        <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                        <ad:DATE>2014-10-31</ad:DATE>
+                                    </ad:DOC-REVISION>
+                                </ad:DOC-REVISIONS>
+                            </ad:ADMIN-DATA>
+                        </a:a>
+                        <a:a name="DESC"
+                            value="EN: This container holds the configuration of a single CanTrcv Driver."/>
+                        <a:a name="LOWER-MULTIPLICITY" value="0"/>
+                        <a:a name="RELEASE" value="asc:4.7"/>
+                        <a:a name="UPPER-MULTIPLICITY" value="*"/>
+                        <a:a name="UUID" value="ECUC:53829d84-d68b-4234-86cf-6ca163c4995d"/>
+                        <a:a name="POSTBUILDVARIANTSUPPORT" value="true"/>
+                        <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html>
+                                        Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points.
+                                    </html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PreCompile">VariantLinkTime</icc:v>
+                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Post Build Variant Used"/>
+                            <a:a name="ORIGIN" value="EB"/>
+                            <a:a name="UUID" value="ECUC:40b85d0b-6a49-48a9-96e8-58bbab831aa2"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="READONLY" value="false"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                        </v:var>
+                        <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PreCompile">VariantLinkTime</icc:v>
+                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Config Variant"/>
+                            <a:a name="UUID" value="ECUC:40b85d0b-6a49-48a9-96e8-58bbab831aa3"/>
+                            <a:da name="DEFAULT" value="VariantPostBuild"/>
+                            <a:da name="RANGE">
+                                <a:v>VariantLinkTime</a:v>
+                                <a:v>VariantPostBuild</a:v>
+                                <a:v>VariantPreCompile</a:v>
+                            </a:da>
+                        </v:var>
+
+                        <!-- /** @implements CanTrcvGeneral_Object */ -->
+                        <v:ctr name="CanTrcvGeneral" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html>
+                                        This container holds parameters related to each CanTrcv Driver.<br>
+                                    </html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="LABEL" value="CanTrcv general"/>
+                            <a:a name="UUID" value="ECUC:92dba3ff-0eab-40cb-b10e-8e2ed31f8fe9"/>
+
+                            <!-- /** @implements CanTrcvWakeUpSupport_Object */ -->
+                            <v:var name="CanTrcvWakeUpSupport" type="ENUMERATION">
+                                <a:a name="LABEL" value="Wake up support"/>
+                                <a:a name="UUID" value="ECUC:d6961677-114a-490e-b638-1a6a1d5cfcb3"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                        <html>
+                                          CANTRCV_WAKEUP_BY_POLLING: Wake up by polling.
+                                          CANTRCV_WAKEUP_NOT_SUPPORTED: Wake up not supported.
+                                        </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:da name="DEFAULT" value="CANTRCV_WAKEUP_NOT_SUPPORTED"/>
+                                <a:da name="RANGE">
+                                    <a:v>CANTRCV_WAKEUP_BY_POLLING</a:v>
+                                    <a:v>CANTRCV_WAKEUP_NOT_SUPPORTED</a:v>
+                                </a:da>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr=". = 'CANTRCV_WAKEUP_BY_POLLING' and count(./../../CanTrcvConfigSet/CanTrcvChannel/*[CanTrcvWakeupByBusUsed = 'true']) &lt; 1"
+                                        true="When WAKEUP enabled, at least 1 transceiver should enable wakeup(CanTrcvWakeupByBusUsed)"/>
+                                </a:da>
+                            </v:var> <!-- /** CanTrcvWakeUpSupport_Object */ -->
+
+                            <!-- /** @implements CanTrcvMainFunctionDiagnosticsPeriod_Object */ -->
+                            <v:var name="CanTrcvMainFunctionDiagnosticsPeriod" type="FLOAT">
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>
+                                        This parameter describes the period for cyclic call to CanTrcv_MainFunctionDiagnostics.
+                                      </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Main diagnostic function period (s)"/>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:bc10c9b3-1605-4eb7-b0c0-2c079d0f7e04"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- /** @implements CanTrcvMainFunctionPeriod_Object */ -->
+                            <v:var name="CanTrcvMainFunctionPeriod" type="FLOAT">
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>
+                                        This parameter describes the period for cyclic call to CanTrcv_MainFunction.
+                                      </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Main function period (s)"/>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:471ed3b2-2971-4de4-a3ff-b8779d28f99b"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- /** @implements CanTrcvDevErrorDetect_Object */ -->
+                            <v:var name="CanTrcvDevErrorDetect" type="BOOLEAN">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Switches the Development Error Detection and Notification: ON or OFF.<br>
+                                            When this option is OFF code size is reduced, but no error detection is available.<br>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Development error detection"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:fae3ece1-6b70-4308-b6ff-36cbf085320d"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <v:var name="CanTrcvMulticoreSupport" type="BOOLEAN">
+                                <a:a name="LABEL" value="CanTrcv multicore support"/>
+                                <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                            Enable Maps CanTrcv driver to multiple EcuC partitions to make the modules API available in this partition. The CanTrcv driver will operate as an independent instance in each of the partitions.<br>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:faa4830a-1114-4eff-9a8b-457bebc658cd"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(. = 'true') and (num:i(count(../CanTrcvEcucPartitionRef/*)) &lt;1)" true="When CanTrcvMulticoreSupport is enabled, at least one CanTrcvEcucPartitionRef needs to be configured."/>
+                                        <a:tst expr="(. = 'false') and (num:i(count(../CanTrcvEcucPartitionRef/*)) &gt;0)" true="When CanTrcvMulticoreSupport is disabled, there isn't any CanTrcvEcucPartitionRef configured."/>
+                                </a:da>
+                                <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.MultiCoreSuport')='STD_ON'"/>
+                            </v:var>
+
+                            <v:var name="CanTrcvTimerType" type="ENUMERATION">
+                                <a:a name="LABEL" value="Timer type"/>
+                                <a:a name="UUID" value="ECUC:e24a9c03-a225-4065-979c-3fb9e000d1ae"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:
+                                        <html>
+                                          Type of the Time Service Predefined Timer.
+                                        </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:da name="DEFAULT" value="None"/>
+                                <a:da name="ENABLE" value="false"/>
+                                <a:da name="RANGE">
+                                    <a:v>None</a:v>
+                                    <a:v>Timer_1us16bit</a:v>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="CanTrcvWaitTime" type="FLOAT">
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>
+                                        Wait time for transceiver state changes in seconds.</html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Wait time for state change"/>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:c783e3e1-098a-4f38-ab75-93cb786ba89c"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:da name="ENABLE" value="false"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=0.000255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- /** @implements CanTrcvVersionInfoApi_Object */ -->
+                            <v:var name="CanTrcvVersionInfoApi" type="BOOLEAN">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Switches the CanTrcv_GetVersionInfo() API: ON or OFF.<br>
+                                            When this option is ON, the driver supports API for getting Version information of the Driver.<br>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Provide version info API"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:1c149bc9-b9f1-41c4-afa6-d1cf49d3ba8f"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- /** @implements CanTrcvIndex_Object */ -->
+                            <v:var name="CanTrcvIndex" type="INTEGER">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Specifies the InstanceId of this module instance.<br>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="LABEL" value="CAN transceiver module instance"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:10cd875e-b959-11eb-8529-0242ac130003"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=255"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- /** @implements CanTrcvEcucPartitionRef_Object */ -->
+                            <v:lst name="CanTrcvEcucPartitionRef">
+                                <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.MultiCoreSuport')='STD_ON'"/>
+                                <v:ref name="CanTrcvEcucPartitionRef" type="REFERENCE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                Maps the CAN transceiver driver to zero or multiple ECUC partitions to make the modules API available in this partition.<br>
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="UUID" value="ECUC:e7ef0ccb-53ac-4abe-b463-c8dea059a2e1"/>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                </v:ref>
+                            </v:lst>
+                        </v:ctr>
+
+                        <!-- /** @implements CanTrcvConfigSet_Object */ -->
+                        <v:ctr name="CanTrcvConfigSet" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html>
+                                        This is the multiple configuration set container for CanTrcv Driver.<br>
+                                    </html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="LABEL" value="CanTrcv configuration set"/>
+                            <a:a name="UUID" value="ECUC:8f338c5b-bc57-4a6a-b94d-e7cfacee8f7d"/>
+
+                            <!-- /** @implements CanTrcvSPICommRetries_Object */ -->
+                            <v:var name="CanTrcvSPICommRetries" type="INTEGER">
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>
+                                        Indicates the maximum number of communication retries in case of a failed SPI communication (applies both to timed out communication and to errors/NACK in the response data).
+                                        If configured value is '0', no retry is allowed (communication is expected to succeed at first try).
+                                      </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="CanTrcv SPI communication retries"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:ccd30d2d-37d4-4eac-a5cd-588ab694d4e9"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- /** @implements CanTrcvSPICommTimeout_Object */ -->
+                            <v:var name="CanTrcvSPICommTimeout" type="INTEGER">
+                                <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html>
+                                        Indicates the maximum time allowed to the CanTrcv to reply (either positively or negatively) to a SPI command.
+                                        Timeout is configured in milliseconds. Timeout value of '0' means no specific timeout is to be used by CanTrcv and the communication is executed at the best of the SPI HW capacity.
+                                      </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="CanTrcv SPI communication timeout (ms)"/>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:93645e48-476f-4795-aa0c-9a43329f95dc"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=100"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                                <a:da name="EDITABLE" value="false"/>
+                            </v:var> <!-- /** CanTrcvSPICommTimeout_Object */ -->
+
+                            <v:lst name="CanTrcvChannel" type="MAP">
+                                <a:da name="MIN" value="1"/>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="num:i(count(node:current()/*)) &gt; ecu:get('CanTrcv.NumberTrcvSupport')"
+                                                true="Maximum channels available for the selected derivative was exceeded."/>
+                                </a:da>
+                                <!-- /** @implements CanTrcvChannel_Object */ -->
+                                <v:ctr name="CanTrcvChannel" type="IDENTIFIABLE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                Defines a structure to initialize the selected CAN transceiver (channel).<br>
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:4678ec95-d992-467b-8a92-12af12369d6b"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+
+                                    <!-- /** @implements CanTrcvInitState_Object */ -->
+                                    <v:var name="CanTrcvInitState" type="ENUMERATION">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    State of CAN transceiver after call to CanTrcv_Init.<br>
+                                                    - Normal mode after Init<br>
+                                                    - Sleep mode after Init<br>
+                                                    - Standby mode after Init (Default)<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Transceiver mode after initialization"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:f55d547d-37c7-4393-b930-c3cb7b7678b2"/>
+                                        <a:da name="DEFAULT" value="CANTRCV_OP_MODE_STANDBY"/>
+                                        <a:da name="RANGE">
+                                            <a:v>CANTRCV_OP_MODE_SLEEP</a:v>
+                                            <a:v>CANTRCV_OP_MODE_STANDBY</a:v>
+                                        </a:da>
+                                    </v:var>
+                                    <!-- /** @implements CanTrcvIcuChannelRef_Object */ -->
+                                    <v:ref name="CanTrcvIcuChannelRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Reference to the IcuChannel to enable/disable the interrupts for wakeups.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                        <a:a name="UUID" value="ECUC:263fe8ad-010a-41f7-84a2-83f5c4c9183d"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Icu/IcuConfigSet/IcuChannel"/>
+                                        <a:a name="INVALID" type="XPath">
+                                            <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                                        </a:a>
+                                    </v:ref>
+
+                                    <!-- /** @implements CanTrcvPorWakeupSourceRef_Object */ -->
+                                    <v:ref name="CanTrcvPorWakeupSourceRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Symbolic name reference to specify the wakeup sources that should be used in the calls to EcuM_SetWakeupEvent.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" value="ECUC:6f1adf1b-6cab-490b-8bdb-a27cffe97b22"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource"/>
+                                        <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.PORFlagSupport')='STD_ON'" />
+                                    </v:ref>
+
+                                    <!-- /** @implements CanTrcvSyserrWakeupSourceRef_Object */ -->
+                                    <v:ref name="CanTrcvSyserrWakeupSourceRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Symbolic name reference to specify the wakeup sources that should be used in the calls to EcuM_SetWakeupEvent.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" value="ECUC:7c124724-51c4-40bb-beff-fba58ad51bdd"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource"/>
+                                        <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SYSERRFlagSupport')='STD_ON'" />
+                                    </v:ref>
+
+                                    <!-- /** @implements CanTrcvWakeupSourceRef_Object */ -->
+                                    <v:ref name="CanTrcvWakeupSourceRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Reference to a wakeup source in the EcuM configuration.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" value="ECUC:905ff40f-6fcb-4b84-9aac-63eaa55b6d4d"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource"/>
+                                        <a:a name="INVALID" type="XPath">
+                                            <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                                        </a:a>
+                                    </v:ref>
+
+                                    <!-- /** @implements CanTrcvChannelId_Object */ -->
+                                    <v:var name="CanTrcvChannelId" type="INTEGER">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Unique identifier of the CAN Transceiver Channel.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="CAN transceiver channel ID"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:20226cf1-13fd-4ea9-a5c2-a6d97ac0ef79"/>
+                                        <a:da name="DEFAULT" type="XPath" expr="node:fallback(node:current()/../@index, num:i(1))"/>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&gt;=0"/>
+                                            <a:tst expr="&lt;=255"/>
+                                        </a:da>
+                                        <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.NumberTrcvSupport') > 1"/>
+                                    </v:var>
+                                    <v:var name="CanTrcvAbstractCanIfId" type="INTEGER">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Vendor specific:The abstract CanIf TransceiverId used when Driver invokes the callback functions from CanIf.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Abstract CanIf TransceiverId"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:20229cf1-13fd-4ea9-a5c2-a6d97ac0ef79"/>
+                                        <a:da name="DEFAULT" type="XPath" expr="node:fallback(node:current()/../@index, num:i(1))"/>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&gt;=0"/>
+                                            <a:tst expr="&lt;=255"/>
+                                        </a:da>
+                                    </v:var>
+                                    <!-- /** @implements CanTrcvChannelEcucPartitionRef_Object */ -->
+                                    <v:ref name="CanTrcvChannelEcucPartitionRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Maps the CAN transceiver configuration to zero or one ECUC partitions.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" value="ECUC:5a5b69e7-7241-49fc-9a84-b3c3c879128c"/>
+                                        <a:da name="ENABLE" value="false"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                        <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.MultiCoreSuport') = 'STD_ON'"/>
+                                    </v:ref>
+
+                                    <!-- /** @implements CanTrcvMaxBaudrate_Object */ -->
+                                    <v:var name="CanTrcvMaxBaudrate" type="INTEGER">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Indicates the data transfer rate in kbps. Maximum data transfer rate in kbps for transceiver hardware type.<br>
+                                                    For CAN the maximum data transfer rate is 500 kbps, for CAN FD 2000 kbps.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Maximum data transfer rate"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:6674b4e9-2a64-4593-94ef-cee6f7d4286c"/>
+                                        <a:da name="DEFAULT" type="XPath" expr="num:i(ecu:get('CanTrcv.MaxBaudrate'))"/>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=12000"/>
+                                            <a:tst expr="&gt;=0"/>
+                                        </a:da>
+                                        <a:da name="EDITABLE" value="false"/>
+                                    </v:var>
+
+                                    <!-- /** @implements CanTrcvChannelUsed_Object */ -->
+                                    <v:var name="CanTrcvChannelUsed" type="BOOLEAN">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Shall the related CAN transceiver be used?<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Is channel used"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:e1070815-34a4-424a-a513-4140fbbcbd77"/>
+                                        <a:da name="DEFAULT" value="true"/>
+                                        <a:da name="READONLY" value="true"/>
+                                    </v:var>
+
+                                    <v:var name="CanTrcvControlsPowerSupply" type="BOOLEAN">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Is ECU power supply controlled by this transceiver?<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Controls power supply"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:7a1fa07a-18c9-4394-b584-af687e500d38"/>
+                                        <a:da name="DEFAULT" value="false"/>
+                                        <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.ControlsPowerSupplySupport') = 'STD_ON'"/>
+                                    </v:var>
+
+                                    <!-- /** @implements CanTrcvWakeupByBusUsed_Object */ -->
+                                    <v:var name="CanTrcvWakeupByBusUsed" type="BOOLEAN">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Is wake up by bus supported?<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Wake up by bus"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:06a07dfc-13d9-4753-9bd6-76b7dc88b3c3"/>
+                                        <a:da name="DEFAULT" value="true"/>
+                                    </v:var>
+
+                                    <!-- /** @implements CanTrcvHwPnSupport_Object */ -->
+                                    <v:var name="CanTrcvHwPnSupport" type="BOOLEAN">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Indicates whether the HW supports the selective wake-up functionality.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="Selective wake up"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:099940f6-4366-4522-818f-46e48b8009bf"/>
+                                        <a:da name="DEFAULT" value="false"/>
+                                        <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                    </v:var>
+
+                                    <!-- /** @implements CanTrcvAccess_Object */ -->
+                                    <v:chc name="CanTrcvAccess" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                     Gives CanTrcv Driver information about access to a single CAN transceiver.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:6d98bbe9-24f1-485d-a303-1d70a3dba6f1"/>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="node:exists(./CanTrcvSpiAccess) and ecu:get('CanTrcv.AccessType')!='SPI'"
+                                                true="The Tranceiver doesn't support SPI type access"/>
+                                            <a:tst expr="node:exists(./CanTrcvDioAccess) and ecu:get('CanTrcv.AccessType')!='DIO'"
+                                                true="The Tranceiver doesn't support DIO type access"/>
+                                        </a:da>
+                                        <!-- /** @implements CanTrcvSpiAccess_Object */ -->
+                                        <v:ctr name="CanTrcvSpiAccess" type="IDENTIFIABLE">
+                                            <a:a name="LABEL" value="SPI access" />
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Defines SPI channel and SPI sequence to link the Transceiver channel with SPI configuration from SPI plugin.
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="UUID" value="ECUC:77385cad-2a93-4d16-89f8-06aea6ec3cd7"/>
+
+                                            <!-- /** @implements CanTrcvSpiSequence_Object */ -->
+                                            <v:ctr name="CanTrcvSpiSequence" type="IDENTIFIABLE">
+                                                <a:a name="LABEL" value="SPI sequence" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html>
+                                                            Container gives CAN transceiver driver information about one SPI se-quence. One SPI sequence used by CAN transceiver driver is in exclusive use for it. No other driver is allowed to access this sequence. CAN transceiver driver may use one sequence to access n CAN transceiver hardwares chips of the same type or n sequences are used to access one single CAN transceiver hardware chip. If a CAN transceiver hardware has no SPI interface, there is no instance of this container.
+                                                        </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:bfb5db01-2e1c-48a5-8efa-50954848c1b8"/>
+
+                                                <!-- /** @implements CanTrcvSpiSequenceName_Object */ -->
+                                                <v:ref name="CanTrcvSpiSequenceName" type="REFERENCE">
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html>
+                                                                Reference to a Spi sequence configuration container.<br>
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="LABEL" value="SPI sequence" />
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                    <a:a name="OPTIONAL" value="true"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                                    <a:a name="SCOPE" value="ECU"/>
+                                                    <a:a name="UUID" value="ECUC:8502f8be-5948-40c7-a3c8-4e35cd9c03b3"/>
+                                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiSequence"/>
+                                                </v:ref>
+
+                                                <!-- /** @implements CanTrcvSpiAccessSynchronous_Object */ -->
+                                                <v:var name="CanTrcvSpiAccessSynchronous" type="BOOLEAN">
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html>
+                                                                This parameter is used to define whether the access to the Spi sequence is synchronous or asynchronous.<br>
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="LABEL" value="SPI access type"/>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="OPTIONAL" value="true"/>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:e5570ada-b886-4538-9bd9-3bcdbdc25e41"/>
+                                                    <a:da name="DEFAULT" value="false"/>
+                                                    <a:da name="EDITABLE" value="false"/>
+                                                    <a:da name="READONLY" value="true"/>
+                                                </v:var>
+                                            </v:ctr>
+                                        </v:ctr>
+
+                                        <v:ctr name="CanTrcvDioAccess" type="IDENTIFIABLE">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Gives CAN transceiver driver information about accessing ports and port pins.<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="DIO access" />
+                                            <a:a name="UUID" value="ECUC:8929e70e-dc3c-44c1-ab9e-f25b4b506967"/>
+
+                                            <v:ctr name="CanTrcvDioChannelAccess" type="IDENTIFIABLE">
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html>
+                                                            Defines DIO channel access by single Can transceiver channel.<br>
+                                                        </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:91a5ed21-4168-49ca-9d8c-e5d56d26cb77"/>
+                                                <v:var name="CanTrcvHardwareInterfaceName" type="STRING_LABEL">
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html>
+                                                                CAN transceiver hardware interface name. It is typically the name of a pin. From a Dio point of view it is either a port, a single channel or a channel group.<br>
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="LABEL" value="Hardware interface name"/>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:31d7f340-a5ed-4c0c-ae96-b71b58d1ccaa"/>
+                                                    <a:da name="DEFAULT" value=""/>
+                                                    <a:da name="EDITABLE" value="false"/>
+                                                    <a:da name="READONLY" value="true"/>
+                                                </v:var>
+
+                                                <v:ref name="CanTrcvDioSymNameRef" type="CHOICE-REFERENCE">
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html>
+                                                                Reference to a DIO Port, DIO Channel or DIO Channel Group.<br>
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SCOPE" value="ECU"/>
+                                                    <a:a name="UUID" value="ECUC:9a4bd779-159d-4fa4-9494-14feeff36753"/>
+                                                    <a:da name="REF">
+                                                        <a:v>ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</a:v>
+                                                        <a:v>ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannelGroup</a:v>
+                                                        <a:v>ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort</a:v>
+                                                    </a:da>
+                                                </v:ref>
+                                            </v:ctr>
+                                        </v:ctr>
+
+                                    </v:chc>
+
+                                    <!-- /** @implements CanTrcvDemEventParameterRefs_Object */ -->
+                                    <v:ctr name="CanTrcvDemEventParameterRefs" type="IDENTIFIABLE">
+                                        <a:a name="LABEL" value="DEM reference" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Container for the references to DemEventParameter elements which shallbe invoked using the API Dem_SetEventStatus in case the corresponding error occurs. The EventId is taken from the referenced DemEventParameter's DemEventId symbolic value. The standardized errors are provided in this container and can be extended by vendor-specific error references.
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:148336cd-0a69-492a-bc44-bdfb94e15168"/>
+
+                                        <!-- /** @implements CANTRCV_E_BUS_ERROR_Object */ -->
+                                        <v:ref name="CANTRCV_E_BUS_ERROR" type="REFERENCE">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Reference to the DemEventParameter which shall be issued when bus error has occurred.<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="LABEL" value="DEM event parameter" />
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                                <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                                <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SCOPE" value="ECU"/>
+                                            <a:a name="UUID" value="ECUC:7aacaee1-222b-4260-a8d8-0caf9eb936ef"/>
+                                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dem/DemConfigSet/DemEventParameter"/>
+                                            <a:a name="INVALID" type="XPath">
+                                              <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                                            </a:a>
+                                        </v:ref>
+                                    </v:ctr>
+
+                                    <!-- /** @implements CanTrcvPartialNetwork_Object */ -->
+                                    <v:ctr name="CanTrcvPartialNetwork" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Container gives CAN transceiver driver information about the configuration of Partial Networking functionality.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="LABEL" value="CanTrcv partial networking"/>
+                                        <a:a name="UUID" value="ECUC:2cb63dcb-118e-4a37-bddd-261c8d4e814d"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <!-- /** @implements CanTrcvBaudRate_Object */ -->
+                                        <v:var name="CanTrcvBaudRate" type="INTEGER">
+                                            <a:a name="LABEL" value="Data transfer rate"/>
+                                            <a:a name="UUID" value="ECUC:236d89b9-d002-4eda-85ab-41d77f2b9353"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:
+                                                    <html>
+                                                      Indicates the data transfer rate in kbps.<br>
+                                                      Supported values:<br>
+                                                       - 50 kBits<br>
+                                                       - 100 kBits<br>
+                                                       - 125 kBits<br>
+                                                       - 250 kBits<br>
+                                                       - 500 kBits<br>
+                                                       - 1000 kBits
+                                                    </html>
+                                                    ]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:da name="DEFAULT" value="50"/>
+                                            <a:da name="RANGE" type="Range">
+                                                <a:tst expr="=50" false="Only values 50, 100, 125, 250, 500 and 1000 are allowed"/>
+                                                <a:tst expr="=100" false="Only values 50, 100, 125, 250, 500 and 1000 are allowed"/>
+                                                <a:tst expr="=125" false="Only values 50, 100, 125, 250, 500 and 1000 are allowed"/>
+                                                <a:tst expr="=250" false="Only values 50, 100, 125, 250, 500 and 1000 are allowed"/>
+                                                <a:tst expr="=500" false="Only values 50, 100, 125, 250, 500 and 1000 are allowed"/>
+                                                <a:tst expr="=1000" false="Only values 50, 100, 125, 250, 500 and 1000 are allowed"/>
+                                            </a:da>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=12000"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'"/>
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPnFrameCanId_Object */ -->
+                                        <v:var name="CanTrcvPnFrameCanId" type="INTEGER">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        CAN ID of the Wake-up Frame (WUF).<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="PN WUF ID"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:efc517ba-59a5-48f9-9225-4e8148771194"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&gt;=0"/>
+                                                <a:tst expr="&lt;=4294967295"/>
+                                            </a:da>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPnFrameCanIdMask_Object */ -->
+                                        <v:var name="CanTrcvPnFrameCanIdMask" type="INTEGER">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        ID Mask for the selective activation of the transceiver. It is used to enable-Frame Wake-up (WUF) on a group of IDs.<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="PN WUF ID mask"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:b11bbe7e-62ad-4e9f-9fdf-6cccbe331880"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&gt;=0"/>
+                                                <a:tst expr="&lt;=4294967295"/>
+                                            </a:da>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPnFrameDlc_Object */ -->
+                                        <v:var name="CanTrcvPnFrameDlc" type="INTEGER">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Data Length of the Wake-up Frame (WUF).<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="Data length"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:6ad0b7b8-7e14-49f1-8dfb-acc6c5196788"/>
+                                            <a:da name="DEFAULT" value="1"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&gt;=0"/>
+                                                <a:tst expr="&lt;=8"/>
+                                            </a:da>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPnCanIdIsExtended_Object */ -->
+                                        <v:var name="CanTrcvPnCanIdIsExtended" type="BOOLEAN">
+                                            <a:a name="LABEL" value="Extended ID format used"/>
+                                            <a:a name="UUID" value="ECUC:2c56c09b-9013-4c3e-bcfa-d199b2131aeb"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:
+                                                    <html>
+                                                      Indicates whether extended or standard ID is used.<br>
+                                                      TRUE = Extended Can identifier is used.<br>
+                                                      FALSE = Standard Can identifier is used
+                                                    </html>
+                                                    ]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:da name="DEFAULT" value="false"/>
+                                            <a:da name="READONLY" value="false"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPnEnabled_Object */ -->
+                                        <v:var name="CanTrcvPnEnabled" type="BOOLEAN">
+                                            <a:a name="LABEL" value="Partial networking"/>
+                                            <a:a name="UUID" value="ECUC:b4cf5123-c45d-4a51-aab0-b85e65ca4fea"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:
+                                                    <html>
+                                                      Indicates whether the selective wake-up function is enabled or disabled in HW.
+                                                    </html>
+                                                    ]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:da name="DEFAULT" value="false"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvBusErrFlag_Object */ -->
+                                        <v:var name="CanTrcvBusErrFlag" type="BOOLEAN">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Indicates if the Bus Error (BUSERR) flag is managed by the BSW. This flag is set if a bus failure is detected by the transceiver.<br>
+                                                        TRUE = Supported by transceiver and managed by BSW.<br> FALSE = Not managed by BSW.<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="Bus error flag"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:9f9dc196-5b1f-4677-a96b-35a5c05c736c"/>
+                                            <a:da name="DEFAULT" value="true"/>
+                                            <a:da name="EDITABLE" value="true"/>
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPowerOnFlag_Object */ -->
+                                        <v:var name="CanTrcvPowerOnFlag" type="BOOLEAN">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Description: Indicates if the Power On Reset (POR) flag is available and is managed by the transceiver.<br>
+                                                        TRUE = Supported by Hardware.<br>
+                                                        FALSE = Not supported by Hardware<br>
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="POR flag support"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:78bb66b6-c94c-438e-8d8a-eaa1ea630a8f"/>
+                                            <a:da name="DEFAULT" value="true"/>
+                                            <a:da name="EDITABLE" value="false"/>
+                                        </v:var>
+
+                                        <!-- /** @implements CanTrcvPnFrameDataMaskSpec_Object */ -->
+                                        <v:lst name="CanTrcvPnFrameDataMaskSpec" type="MAP">
+                                            <a:da name="MIN" value="0"/>
+                                            <a:da name="MAX" value="8"/>
+                                            <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                            <v:ctr name="CanTrcvPnFrameDataMaskSpec" type="IDENTIFIABLE">
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html>
+                                                            Defines data payload mask to be used on the received payload in order to determine if the transceiver must be woken up by the received wake-up frame (WUF).<br>
+                                                        </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="LABEL" value="CanTrcv PN frame data mask"/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v mclass="PreCompile">VariantLinkTime</icc:v>
+                                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:1bbd8e9b-5d84-41df-b088-5f9e85f1ff7b"/>
+                                                <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                                <!-- /** @implements CanTrcvPnFrameDataMask_Object */ -->
+                                                <v:var name="CanTrcvPnFrameDataMask" type="INTEGER">
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html>
+                                                                Defines the byte 0 of the data payload mask to be used on the received payload in order to determine if the transceiver must be woken up by the received Wake-up frame (WUF).<br>.<br>
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="LABEL" value="PN WUF byte 0 data mask"/>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:ab20533a-4e20-4f14-99c3-527e1dbee519"/>
+                                                    <a:da name="DEFAULT" value="0"/>
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&gt;=0"/>
+                                                        <a:tst expr="&lt;=255"/>
+                                                    </a:da>
+                                                    <a:da name="EDITABLE" type="XPath" expr="ecu:get('CanTrcv.SelectiveWakeSupport')='STD_ON'" />
+                                                </v:var>
+
+                                                <!-- /** @implements CanTrcvPnFrameDataMaskIndex_Object */ -->
+                                                <v:var name="CanTrcvPnFrameDataMaskIndex" type="INTEGER">
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html>
+                                                                Holds the position n in frame of the mask-part.<br>
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="LABEL" value="Position n in frame of the mask-part"/>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="Link">VariantLinkTime</icc:v>
+                                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:c10f735e-ef56-42bd-8f7f-16d5181d7fee"/>
+                                                    <a:da name="DEFAULT" value="0"/>
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&gt;=0"/>
+                                                        <a:tst expr="&lt;=7"/>
+                                                    </a:da>
+                                                </v:var>
+                                            </v:ctr>
+                                        </v:lst>
+                                    </v:ctr>
+                                </v:ctr>
+                            </v:lst>
+
+                        </v:ctr>
+
+                        <!-- /** @implements CommonPublishedInformation_Object */ -->
+                        <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html>
+                                        Common container, aggregated by all modules.
+                                        It contains published information about vendor and versions.
+                                    </html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:d8051a3c-52f1-47f3-9103-8da3673e33df"/>
+                            <!-- /** @implements ArReleaseMajorVersion_Object */ -->
+                            <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Ar Release Major Version" />
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Major version number of AUTOSAR specification on which the appropriate implementation is based on. <p/>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:db992b08-eb13-42be-87aa-f8a4881e9389"/>
+                                <a:da name="DEFAULT" value="4"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=4"/>
+                                    <a:tst expr="&lt;=4"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements ArReleaseMinorVersion_Object */ -->
+                            <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Ar Release Minor Version" />
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Minor version number of AUTOSAR specification on which the appropriate implementation is based on. <p/>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:3e49c3de-bb97-430a-bd4e-64465f417a71"/>
+                                <a:da name="DEFAULT" value="7"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=7"/>
+                                    <a:tst expr="&lt;=7"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements ArReleaseRevisionVersion_Object */ -->
+                            <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Ar Release Revision Version" />
+                                <a:a name="DESC">
+                                     <a:v>
+                                        <![CDATA[EN:<html>
+                                            Revision version number of AUTOSAR specification on which the appropriate implementation is based on. <p/>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:0fd1cea2-6708-4d75-a306-80f8efa977c3"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements ModuleId_Object */ -->
+                            <v:var name="ModuleId" type="INTEGER_LABEL">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Module ID of this module from Module List.
+                                            Note: Implementation Specific Parameter
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:36b71624-6344-4252-b679-53528195f239"/>
+                                <a:da name="DEFAULT" value="70"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=70"/>
+                                    <a:tst expr="&lt;=70"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements SwMajorVersion_Object */ -->
+                            <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Major version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                                            Note: Implementation Specific Parameter
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:be935e3c-13e6-4d24-bcbd-865d5cc6ec69"/>
+                                <a:da name="DEFAULT" value="3"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=3"/>
+                                    <a:tst expr="&lt;=3"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements SwMinorVersion_Object */ -->
+                            <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                                            Note: Implementation Specific Parameter
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:861d2c19-be42-4533-b4f7-765846a58a68"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements SwPatchVersion_Object */ -->
+                            <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                                            Note: Implementation Specific Parameter
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:e8c83bb4-7547-4703-a968-f4125c71cd84"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+                            <!-- /** @implements VendorApiInfix_Object */ -->
+                            <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                <a:a name="LABEL" value="Vendor Api Infix"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                            This parameter is used to specify the vendor specific name. In total, the Implementation specific name is generated as follows:
+                                            &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                            E.g. assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of "v11r456" a api name
+                                            Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                            This parameter is mandatory for all modules with upper multiplicity &gt;
+                                            1. It shall not be used for modules with upper multiplicity =1.
+                                            Note: Implementation Specific Parameter
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:f0520aaa-f467-4cce-aae3-7eb19f74861c"/>
+                                <a:da name="DEFAULT" value="AE"/>
+                            </v:var>
+                            <!-- /** @implements VendorId_Object */ -->
+                            <v:var name="VendorId" type="INTEGER_LABEL">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.
+                                            Note: Implementation Specific Parameter
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantLinkTime</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:f07afb9f-1ec2-4267-9801-f1d924239bb2"/>
+                                <a:da name="DEFAULT" value="43"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=43"/>
+                                    <a:tst expr="&lt;=43"/>
+                                </a:da>
+                            </v:var>
+                        </v:ctr>
+                        <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/CanTrcv"/>
+                    </v:ctr>
+                </d:chc>
+                <d:chc name="CanTrcv_43_AE_EcuParameterDefinition" type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="UUID" value="ECUC:bdef251c-9d5c-4848-af10-7b16bde8d8de"/>
+                        <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                        <d:lst name="MODULE_REF">
+                            <d:ref type="MODULE_REF" value="ASPath:/CanTrcv_43_AE_TS_T40D34M30I0R0/CanTrcv"/>
+                        </d:lst>
+                    </d:ctr>
+                </d:chc>
+                <d:chc name="CanTrcv_43_AE_ModuleDescription" type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                        <d:var name="MODULE_ID" type="INTEGER" >
+                            <a:a name="ENABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:ref type="RECOMMENDED_CONFIGURATION" >
+                            <a:a name="ENABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="PRE_CONFIGURED_CONF" >
+                            <a:a name="ENABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" value="ASPath:/CanTrcv_43_AE_TS_T40D34M30I0R0/CanTrcv"/>
+                    </d:ctr>
+                </d:chc>
+            </d:lst>
+        </d:ctr>
+    </d:lst>
+</d:ctr>
+
+</datamodel>

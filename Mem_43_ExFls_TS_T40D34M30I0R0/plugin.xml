@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+
+<!--
+*   @file    plugin.xml
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Mem_43_ExFls_TS_T40D34M30I0R0 - Tresos Studio plugin configuration file.
+*   @details This file contains the configuration for and Mem_43_ExFls Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : IPV_QSPI
+*   Dependencies         : None
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+*
+*   Copyright 2020 - 2023 NXP Semiconductors
+*   NXP Confidential. This software is owned or controlled by NXP and may only be  used strictly in accordance with the applicable license terms.  By expressly  accepting such terms or by downloading, installing, activating and/or otherwise  using the software, you are agreeing that you have read, and that you agree to  comply with and are bound by, such license terms.  If you do not agree to be  bound by the applicable license terms, then you may not retain, install, activate or otherwise use the software.
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->
+
+<plugin>
+  <extension point="dreisoft.tresos.launcher2.plugin.module"
+             id="Mem_43_ExFls_TS_T40D34M30I0R0_ModuleId"
+             name="Mem_43_ExFls_TS_T40D34M30I0R0 Module">
+
+    <module id="Mem_43_ExFls_TS_T40D34M30I0R0"
+            label="Mem_43_ExFls"
+            mandatory="false"
+            allowMultiple="false"
+            description="Mem_43_ExFls BSW module"
+            copyright="Copyright 2020 - 2023 NXP Semiconductors"
+            swVersionMajor="3"
+            swVersionMinor="0"
+            swVersionPatch="0"
+            swVersionSuffix="D2303"
+            specVersionMajor="4"
+            specVersionMinor="7"
+            specVersionPatch="0"
+            specVersionSuffix="Rev_0000"
+            relVersionPrefix="AUTOSAR"
+            relVersionMajor="4"
+            relVersionMinor="7"
+            relVersionPatch="0"
+            relVersionSuffix="0000"
+            categoryType="Mem_43_ExFls"
+            categoryLayer="MCAL"
+            categoryCategory="ECU Firmware"
+            categoryComponent="ECUC">
+      <ecuType target="CORTEXM" derivate="S32K3XX"/>
+
+    </module>
+    </extension>
+   
+  <extension point="dreisoft.tresos.launcher2.plugin.configuration"
+             id="Mem_43_ExFls_TS_T40D34M30I0R0_ConfigId"
+             name="Mem_43_ExFls_TS_T40D34M30I0R0 Configuration">
+    <configuration moduleId="Mem_43_ExFls_TS_T40D34M30I0R0">
+      <schema>
+        <manager class="dreisoft.tresos.autosar2.resourcehandling.AutosarSchemaManager"/>
+          <!-- register the main xdm configuration schema for Mem_43_ExFls -->
+          <resource value="config/Mem_43_ExFls.xdm" type="xdm"/>
+
+      </schema>
+
+      <data>
+        <manager class="dreisoft.tresos.autosar2.resourcehandling.AutosarConfigManager"/>
+        <schemaNode path="ASPath:/Mem_43_ExFls_TS_T40D34M30I0R0/Mem"/>
+      </data>
+
+      <editor id="Mem_43_ExFls_TS_T40D34M30I0R0_EditorId"
+              label="Default"
+              tooltip="Mem_43_ExFls BSW module">
+        <class class="dreisoft.tresos.launcher2.editor.GenericConfigEditor">
+          <parameter name="schema" value="ASPath:/Mem_43_ExFls_TS_T40D34M30I0R0/Mem"/>
+          <parameter name="title" value="Mem_43_ExFls"/>
+          <parameter name="noTabs" value="false"/>
+          <parameter name="noLinks" value="true"/>
+          <parameter name="groupLinks" value="false"/>
+          <parameter name="groupContainers" value="false"/>
+          <parameter name="groupTables" value="true"/>
+          <parameter name="optionalGeneralTab" value="true"/>
+        </class>
+      </editor>
+    </configuration>
+  </extension>
+
+ <extension point="dreisoft.tresos.launcher2.plugin.generator"
+             id="EPCGenerator"
+             name="EPC Generator">
+  <generator moduleId="Mem_43_ExFls_TS_T40D34M30I0R0"
+               id="Mem_43_ExFls_TS_T40D34M30I0R0"
+               class="dreisoft.tresos.autosar2.generator.EPCFileGenerator">
+   
+  <parameter name="allVariants" value="false"/>
+  <parameter name="cfgFilePath" value="output"/>
+  <parameter name="generateAllModules" value="false"/>
+  <parameter name="generateIntoOneFile" value="false"/>
+  <parameter name="contentType" value="asc:4.7.0"/>
+  </generator>
+ </extension>
+  
+ <extension point="dreisoft.tresos.generator.api.plugin.generator" id="Mem_43_ExFls_TS_T40D34M30I0R0_NGGeneratorId">
+          <generator moduleId="Mem_43_ExFls_TS_T40D34M30I0R0"
+                     class="dreisoft.tresos.generator.ng.api.NGGenerator"
+                     id="Mem_43_ExFls_TS_T40D34M30I0R0_UniqueNGGeneratorId"
+                     modes="generate,generate_PC,generate_PB,verify"
+                     step="post"> <!-- run after code-generation -->
+              <parameter name="buildfile" value="ant_generator.xml"/>
+           <parameter name="variantAware" value="true"/>
+          </generator>
+  </extension>
+      <extension point="dreisoft.tresos.launcher2.plugin.generator"
+              id="Mem_43_ExFls_TS_T40D34M30I0R0_GeneratorId"
+              name="Mem_43_ExFls_TS_T40D34M30I0R0 Generator">
+    <generator moduleId="Mem_43_ExFls_TS_T40D34M30I0R0"
+               class="dreisoft.tresos.launcher2.generator.TemplateBasedCodeGenerator">
+  
+    <parameter name="variantAware" value="true"/>
+    <!-- swcd modes and template path parameters -->
+    <parameter name="mode_type" mode="generate_swcd" value="generate"></parameter>
+    <parameter name="mode_type" mode="verify_swcd" value="verify"></parameter>
+    <parameter name="templates" mode="generate_swcd,verify_swcd" value="generate_swcd"></parameter>   
+
+      <!-- common template path parameters -->
+      <parameter name="templates" mode="generate,verify" value="generate,generate_PC"/>
+      <!-- custom generators -->
+      <parameter name="templates" mode="generate_PC" value="generate_PC"/>
+      <!-- custom template paths -->
+      <parameter name="mode_type" mode="generate_PC" value="generate"/>
+    </generator>
+  </extension>
+ 
+  <extension point="org.eclipse.help.toc">
+    <toc file="anchors.xml" primary="true"/>
+    <toc file="$nl$/Mem_43_ExFls/toc.xml" primary="false"/>
+    <!-- toc file="$nl$/ReleaseNotes/toc.xml" primary="false"/ !-->
+  </extension>
+</plugin>

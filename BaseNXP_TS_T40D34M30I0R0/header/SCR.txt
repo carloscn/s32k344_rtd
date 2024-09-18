@@ -1,0 +1,11 @@
+NXP Software Content Register
+=============================
+Release Name:     S32K312 Header File For S32K3xx RM Rev 4
+Outgoing License: LA_OPT_NXP_SOFTWARE_LICENSE 
+               
+S32K312 Header File For S32K3xx RM Rev 4 
+---------
+Description: S32K312 Header File For S32K3xx RM Rev 4
+Author: NXP
+License: LA_OPT_NXP_SOFTWARE_LICENSE
+Format: source code

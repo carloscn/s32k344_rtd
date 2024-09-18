@@ -1,0 +1,921 @@
+<?xml version='1.0'?>
+<datamodel version="3.0"
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+    <!--
+*   @file    Ocotp.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Ocotp - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Ocotp Tresos Studio plugin.
+-->
+    <!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : MEM_OTP_IP
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   (c) Copyright 2020 - 2023 NXP Semiconductors
+*   All Rights Reserved.
+====================================================================================================
+-->
+
+
+    <d:ctr type="AUTOSAR" factory="autosar"
+    xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+    xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+    xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+        <d:lst type="TOP-LEVEL-PACKAGES">
+            <d:ctr name="TS_T40D34M30I0R0" type="AR-PACKAGE">
+                <a:a name="UUID" value="ECUC:50f2d2f3-5504-4c52-a1e4-9d1b9a95d1d9"/>
+                <d:lst type="ELEMENTS">
+                    <!-- Ocotp_Object -->
+                    <d:chc name="Ocotp" type="AR-ELEMENT" value="MODULE-DEF">
+                        <v:ctr type="MODULE-DEF">
+                            <a:a name="RELEASE" value="asc:4.7"/>
+                            <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                                <ad:ADMIN-DATA>
+                                    <ad:DOC-REVISIONS>
+                                        <ad:DOC-REVISION>
+                                            <ad:REVISION-LABEL>4.6.0</ad:REVISION-LABEL>
+                                            <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                            <ad:DATE>2014-10-31</ad:DATE>
+                                        </ad:DOC-REVISION>
+                                    </ad:DOC-REVISIONS>
+                                </ad:ADMIN-DATA>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTSUPPORT" value="true"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html><p>
+                                    Configuration of the Ocotp module.
+                                </p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="LOWER-MULTIPLICITY" value="1"/>
+                            <a:a name="UPPER-MULTIPLICITY" value="*"/>
+                            <a:a name="UUID" value="ECUC:6aaf9191-6e86-4577-b6ca-987d515ab0b0"/>
+                            <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                                <a:a name="DESC"
+                                value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Post Build Variant Used"/>
+                                <a:a name="ORIGIN" value="EB"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:da name="READONLY" value="FALSE"/>
+                                <a:da name="TOOLTIP"
+                                value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                            </v:var>
+                            <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                                <a:a name="LABEL" value="Config Variant"/>
+                                <a:a name="UUID" value="ECUC:bab17be1-957e-4afe-88b7-a4802d1a7bd3"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                        <p>VariantPostBuild: Mix of precompile and postbuild time configuration parameters.<br>
+                                        If Config Variant = VariantPostBuild, the files Ocotp_Cfg.h and Ocotp_PBcfg.c should be used.<br>
+                                        If Config Variant = VariantPreCompile, the files Ocotp_Cfg.h and Ocotp_Cfg.c should be used.
+                                        </p>
+                                    </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:da name="DEFAULT" value="VariantPostBuild"/>
+                                <a:da name="RANGE">
+                                    <a:v>VariantPostBuild</a:v>
+                                    <a:v>VariantPreCompile</a:v>
+                                </a:da>
+                            </v:var>
+
+                            <!-- OcotpGeneral_Object -->
+                            <v:ctr name="OcotpGeneral" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="Ocotp General"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                    <![CDATA[EN:<html><p>
+                                          Container for general parameters of the ocotp driver. These parameters are always pre-compile.
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:24d0f592-56d1-484b-ad5b-83db3334a424"/>
+
+                                <!-- OcotpDevErrorDetect_Object -->
+                                <v:var name="OcotpDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Ocotp Development Error Detect"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Pre-processor switch to enable and disable development error detection.<br>
+                                                true: Development error detection enabled.<br>
+                                                false:  Development error detection disabled.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:c618c912-5bde-4ef3-bb6e-aabb2f70a463"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <!-- @implements OcotpIpDevErrorDetect_Object -->
+                                <v:var name="OcotpIpDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Ocotp Ip Development Error Detect"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Pre-processor switch to enable and disable development error detection for IP layer.<br>
+                                                true: Ocotp error detect for IP layer is enabled.<br>
+                                                false: Ocotp error detect for IP layer is disabled.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:0b28a823-646d-4553-8afd-473634eef185"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <!-- @implements OcotpEnableUserModeSupport_Object  -->
+                                <v:var name="OcotpEnableUserModeSupport" type="BOOLEAN">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                Ocotp module can run in user mode without any specific measures. The parameter is not used in the Ocotp implementation.
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="LABEL" value="Ocotp Enable User Mode Support"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:be2fabef-96f0-42c1-b4e4-4ffed12df749"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                    <a:da name="READONLY" value="true"/>
+                                </v:var>
+
+
+                                <!-- @implements OcotpReadEFuseApi_Object -->
+                                <v:var name="OcotpReadEFuseApi" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Ocotp Read eFuse Api"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Ocotp_ReadEFuse function.<br>
+                                            true: API supported / function provided.<br>
+                                            false: API not supported / function not provided
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:b992f724-fe6c-4d8b-809f-0da344ade338"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <!-- @implements OcotpReadMirrorRegisterApi_Object -->
+                                <v:var name="OcotpReadMirrorRegisterApi" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Ocotp Read Mirror Api"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the OcotpReadMirrorRegisterApi function.<br>
+                                            true: API supported / function provided.<br>
+                                            false: API not supported / function not provided
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:8e26939d-9c29-4204-b645-238fdb5a8722"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <!-- @implements OcotpWriteMirrorRegisterApi_Object -->
+                                <v:var name="OcotpWriteMirrorRegisterApi" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Ocotp Write Mirror Api"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Ocotp_OcotpWriteMirrorRegister function.<br>
+                                            true: API supported / function provided.<br>
+                                            false: API not supported / function not provided
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:6b136390-a260-440c-9b6d-916be02bb1c5"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                        <!-- @implements OcotpReadMirrorWithCommand_Object -->
+                                <v:var name="OcotpReadMirrorWithCommand" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Read Mirror With Command Enable"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Enable Read Mirror With Command.<br>
+                                            true: Read Mirror With Command.<br>
+                                            false: Read Mirror directly.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:5b4efbf8-9225-43ac-a59b-63cca05d164d"/>
+                                    <a:da name="EDITABLE" type="XPath" expr="node:value(../OcotpReadMirrorRegisterApi)='true'"/>
+                                    <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="node:value(../OcotpReadMirrorRegisterApi)='false' and node:value(.)='true'"
+                                            true="OcotpReadMirrorRegisterApi must be enabled."/>
+                                    </a:da>
+                                    <a:da name="DEFAULT" value="false"/>
+                                </v:var>
+
+                                        <!-- @implements OcotpWriteMirrorWithCommand_Object -->
+                                <v:var name="OcotpWriteMirrorWithCommand" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Write Mirror With Command Enable"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Enable Write Mirror With Command.<br>
+                                            true: Write Mirror With Command.<br>
+                                            false: Write Mirror directly.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:f7da262c-3f0c-4e16-9b75-f074a1089f45"/>
+                                    <a:da name="EDITABLE" type="XPath" expr="node:value(../OcotpWriteMirrorRegisterApi)='true'"/>
+                                    <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="node:value(../OcotpWriteMirrorRegisterApi)='false' and node:value(.)='true'"
+                                            true="OcotpWriteMirrorRegisterApi must be enabled."/>
+                                    </a:da>
+                                    <a:da name="DEFAULT" value="false"/>
+                                </v:var>
+
+                                <!-- @implements OcotpGetStatusApi_Object -->
+                                <v:var name="OcotpGetStatusApi" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Ocotp Get Status Api"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Ocotp_GetStatus function.<br>
+                                            true: API supported / function provided.<br>
+                                            false: API not supported / function not provided
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:22dc738c-5662-43f6-8ae7-7355056e5243"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+
+                                <!-- OcotpTimeoutMethod_Object -->
+                                <v:var name="OcotpTimeoutMethod" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Ocotp Timeout Method"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    <p>OcotpTimeoutMethod</p>
+                                                    <p>Configures the timeout method.</p>
+                                                    <p>Based on this selection a certain timeout method from OsIf will be used in the driver.</p>
+                                                    <p>Note: If OSIF_COUNTER_SYSTEM or OSIF_COUNTER_CUSTOM are selected make sure the corresponding timer is enabled in OsIf General configuration. </p>
+                                                    Note: Implementation Specific Parameter. <p/>
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:8ce7c4f9-799e-43b0-8f0e-c17be0c0485e"/>
+                                    <a:a name="DEFAULT" value="OSIF_COUNTER_DUMMY"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseCustomTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_CUSTOM'" true="Custom Timer is not enabled in OsIf (OsIfGeneral/OsIfUseCustomTimer checkbox)"/>
+                                        <a:tst expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseSystemTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_SYSTEM'" true="System Timer is not enabled in OsIf (OsIfGeneral/OsIfUseSystemTimer checkbox)"/>
+                                    </a:da>
+                                    <a:da name="RANGE">
+                                        <a:v>OSIF_COUNTER_DUMMY</a:v>
+                                        <a:v>OSIF_COUNTER_SYSTEM</a:v>
+                                        <a:v>OSIF_COUNTER_CUSTOM</a:v>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- OcotpWriteTimeout -->
+                                <v:var name="OcotpWriteTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Ocotp Write Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Timeout value for write eFuse operation.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:539ef40b-e737-4d2d-ba7e-557735dcca87"/>
+                                    <a:da name="DEFAULT" value="1"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- OcotpReadTimeout -->
+                                <v:var name="OcotpReadTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Ocotp Read Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Timeout value for read eFuse operation.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:e24aad5d-896d-40c6-ad4e-d607ab144b6b"/>
+                                    <a:da name="DEFAULT" value="1"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                            </v:ctr>
+
+                            <v:ctr name="OcotpConfigList" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                      Container for runtime configuration parameters of the Ocotp driver.<br>
+                                      Implementation Type: Ocotp_ConfigType.
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:ce69ec23-0d5d-4444-8d9d-122916af5233"/>
+                                <!-- OcotpConfig_Object -->
+                                <v:lst name="OcotpHwUnit" type="MAP">
+                                        <v:ctr name="OcotpHwUnit" type="IDENTIFIABLE">
+                                        <a:a name="LABEL" value="OcotpHwUnit"/>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                Ocotp Hardware Unit.
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:bdfefe03-2fba-4652-bdfe-0d53627668fb"/>
+                                                <!-- OcotpHardwareIndex -->
+                                        <v:var name="OcotpHardwareIndex" type="INTEGER">
+                                            <a:a name="LABEL" value="Ocotp Hardware Index" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                      <![CDATA[EN:<html><p>
+                                                        Index of current hardware unit.
+                                                      </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                                            <a:a name="UUID" value="ECUC:41f2c709-2eee-4204-9d58-6df0a36d7733"/>
+                                            <a:da name="DEFAULT" type="XPath">
+                                                <a:tst expr="num:i(node:fallback(../@index, 0))"/>
+                                            </a:da>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="text:uniq(text:split(node:fallback(../../*/OcotpHardwareIndex, 1)), node:fallback(., 1))" false="This hardware index is already in use."/>
+                                                <a:tst expr="count(../../*)&lt;=node:value(.)" true="Wrong hardware index number. Push calculate button to update value."/>
+                                            </a:da>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+                                                <!-- OcotpInstance -->
+                                        <v:var name="OcotpInstance" type="INTEGER">
+                                            <a:a name="LABEL" value="Instance" />
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                    Instance of this word channel
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:7bd41eb9-bfd7-44d2-9833-4ecd38336d77"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="text:uniq(../../*/OcotpInstance,.)"
+                                                       false="Duplicate Hardware Unit."
+                                                />
+                                            </a:da>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=0"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                            <a:da name="READONLY" value="true"/>
+                                        </v:var>
+
+                                    </v:ctr>
+                                </v:lst>
+                            </v:ctr>
+                            <v:ctr name="OcotpChannelList" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="Ocotp Channel List"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            List of Otp channel.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:e1a3a547-af32-47ef-9d76-58051563353d"/>
+                                <!-- OcotpChannel_Object -->
+                                <v:lst name="OcotpChannel" type="MAP">
+                                    <a:da name="MIN" value="1"/>
+                                    <v:ctr name="OcotpChannel" type="IDENTIFIABLE">
+                                        <a:a name="LABEL" value="Ocotp Channel"/>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                Ocotp Channel Configuration.
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:dd42546b-3901-4182-a21a-d2384d5c990a"/>
+                                                <!-- OcotpChannelNumber -->
+                                        <v:var name="OcotpChannelNumber" type="INTEGER">
+                                            <a:a name="LABEL" value="Ocotp Channel Number" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                      <![CDATA[EN:<html><p>
+                                                        Index of current channel.
+                                                      </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                                            <a:a name="UUID" value="ECUC:f0933669-0307-4782-9b0d-5e95cc501be1"/>
+                                            <a:da name="DEFAULT" type="XPath">
+                                                <a:tst expr="num:i(node:fallback(../@index, 0))"/>
+                                            </a:da>
+                                            <a:da name="RANGE" type="XPath">
+                                                <a:tst expr="text:uniq(text:split(node:fallback(../../*/OcotpChannelNumber, 1)), node:fallback(., 1))" false="This channel number is already in use."/>
+                                                <a:tst expr="count(../../*)&lt;=node:value(.)" true="Wrong channel number. Push calculate button to update value."/>
+                                            </a:da>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+                                                <!-- OcotpHwRef -->
+                                        <v:ref name="OcotpHwRef" type="REFERENCE">
+                                            <a:a name="LABEL" value="Ocotp HW Reference"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:<html>
+                                                Select Ocotp Hardware Reference
+                                                </html>]]></a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="ECU"/>
+                                            <a:a name="UUID" value="ECUC:ffd04533-5ef7-4438-862c-74a551aee387"/>
+                                            <a:da name="REF" value="ASPathDataOfSchema:/TS_T40D34M30I0R0/Ocotp/OcotpConfigList/OcotpHwUnit"/>
+                                            <a:a name="INVALID" type="XPath">
+                                                <a:tst expr="node:refvalid(.)"
+                                                    false="Invalid or empty reference."/>
+                                                </a:a>
+                                        </v:ref>
+                                                <!-- OcotpWord -->
+                                        <v:var name="OcotpWord" type="ENUMERATION">
+                                            <a:a name="LABEL" value="eFuse Word" />
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                        Ocotp Fuse Word.
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:5793b38b-c209-4bec-b671-be87f1dfa34d"/>
+                                            <a:da name="DEFAULT" type="XPath" expr="text:split(text:replaceAll(concat(' ',text:join(ecu:list('Ocotp.FuseMap'))),' [0-9a-fA-F]+_',' '))[position()-1 = node:fallback(node:current()/../@index, '0')]"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="not(text:uniq(../../*/OcotpWord,.))" true="This eFuse is already in use."/>
+                                            </a:da>
+                                            <a:da name="RANGE" type="XPath" expr="text:split(text:replaceAll(concat(' ',text:join(ecu:list(&apos;Ocotp.FuseMap&apos;))),' [0-9a-fA-F]+_',' '))"/>
+                                        </v:var>
+                                    </v:ctr>
+                                </v:lst>
+                            </v:ctr>
+
+                            <!-- @implements CommonPublishedInformation_Object -->
+                            <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="Common Published Information"/>
+                                <!-- @remarks Covers BSW00374, BSW00318 -->
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                        <html>
+                                        <p>Common container, aggregated by all modules. It contains published information about vendor and versions.</p>
+                                        </html>
+                                    ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:339efe8a-03b2-4966-a71b-f6ddd2b071d6"/>
+
+                                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Major Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Major version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:edc352aa-00a5-442c-ae86-a79fbfb9a51a"/>
+                                    <a:da name="DEFAULT" value="4"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=4"/>
+                                        <a:tst expr="&lt;=4"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Minor Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Minor version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:cef33d8f-ff9b-40e7-94b9-929663d0da3b"/>
+                                    <a:da name="DEFAULT" value="7"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=7"/>
+                                        <a:tst expr="&lt;=7"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Patch Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Patch version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:93efb8f0-3ef9-41d6-ad04-f9d1cb6da0d5"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="ModuleId" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Numeric Module ID"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Module ID of this module.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:d3be6995-c4cf-4b99-993d-a8ac6556d6ff"/>
+                                    <a:da name="DEFAULT" value="255"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=255"/>
+                                        <a:tst expr="&lt;=255"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Major Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:f4ce172b-b350-4b43-a6a1-bd27930813e6"/>
+                                    <a:da name="DEFAULT" value="3"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=3"/>
+                                        <a:tst expr="&lt;=3"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Minor Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:1310e215-653c-4e51-9579-45b4585789cb"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Patch Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:12a3a6ca-c689-4ab0-be0b-a43d24b4f104"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                    <a:a name="LABEL" value="Vendor Api Infix"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                            This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                            &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                            E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                            This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                                            </p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:431d24fb-b943-4a77-90e6-6db0146db38b"/>
+                                    <a:da name="DEFAULT" value=""/>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:da name="READONLY" value="true"/>
+                                </v:var>
+
+                                <v:var name="VendorId" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Vendor ID"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:b16fce99-5b9e-40eb-b16a-46b295a84019"/>
+                                    <a:da name="DEFAULT" value="43"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=43"/>
+                                        <a:tst expr="&lt;=43"/>
+                                    </a:da>
+                                </v:var>
+
+                            </v:ctr>
+
+                        </v:ctr>
+                    </d:chc>
+
+                    <d:chc name="Ocotp_EcuParameterDefinition"
+                       type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF"
+                             value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                            <a:a name="UUID" value="ECUC:b86966a3-d071-4b79-b288-7e7763551f30"/>
+                            <d:lst name="MODULE_REF">
+                                <d:ref type="MODULE_REF" value="ASPath:/TS_T40D34M30I0R0/Ocotp"/>
+                            </d:lst>
+                        </d:ctr>
+                    </d:chc>
+
+                    <d:chc name="Ocotp_ModuleDescription"
+                       type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF"
+                             value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                            <d:var name="MODULE_ID" type="INTEGER" >
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:ref type="RECOMMENDED_CONFIGURATION" >
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:ref>
+                            <d:ref type="PRE_CONFIGURED_CONF" >
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:ref>
+                            <d:ref type="VENDOR_SPECIFIC_MODULE_DEF"
+                               value="ASPath:/TS_T40D34M30I0R0/Ocotp"/>
+                        </d:ctr>
+                    </d:chc>
+                </d:lst>
+            </d:ctr>
+        </d:lst>
+    </d:ctr>
+
+</datamodel>

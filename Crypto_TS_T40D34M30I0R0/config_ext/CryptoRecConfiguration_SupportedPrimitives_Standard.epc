@@ -1,0 +1,2476 @@
+<?xml version='1.0'?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00046.xsd">
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>Crypto</SHORT-NAME>
+      <ELEMENTS>
+        <ECUC-MODULE-CONFIGURATION-VALUES>
+          <SHORT-NAME>Crypto</SHORT-NAME>
+          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/TS_T40D34M30I0R0/Crypto</DEFINITION-REF>
+          <CONTAINERS>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>CryptoDriverObjects</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoDriverObjects</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>CryptoDriverObject_Symmetric</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoDriverObjects/CryptoDriverObject</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoDriverObjects/CryptoDriverObject/CryptoDriverObjectId</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoDriverObjects/CryptoDriverObject/CryptoPrimitiveType</DEFINITION-REF>
+                      <VALUE>CRYPTO_SYMMETRIC_ALGORITHMS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-NUMERICAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoDriverObjects/CryptoDriverObject/CryptoQueueSize</DEFINITION-REF>
+                      <VALUE>0</VALUE>
+                    </ECUC-NUMERICAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                  <REFERENCE-VALUES>
+                    <ECUC-REFERENCE-VALUE>
+                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/TS_T40D34M30I0R0/Crypto/CryptoDriverObjects/CryptoDriverObject/CryptoPrimitiveRef</DEFINITION-REF>
+                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Crypto/Crypto/RANDOM/ALGOFAM1_RNG__ALGOMODE_CTRDRBG__ALGOFAM2_NOT_SET</VALUE-REF>
+                    </ECUC-REFERENCE-VALUE>
+                  </REFERENCE-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>CryptoGeneral</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoGeneral</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoGeneral/HseFwType</DEFINITION-REF>
+                  <VALUE>STANDARD</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>AEAD_DECRYPT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_GCM__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_GCM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>AEAD_DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>AEAD_ENCRYPT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_GCM__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_GCM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>AEAD_ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>DECRYPT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CBC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CBC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CFB__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CFB</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CTR__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CTR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_ECB__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_ECB</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_OFB__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_OFB</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_PKCS1_v1_5__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>DECRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>ENCRYPT</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CBC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CBC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CFB__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CFB</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CTR__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CTR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_ECB__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_ECB</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_OFB__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_OFB</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_OAEP__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_OAEP</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSAES_PKCS1_v1_5__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSAES_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>ENCRYPT</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>HASH</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA1__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_224__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_256__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_384__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512_224__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512_256__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>HASH</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>MAC_GENERATE</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CBC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CBC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CUSTOM_FAST_CMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CUSTOM_FAST_CMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_GMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_GMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA1__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_224__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_256__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_384__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512_224__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512_256__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>MAC_VERIFY</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CBC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CBC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_CUSTOM_FAST_CMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CUSTOM_FAST_CMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_AES__ALGOMODE_GMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_AES</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_GMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA1__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_224__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_256__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_384__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512_224__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512_256__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_SHA2_512__ALGOMODE_HMAC__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_HMAC</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>MAC_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>RANDOM</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RNG__ALGOMODE_CTRDRBG__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RNG</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CTRDRBG</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>RANDOM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RNG__ALGOMODE_CUSTOM_DRBG_PR__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RNG</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CUSTOM_DRBG_PR</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>RANDOM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RNG__ALGOMODE_CUSTOM_DRBG_RS__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RNG</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_CUSTOM_DRBG_RS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>RANDOM</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SIGNATURE_GENERATE</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ED25519__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ED25519</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_GENERATE</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>SIGNATURE_VERIFY</SHORT-NAME>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives</DEFINITION-REF>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ECCNIST__ALGOMODE_NOT_SET__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ECCNIST</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_ED25519__ALGOMODE_NOT_SET__ALGOFAM2_NOT_SET</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_ED25519</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_NOT_SET</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PKCS1_v1_5__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PKCS1_v1_5</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA1</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA1</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_384</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_384</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_512</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_512_224</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_224</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>ALGOFAM1_RSA__ALGOMODE_RSASSA_PSS__ALGOFAM2_SHA2_512_256</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_RSA</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmMode</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOMODE_RSASSA_PSS</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveAlgorithmSecondaryFamily</DEFINITION-REF>
+                      <VALUE>CRYPTO_ALGOFAM_SHA2_512_256</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/CryptoPrimitives/CryptoPrimitive/CryptoPrimitiveService</DEFINITION-REF>
+                      <VALUE>SIGNATURE_VERIFY</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>NvmKeyGroup_AES</SHORT-NAME>
+              <INDEX>0</INDEX>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog/KeyOwner</DEFINITION-REF>
+                  <VALUE>OWNER_CUST</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog/KeyType</DEFINITION-REF>
+                  <VALUE>AES</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog/MaxKeyBitLen</DEFINITION-REF>
+                  <VALUE>128</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog/NumOfKeySlots</DEFINITION-REF>
+                  <VALUE>10</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MuMask_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog/MuMask</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/NvmKeyCatalog/MuMask/MU</DEFINITION-REF>
+                      <VALUE>MU_0</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+            <ECUC-CONTAINER-VALUE>
+              <SHORT-NAME>RamKeyGroup_AES</SHORT-NAME>
+              <INDEX>0</INDEX>
+              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog</DEFINITION-REF>
+              <PARAMETER-VALUES>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog/KeyOwner</DEFINITION-REF>
+                  <VALUE>OWNER_ANY</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-TEXTUAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog/KeyType</DEFINITION-REF>
+                  <VALUE>AES</VALUE>
+                </ECUC-TEXTUAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog/MaxKeyBitLen</DEFINITION-REF>
+                  <VALUE>128</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+                <ECUC-NUMERICAL-PARAM-VALUE>
+                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog/NumOfKeySlots</DEFINITION-REF>
+                  <VALUE>10</VALUE>
+                </ECUC-NUMERICAL-PARAM-VALUE>
+              </PARAMETER-VALUES>
+              <SUB-CONTAINERS>
+                <ECUC-CONTAINER-VALUE>
+                  <SHORT-NAME>MuMask_0</SHORT-NAME>
+                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog/MuMask</DEFINITION-REF>
+                  <PARAMETER-VALUES>
+                    <ECUC-TEXTUAL-PARAM-VALUE>
+                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/TS_T40D34M30I0R0/Crypto/RamKeyCatalog/MuMask/MU</DEFINITION-REF>
+                      <VALUE>MU_0</VALUE>
+                    </ECUC-TEXTUAL-PARAM-VALUE>
+                  </PARAMETER-VALUES>
+                </ECUC-CONTAINER-VALUE>
+              </SUB-CONTAINERS>
+            </ECUC-CONTAINER-VALUE>
+          </CONTAINERS>
+        </ECUC-MODULE-CONFIGURATION-VALUES>
+      </ELEMENTS>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

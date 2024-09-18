@@ -1,0 +1,71 @@
+
+Name: config/Gdu.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 44189296972415873042795338823977165507177377750457474125991
+ 2371654452689989830517570759448700564312995265371
+
+Name: generate_swcd/swcd/Gdu_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423827077886991279525735852041554988483022539249369
+ 1659798924128405715424026305762443765123204139065337
+
+Name: generate_PC/include/CDD_Gdu_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426409734583943361973807399047545075086710726815601
+ 2431777999884196732338285569187915708574927232490329
+
+Name: generate_PB/include/Gdu_Ip_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773972397374944831043609312738426027053343692718133
+ 021271069772066916870548613503275893230582191440378609
+
+Name: generate_PC/include/Gdu_Ip_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423576277615733365537471154271168114495479665712517
+ 2136820836118699546524525331089905041279964154215776
+
+Name: generate_PB/src/CDD_Gdu_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424036153697455715580274085026700698278642102207965
+ 9517324695865907431431202556437525869135668868080708
+
+Name: generate_PC/include/CDD_Gdu_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426580974053576320652808131636801806269823816442055
+ 4850551678290963232748800072068166280222402735936787
+
+Name: generate_PB/include/CDD_Gdu_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594755125123264819052943135013505852922431325698528222
+ 124483733653592999770851069834096284225894476102404451
+
+Name: generate_PC/include/Gdu_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422663951811915728078526068109141158111389118418630
+ 5507043020697148240158413347348456006053187845923600
+
+Name: generate_PB/src/Gdu_Ip_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424951269079212587074567872301507501685507955488030
+ 1980758770256635900410208248994013742571247322567469
+

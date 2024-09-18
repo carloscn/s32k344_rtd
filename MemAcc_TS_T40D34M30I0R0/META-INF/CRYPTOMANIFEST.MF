@@ -1,0 +1,64 @@
+
+Name: generate_PB/src/MemAcc_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423630235644256382907876818967380183096781733804699
+ 9005398018310298140249303544008403851954831128963834
+
+Name: generate_swcd/swcd/MemAcc_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422562537021630942894669615897782730880141331183059
+ 2411841012589163479745485995967424817107741823434360
+
+Name: config/MemAcc.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594740986737485620840322873711181077701606095425713728
+ 601774425680854309259019344761099307476507601291893204
+
+Name: generate_PC/include/MemAcc_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426420735797547368911769669155580766062963247292637
+ 5005843395471036906200488148513198939841013851419893
+
+Name: generate_PC/MemAcc_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421557305758408598266444325686480600366272779667186
+ 7493329994861187249423398508277578430807134563742673
+
+Name: generate_PC/src/MemAcc_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426166323030659669388652832264353749272521748084262
+ 7751229571188035460264516230385304045000764931568087
+
+Name: generate_PC/include/MemAcc_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426166238708292954222906218965747717786735127412317
+ 4292745339987816797794294976494156423590117929515561
+
+Name: generate_PB/include/MemAcc_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773966486542421376780337223533234034355784636220601
+ 914020283827134649579370713595367059149278346475020641
+
+Name: generate_PB/MemAcc_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422096783127374082729301293648144243307496542848485
+ 7112909012548888207132678218254427638554895148609277
+

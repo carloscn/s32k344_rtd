@@ -1,0 +1,1567 @@
+<?xml version='1.0'?>
+<datamodel version="3.0" xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd" xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd" xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+    <!--
+*   @file    Platform.xmd
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Platform - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Platform Tresos Studio plugin.
+-->
+    <!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : 
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   (c) Copyright 2020 - 2023 NXP Semiconductors
+*   All Rights Reserved.
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->
+    <d:ctr type="AUTOSAR" factory="autosar" xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd">
+        <d:lst type="TOP-LEVEL-PACKAGES">
+            <d:ctr name="TS_T40D34M30I0R0" type="AR-PACKAGE">
+                <a:a name="UUID" value="ECUC:a7647192-b1d1-4d9e-bbd9-23038a76c9f4"/>
+                <d:lst type="ELEMENTS">
+                    <d:chc name="Platform" type="AR-ELEMENT" value="MODULE-DEF">
+                        <v:ctr type="MODULE-DEF">
+                            <a:a name="RELEASE" value="asc:4.7"/>
+                            <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                                <ad:ADMIN-DATA>
+                                    <ad:DOC-REVISIONS>
+                                        <ad:DOC-REVISION>
+                                            <ad:REVISION-LABEL>4.1.0</ad:REVISION-LABEL>
+                                            <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                            <ad:DATE>2010-12-03</ad:DATE>
+                                        </ad:DOC-REVISION>
+                                    </ad:DOC-REVISIONS>
+                                </ad:ADMIN-DATA>
+                            </a:a>
+                            <a:a name="DESC" value="EN: Configuration of Platform module."/>
+                            <a:a name="LOWER-MULTIPLICITY" value="1"/>
+                            <a:a name="UPPER-MULTIPLICITY" value="1"/>
+                            <a:a name="UUID" value="ECUC:6fd4d1f8-6feb-49b3-93a9-46a385debde0"/>
+                            <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                                <a:a name="LABEL" value="Config Variant"/>
+                                <a:a name="UUID" value="ECUC:ce3af0b3-cbec-4938-966f-d7b5a2456911"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            VariantPreCompile: Only precompile time configuration parameters. Only one set of parameters.<p/>
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:da name="DEFAULT" value="VariantPreCompile"/>
+                                <a:da name="READONLY" value="true"/>
+                                <a:da name="RANGE">
+                                    <a:v>VariantPreCompile</a:v>
+                                    <a:v>VariantPostBuild</a:v>
+                                </a:da>
+                            </v:var>
+                            
+                            <v:ctr name="GeneralConfiguration" type="IDENTIFIABLE">
+                                <a:a name="UUID" value="ECUC:b752d500-9b1b-4666-a937-1355ac81f89c"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                          <html>
+                                              <p>GeneralConfiguration</p>
+                                              <p>This container contains the global configuration parameters of the Non-Autosar Platform driver.</p>
+                                              Note: Implementation Specific Parameter. <p/>
+                                          </html>
+                                      ]]>
+                                    </a:v>
+                                </a:a>
+                                <!-- @implements PlatformDevErrorDetect_Object -->
+                                <v:var name="PlatformDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Platform Development Error Detection"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    <p>PlatformDevErrorDetect</p>
+                                                    <p>Switches the Development Error Detection and Notification ON or OFF.</p>
+                                                    Note: Implementation Specific Parameter. <p/>
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:accbe9c0-3853-4fe1-afe0-153298ff199e"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+                                <v:var name="PlatformIntmConfigurable" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Interrupt Monitoring Enabled"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                                <p>PlatformIntmConfigurable</p>
+                                                <p>Check this in order to be able to use the interrupt monitors.</p>
+                                                <p></p>Note: Implementation Specific Parameter. <p/>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:c907cc1e-782e-4abd-b043-f20bdf829e34"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                </v:var>
+                                <v:var name="PlatformMcmConfigurable" type="BOOLEAN">
+                                    <a:a name="LABEL" value="System Settings Configurable"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                                <p>PlatformMcmConfigurable</p>
+                                                <p>Check this in order to be able to configure Miscellaneous Control settings.</p>
+                                                <p></p>Note: Implementation Specific Parameter. <p/>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:72b8a638-4009-4639-124a-bb4daf844a8b"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                    <a:da name="EDITABLE" type="XPath" expr="num:i(ecu:get('Platform.fpu')) > 0"/>
+                                    <a:a name="INVALID" type="XPath">
+                                        <a:tst expr="(. = 'true') and not(num:i(ecu:get('Platform.fpu')) > 0)"
+                                            true="Platform mcm configurable only enabled when fpu is supported"/>                       
+                                    </a:a>
+                                </v:var>
+                            
+
+
+                            <!-- PlatformMpuM7Configurable -->
+                            <!-- @implements PlatformMpuM7Configurable_Object -->
+                            <v:var name="PlatformMpuM7Configurable" type="BOOLEAN">
+                                <a:a name="LABEL" value="Platform Enable MPU M7 Support"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                        <html>
+                                            <p>PlatformMpuM7Configurable</p>
+                                            <p>Check this in order to be able to use the ARM Cortex M7 MPU.</p>
+                                            <p></p>Note: Implementation Specific Parameter. <p/>
+                                        </html>
+                                    ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="UUID" value="ECUC:72a8a638-4009-4639-124a-bb4daf844a8b"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+
+                                <v:var name="PlatformIpAPIsAvailable" type="BOOLEAN">
+                                    <a:a name="LABEL" value="IP layer APIs"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                                <p>PlatformIpAPIsAvailable</p>
+                                                <p>Enable or disable IP layer APIs which are not used by APIs at High Level Driver (HLD). Following APIs are affected:</p>
+                                                <li>IntCtrl_Ip_SetPending</li>
+                                                <li>IntCtrl_Ip_GetPending</li>
+                                                <li>IntCtrl_Ip_GetActive</li>
+                                                <p></p>Note: Implementation Specific Parameter. <p/>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:72b8a638-4179-4639-124a-bb4daf844a8b"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                </v:var>
+                                <!-- @implements PlatformEnableUserModeSupport_Object -->
+                                <v:var name="PlatformEnableUserModeSupport" type="BOOLEAN">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                            <p>When this parameter is enabled, the Platform module will adapt to run from User Mode, with the following measures:<p/>
+                                            <p> b) using 'call trusted function' stubs for all internal function calls that access registers requiring supervisor mode.<p/>
+                                            Note: Implementation Specific Parameter.
+                                        </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                           type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="LABEL"
+                                           value="Platform Enable User Mode Support"/>
+                                    <a:a name="ORIGIN"
+                                           value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE"
+                                           value="false"/>
+                                    <a:a name="UUID"
+                                           value="ECUC:f466ec0d-5bba-65fa-be74-2bd1bb030b88"/>
+                                    <a:da name="DEFAULT"
+                                            value="false"/>
+                                </v:var>
+                                <!-- @implements PlatformMulticoreSupport_Object -->
+                                <v:var name="PlatformMulticoreSupport" type="BOOLEAN">
+                                    <a:a name="DESC">
+                                    <a:v><![CDATA[EN:<html><p>This parameter globally enables the possibility to support multicore. If this parmeter is enabled, at least one EcucPartition needs to be defined (in all variants).<br>
+                                    <h1>Note</h1>This is an Implementation Specific Parameter.
+                                            </p></html>]]></a:v>
+                                    </a:a>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/> 
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="Platform Multicore Support"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:8436de9b-c7e1-4ab0-9e80-145e3870a2ab" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:a name="EDITABLE" type="XPath" expr="num:i(count(ecu:list('Platform.targetCoresList')))>1"/>
+                                    <a:a name="INVALID" type="XPath">
+                                        <a:tst expr="(. = 'true') and not(num:i(count(../../GeneralConfiguration/PlatformEcucPartitionRef/*) > 0))"
+                                            true="Platform Multicore Support is only enabled when at least one EcucPartition needs to be defined (in all variants)."/>
+                                            <a:tst expr="(. = 'true') and not(num:i(count(ecu:list('Platform.targetCoresList')))>1)"
+                                            true="This derivative not support multicore so must be false "/>                            
+                                    </a:a>
+                                </v:var>
+
+                                <v:var name="PlatformEnableVtorConfiguration" type="BOOLEAN">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                            <p>When this parameter is enabled, the Platform module will allow the user the manually configure the Vector Table Offset Register address:<p/>
+                                            Note: Implementation Specific Parameter.
+                                        </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                           type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="LABEL"
+                                           value="Platform Enable VTOR Manual Configuration"/>
+                                    <a:a name="ORIGIN"
+                                           value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE"
+                                           value="false"/>
+                                    <a:a name="UUID"
+                                           value="ECUC:73234c86-eecd-416f-ad21-91bd5a38ef27"/>
+                                    <a:da name="DEFAULT"
+                                            value="false"/>
+                                    <a:da name="EDITABLE" 
+                                            value="false"/>
+                                    <a:da name="VISIBLE" 
+                                            value="false"/>
+                                </v:var>
+                                <v:lst name="PlatformEcucPartitionRef">
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst expr="../../GeneralConfiguration/PlatformMulticoreSupport"/>
+                                    </a:da>
+                                    <v:ref name="PlatformEcucPartitionRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:
+                                                <html>
+                                                <p>Maps the Platform driver to zero a multiple ECUC partitions to make the modules API available in this partition.</p>
+                                                <p>Note: Each PlatformEcucPartitionRef should map to a M7 core, one by one</p>
+                                                </html>
+                                                ]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                            type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" 
+                                            value="ECUC:f86d720b-a1e5-4f3f-a656-0f491v2l8563"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="text:uniq(../*, .)" false="Duplicate Partition."/>
+                                            <a:tst expr="count(text:grep(node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/Os')/OsApplication/*/OsAppEcucPartitionRef, .)) = 0"
+                                            true="This ECUC partition must be defined in OS."/>
+                                            <a:tst expr="count(./../../../McmConfig/*[./PlatformMcmEcucPartitionRef = node:current()]) = 0 and count(./../../../IntCtrlConfig/*[./PlatformNvicEcucPartitionRef = node:current()]) = 0 and (./../../../IntmConfig/IntmGenericSettings/PlatformIntmGenericEcucPartitionRef = node:current()) = 0 and count(./../../../IntmConfig/IntmChannel/*[./PlatformIntmChannelEcucPartitionRef = node:current()]) = 0 and count(./../../../MPU_M7_Configuration/MPU_M7_ModuleConfig/*[./Mpu_M7_EcucPartitionRef = node:current()]) = 0 and count(./../../../Mpu_M33_Configuration/Mpu_M33_ModuleConfig/*[./Mpu_M33_EcucPartitionRef = node:current()]) = 0 and
+                                            count(./../../../MPU_R52_Configuration/*[./MPU_R52_EcucPartitionRef = node:current()]) = 0"
+                                            true="This PlatformEcucPartitionRef is not used anywhere in Platform"/>
+                                        </a:da>
+                                    </v:ref>
+                                </v:lst>
+                            </v:ctr>
+
+
+
+                            <v:lst name="McmConfig" type="MAP">
+                                    <a:a name="LABEL" value="System Settings"/>
+                                    <a:da name="EDITABLE" type="XPath" expr="./../GeneralConfiguration/PlatformMcmConfigurable = 'true'"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(./../GeneralConfiguration/PlatformMulticoreSupport = 'false') and (count(./*) &gt;= 2) " true="When PlatformMulticoreSupport = false, only 1 McmConfig instance can be existed, for default core"/>
+                                        <a:tst expr="(./../GeneralConfiguration/PlatformMcmConfigurable = 'false') and (count(./*) &gt;= 1) " true="When PlatformMcmConfigurable = false, all McmConfig instance must to be removed"/>
+                                         <a:tst expr="count(./*) &gt; ecu:get('Platform.systemMcmInstList')" true=" exceed maximum System Settings allowed"/>
+                                         <a:tst expr="node:value(../GeneralConfiguration/PlatformMcmConfigurable)='true' and (num:i(count(./*))='0')" true="This McmConfig must have one child at least when System Settings Configurable = TRUE"/>
+                                     </a:da>
+                                    <a:a name="MIN" value="0"/> 
+                                    <v:ctr name="McmConfig" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v><![CDATA[EN:
+                                                <html> Vendor specific:
+                                                Miscellaneous Control Configuration
+                                                </html>
+                                                    ]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:04ac83ba-72f5-482b-b9ec-cc43a5100e5b"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                        </a:a>   
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="(./../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (node:exists(./PlatformMcmEcucPartitionRef) = false()) " true="When PlatformMulticoreSupport = true, PlatformMcmEcucPartitionRef must be configured"/>
+                                            <a:tst expr="(./../../GeneralConfiguration/PlatformMulticoreSupport = 'false') and (node:exists(./PlatformMcmEcucPartitionRef) = true()) " true="When PlatformMulticoreSupport = false, PlatformMcmEcucPartitionRef must be disabled"/>
+                                        </a:da>
+                                        <v:var name="SystemAhbSlavePrio" type="ENUMERATION">
+                                            <a:a name="LABEL" value="AHB Slave Priority"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html> Vendor specific:
+                                            Configures the access priority on the AHBS port of the Cortex-M7.
+                                            </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:00a8705c-32fd-499a-9b7f-acf75976173b"/>
+                                            <a:da name="RANGE">
+                                                <a:v>Round_robin</a:v>
+                                                <a:v>AHB_Slave_priority</a:v>
+                                            </a:da>
+                                            <a:da name="DEFAULT" value="Round_robin"/>
+                                        </v:var>
+                                        <v:lst name="SystemIsrConfig" type="MAP">
+                                            <a:a name="LABEL" value="Core-related Interrupts"/>
+                                            <a:a name="MIN" value="0"/> <!-- temporary workaround - type="XPath" expr="ecu:get('Platform.systemIrqsCount')"/>-->
+                                            <a:a name="MAX" type="XPath" expr="ecu:get('Platform.systemIrqsCount')"/>
+                                            <a:a name="TAB" value="CM7 System Settings"/>
+                                            <v:ctr name="SystemIsrConfig" type="IDENTIFIABLE">
+                                                <a:a name="DESC">
+                                                    <a:v><![CDATA[EN:
+                                                        <html> Vendor specific:
+                                                        Configuration for core-related interrupts.
+                                                        </html>
+                                                            ]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:04ac838a-72f5-482b-b9ec-cc43a5100e5b"/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                </a:a>
+                                                <v:var name="SystemIsrName" type="ENUMERATION">
+                                                    <a:a name="LABEL" value="Interrupt Name"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                            Interrupt Name.
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8705c-39fd-499a-9b7f-acf75976173b"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.systemIrqsList'))[position()-1=node:fallback(node:current()/../@index,'0')]"/>
+                                                    <a:da name="INVALID" type="XPath">
+                                                        <a:tst expr="text:uniq(../../*/SystemIsrName, .)" false="Duplicate system interrupt configuration"/>
+                                                    </a:da>
+                                                    <a:da name="EDITABLE" value="true"/>
+                                                    <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.systemIrqsList')"/>
+                                                </v:var>
+                                                <v:var name="SystemIsrEnabled" type="BOOLEAN">
+                                                    <a:a name="LABEL" value="Interrupt Enabled"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN: <html> Vendor specific: Switch to indicate if the interrupt is enabled 
+                                                                    </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:e1524282-63e7-4426-bfb8-590fd3d012d6"/>
+                                                    <a:da name="DEFAULT" value="false"/>
+                                                    <a:a name="EDITABLE" value="true"/>
+                                                </v:var>
+                                            </v:ctr>
+                                        </v:lst>
+                                        
+                                        
+                                        <v:ref name="PlatformMcmEcucPartitionRef" type="REFERENCE">
+                                            <a:a name="DESC">
+                                                <a:v>EN: Maps a instance of Mcm to ECUC partitions.</a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="SCOPE" value="ECU"/>
+                                            <a:a name="UUID" value="ECUC:c76c166f-443a-4587-bd8d-5e696cfb1b00"/>
+                                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="count(text:grep(./../../../GeneralConfiguration/PlatformEcucPartitionRef/*,.)) > 0" false="The ECUC partition must be defined on the PlatformEcucPartitionRef." />
+                                                <a:tst expr="(./../../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (count(./../../*[./PlatformMcmEcucPartitionRef = node:current()]) &gt;=2 )  " true="PlatformMcmEcucPartitionRef refer to same value in others"/>
+                                            </a:da>
+                                        </v:ref>
+                                    </v:ctr>
+                            </v:lst>
+
+
+
+                           <v:ctr name="MPU_M7_Configuration" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html><p>Configuration for the ARM Cortex M7 MPU.</p></html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:be68078a-ba7e-4321-b0a2-8097d0117449"/>
+                                <a:a name="TAB" value="MPU M7"/>
+
+                                <v:lst name="MPU_M7_ModuleConfig" type="MAP">
+                                    <a:a name="LABEL" value="Module Configurations"/>
+                                    <a:da name="MIN" value="0"/>
+                                    <!-- <a:da name="DEFAULT" type="XPath" expr="ecu:get('Rm.Mpu_M7.DefaultRegionCount')"/> -->
+                                    <a:a name="TAB" value="MPU M7"/>
+                                    <a:da name="EDITABLE" type="XPath" expr="node:fallback( node:current() /../../GeneralConfiguration/PlatformMpuM7Configurable, num:i(0))" />
+                                    <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="./../../GeneralConfiguration/PlatformMpuM7Configurable = 'true' and (num:i(count(*)) = 0)"
+                                            true ="At least one MPU M7 configuration must be configured when Plaform Enable MPU M7 Support is checked!"/>
+                                            <a:tst expr="./../../GeneralConfiguration/PlatformMpuM7Configurable = 'false' and (num:i(count(*)) > 1)"
+                                            true ="Plaform MPU M7 only support when PlatformMpuM7Configurable is enable !"/>
+                                            <a:tst expr="./../../GeneralConfiguration/PlatformMulticoreSupport = 'false' and (num:i(count(*)) > 1)"
+                                                   true ="Only one configuration element is allowed when disable Multicore support!"/>
+                                    </a:da>
+                                    <a:da name="WARNING" type="XPath">
+                                            <a:tst expr="./../../GeneralConfiguration/PlatformMulticoreSupport = 'true' and (num:i(count(*)) &lt;= 1)"
+                                                   true ="user should configure multi MPU M7 module!"/>
+                                    </a:da>                                    
+                                    <v:ctr name="MPU_M7_ModuleConfig" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:
+                                                    <html><p>Configuration for the ARM Cortex M7 MPU.</p></html>
+                                                ]]>
+                                            </a:v>
+                                        </a:a>
+                                    <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="(./../../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (node:exists(./Mpu_M7_EcucPartitionRef) = false()) " true="When PlatformMulticoreSupport = true, MPU M7 Partition must be configured"/>
+                                    </a:da>                                        
+                                        <a:a name="UUID" value="ECUC:be68078a-ba7e-4321-b0a2-8097d4321449"/>
+                                        <a:a name="TAB" value="MPU M7 Controller"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <v:var name="DefaultMapEnable" type="BOOLEAN">
+                                            <a:a name="LABEL" value="Default Memory Map Enable"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN: <html> Vendor specific: Switch to indicate if the default memmory map is enabled
+                                                        </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:e1524282-63e7-4426-bfb8-590fd3d096d6"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                        </v:var>
+                                        <v:var name="RunInHFNMIEnable" type="BOOLEAN">
+                                            <a:a name="LABEL" value="Enable MPU in Exceptions"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN: <html> Vendor specific: Switch to indicate if the MPU is enabled in Hard Fault or NMI
+                                                        </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:e1524282-63e7-4426-bfb8-590fd3d09981"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                        </v:var>
+                                        <v:var name="MemManageInterruptEnable" type="BOOLEAN">
+                                            <a:a name="LABEL" value="Enable Memory Management interrupt"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN: <html> Vendor specific: Switch to indicate if the Memory Management Interrupt is enabled
+                                                        </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:e1524282-63e7-4426-bfb8-590fd3d09982"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                        </v:var>
+                                        <v:lst name="RegionConfig" type="MAP">
+                                            <a:a name="LABEL" value="Region Configuration"/>
+                                            <a:da name="MIN" type="XPath" expr="ecu:get('Platform.Mpu_M7.MinimumRegionCount')"/>
+                                            <a:da name="MAX" type="XPath" expr="ecu:get('Platform.Mpu_M7.MaximumRegionCount')"/>
+                                            <!-- <a:da name="DEFAULT" type="XPath" expr="ecu:get('Platform.Mpu_M7.DefaultRegionCount')"/> -->
+                                            <a:a name="TAB" value="Region Config"/>
+                                            <v:ctr name="RegionConfig" type="IDENTIFIABLE">
+                                                <a:a name="DESC">
+                                                    <a:v><![CDATA[EN:
+                                                    <html> Vendor specific:
+                                                    Configuration for interrupt requests.
+                                                    Warning: This is a precompile configuration.If you uncheck a ISR, you will not be able to enable the
+                                                    respective channel or error functionality at post build time.
+                                                    </html>
+                                                        ]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:04ac838a-72f5-480b-b9ec-cc43a5100e5b"/>
+                                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+
+                                                <v:var name="RegionNumber" type="INTEGER">
+                                                    <a:a name="LABEL" value="Region Number"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                        Region Number.
+                                                        </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8505c-39fd-499a-9b7f-acf75976173b"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="num:i( node:fallback( node:current()/../@index, num:i(0)))"/>
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;num:i(ecu:get('Platform.Mpu_M7.MaximumRegionCount'))" false="Value must be lower than ecu:get('Platform.Mpu_M7.MaximumRegionCount')"/>
+                                                        <a:tst expr="&gt;=0" false="Value must be higher or equal than ecu:get('Platform.Mpu_M7.MinimumRegionCount')"/>
+                                                    </a:da>
+                                                </v:var>
+
+                                                <v:var name="StartAddress" type="INTEGER">
+                                                    <a:a name="LABEL" value="Start Address"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                                Start Address.
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="DEFAULT_RADIX" value="HEX"/>
+                                                    <a:a name="UUID" value="ECUC:00a8505c-39fd-499a-9b7f-acf759763331"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="num:i(ecu:list('Platform.Mpu_M7.RegionStartAddress')[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1])"/>
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;i(0xFFFFFFFF)"/>
+                                                        <a:tst expr="&gt;=i(0)"/>
+                                                    </a:da>
+                                                </v:var>
+
+                                                <v:var name="EndAddress" type="INTEGER">
+                                                    <a:a name="LABEL" value="End Address"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                        End Address.
+                                                        </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8505c-39fd-499a-9b7f-cc43a5100e44"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="num:i(ecu:list('Platform.Mpu_M7.RegionEndAddress')[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1])"/>
+                                                    <a:a name="DEFAULT_RADIX" value="HEX"/>
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;=i(0xFFFFFFFF)"/>
+                                                        <a:tst expr="&gt;=num:i(num:i(ecu:get('Platform.Mpu_M7.MinRegionSize'))-1)"/>
+                                                    </a:da>
+                                                </v:var>
+
+                                                <v:var name="RegionSize" type="INTEGER">
+                                                    <a:a name="LABEL" value="Region Size"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                        RegionSize.
+                                                        </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8505c-39fd-499a-9b7f-acf75976173c"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="num:i(num:i(node:fallback(node:current()/../EndAddress, num:i(0))) - num:i(node:fallback(node:current()/../StartAddress, num:i(0))) + num:i(1))" />
+                                                    <a:a name="DEFAULT_RADIX" value="HEX"/>
+                                                    <a:da name="INVALID" type="XPath">
+                                                        <a:tst expr="num:i(num:i(node:fallback(node:current()/../EndAddress, num:i(0))) - num:i(node:fallback(node:current()/../StartAddress, num:i(0))) + num:i(1)) = num:i(node:value(.))" false="Please recalculate value"/>
+                                                        <a:tst expr="(num:i(node:fallback(node:current()/../StartAddress, num:i(0))) mod num:i(node:value(.))) = 0" false="The StartAddress is aligned to the size of the region. For example, a 64KB region must be aligned on a multiple of 64KB, for example, at 0x00010000 or 0x00020000"/>
+                                                        <a:tst expr="(num:i(node:value(.))&gt;= 32 )" false="The RegionSize must than 32"/>                                                    
+                                                        <a:tst expr="(num:i(node:value(.)) mod 32) = 0" false=" RegionSize mod 32 == 0"/>                                                       
+                                                    </a:da>
+                                                </v:var>
+
+                                                <v:var name="MemoryType" type="ENUMERATION">
+                                                    <a:a name="LABEL" value="Memory type"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                                Memory type.
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8705c-34ad-499a-9b7f-acf759761359"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.Mpu_M7.RegionMemoryType'))[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1]">
+                                                    </a:da>
+                                                    <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.Mpu_M7.MemoryType')"/>
+                                                </v:var>
+
+                                                <v:var name="AccessRights" type="ENUMERATION">
+                                                    <a:a name="LABEL" value="Access Rights"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                                Access Rights.
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8705c-34ad-499a-9b7f-acf75923232a"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.Mpu_M7.RegionAccessRights'))[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1]">
+                                                    </a:da>
+                                                    <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.Mpu_M7.AccessRightsType')"/>
+                                                </v:var>
+
+                                                <v:var name="OuterCachePolicy" type="ENUMERATION">
+                                                    <a:a name="LABEL" value="Outer Cache Policy"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                                Outer Cache Policy.
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8705c-34ad-ccda-9b7f-acf759761257"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.Mpu_M7.RegionOuterCachePolicy'))[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1]">
+                                                    </a:da>
+                                                    <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.Mpu_M7.CachePolicyType')"/>
+                                                </v:var>
+
+                                                <v:var name="InnerCachePolicy" type="ENUMERATION">
+                                                    <a:a name="LABEL" value="Inner Cache Policy"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                                Inner Cache Policy.
+                                                            </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8705c-34ad-22ad-9b7f-acf759761331"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.Mpu_M7.RegionInnerCachePolicy'))[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1]">
+                                                    </a:da>
+                                                    <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.Mpu_M7.CachePolicyType')"/>
+                                                </v:var>
+
+                                                <v:var name="SubregionMask" type="INTEGER">
+                                                    <a:a name="LABEL" value="Subregion Mask"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html> Vendor specific:
+                                                        Sub Region.
+                                                        </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:00a8505c-39fd-499a-9b7f-acf759761112"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="ecu:list('Platform.Mpu_M7.RegionSubregionMask')[num:i(node:fallback( node:current()/../@index, num:i(0))) + 1]"/>
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;i(256)"/>
+                                                        <a:tst expr="&gt;=i(0)"/>
+                                                    </a:da>
+                                                    <a:da name="EDITABLE" type="XPath" expr="num:i(node:fallback(node:current()/../RegionSize, num:i(0))) &gt;= num:i(ecu:get('Platform.Mpu_M7.MinRegionSizeWithSubregion'))"/>
+                                                </v:var>
+
+                                                <v:var name="Shareable" type="BOOLEAN">
+                                                    <a:a name="LABEL" value="Shareable"/>
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN: <html> Vendor specific: Switch to indicate if the region is shareable
+                                                                </html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="NXP"/>
+                                                    <a:a name="SCOPE" value="LOCAL"/>
+                                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                    <a:a name="UUID" value="ECUC:e1524282-63e7-4426-bfb8-590fd3d096331"/>
+                                                    <a:da name="DEFAULT" type="XPath" expr="ecu:list('Platform.Mpu_M7.RegionShareable')[num:i( node:fallback( node:current()/../@index, num:i(0))) + 1]"/>
+                                                </v:var>
+                                            </v:ctr>
+                                        </v:lst>
+
+                                        <v:var name="PhysicalCoreID" type="ENUMERATION">
+                                            <a:a name="LABEL" value="Physical Core ID"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:
+                                                        <html>
+                                                            <p>Physical Core ID</p>
+                                                            <p> <p/>
+                                                        </html>
+                                                    ]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="UUID" value="ECUC:b41b23f0-dc5c-4198-bc4d-ab27cb37c4b3"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:da name="DEFAULT" value = "Cortex_M7_Core0">
+                                            </a:da>
+                                            <a:da name="RANGE" type="XPath" expr="(ecu:list('Platform.Mpu_M7.Core.List'))"/>
+                                        </v:var>
+                                        
+                                        <v:ref name="Mpu_M7_EcucPartitionRef" type="REFERENCE">
+                                            <a:a name="DESC">
+                                                <a:v>EN: Maps an instance of Nvic ECUC partitions.</a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="SCOPE" value="ECU"/>
+                                            <a:a name="UUID" value="ECUC:84adbcb2-7721-418d-baba-e8e7931d3f60"/>
+                                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="count(text:grep(../../../../GeneralConfiguration/PlatformEcucPartitionRef/*,.)) > 0" false="The ECUC partition must be defined on the PlatformEcucPartitionRef." />
+                                                <a:tst expr="(../../../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (count(./../../*[./Mpu_M7_EcucPartitionRef = node:current()]) &gt;=2 )  " true="Mpu_M7_EcucPartitionRef refer to same value in others"/>
+                                            </a:da>  
+                                        </v:ref>                                        
+                                        
+                                    </v:ctr>
+                                </v:lst>
+                            </v:ctr>
+
+
+
+                            <v:ctr name="IntmConfig" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                <html><p>Configuration for interrupt monitors.</p></html>
+                            ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:be68578a-ba7e-4320-b0a2-b097d0117449"/>
+                                <a:a name="TAB" value="Interrupt Monitors"/>
+                                <v:ctr name="IntmGenericSettings" type="IDENTIFIABLE">
+                                    <a:a name="UUID" value="ECUC:29793957-805b-400b-921f-acc6f3289e14"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                                <p>IntmGenericSettings</p>
+                                                <p>This container contains the global configuration parameters interrupt monitor.</p>
+                                                Note: Implementation Specific Parameter. <p/>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>                                        
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(./../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (node:exists(./PlatformIntmGenericEcucPartitionRef) = false()) " true="When PlatformMulticoreSupport = true, PlatformIntmGenericEcucPartitionRef must be configured"/>
+                                        <a:tst expr="(./../../GeneralConfiguration/PlatformMulticoreSupport = 'false') and (node:exists(./PlatformIntmGenericEcucPartitionRef) = true()) " true="When PlatformMulticoreSupport = false, PlatformIntmGenericEcucPartitionRef must be disabled"/>
+                                    </a:da>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <v:var name="IntmEnable" type="BOOLEAN">
+                                        <a:a name="LABEL" value="Default interrupt monitoring enable"/>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html> Vendor specific:
+                                            Enables the interrupt monitoring feature.
+                                            </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:0aff228e-f32e-42b6-34be-372ca32a5726"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:da name="DEFAULT" value="false">
+                                        </a:da>
+                                        <a:da name="EDITABLE" type="XPath" expr="./../../../GeneralConfiguration/PlatformIntmConfigurable = 'true'"/>
+                                    </v:var>
+                                    <v:ref name="PlatformIntmGenericEcucPartitionRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>EN: Maps Intm Generic setting to ECUC partitions.</a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" value="ECUC:c76c1661-443a-4587-bd8d-5e696cfl1b00"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="count(text:grep(./../../../GeneralConfiguration/PlatformEcucPartitionRef/*,.)) > 0" false="The ECUC partition must be defined on the PlatformEcucPartitionRef." />
+                                        </a:da>
+                                    </v:ref>
+                                    
+                                    
+                                </v:ctr>
+                                <v:lst name="IntmChannel" type="MAP">
+                                    <a:a name="LABEL" value="Interrupt Monitors List"/>
+                                    <a:da name="MAX" type="XPath">
+                                        <a:tst expr="ecu:get('Platform.intmCount')"/>
+                                    </a:da>
+                                    <a:a name="TAB" value="Interrupt Monitors"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(./../../GeneralConfiguration/PlatformIntmConfigurable = 'true') and (count(./*) = 0) " true="When PlatformIntmConfigurable = true, at least one IntmChannel must be configured"/>
+                                    </a:da>
+                                    <a:da name="EDITABLE" type="XPath" expr="./../../GeneralConfiguration/PlatformIntmConfigurable = 'true'"/>
+                                    <v:ctr name="IntmChannel" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v><![CDATA[EN:
+                                  <html> Vendor specific:
+                                  Configuration for interrupt monitors.
+                                  </html>
+                                      ]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:04ac8333-72f5-482b-b9ec-cc43a5100e5b"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                        </a:a>                                                                                
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="(./../../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (node:exists(./PlatformIntmChannelEcucPartitionRef) = false()) " true="When PlatformMulticoreSupport = true, PlatformIntmChannelEcucPartitionRef must be configured"/>
+                                            <a:tst expr="(./../../../GeneralConfiguration/PlatformMulticoreSupport = 'false') and (node:exists(./PlatformIntmChannelEcucPartitionRef) = true()) " true="When PlatformMulticoreSupport = false, PlatformIntmChannelEcucPartitionRef must be disabled"/>
+                                        </a:da>
+                                        
+                                        <v:var name="PlatformIntmChannelId" type="INTEGER">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[<html>
+                                                    <p>Channel Id of the interrupt monitor channel.
+                                                    This value will be assigned to the symbolic name derived of the PlatformIntmChannelId container short name.</p>
+                                                </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN"
+                                                   value="NXP"/>
+                                            <a:a name="SCOPE"
+                                                   value="ECU"/>
+                                            <a:a name="SYMBOLICNAMEVALUE"
+                                                   value="true"/>
+                                            <a:a name="UUID"
+                                                   value="ECUC:1296bb21-7d7e-4d26-bdd9-435355afab9f"/>
+                                            <a:da name="DEFAULT"
+                                                    type="XPath"
+                                                    expr="node:fallback(node:current()/../@index, num:i(1))"/>
+                                            <a:da name="RANGE"
+                                                    type="XPath">
+                                                <a:tst expr="(node:fallback(.,1) &gt;= 0) and (node:fallback(.,1) &lt; num:i(count(node:fallback(node:current()/../../*, num:i(50)))) )"
+                                                         false="Value out of range: must be in range 0 to N-1 (N is number of configured channels). Use the Calc button to calculate correct default value."/>
+                                                <a:tst expr="text:uniq(node:fallback(../../*/PlatformIntmChannelId, text:split('1 2 3')), node:fallback(.,1))"
+                                                         false="Duplicated value, PlatformIntmChannelId must be unique across all channels. Use the Calc button to calculate correct default value."/>
+                                            </a:da>
+                                            <a:da name="INVALID"
+                                                    type="Range">
+                                                <a:tst expr="&gt;=0"/>
+                                                <a:tst expr="&lt;num:i(ecu:get('Platform.intmCount'))"/>
+                                            </a:da>
+                                        </v:var>
+                                        
+                                        <v:var name="InterruptMonitor" type="ENUMERATION">
+                                            <a:a name="LABEL" value="Interrupt Monitor"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html> Vendor specific:
+                                      Interrupt monitor index.
+                                      </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:00a8705c-39ad-499a-9b7f-acf75976173b"/>
+                                            <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.intMonitorsList'))[position()-1=node:fallback(node:current()/../@index,'0')]"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="text:uniq(../../*/InterruptMonitor, .)" false="Same interrupt monitor configured twice"/>
+                                            </a:da>
+                                            <a:da name="EDITABLE" value="true"/>
+                                            <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.intMonitorsList')"/>
+                                        </v:var>
+                                        <v:var name="MonitoredIrq" type="ENUMERATION">
+                                            <a:a name="LABEL" value="Monitored Irq"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html> Vendor specific:
+                                      Monitored interrupt source.
+                                      If multicore is support, one interrupt source can be monitored by multiple channels, each channel for each core.
+                                      </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:00a8705c-34ad-499a-9b7f-acf75976173b"/>
+                                            <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.irqsMonitorList'))[position()-1=node:fallback(node:current()/../@index,'0')]">
+                                            </a:da>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="(text:uniq(../../*/MonitoredIrq, .)) or (./../../../../GeneralConfiguration/PlatformMulticoreSupport = 'true')" false="Same interrupt source should not configured twice in the case single core"/>
+                                            </a:da>
+                                            <a:da name="EDITABLE" value="true"/>
+                                            <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.irqsMonitorList')"/>
+                                        </v:var>
+                                        <v:var name="AcceptedLatency" type="INTEGER">
+                                            <a:a name="LABEL" value="Accepted Latency"/>
+                                            <a:a name="DESC" value="Accepted latency for the monitored interrupt. To disable monitoring when initializing, enter 0 for AcceptedLatency "/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="UUID" value="ECUC:7fe16fe3-d085-43ec-9ef2-e560e0139a20"/>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:da name="EDITABLE" value="true"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=ecu:get('Platform.intmMaxLatency')"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>                                        
+                                        <v:ref name="PlatformIntmChannelEcucPartitionRef" type="REFERENCE">
+                                            <a:a name="DESC">
+                                                <a:v>EN: Maps Intm channel setting to ECUC partitions.</a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="NXP"/>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="SCOPE" value="ECU"/>
+                                            <a:a name="UUID" value="ECUC:c76c1661-443a-4587-bd8d-5e696cf81b00"/>
+                                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="count(text:grep(./../../../../GeneralConfiguration/PlatformEcucPartitionRef/*,.)) > 0" false="The ECUC partition must be defined on the PlatformEcucPartitionRef." />
+                                            </a:da>
+                                        </v:ref>
+                                        
+                                    </v:ctr>
+                                </v:lst>
+                            </v:ctr>
+                            <v:lst name="IntCtrlConfig" type="MAP">
+                                <a:a name="LABEL" value="Interrupt Controller"/>
+                                <a:a name="MIN" value="0"/>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="count(./*) &gt; ecu:get('Platform.NvicInstances')" true=" exceed maximum Interrupt Controller allowed"/>
+                                    <a:tst expr="(./../GeneralConfiguration/PlatformMulticoreSupport = 'false') and (count(./*) &gt; 1)" true="This list must have only 1 child when PlatformMulticoreSupport = FALSE"/>
+                                </a:da>
+                                <v:ctr name="IntCtrlConfig" type="IDENTIFIABLE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                    <html><p>Configuration for the interrupts.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:be68078a-ba7e-4320-b0a2-8097d0117449"/>
+                                    <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="(./../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (node:exists(./PlatformNvicEcucPartitionRef) = false()) "   true="When PlatformMulticoreSupport = true, PlatformNvicEcucPartitionRef must be configured"/>
+                                                <a:tst expr="(./../../GeneralConfiguration/PlatformMulticoreSupport = 'false') and (node:exists(./PlatformNvicEcucPartitionRef) = true()) " true="When PlatformMulticoreSupport = false, PlatformNvicEcucPartitionRef must be disabled"/>
+                                            </a:da>
+                                    <a:a name="TAB" value="Interrupt Controller"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>  
+                                    <v:lst name="PlatformIsrConfig" type="MAP">
+                                        <a:a name="LABEL" value="Interrupt Configuration"/>
+                                        <a:da name="MAX" type="XPath" expr="ecu:get('Platform.irqCount')"/>
+                                        <a:da name="MIN" type="XPath" expr="num:i(0)"/>
+                                        <v:ctr name="PlatformIsrConfig" type="IDENTIFIABLE">
+                                        <a:a name="REQUIRES-INDEX" value="true"/>
+                                            <a:a name="DESC">
+                                                <a:v><![CDATA[EN:
+                                                <html> Vendor specific:
+                                                Configuration for interrupt requests.
+                                                Warning: This is a precompile configuration.If you uncheck a ISR, you will not be able to enable the 
+                                                respective channel or error functionality at post build time.
+                                                </html>
+                                                    ]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="UUID" value="ECUC:868fd41a-bb6f-4bca-b3de-8a299787cfb6"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>                                            
+                                            <v:var name="IsrName" type="ENUMERATION">
+                                                <a:a name="LABEL" value="Interrupt Name"/>
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html> Vendor specific:
+                                                    Interrupt Name.
+                                                    </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="NXP"/>
+                                                <a:a name="SCOPE" value="LOCAL"/>
+                                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                <a:a name="UUID" value="ECUC:9f6399ce-4ea3-40fc-8bd5-f914a998b970"/>
+                                            <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Platform.irqsList'))[position()-1=node:fallback(node:current()/../@index,'0')]"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                 <a:tst expr="not(text:uniq(../../*/IsrName,.))" true="This field must be unique."/>
+                                            </a:da>
+                                            <a:da name="RANGE" type="XPath" expr="ecu:list('Platform.irqsList')"/>
+                                            </v:var>
+                                            <v:var name="IsrEnabled" type="BOOLEAN">
+                                                <a:a name="LABEL" value="Interrupt Enabled"/>
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN: <html> Vendor specific: Switch to indicate if the interrupt is enabled 
+                                                            </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="NXP"/>
+                                                <a:a name="SCOPE" value="LOCAL"/>
+                                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                <a:a name="UUID" value="ECUC:65d5efb4-3c79-4870-adf5-abb40ff42708"/>
+                                                <a:da name="DEFAULT" value="false"/>
+                                                <a:a name="EDITABLE" value="true"/>
+                                            </v:var>
+                                            <v:var name="IsrPriority" type="INTEGER">
+                                                <a:a name="LABEL" value="Priority"/>
+                                                <a:a name="DESC" value="Priority of the interrupt interrupt"/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:7fe12fe3-d085-43ec-9ef2-e560e0139a20"/>
+                                                <a:a name="ORIGIN" value="NXP"/>
+                                                <a:da name="EDITABLE" value="true"/>
+                                                <a:da name="DEFAULT" value="0"/>
+                                                <a:da name="INVALID" type="XPath">
+                                                    <a:tst expr=". &lt;= ecu:get('Platform.irqMaxPrio')" false="The priority is out of range!" />
+                                                </a:da> 
+                                                <a:da name="INVALID" type="Range">
+                                                    <a:tst expr="&lt;=255"/>
+                                                    <a:tst expr="&gt;=0"/>
+                                                </a:da>
+                                            </v:var>
+                                            <v:var name="IsrHandler" type="FUNCTION-NAME">
+                                                <a:a name="LABEL" value="Handler"/>
+                                                <a:a name="DESC" value="Function to be installed as the interrupt handler."/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                </a:a>
+                                                <a:a name="OPTIONAL" value="false"/>
+                                                <a:a name="ORIGIN" value="NXP"/>
+                                                <a:a name="SCOPE" value="LOCAL"/>
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                <a:a name="UUID" value="ECUC:bdee5480-3705-4c45-aea3-6775b0d7d806"/>
+                                                <a:da name="DEFAULT" value="undefined_handler"/>
+                                                <a:da name="INVALID" type="XPath">
+                                                    <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z]+[_0-9a-zA-Z]*$') and (node:value(.)!='NULL')" 
+                                                        false="Invalid name of the IsrHandler. Must be valid C function name or NULL_PTR."/>
+                                                    <a:tst expr="not(text:uniq(../../../../*/PlatformIsrConfig/*/IsrName,./../IsrName)) and (text:uniq(../../../../*/PlatformIsrConfig/*/IsrName[.= node:current()/../IsrName]/../IsrHandler, .))" 
+                                                        true="The IsrHandler should be the same between partitions which use the same IRQ number."/>
+                                                </a:da>
+                                                <a:da name="EDITABLE" value="true"/>
+                                            </v:var>
+                                        </v:ctr>
+                                    </v:lst>
+
+
+                                    
+                                    <v:ref name="PlatformNvicEcucPartitionRef" type="REFERENCE">
+                                        <a:a name="DESC">
+                                            <a:v>EN: Maps an instance of Nvic ECUC partitions.</a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="OPTIONAL" value="true"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="UUID" value="ECUC:c76c166f-441a-4587-bd8d-5e696cfb1b00"/>
+                                        <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="count(text:grep(./../../../GeneralConfiguration/PlatformEcucPartitionRef/*,.)) > 0" false="The ECUC partition must be defined on the PlatformEcucPartitionRef." />
+                                            <a:tst expr="(./../../../GeneralConfiguration/PlatformMulticoreSupport = 'true') and (count(./../../*[./PlatformNvicEcucPartitionRef = node:current()]) &gt;=2 )  " true="PlatformNvicEcucPartitionRef refer to same value in others"/>
+                                        </a:da> 
+                                    </v:ref>
+
+                                    <v:var name="PlatformVtorAddressConfig" type="INTEGER">
+                                        <a:a name="LABEL" value="VTOR-Address"/>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN: <html> Configure the address where the Interrupt Vector starts 
+                                                    </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:8a5207c5-a4cb-4cc4-a8c9-084064229db7"/>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:da name="VISIBLE" value="false"/>
+                                        <a:da name="EDITABLE" type="XPath" expr="./../../../GeneralConfiguration/PlatformEnableVtorConfiguration = 'true'"/>                                    
+                                        <a:a name="DEFAULT_RADIX" value="HEX" />
+                                        <a:da name="DEFAULT" type="XPath" expr="num:i(ecu:get('Platform.VtorAddress'))"/>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="bit:and(num:i(.), num:hextoint(ecu:get('Platform.VtorAddressMask'))) = 0" false = "The VTOR address should be aligned by rounding up to the next power of two"/>
+                                        </a:da> 
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&gt;=0"/>
+                                            <a:tst expr="&lt;=4294967295"/>
+                                        </a:da>
+                                    </v:var>
+                                </v:ctr>
+                            </v:lst>
+                            <!-- @implements CommonPublishedInformation_Package -->
+                            <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                <html><p>Common container, aggregated by all modules. It contains published information about vendor and versions.</p></html>
+                            ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:23b87e61-d21d-4131-88a7-bd8facebe588"/>
+                                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Major Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Major version number of AUTOSAR specification on which the appropriate implementation is based on.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:9acc3a0d-ef9f-46f2-a83c-e5605e497a44"/>
+                                    <a:da name="DEFAULT" value="4"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=4"/>
+                                        <a:tst expr="&lt;=4"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Minor Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Minor version number of AUTOSAR specification on which the appropriate implementation is based on.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:025b0f42-8fe1-4172-9d82-3ce6cf632082"/>
+                                    <a:da name="DEFAULT" value="7"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=7"/>
+                                        <a:tst expr="&lt;=7"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Release Revision Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Revision version number of AUTOSAR specification on which the appropriate implementation is based on.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:5c7b606d-965a-4834-8dcd-2996268fa2cd"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="ModuleId" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Module Id"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Module ID of this module from Module List.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:4f695cd4-cc96-4aa8-b198-e1d984854ac2"/>
+                                    <a:da name="DEFAULT" value="255"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=255"/>
+                                        <a:tst expr="&lt;=255"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Major Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:4f9f276f-e2f6-4750-818f-44b03e4fabbf"/>
+                                    <a:da name="DEFAULT" value="3"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=3"/>
+                                        <a:tst expr="&lt;=3"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Minor Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:b925e0eb-1a62-4e94-8aae-cca5b200f4f2"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Patch Version"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:89f4430d-0c46-4c5e-97f9-83b5b68644e0"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=0"/>
+                                    </a:da>
+                                </v:var>
+                                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                    <a:a name="LABEL" value="Vendor Api Infix"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>
+                                        In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name. 
+                                        This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                        &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                        E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write. 
+                                        This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                                    </p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:f2df9ddd-b891-475d-af2b-647077730557"/>
+                                    <a:da name="DEFAULT" value=""/>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:da name="READONLY" value="true"/>
+                                </v:var>
+                                <v:var name="VendorId" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Vendor Id"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN: 
+                                    <html><p>Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</p></html>
+                                ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:a42adab2-d881-4f71-92f6-db500738c652"/>
+                                    <a:da name="DEFAULT" value="43"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=43"/>
+                                        <a:tst expr="&lt;=43"/>
+                                    </a:da>
+                                </v:var>
+                            </v:ctr>
+                            
+                        </v:ctr>
+                    </d:chc>
+                    <d:chc name="Platform_EcuParameterDefinition" type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                            <d:lst name="MODULE_REF">
+                                <d:ref type="MODULE_REF" value="ASPath:/TS_T40D34M30I0R0/Platform"/>
+                            </d:lst>
+                            <a:a name="UUID" value="ECUC:fb52d338-daea-408f-81ad-b460305eccc8"/>
+                        </d:ctr>
+                    </d:chc>
+                    <d:chc name="Platform_ModuleDescription" type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                            <d:var name="MODULE_ID" type="INTEGER">
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:var>
+                            <d:ref type="RECOMMENDED_CONFIGURATION">
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:ref>
+                            <d:ref type="PRE_CONFIGURED_CONF">
+                                <a:a name="EDITABLE" value="false"/>
+                                <a:a name="IMPORTER_INFO" value="@DEF"/>
+                            </d:ref>
+                            <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" value="ASPath:/TS_T40D34M30I0R0/Platform"/>
+                        </d:ctr>
+                    </d:chc>
+                </d:lst>
+            </d:ctr>
+        </d:lst>
+    </d:ctr>
+</datamodel>
+

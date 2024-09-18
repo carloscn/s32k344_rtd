@@ -1,0 +1,967 @@
+<?xml version='1.0'?>
+<datamodel version="3.0"
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    Lin.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR LinTrcv_43_AE - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and LinTrcv_43_AE Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : AE
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   (c) Copyright 2020 - 2023 NXP Semiconductors
+*   All Rights Reserved.
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->
+<d:ctr type="AUTOSAR" factory="autosar"
+    xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+    xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+    xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+        <d:ctr name="LinTrcv_43_AE_TS_T40D34M30I0R0" type="AR-PACKAGE">
+            <a:a name="UUID" value="ECUC:c59b866e-f4e6-458a-9035-29a85b418af1"/>
+            <d:lst type="ELEMENTS">
+                <!-- @implements LINTRCV_Object -->
+                <d:chc name="LinTrcv" type="AR-ELEMENT" value="MODULE-DEF">
+                    <v:ctr type="MODULE-DEF">
+                        <a:a name="RELEASE" value="asc:4.7"/>
+                        <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                            <ad:ADMIN-DATA>
+                                <ad:DOC-REVISIONS>
+                                    <ad:DOC-REVISION>
+                                        <ad:REVISION-LABEL>3.0.0</ad:REVISION-LABEL>
+                                        <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                        <ad:DATE>2010-12-03</ad:DATE>
+                                    </ad:DOC-REVISION>
+                                </ad:DOC-REVISIONS>
+                            </ad:ADMIN-DATA>
+                        </a:a>
+                        <a:a name="DESC">
+                            <a:v>
+                                <![CDATA[EN:
+                                    <html>
+                                        <p>Configuration of LIN Transceiver Driver module.</p>
+                                    </html>
+                                ]]>
+                            </a:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTSUPPORT" value="false"/>
+                        <a:a name="UUID" value="ECUC:754b773c-6809-46a7-be78-94f24abb9268"/>
+                        
+                        <!-- @implements IMPLEMENTATION_CONFIG_VARIANT_Object -->
+                        <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                            <a:a name="LABEL" value="Configuration Variant"/>
+                            <a:a name="UUID" value="ECUC:c3f60b73-7066-4b07-b81e-b9c63fea2019"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                            <p>
+                                            VariantPreCompile: Only precompile time configuration parameters. Only one set of parameters.<br>
+                                            </p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:da name="DEFAULT" value="VariantPreCompile"/>
+                            <a:da name="READONLY" value="true"/>
+                            <a:da name="RANGE">
+                                <a:v>VariantPostBuild</a:v>
+                                <a:v>VariantPreCompile</a:v>
+                            </a:da>
+                        </v:var>
+
+                        <!-- @implements LinGeneral_Object -->
+                        <v:ctr name="LinTrcvGeneral" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                            <h1>LinTrcvGeneral</h1>
+                                            <p>Autosar Requirements: ECUC_LinTrcv_00090</p>
+                                            <p>Container gives LIN transceiver driver basic information.</p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:f54ae770-970c-4e6f-9558-edcb05029375"/>
+
+                            <v:var name="LinTrcvMulticoreSupport" type="BOOLEAN">
+                                <a:a name="LABEL" value="Lin Transceiver Multicore Support"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>This parameter determine multi-core feature will be used in Lin driver.</p>
+                                                <p>If LinTrcvMulticoreSupport is disabled, then for all the variants no partition shall be defined.</p>
+                                                <p>If LinTrcvMulticoreSupport is enabled, at least one EcucPartition needs to be defined (in all variants).</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:72a8a638-4009-4639-124a-ee4da2363e78"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:a name="EDITABLE" type="XPath">
+                                    <a:tst expr="(ecu:get(&apos;LinTrcv.LinTrcvMulticoreSupport&apos;)='TRUE') or
+                                        ((ecu:get(&apos;LinTrcv.LinTrcvMulticoreSupport&apos;)='FALSE') and (.='true'))"/>
+                                </a:a>
+                            </v:var>
+                            <!-- @implements LinTrcvDevErrorDetect_Object -->
+                            <v:var name="LinTrcvDevErrorDetect" type="BOOLEAN">
+                                <a:a name="LABEL" value="Lin Transceiver Default Error Detection"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <h1>LinDevErrorDetect</h1>
+                                                <p>Autosar Requirements: ECUC_LinTrcv_00001</p>
+                                                <p>Switches the Default Error Detection and Notification ON or OFF.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:4fc91bfc-86af-4a83-99a7-973f2b5be813"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+                            <!-- @implements LinTrcvIndex_Object -->
+                            <v:var name="LinTrcvIndex" type="INTEGER">
+                                <a:a name="LABEL" value="InstanceId"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>Autosar Requirements: ECUC_LinTrcv_00153</p>
+                                                <p>Specifies the InstanceId of this module instance. If only one instance is present it shall have the Id 0.</p>
+                                                <p>Note, this parameter is not used in the current implementation.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:77460cdb-d56a-4a49-8614-b9e15d69dc07"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="READONLY" value="true"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="LinTrcvTimerType" type="ENUMERATION">
+                                <a:a name="LABEL" value="Lin Transceiver Timer Type"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>LinTrcvTimerType</p>
+                                                <p>Type of the Time Service Predefined Timer.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:2f8f839d-6feb-4351-aa09-cd3d1a742be8"/>
+                                <a:da name="RANGE">
+                                    <a:v>None</a:v>
+                                    <a:v>Timer_1us16bit</a:v>
+                                </a:da>
+                                <a:a name="DEFAULT" value="None"/>
+                            </v:var>
+
+
+                            <!-- @implements LinVersionInfoApi_Object -->
+                            <v:var name="LinTrcvVersionInfoApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Provide Lin Transceiver VersionInfo Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                       <![CDATA[EN:
+                                            <html>
+                                                <h1>LinTrcvVersionInfoApi</h1>
+                                                <p>Autosar Requirements: ECUC_LinTrcv_00003</p>
+                                                <p>Switches the LinTrcvVersionInfo function ON or OFF.</p>
+                                            </html>
+                                       ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:88361779-3793-47d9-8acc-ad065a048c2d"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+                            
+                            <v:var name="LinTrcvWaitTime" type="FLOAT">
+                                <a:a name="LABEL" value="Lin Transceiver Timer Type"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>LinTrcvWaitTime</p>
+                                                <p>Autosar Requirements: ECUC_LinTrcv_00160</p>
+                                                <p>Wait time for transceiver state changes in seconds.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:46e39632-5374-46d2-ad7e-3b316b681bc1"/>
+                                <a:a name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=0.000255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+                            
+                            <v:var name="LinTrcvWakeUpSupport" type="BOOLEAN">
+                                <a:a name="LABEL" value="Lin Transceiver WakeUp Support"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                       <![CDATA[EN:
+                                            <html>
+                                                <h1>LinTrcvWakeUpSupport</h1>
+                                                <p>Autosar Requirements: ECUC_LinTrcv_00107</p>
+                                                <p>Informs whether wake up is supported or not. In case wake up is not supported by LIN transceiver hardware the setting shall be false. The wake up ability may be switched on or off for each channel of one LIN transceiver by LinTrcvWakeupSourceRef.</p>
+                                            </html>
+                                       ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:6da8ded4-8d8a-4f7d-97de-c40d9e3b8ee4"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+                            <!-- /** @implements LinTrcvEcucPartitionRef_Object */ -->
+                            <v:lst name="LinTrcvEcucPartitionRef">
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="( (node:fallback(as:modconf('LinTrcv')[1]/LinTrcvGeneral/LinTrcvMulticoreSupport, 'false') = 'false') and (num:i(count(./*)) != 0) )"
+                                    true="Multicore isn't supported(LinTrcvMulticoreSupport node is unchecked) so the LinTrcvEcucPartitionRef list need to be empty"/>
+                                    <a:tst expr="( (node:fallback(as:modconf('LinTrcv')[1]/LinTrcvGeneral/LinTrcvMulticoreSupport, 'false') = 'true') and (num:i(count(./*)) = 0) )"
+                                    true="Multicore is supported(LinTrcvMulticoreSupport node is checked) so at least one partition should be referred"/>
+                                </a:da>
+                                <v:ref name="LinTrcvEcucPartitionRef" type="REFERENCE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                Maps the Lin transceiver driver to zero or multiple ECUC partitions to make the modules API available in this partition. The Lin transceiver driver will operate as an independent instance in each of the partitions.
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                      <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="UUID" value="ECUC:3cb8136f-d38f-4f73-919a-df2f80c88975"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                </v:ref>
+                            </v:lst>
+
+                        </v:ctr>
+
+                        <!-- @implements LinTrcvChanne_Object -->
+                        <v:lst name="LinTrcvChannel" type="MAP">
+                            <a:da name="MIN" value="1"/>
+                            <a:da name="INVALID" type="XPath">
+                                <a:tst expr="num:i(count(node:current()/*)) &gt; ecu:get(&apos;LinTrcv.LinTrcvChannel&apos;)"
+                                       true="Maximum available LIN Transceiver hardware channels was exceeded."/>
+                            </a:da>
+                            <v:ctr name="LinTrcvChannel" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                Container gives LIN transceiver driver information about a single LIN transceiver channel. Any LIN transceiver driver has such LIN transceiver channels"
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:a name="UUID" value="ECUC:5519f98a-d432-484f-b653-445226eca31a"/>
+                                <!-- @implements LinTrcvChannelId_Object -->
+                                <v:var name="LinTrcvChannelId" type="INTEGER">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    Unique identifier of the LIN Transceiver Channel.
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="Lin Transceiver Channel ID" />
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                                    <a:a name="UUID" value="ECUC:ea720240-7002-4a3b-8cec-9e7d8615d120"/>
+                                    <a:da name="DEFAULT" type="XPath" expr="node:fallback(node:current()/../@index, num:i(1))"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0"/>
+                                        <a:tst expr="&lt;=255"/>
+                                    </a:da>
+                                    <a:da name="RANGE" type="XPath">
+                                        <a:tst expr="(. &gt;= 0) and (.&lt; num:i(count(node:current()/../../*)))"
+                                        false="Value out of range: must be in range 0 to N-1 (N is number of configured channels). Use the Calc button to calculate correct default value"/>
+                                        <a:tst expr="text:uniq(../../*/LinTrcvChannelId, .)"
+                                        false="Duplicated value, LinTrcvChannelId must be unique across all Lin Transceiver channels. Use the Calc button to calculate correct default value."/>
+                                    </a:da>
+                                </v:var>
+                                
+                                <v:var name="LinTrcvHwChannel" type="ENUMERATION">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    Selects the Lin Transceiver Hardware Channel.
+                                                    <h1>Note:</h1>
+                                                    This Parameter is an Implementation Specific Parameter.
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="Lin Transceiver Hardware Channel" />
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:2121e93b-3d41-4334-bcb4-5f073af183ed"/>
+                                    <a:da name="DEFAULT" type="XPath" expr="(ecu:list(&apos;LinTrcv.LinTrcvChannel.LinTrcvAePhyChannels.List&apos;))[position()-1=node:fallback( node:current()/../@index, '0')]"></a:da>
+                                    <a:da name="RANGE" type="XPath" expr="ecu:list(&apos;LinTrcv.LinTrcvChannel.LinTrcvAePhyChannels.List&apos;)"/>
+                                </v:var>
+                                
+                                <!-- @implements LinTrcvChannelUsed_Object -->
+                                <v:var name="LinTrcvChannelUsed" type="BOOLEAN">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    <h1>LinTrcvChannelUsed</h1>
+                                                    <p>Autosar Requirements: ECUC_LinTrcv_00004</p>
+                                                    <p>Shall the related LIN transceiver channel be used?</p>
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="Lin Transceiver Channel Used" />
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:884f60c8-028b-4855-aff0-3f97451c988e"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+                                
+                                <!-- @implements LinTrcvWakeupByBusUsed_Object -->
+                                <v:var name="LinTrcvWakeupByBusUsed" type="BOOLEAN">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    <h1>LinTrcvWakeupByBusUsed</h1>
+                                                    <p>Autosar Requirements: ECUC_LinTrcv_00006</p>
+                                                    <p>Is wake up by bus supported? If LIN transceiver hardware does not support wake up by bus value is always FALSE. If LIN transceiver hardware supports wake up by bus value is TRUE or FALSE depending whether it is used or not</p>
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="Lin Transceiver WakeUp By Bus Used" />
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:7f058deb-29b5-4646-a085-759f9a2406cd"/>
+                                    <a:da name="DEFAULT" value="true"/>
+                                </v:var>
+                                
+                                <!-- @implements LinTrcvWakeupSource_Object -->
+                                <v:ref name="LinTrcvWakeupSourceRef" type="REFERENCE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html>
+                                                    <h1>LinTrcvWakeupByBusUsed</h1>
+                                                    <p>Autosar Requirements: ECUC_LinTrcv_00012</p>
+                                                    <p>Reference to a wakeup source in the EcuM configuration. This reference is only needed if LinTrcvWakeupByBusUsed is true. Implementation Type: reference to EcuM_WakeupSourceType</p>
+                                                </html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="EcuM WakeUP source" />
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="UUID" value="ECUC:6c159cde-405c-4220-b459-9036157b36b8"/>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuM/EcuMConfiguration/EcuMCommonConfiguration/EcuMWakeupSource"/>
+                                    <a:da name="INVALID" type="XPath">
+                                         <a:tst expr="( (. != '') and (node:exists(node:refs(.))) )" false="Refer to a invalid wakeup source"/>
+                                         <a:tst expr="node:fallback(../LinTrcvWakeupByBusUsed, 'false')= 'false'"
+                                         true="The LinTrcvWakeupSourceRef node should be disabled because the LinTrcvWakeupByBusUsed node was disabled"/>
+                                    </a:da>
+                                </v:ref>
+                                <!-- @implements LinTrcvChannelEcucPartitionRef_Object -->
+                                <v:ref name="LinTrcvChannelEcucPartitionRef" type="REFERENCE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                Maps one single Lin transceiver channel to zero or one ECUC partitions.
+                                                The ECUC partition referenced is a subset of the ECUC partitions where the Lin transceiver driver is mapped to.
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                      <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="UUID" value="ECUC:368967f8-2f54-4394-a9be-ef9d6eb2e7b3"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/EcuC/EcucPartitionCollection/EcucPartition"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                                        <a:tst expr="node:containsValue(../../../../LinTrcvGeneral/LinTrcvEcucPartitionRef/*, node:value(.))"
+                                            false="The ECUC partitions referenced by LinTrcvChannelEcucPartitionRef shall be a subset of the ECUC partitions referenced by LinTrcvEcucPartitionRef."/>
+                                    </a:da>
+                                </v:ref>
+
+                                <v:ref name="LinTrcvIcuChannelRef" type="REFERENCE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                Reference to the IcuChannel to enable/disable the interrupts for wakeups.
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                      <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                      <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="UUID" value="ECUC:0b855299-4d08-4de1-a437-5059825c76ea"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Icu/IcuConfigSet/IcuChannel"/>
+                                </v:ref>
+                                <!-- @implements LinTrcvAccess_Object -->
+                                <v:ctr name="LinTrcvAccess" type="IDENTIFIABLE">
+                                    <a:a name="LABEL" value="Lin Transceiver Access" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                                 Container gives LIN transceiver driver access about a single LIN transceiver channel.<br>
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:da name="READONLY" value="true"/>
+                                    <a:a name="UUID" value="ECUC:5eacba8a-9292-46db-a06e-3a7cf400b449"/>
+                                    <!-- Container Definition: LinTrcvDioAccess -->
+                                    <v:ctr name="LinTrcvDioAccess" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Container gives LIN transceiver driver information about accessing ports and port pins. In addition relation between LIN transceiver hardware pin names and Dio port access information is given. If a LIN transceiver hardware has no Dio interface, there is no instance of this container.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:5097db74-73a0-4c39-a04d-2bc2b00d47ef"/>
+                                        <!-- Container Definition: LinTrcvDioChannelAccess -->
+                                        <v:ctr name="LinTrcvDioChannelAccess" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Container gives DIO channel access by single Lin transceiver channel.<br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:793b4242-4f83-4d10-ac20-9ef264bfd9b3"/>
+                                            <v:var name="LinTrcvHardwareInterfaceName" type="STRING_LABEL">
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html>
+                                                            LIN transceiver hardware interface name. It is typically the name of a pin. From a Dio point of view it is either a port, a single channel or a channel group. Depending on this fact either LINTRCV_DIO_PORT_SYMBOLIC_NAME or LINTRCV_DIO_CHANNEL_SYMBOLIC_NAME or LINTRCV_DIO_CHANNEL_GROUP_SYMBOLIC_NAME shall reference a Dio configuration. The LIN transceiver driver implementation description shall list up this name for the appropriate LIN transceiver hardware.<br>
+                                                        </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="LABEL" value="Hardware interface name"/>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                <a:a name="SCOPE" value="LOCAL"/>
+                                                <a:a name="UUID" value="ECUC:59f8b925-adff-4508-8c3e-219d335e9f24"/>
+                                            </v:var>
+    
+                                            <v:ref name="LinTrcvDioSymRefName" type="CHOICE-REFERENCE">
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html>
+                                                            Choice Reference to a DIO Port, DIO Channel or DIO Channel Group. This reference replaces the LINTRCV_DIO_PORT_SYM_NAME, LINTRCV_DIO_CHANNEL_SYM_NAME and LINTRCV_DIO_GROUP_SYM_NAME references in the Lin Trcv SWS.<br>
+                                                        </html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                                <a:a name="SCOPE" value="ECU"/>
+                                                <a:a name="UUID" value="ECUC:de9282c6-6a65-47db-95ff-aa3fe4b97a0a"/>
+                                                <a:da name="REF">
+                                                    <a:v>ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannel</a:v>
+                                                    <a:v>ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort/DioChannelGroup</a:v>
+                                                    <a:v>ASPathDataOfSchema:/AUTOSAR/EcucDefs/Dio/DioConfig/DioPort</a:v>
+                                                </a:da>
+                                            </v:ref>
+                                        </v:ctr>
+                                    </v:ctr>
+                                    <!-- Container Definition: LinTrcvSpiSequence -->
+                                    <v:ctr name="LinTrcvSpiSequence" type="IDENTIFIABLE">
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    Container gives LIN transceiver driver information about one SPI sequence.
+                                                    One SPI sequence used by LIN transceiver driver is in exclusive use for it.
+                                                    No other driver is allowed to access this sequence. LIN transceiver driver may use one sequence to access n LIN transceiver hardwares chips of the same type or n sequences are used to access one single LIN transceiver hardware chip.
+                                                    If a LIN transceiver hardware has no SPI interface, there is no instance of this container.
+                                                    <br>
+                                                </html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="UUID" value="ECUC:b4dd521f-0d5c-4e82-b30d-8a192720ba27"/>
+                                        <!-- Symbolic Name Reference Definition: LinTrcvSpiSequenceName -->
+                                        <v:ref name="LinTrcvSpiSequenceName" type="REFERENCE">
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html>
+                                                        Reference to a Spi sequence configuration container.
+                                                    </html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SCOPE" value="ECU"/>
+                                            <a:a name="UUID" value="ECUC:606dedc9-d5fb-4881-b88f-f39e2c10008a"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiSequence"/>
+                                        </v:ref>
+                                    </v:ctr>
+                                </v:ctr>
+                            </v:ctr>
+                        </v:lst>
+
+                        <!-- @implements CommonPublishedInformation_Object -->
+                        <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:
+                                         <html>
+                                             Common container, aggregated by all modules. It contains published information about vendor and versions.
+                                         </html>
+                                     ]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:5375a2dc-49f5-478c-8683-2aa697669002"/>
+                            <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Major Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Major version number of AUTOSAR specification on which the appropriate implementation is based on.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:935af21d-a6f3-49c0-87e8-d2d3496a3692"/>
+                                <a:da name="DEFAULT" value="4"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=4"/>
+                                    <a:tst expr="&lt;=4"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Minor Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Minor version number of AUTOSAR specification on which the appropriate implementation is based on.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:d80476cd-88a3-4bbd-b2bc-ddfd34e86472"/>
+                                <a:da name="DEFAULT" value="7"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=7"/>
+                                    <a:tst expr="&lt;=7"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Release Revision Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Revision version number of AUTOSAR specification on which the appropriate implementation is based on.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:fc62a62f-5cb5-4c64-97d2-af849706fce2"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="ModuleId" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Numeric Module ID"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Module ID of this module from Module List.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:cc1aa557-fbff-4180-967b-ce245123bde2"/>
+                                <a:da name="DEFAULT" value="64"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=64"/>
+                                    <a:tst expr="&lt;=64"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Major Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Major version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:aed451e3-079d-48ea-a1f8-4e867daa4cf2"/>
+                                <a:da name="DEFAULT" value="3"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=3"/>
+                                    <a:tst expr="&lt;=3"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Minor Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:b253ab94-d3c5-451f-8583-de105a2e7c52"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Patch Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:ec50d75b-5108-417f-a312-33c3438e7382"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                <a:a name="LABEL" value="Vendor Api Infix"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                <p>
+                                                    In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                                    This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                                    &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                                    E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                                    This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                                                </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:e9531a20-2560-4772-ba2a-c3a7610f5202"/>
+                                <a:da name="DEFAULT" value="AE"/>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:da name="READONLY" value="true"/>
+                            </v:var>
+                            <v:var name="VendorId" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Vendor ID"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                                Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:dbc03ef9-e4e5-415a-94d4-d41afce3c312"/>
+                                <a:da name="DEFAULT" value="43"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=43"/>
+                                    <a:tst expr="&lt;=43"/>
+                                </a:da>
+                            </v:var>
+                        </v:ctr>
+                        <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/LinTrcv_43_AE"/>
+                    </v:ctr>
+                </d:chc>
+                <d:chc name="LinTrcv_43_AE_EcuParameterDefinition" type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="UUID" value="ECUC:bde61c8d-7fb8-490e-a49c-762d3bd1cae1"/>
+                        <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                        <d:lst name="MODULE_REF">
+                            <d:ref type="MODULE_REF" value="ASPath:/LinTrcv_43_AE_TS_T40D34M30I0R0/LinTrcv"/>
+                        </d:lst>
+                    </d:ctr>
+                </d:chc>
+                <d:chc name="LinTrcv_43_AE_ModuleDescription" type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                        <d:var name="MODULE_ID" type="INTEGER" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:ref type="RECOMMENDED_CONFIGURATION" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="PRE_CONFIGURED_CONF" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" value="ASPath:/LinTrcv_43_AE_TS_T40D34M30I0R0/LinTrcv"/>
+                    </d:ctr>
+                </d:chc>
+            </d:lst>
+        </d:ctr>
+    </d:lst>
+</d:ctr>
+
+</datamodel>

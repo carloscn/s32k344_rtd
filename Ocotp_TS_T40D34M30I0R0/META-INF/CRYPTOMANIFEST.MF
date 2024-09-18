@@ -1,0 +1,71 @@
+
+Name: generate_PB/Ocotp_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773974736089907081759034467127589426539140909759879
+ 108514509127074456181592849943743299355821145640539583
+
+Name: generate_PC/src/Ocotp_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773963968482524224340749587082500033065594729420359
+ 706781790505396488222835917371671055687167884805299782
+
+Name: generate_PC/include/Mem_Otp_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377425594828386906075751133814094578528743495702338274
+ 4354325693272746180302251046941044729466937960855506
+
+Name: generate_PB/src/Mem_Otp_Ip_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422080141775350607480683530369670697958438023840453
+ 4470009713693779616168614860444365836484037282623920
+
+Name: generate_PC/Ocotp_VersionCheck.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424141848915968583163132962495581717918067928518963
+ 4183260607669374802396720824857201065635239652321519
+
+Name: generate_PB/include/Ocotp_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773975383544944722153955411449266292917307086419286
+ 723813954614599455222961298413257732835713552435740053
+
+Name: generate_PC/include/Ocotp_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423594577681915414050895716794328036730620604417070
+ 3478361639445972693740742457013859575566674885559332
+
+Name: generate_swcd/swcd/Ocotp_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421912275823978986792770609983322450857239084425728
+ 7715937803603118794295983086581745128967268962789469
+
+Name: config/Ocotp.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424398502514914658427002653798963143190110075054878
+ 3580835872032193002312276451025091874342016018569494
+
+Name: generate_PB/src/Ocotp_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773973802487219972907345315378265647337181202810507
+ 265835866180743679426892429553363726737027402543758238
+

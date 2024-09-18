@@ -1,0 +1,2413 @@
+<?xml version='1.0' encoding='ASCII'?>
+<datamodel xmlns="http://www.tresos.de/_projects/DataModel2/16/root.xsd" xmlns:a="http://www.tresos.de/_projects/DataModel2/16/attribute.xsd" xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd" version="7.0">
+
+  <d:ctr xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" xmlns:f="http://www.tresos.de/_projects/DataModel2/14/formulaexpr.xsd" xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd" type="AUTOSAR" factory="autosar">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="Mem_43_ExFls" type="AR-PACKAGE">
+        <d:lst type="ELEMENTS">
+          <d:chc name="Mem" type="AR-ELEMENT" value="MODULE-CONFIGURATION">
+            <d:ctr type="MODULE-CONFIGURATION">
+              <a:a name="DEF" value="ASPath:/Mem_43_ExFls_TS_T40D34M30I0R0/Mem"/>
+              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+              <d:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN" value="false">
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION" value="VariantPreCompile">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+              </d:var>
+              <d:ctr name="AutosarExt" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                <d:var name="MemEnableUserModeSupport" type="BOOLEAN" value="false">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+              </d:ctr>
+              <d:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                <d:var name="ArReleaseMajorVersion" type="INTEGER" value="4">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseMinorVersion" type="INTEGER" value="7">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ArReleaseRevisionVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="ModuleId" type="INTEGER" value="91">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMajorVersion" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwMinorVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="SwPatchVersion" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorApiInfix" type="STRING" value="">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+                <d:var name="VendorId" type="INTEGER" value="43">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+              <d:ctr name="MemDevice" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                <d:lst name="MemCfg" type="MAP">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  <d:ctr name="MemCfg_0" type="IDENTIFIABLE">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    <d:var name="MemAHBReadEnable" type="BOOLEAN" value="true">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemAlignment" type="INTEGER" value="1">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemConnectionType" type="ENUMERATION" value="QSPI_IP_SIDE_A1">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemName" type="STRING" value="MX25L6433F">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemUseSfdp" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:ref name="MemCfgRef" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:ref>
+                    <d:ref name="MemQspiInstance" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemController_0">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:ref>
+                  </d:ctr>
+                </d:lst>
+                <d:lst name="MemController" type="MAP">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  <d:ctr name="MemController_0" type="IDENTIFIABLE">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    <d:var name="MemControllerName" type="ENUMERATION" value="QSPI_IP_INSTANCE_0">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:ref name="MemControllerCfgRef" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemControllerCfg_0_SPI">
+                      <a:a name="ENABLE" value="true"/>
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:ref>
+                  </d:ctr>
+                </d:lst>
+                <d:lst name="MemHyperFlashCfg" type="MAP"/>
+                <d:lst name="MemControllerCfg" type="MAP">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  <d:ctr name="MemControllerCfg_0_SPI" type="IDENTIFIABLE">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    <d:var name="MemHwUnitByteSwapping" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitColumnAddressWidth" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitReadMode" type="ENUMERATION" value="QSPI_IP_DATA_RATE_SDR">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitSamplingDly" type="ENUMERATION" value="QSPI_IP_SAMPLE_DELAY_SAME_DQS">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitSamplingEdge" type="ENUMERATION" value="QSPI_IP_SAMPLE_PHASE_NON_INVERTED">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitSamplingModeA" type="ENUMERATION" value="QSPI_IP_READ_MODE_LOOPBACK">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitTcsh" type="INTEGER" value="4">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitTcss" type="INTEGER" value="4">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitTdh" type="ENUMERATION" value="QSPI_IP_FLASH_DATA_ALIGN_REFCLK">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemHwUnitWordAddressable" type="BOOLEAN" value="false">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemIdleSignalDriveIOFA2HighLvl" type="BOOLEAN" value="true">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemIdleSignalDriveIOFA3HighLvl" type="BOOLEAN" value="true">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemSerialFlashA1Size" type="INTEGER" value="8388608">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemSerialFlashA2Size" type="INTEGER" value="0">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:lst name="MemAhbBuffer" type="MAP">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:ctr name="MemAhbBuffer_0" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemAhbBufferAllMasters" type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferInstance" type="ENUMERATION" value="AHB_BUFFER_0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferMasterId" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferSize" type="INTEGER" value="64">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="MemAhbBuffer_1" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemAhbBufferAllMasters" type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferInstance" type="ENUMERATION" value="AHB_BUFFER_1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferMasterId" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferSize" type="INTEGER" value="64">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="MemAhbBuffer_2" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemAhbBufferAllMasters" type="BOOLEAN" value="false">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferInstance" type="ENUMERATION" value="AHB_BUFFER_2">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferMasterId" type="INTEGER" value="2">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferSize" type="INTEGER" value="64">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                      </d:ctr>
+                      <d:ctr name="MemAhbBuffer_3" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemAhbBufferAllMasters" type="BOOLEAN" value="true">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferInstance" type="ENUMERATION" value="AHB_BUFFER_3">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferMasterId" type="INTEGER" value="3">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="MemAhbBufferSize" type="INTEGER" value="64">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                      </d:ctr>
+                    </d:lst>
+                    <d:ctr name="MemDllCfgA" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:var name="MemDllCfgADllCraFreqEn" type="BOOLEAN" value="false">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllCraReferenceCounter" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllCraResolution" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllCraSlvDlyCoarse" type="INTEGER" value="5">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllCraSlvDlyOffset" type="INTEGER" value="7">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllCraSlvFineOffset" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllMode" type="ENUMERATION" value="QSPI_IP_DLL_BYPASSED">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemDllCfgADllTapSelect" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                    </d:ctr>
+                    <d:ctr name="MemSecureFlashProtection" type="IDENTIFIABLE">
+                      <d:var name="MemQspiSfpMasterTimeout" type="INTEGER" value="65535">
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:var>
+                      <d:lst name="MemQspiSfpMdadTG" type="MAP"/>
+                      <d:lst name="MemQspiSfpFrad" type="MAP"/>
+                    </d:ctr>
+                  </d:ctr>
+                </d:lst>
+                <d:lst name="MemSerialFlashCfg" type="MAP">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  <d:ctr name="MemSerialFlashCfg_0" type="IDENTIFIABLE">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    <d:var name="MemCfgPageSize" type="INTEGER" value="256">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:var name="MemCfgSize" type="INTEGER" value="8388608">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:var>
+                    <d:ref name="MemCfgReadLUT" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/Read_1S1S1S">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:ref>
+                    <d:ref name="MemCfgWriteLUT" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/Write_1S1S1S">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    </d:ref>
+                    <d:ref name="MemCfgRead0xxLUT" type="REFERENCE">
+                      <a:a name="ENABLE" value="false"/>
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:ref>
+                    <d:ref name="MemCfgRead0xxLUTAHB" type="REFERENCE">
+                      <a:a name="ENABLE" value="false"/>
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:ref>
+                    <d:ctr name="MemCfgEraseSettings" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:var name="MemCfgErase1Size" type="INTEGER" value="12">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemCfgErase2LUT" type="REFERENCE" value="">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:var name="MemCfgErase2Size" type="INTEGER" value="15">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemCfgErase3LUT" type="REFERENCE">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:var name="MemCfgErase3Size" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemCfgErase4LUT" type="REFERENCE">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:var name="MemCfgErase4Size" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemCfgErase1LUT" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/SectorErase">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                      <d:ref name="MemChipEraseLUT" type="REFERENCE">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                    </d:ctr>
+                    <d:ctr name="MemCfgReadIdSettings" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:var name="MemCfgReadIdSize" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemQspiDeviceId" type="STRING" value="0x17:20:C2">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemCfgReadIdLUT" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/ReadID">
+                        <a:a name="ENABLE" value="true"/>
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                    </d:ctr>
+                    <d:lst name="MemInitConfiguration" type="MAP">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:ctr name="init_0_Set_QE_bit" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="addr" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="opType" type="ENUMERATION" value="QSPI_IP_OP_TYPE_RMW_REG">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="shift" type="INTEGER" value="6">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="size" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="value" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="width" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:ref name="MemCommand1Lut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/ReadStatus">
+                          <a:a name="ENABLE" value="true"/>
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:ref>
+                        <d:ref name="MemCommand2Lut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/WriteStatus">
+                          <a:a name="ENABLE" value="true"/>
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:ref>
+                        <d:ref name="MemWeLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/WriteEnable">
+                          <a:a name="ENABLE" value="true"/>
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:ref>
+                        <d:ref name="MemCtrlCfgPtr" type="REFERENCE" value="">
+                          <a:a name="ENABLE" value="false"/>
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                      </d:ctr>
+                      <d:ctr name="init_1_Dummy" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:ref name="MemCommand2Lut" type="REFERENCE" value="">
+                          <a:a name="ENABLE" value="false"/>
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref name="MemWeLut" type="REFERENCE" value="">
+                          <a:a name="ENABLE" value="false"/>
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:var name="addr" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="opType" type="ENUMERATION" value="QSPI_IP_OP_TYPE_CMD">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="shift" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="size" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="value" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:var name="width" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:ref name="MemCommand1Lut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/DummyCmd">
+                          <a:a name="ENABLE" value="true"/>
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:ref>
+                        <d:ref name="MemCtrlCfgPtr" type="REFERENCE" value="">
+                          <a:a name="ENABLE" value="false"/>
+                          <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                      </d:ctr>
+                    </d:lst>
+                    <d:ctr name="MemInitResetSettings" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:var name="MemResetCmdCount" type="INTEGER" value="6">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemResetCmdLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/Reset">
+                        <a:a name="ENABLE" value="true"/>
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                    </d:ctr>
+                    <d:lst name="MemLUT" type="MAP">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:ctr name="BlockErase" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="19">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="216">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="BlockErase32K" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="20">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="82">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="ChipErase" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="21">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="96">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="DummyCmd" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="25">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="FastRead_1S1S1S" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="7">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="11">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read0xx_1S4S4S_104MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="14">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="235">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="90">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_5" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="5">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_JMP_ON_CS">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read0xx_1S4S4S_133MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="15">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="235">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="90">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_5" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="5">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_JMP_ON_CS">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read0xx_AHB_1S4S4S_104MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="16">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="90">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read0xx_AHB_1S4S4S_133MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="17">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="90">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="ReadConfiguration" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="3">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="21">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="ReadID" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="159">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="ReadStatus" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="2">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="5">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S1S1S" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="6">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S1S2S" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="8">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="59">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S1S4S" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="11">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="107">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S2S2S_104MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="9">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="187">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S2S2S_133MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="10">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="187">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="6">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S4S4S_104MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="12">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="235">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Read_1S4S4S_133MHz" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="13">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="235">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_MODE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_DUMMY">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_READ">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Reset" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="24">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="102">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_STOP">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_10" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="10">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="153">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_11" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="11">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_STOP">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="153">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_3" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="3">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_STOP">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_4" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="102">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_5" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="5">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_STOP">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_6" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="6">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="153">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_7" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="7">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_STOP">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_8" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="102">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_9" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="9">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_STOP">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="SectorErase" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="18">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="32">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="WriteConfiguration" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="5">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_WRITE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="WriteEnable" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="0">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="6">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="WriteStatus" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="4">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_WRITE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Write_1S1S1S" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="22">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_WRITE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                      <d:ctr name="Write_1S4S4S" type="IDENTIFIABLE">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        <d:var name="MemLUTIndex" type="INTEGER" value="23">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                        </d:var>
+                        <d:lst name="MemInstructionOperandPair" type="MAP">
+                          <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                          <d:ctr name="MemInstructionOperandPair_0" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="0">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_CMD">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="56">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_1" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="1">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_ADDR">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="24">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                          <d:ctr name="MemInstructionOperandPair_2" type="IDENTIFIABLE">
+                            <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            <d:var name="MemInstrOperPairIndex" type="INTEGER" value="2">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTInstruction" type="ENUMERATION" value="QSPI_IP_LUT_INSTR_WRITE">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTOperand" type="INTEGER" value="8">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                            <d:var name="MemLUTPad" type="ENUMERATION" value="QSPI_IP_LUT_PADS_4">
+                              <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                            </d:var>
+                          </d:ctr>
+                        </d:lst>
+                      </d:ctr>
+                    </d:lst>
+                    <d:ctr name="MemResetSettings" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:var name="MemResetCmdCount" type="INTEGER" value="6">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemResetCmdLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/Reset">
+                        <a:a name="ENABLE" value="true"/>
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                    </d:ctr>
+                    <d:ctr name="MemStatusConfig" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:var name="MemBlockProtectionOffset" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemBlockProtectionValue" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemBlockProtectionWidth" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemBusyOffset" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemBusyValue" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemRegSize" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemWriteEnableOffset" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ref name="MemStatusRegInitReadLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/ReadStatus">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                      <d:ref name="MemStatusRegReadLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/ReadStatus">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                      <d:ref name="MemStatusRegWriteLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/WriteStatus">
+                        <a:a name="ENABLE" value="true"/>
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                      <d:ref name="MemWriteEnableLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/WriteEnable">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                      <d:ref name="MemWriteEnableSRLut" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemSerialFlashCfg_0/WriteEnable">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:ref>
+                    </d:ctr>
+                    <d:ctr name="MemSuspendSettings" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <d:ref name="MemEraseSuspendLut" type="REFERENCE" value="">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="MemEraseResumeLut" type="REFERENCE" value="">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="MemProgramSuspendLut" type="REFERENCE" value="">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                      <d:ref name="MemProgramResumeLut" type="REFERENCE" value="">
+                        <a:a name="ENABLE" value="false"/>
+                        <a:a name="IMPORTER_INFO" value="@DEF"/>
+                      </d:ref>
+                    </d:ctr>
+                    <d:ref name="MemCtrlAutoCfgPtr" type="REFERENCE" value="">
+                      <a:a name="ENABLE" value="false"/>
+                      <a:a name="IMPORTER_INFO" value="@DEF"/>
+                    </d:ref>
+                  </d:ctr>
+                </d:lst>
+              </d:ctr>
+              <d:ctr name="MemGeneral" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                <d:var name="MemDevErrorDetect" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiInitCallout" type="FUNCTION-NAME" value="MemQspiInitCallout">
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  <a:a name="VARIANTS" type="Variant">
+                    <variant:pbvcond>
+                      <variant:criterion value="ASPath:/EB/PostBuildSelectable/PostBuildSelectableCriterion"/>
+                      <variant:cond>
+                        <variant:tst expr="0"/>
+                      </variant:cond>
+                    </variant:pbvcond>
+                  </a:a>
+                </d:var>
+                <d:var name="MemQspiResetCallout" type="FUNCTION-NAME" value="MemQspiResetCallout">
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  <a:a name="VARIANTS" type="Variant">
+                    <variant:pbvcond>
+                      <variant:criterion value="ASPath:/EB/PostBuildSelectable/PostBuildSelectableCriterion"/>
+                      <variant:cond>
+                        <variant:tst expr="0"/>
+                      </variant:cond>
+                    </variant:pbvcond>
+                  </a:a>
+                </d:var>
+                <d:var name="MemQspiErrorCheckCallout" type="FUNCTION-NAME" value="MemQspiErrorCheckCallout">
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  <a:a name="VARIANTS" type="Variant">
+                    <variant:pbvcond>
+                      <variant:criterion value="ASPath:/EB/PostBuildSelectable/PostBuildSelectableCriterion"/>
+                      <variant:cond>
+                        <variant:tst expr="0"/>
+                      </variant:cond>
+                    </variant:pbvcond>
+                  </a:a>
+                </d:var>
+                <d:var name="MemQspiEccCheckCallout" type="FUNCTION-NAME" value="MemQspiEccCheckCallout">
+                  <a:a name="ENABLE" value="false"/>
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                  <a:a name="VARIANTS" type="Variant">
+                    <variant:pbvcond>
+                      <variant:criterion value="ASPath:/EB/PostBuildSelectable/PostBuildSelectableCriterion"/>
+                      <variant:cond>
+                        <variant:tst expr="0"/>
+                      </variant:cond>
+                    </variant:pbvcond>
+                  </a:a>
+                </d:var>
+                <d:var name="MemExFlsTimeoutMethod" type="ENUMERATION" value="OSIF_COUNTER_DUMMY">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiAsyncEraseTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiAsyncWriteTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiCommandCompleteTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiDllLockTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiFlashInitTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiIdleTimeout" type="INTEGER" value="100">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiResetTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSfpEnableFrad" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSfpEnableGlobal" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSfpEnableMdad" type="BOOLEAN" value="true">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSoftwareResetDelay" type="INTEGER" value="21">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSyncEraseTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSyncReadTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiSyncWriteTimeout" type="INTEGER" value="2147483">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiTxBufferResetDelay" type="INTEGER" value="0">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+                <d:var name="MemQspiWriteEnableRetries" type="INTEGER" value="3">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                </d:var>
+              </d:ctr>
+              <d:lst name="MemInstance" type="MAP">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                <d:ctr name="MemInstance_0" type="IDENTIFIABLE">
+                  <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  <d:var name="MemInstanceId" type="INTEGER" value="0">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  </d:var>
+                  <d:ref name="MemDeviceRef" type="REFERENCE" value="ASPath:/Mem_43_ExFls/Mem/MemDevice/MemCfg_0">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                  </d:ref>
+                  <d:lst name="MemSectorBatch" type="MAP">
+                    <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                    <d:ctr name="MemSectorBatch_0" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <a:a name="INDEX" value="0"/>
+                      <d:var name="MemEraseSectorSize" type="INTEGER" value="4096">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemNumberOfSectors" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemReadPageSize" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemSpecifiedEraseCycles" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemStartAddress" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemWritePageSize" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="false"/>
+                        <d:var name="MemEraseBurstSize" type="INTEGER" value="4096">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemReadBurstSize" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemWriteBurstSize" type="INTEGER" value="16">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="MemSectorBatch_1" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <a:a name="INDEX" value="1"/>
+                      <d:var name="MemEraseSectorSize" type="INTEGER" value="4096">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemNumberOfSectors" type="INTEGER" value="2">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemReadPageSize" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemSpecifiedEraseCycles" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemStartAddress" type="INTEGER" value="4096">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemWritePageSize" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="false"/>
+                        <d:var name="MemEraseBurstSize" type="INTEGER" value="4096">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemReadBurstSize" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemWriteBurstSize" type="INTEGER" value="16">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="MemSectorBatch_2" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <a:a name="INDEX" value="2"/>
+                      <d:var name="MemEraseSectorSize" type="INTEGER" value="4096">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemNumberOfSectors" type="INTEGER" value="3">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemReadPageSize" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemSpecifiedEraseCycles" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemStartAddress" type="INTEGER" value="12288">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemWritePageSize" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="false"/>
+                        <d:var name="MemEraseBurstSize" type="INTEGER" value="4096">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemReadBurstSize" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemWriteBurstSize" type="INTEGER" value="16">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                    <d:ctr name="MemSectorBatch_3" type="IDENTIFIABLE">
+                      <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      <a:a name="INDEX" value="3"/>
+                      <d:var name="MemEraseSectorSize" type="INTEGER" value="4096">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemNumberOfSectors" type="INTEGER" value="4">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemReadPageSize" type="INTEGER" value="1">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemSpecifiedEraseCycles" type="INTEGER" value="0">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemStartAddress" type="INTEGER" value="24576">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:var name="MemWritePageSize" type="INTEGER" value="16">
+                        <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                      </d:var>
+                      <d:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                        <a:a name="ENABLE" value="false"/>
+                        <d:var name="MemEraseBurstSize" type="INTEGER" value="4096">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemReadBurstSize" type="INTEGER" value="1">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                        <d:var name="MemWriteBurstSize" type="INTEGER" value="16">
+                          <a:a name="IMPORTER_INFO">
+                            <a:v>@DEF</a:v>
+                            <a:v>@CALC</a:v>
+                          </a:a>
+                        </d:var>
+                      </d:ctr>
+                    </d:ctr>
+                  </d:lst>
+                </d:ctr>
+              </d:lst>
+              <d:ctr name="MemPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="IMPORTER_INFO" value="MemExFls"/>
+                <d:var name="MemErasedValue" type="INTEGER" value="4294967295">
+                  <a:a name="IMPORTER_INFO" value="@DEF"/>
+                </d:var>
+              </d:ctr>
+            </d:ctr>
+          </d:chc>
+        </d:lst>
+      </d:ctr>
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

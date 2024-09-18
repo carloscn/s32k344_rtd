@@ -1,0 +1,36 @@
+
+Name: generate_PB/include/CanIf_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424838761198399655552557702255721789339844905036526
+ 1312834619711240231007093353129344833883293484769582
+
+Name: generate_PC/include/CanIf_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773973629400901160004949537181421757971692578205455
+ 040696153689191220371550930754768494030648652867333807
+
+Name: config/CanIf.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424360007674231380174975047487267404260820647904680
+ 7095218232970599914682015879615191919122890200833406
+
+Name: generate_PB/src/CanIf_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426440000159148515547371978292429180216229179827102
+ 2791578482448444094547439158300281086547781537086960
+
+Name: generate_PC/src/CanIf_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594746497188446773721700415534844528619328987855391370
+ 842186905146587324663514980374642499044047942673314520
+

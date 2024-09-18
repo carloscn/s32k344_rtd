@@ -1,0 +1,49 @@
+1. Example Description
+    This application demonstrates the usage of a the Resource Manager HLD.
+    The application includes an S32DS project that configures the Rm driver.
+    1.1 The application software functionality
+            - Initialize Application (Clock and CDD RM)
+                Configure CDD RM - Virtual Wrapper with two pin PDAC1 access types
+                    - PDAC1 M7_0_0 is configured with full access right by XRDC
+                    - PDAC1 M7_0_1 is configured with no access right by XRDC
+            - Try to access by MSCR register of SIUL2 through PDAC1 M7_0_0
+                This action performs successfully and MSCR register can be wrote
+            - Try to access by MSCR register of SIUL2 through PDAC1 M7_0_1
+                This action does not perform successfully and MSCR register value is unchanged
+                An hardfault occurs and error details can be captured by XRDC registers
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            - XS32K3X8CVB-Q289 PCB 53108 RevX3 SCH RevA1
+            - Silicon: P32K358GVS 0P14E CTZF2233B
+        2.1.2 Connections
+            - Powered board through power Adapter 12V
+        2.1.3 Debugger
+            - The probe must be connected to J205 - 20-Pin ARM Standard JTAG Connector.
+    2.2 Software installation
+        - Make sure that all RTD plugins are already installed in the S32DS plugins directory
+3. How to run
+    3.1 Importing the project into the workspace
+        After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select "Rm_Virt_Wrap_Example_S32K358". Then click on "Finish".
+        The project should now be copied into you current workspace.
+        Wait for the S32 Configuration was initialized and ready.
+    3.2 Generating the S32 configuration
+        The example will run without an active configuration, however if any changes are required, a configuration needs to be generated.
+        The initial configuration will have the same settings as the default example settings.
+        Right click on the current project, then click "S32 Configuration Tool" choose "Open Peripherals".
+        Pay attention to any error and warning message. If any configured value is invalid, they will be shown for user.
+        Make the desired changes (if any) then click "Update Code".
+    3.3 Building the project
+            Select the configuration to be built: RAM (Debug_RAM), or FLASH (Debug_FLASH) by left clicking on the downward arrow corresponding to the build button in eclipse.
+            Use Project > Build to build the project.
+            Wait for the build action to be completed before continuing to the next step. Check the compiler console for error messages; upon completion, the *.elf binary file should be created.
+    3.4 Running the project
+            Go to Run and select Debug Configurations. There will be a debug configuration for this project:
+
+            Configuration Name                                      Description
+            -------------------------------                         -----------------------
+            Rm_Virt_Wrappper_Example_S32K358_Debug_RAM_PNE          Debug the RAM configuration using PEmicro probe
+            Rm_Virt_Wrappper_Example_S32K358_Debug_FLASH_PNE        Debug the FLASH configuration using PEmicro probe
+
+            Select the desired debug configuration and click on Launch. Now the perspective will change to the Debug Perspective.
+            Use the controls to control the program flow.

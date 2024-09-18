@@ -1,0 +1,1514 @@
+<?xml version='1.0'?>
+
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : C40
+*   Dependencies         : None
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   (c) Copyright 2020 - 2023 NXP Semiconductors
+*   All Rights Reserved.
+====================================================================================================
+
+*   @file    Mem_43_InFls.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Mem_43_InFls - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Mem_43_InFls Tresos Studio plugin.
+-->
+
+<datamodel version="3.0" xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+    xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+    xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+    xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+    <d:ctr type="AUTOSAR" factory="autosar" xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+        xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+        xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd">
+        <d:lst type="TOP-LEVEL-PACKAGES">
+            <d:ctr name="Mem_43_InFls_TS_T40D34M30I0R0" type="AR-PACKAGE">
+                <a:a name="UUID" value="ECUC:562fa4fe-e071-450e-a2c8-40f37030565e" />
+                <d:lst type="ELEMENTS">
+                    <!-- @implements Mem_Object -->
+                    <d:chc name="Mem" type="AR-ELEMENT" value="MODULE-DEF">
+                        <v:ctr type="MODULE-DEF">
+                            <a:a name="RELEASE" value="asc:4.7" />
+                            <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                                <ad:ADMIN-DATA>
+                                    <ad:DOC-REVISIONS>
+                                        <ad:DOC-REVISION>
+                                            <ad:REVISION-LABEL>4.6.0</ad:REVISION-LABEL>
+                                            <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                            <ad:DATE>2014-10-31</ad:DATE>
+                                        </ad:DOC-REVISION>
+                                    </ad:DOC-REVISIONS>
+                                </ad:ADMIN-DATA>
+                            </a:a>
+                            <a:a name="POSTBUILDVARIANTSUPPORT" value="false" />
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html><p>
+                                    Configuration of the Mem_43_InFls module.
+                                </p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="LOWER-MULTIPLICITY" value="1" />
+                            <a:a name="UPPER-MULTIPLICITY" value="*" />
+                            <a:a name="UUID" value="ECUC:ac189584-9ca0-492e-9e83-1bd061c605a9" />
+
+                            <!--  POST_BUILD_VARIANT_USED -->
+                            <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                                <a:a name="DESC"
+                                    value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points." />
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="LABEL" value="Post Build Variant Used" />
+                                <a:a name="ORIGIN" value="EB" />
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false" />
+                                <a:da name="DEFAULT" value="false" />
+                                <a:da name="READONLY" value="TRUE" />
+                                <a:da name="TOOLTIP"
+                                    value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points." />
+                            </v:var>
+
+                            <!-- @implements IMPLEMENTATION_CONFIG_VARIANT_Object -->
+                            <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                                <a:a name="LABEL" value="Config Variant" />
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                        <strong>VariantPreCompile</strong>: Precompile configuration parameters.
+                                     </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:5a10844e-4e25-401a-b5af-abe00bbb01f7" />
+                                <a:da name="DEFAULT" value="VariantPreCompile" />
+                                <a:da name="RANGE" value="VariantPreCompile" />
+                            </v:var>
+
+
+                            <!--  MemAutosarExt -->
+                            <v:ctr name="MemAutosarExt" type="IDENTIFIABLE">
+                                <a:a name="UUID" value="ECUC:48e02262-5a5c-47af-81e2-a8d9d35f08ac" />
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                        <html>
+                                            <p>Vendor specific: This container contains the global Non-Autosar configuration parameters of the Mem driver.
+                                               This container is a MultipleConfigurationContainer, i.e. this container and
+                                               its sub-containers exist once per configuration set.</p>
+                                        </html>
+                                    ]]>
+                                    </a:v>
+                                </a:a>
+
+                                <!-- MemUsesAlterInterface -->
+                                <v:var name="MemUsesAlterInterface" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Uses Alternate Interface " />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Vendor specific: When enabled: A second interface is made available for program and erase operations
+                                            The alternate interface includes an alternate MCR register, alternate MCRS register,
+                                            alternate PEADR register, and alternate sector and super sector PELOCK registers.
+                                            Program and Erase procedures on the alternate interface follow exactly the same flow as the main interface
+                                            <br />
+                                            Note:
+                                            +) Both the Alternate Interface and the Main Interface have the same priority which allows
+                                            both operations to initiate in parallel.
+                                            +) Alternate inteface may not be available for the application cores, it only allocated to the HSE core.
+                                            <br />
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:78896e06-8874-460f-a08a-c81e7ac87a19" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:da name="READONLY" value="true" />
+                                    <a:da name="VISIBLE" value="false" />
+                                </v:var><!-- MemUsesAlterInterface -->
+
+                                <!-- @implements MemEnableUserModeSupport_Object -->
+                                <v:var name="MemEnableUserModeSupport" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Enable User Mode Support" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                      <html>
+                                           <p>Vendor specific: When this parameter is enabled, the module will adapt to run from User Mode, with the following measures:</p>
+                                            <p>configuring REG_PROT for IPs so that the registers under protection can be accessed from user mode by setting UAA bit in REG_PROT_GCR to 1</p>
+                                            <p>for more information and availability on this platform, please see chapter User Mode Support in IM</p>
+                                      </html>
+                                  ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:a5623f52-1434-40cd-af2d-308984bd2426" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:da name="EDITABLE" type="XPath"
+                                        expr="(ecu:has('Mem.InFls.UserModeSupport') and ecu:get('Mem.InFls.UserModeSupport')='true')" />
+                                </v:var>
+
+                                <!-- MemSynchronizeCache  -->
+                                <v:var name="MemSynchronizeCache" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Synchronize Cache" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html>
+                                            <p>Vendor specific:<p/>
+                                            <p>Synchronize the memory by invalidating the cache after each flash hardware operation.<p/>
+                                            <p>The MEM driver needs to maintain the memory coherency by means of three methods:
+                                                1. Disable data cache, or<p/>
+                                                2. Configure the flash region upon which the driver operates, as non-cacheable, or
+                                                3. Enable the MemSynchronizeCache feature.<p/>
+                                            <p>Depending on the application configuration, one option may be more beneficial than other.<p/>
+
+                                            <p>Enabled: The MEM driver will call Mcl cache API functions in order to invalidate the cache
+                                                        after each high voltage operation(write,erase) and before each read operation, in order
+                                                        to ensure that the cache and the modified flash memory are in sync.
+                                                        If enabled, the driver will attempt to invalidate only the modified lines from the cache.
+                                                        If the size of the region to be invalidated is greater than half of the cache size, then
+                                                        the entire cache is invalidated.
+                                                        <b>Note</b>: If enabled, the MclEnableCache parameter has to be enabled and the MCL plugin included as a dependency.<p/>
+                                            <p>Disabled: The upper layers have to ensure that the flash region upon which the driver operates is not cached.
+                                                         This can be obtained by either disabling the data cache or by configuring the memory region as non-cacheable.
+
+                                            <p>Note: This feature is applicable only if supported on the current platform.<p/>
+                                        </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:e37dfcd6-02a2-4f00-8961-b236be0e2457" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst
+                                            expr="(node:value(node:fallback(.,''))='true') and (ecu:get('Mem.InFls.SupportSynchronizeCacheFeature') = 'false')"
+                                            true="Cache is not supported in this device." />
+                                    </a:da>
+                                </v:var> <!-- MemSynchronizeCache  -->
+
+                                <!-- MemDataErrorSuppression -->
+                                <v:var name="MemDataErrorSuppression" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Data Error Suppression" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                        Vendor specific: See the Embedded Flash Memory configuration information or system memory map for which flash memory blocks are affected by this field.<br />
+                                        Disable - Reports ECC events on data flash memory accesses.<br />
+                                        Enable - Single-bit and multi-bit ECC events on data flash memory accesses are suppressed.<br />
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:db3c475b-945b-48c9-bc14-fcf2c39f056e" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:da name="EDITABLE" value="true" />
+                                </v:var><!-- MemDataErrorSuppression -->
+
+                                <!-- MemBlock4PipeSelect -->
+                                <v:var name="MemBlock4PipeSelect" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Mem Block 4 Pipe Select" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html><p>
+                                                Vendor specific: Select the pipe to be used for accessing the internal flash block 4.<br>
+                                                PFLASH has four independent command pipes to issue four parallel read commands to different flash memory blocks.<br>
+                                                The access to block 4 can be through any of the command pipes:<br>
+                                                MEM_COMMAND_PIPE_0    - Block 4 access is always through pipe 0.<br>
+                                                MEM_COMMAND_PIPE_1    - Block 4 access is always through pipe 1.<br>
+                                                MEM_COMMAND_PIPE_2    - Block 4 access is always through pipe 2.<br>
+                                                MEM_COMMAND_PIPE_3    - Block 4 access is always through pipe 3.<br>
+                                                MEM_ANY_COMMAND_PIPES - Block 4 access can be through any of the command pipes, based on which command pipe is available for block 4 access.<br>
+                                            </p></html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:f7818397-facc-4efd-aef5-946fbdbecfac" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst expr="(ecu:get('Mem.InFls.SupportBlock4PipeSelect') = 'STD_ON')" />
+                                    </a:da>
+                                    <a:da name="RANGE">
+                                        <a:v>MEM_COMMAND_PIPE_0</a:v>
+                                        <a:v>MEM_COMMAND_PIPE_1</a:v>
+                                        <a:v>MEM_COMMAND_PIPE_2</a:v>
+                                        <a:v>MEM_COMMAND_PIPE_3</a:v>
+                                        <a:v>MEM_ANY_COMMAND_PIPES</a:v>
+                                    </a:da>
+                                    <a:da name="DEFAULT" value="MEM_COMMAND_PIPE_0" />
+                                </v:var><!-- MemBlock4PipeSelect -->
+
+                                <!-- MemDomainID -->
+                                <v:var name="MemDomainID" type="INTEGER">
+                                    <a:a name="LABEL" value="Mem Domain ID" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                        Vendor specific: The domain ID assigned by the XRDC.
+                                        Note: Users have to fill using core.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:abe881b5-3dc5-4205-b950-6be39bdb62b1" />
+                                    <a:da name="DEFAULT" value="0" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var><!-- MemDomainID -->
+
+                            </v:ctr> <!-- <v:ctr name="AutosarExt" type="IDENTIFIABLE"> -->
+
+
+                            <!-- @implements MemGeneral_Object -->
+                            <v:ctr name="MemGeneral" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="MemGeneral" />
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                      Container for general parameters of the flash driver. These parameters are always pre-compile.
+                                </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:59e0495e-eb1a-41a1-8ad3-e0ce36166685" />
+
+                                <!-- @implements MemDevErrorDetect_Object -->
+                                <v:var name="MemDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Development Error Detect" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable and disable development error detection.<br>
+                                            true : Development error detection enabled.<br>
+                                            false: Development error detection disabled.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:cfb50156-3061-48d8-8b1a-6607af6061da" />
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var>
+
+                                <!-- MemSectorSetLockApi_Object -->
+                                <v:var name="MemSectorSetLockApi" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Sector Set Lock Api" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable / disable the Sector Set Lock Api.<br>
+                                            true: Sector Set Lock Api enabled.<br>
+                                            false:  Sector Set Lock Api disabled.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:9346ff1c-a91b-40eb-8584-682354e0c6e9" />
+                                    <a:da name="DEFAULT" value="true" />
+                                </v:var>
+
+                                <!-- @implements MemEraseVerificationEnabled_Object -->
+                                <v:var name="MemEraseVerificationEnabled" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Erase Verification Enabled" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable / disable the erase blank check. After a flash block has been erased, the erase blank check compares the contents of the addressed memory area against the value of an erased flash cell to check that the block has been completely erased.<br>
+                                            true: Memory region is checked to be erased.<br>
+                                            false: Memory region is not checked to be erased.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:e80050de-4df0-4ef7-982c-7f7b735557bc" />
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var>
+
+                                <!-- @implements MemWriteVerificationEnabled_Object -->
+                                <v:var name="MemWriteVerificationEnabled" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Write Verification Enabled" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                              Pre-processor switch to enable / disable the write verify check. After writing a flash block, the write verify check compares the contents of the reprogrammed memory area against the contents of the provided application buffer to check that the block has been completely reprogrammed.<br>
+                                              true: Written data is compared directly after write.<br>
+                                              false: Written date is not compared directly after write.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:f3233dcf-c8c7-4a61-991b-bca54b7281c5" />
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var>
+
+                                <v:var name="MemECCCheck" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem ECC Handling HardfaultHandler" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Vendor specific: Pre-processor switch to enable / disable the API to report data storage (ECC) errors to the flash driver.<br>
+                                            This is the first ECC handling approach which modifies the program counter to skip the instruction causing the fault.<br>
+                                            Please read the chapter Exception Handler in case of ECC error in IM for more information.<br>
+                                            true : The ECC check by HardfaultHandler API is enabled.<br>
+                                            false: The ECC check by HardfaultHandler API is disabled.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:cd0a73b7-9d32-4929-9a5a-6b47419a317f" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst
+                                            expr="(node:value(.)='true') and (node:fallback(../../AutosarExt/MemInternalSectorsConfigured, '')='false')"
+                                            true="Mem ECC check is enabled but parameter MemInternalSectorsConfigured is not enabled." />
+                                        <a:tst
+                                            expr="(node:value(.)='true') and (node:fallback(../MemECCHandlingProtectionHook,'')='true')"
+                                            true="Only one ECC checking approach is allowed at a time." />
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements MemECCHandlingProtectionHook_Object -->
+                                <v:var name="MemECCHandlingProtectionHook" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem ECC Handling ProtectionHook" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Vendor specific: Pre-processor switch to enable / disable the API to report data storage (ECC) errors to the flash driver.<br>
+                                            This is the second ECC handling approach which is compatible with Autosar Os.<br>
+                                            Please read the chapter Exception Handler in case of ECC error in IM for more information.<br>
+                                            true : The ECC check by AutosarOs API is enabled.<br>
+                                            false: The ECC check by AutosarOs API is disabled.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:959421eb-2e86-43fe-9daf-d04cef00b324" />
+                                    <a:da name="DEFAULT" value="false" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst
+                                            expr="(node:value(.)='true') and (node:fallback(../../AutosarExt/MemInternalSectorsConfigured, '')='false')"
+                                            true="Mem ECC check is enabled but parameter MemInternalSectorsConfigured is not enabled." />
+                                        <a:tst
+                                            expr="(node:value(.)='true') and (node:fallback(../MemECCCheck,'')='true')"
+                                            true="Only one ECC checking approach is allowed at a time." />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="MemStartFlashAccessNotif" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Mem Start Flash Access Notification" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Vendor specific: Start flash access. If configured, this notification will be called before any flash memory access.<br>
+                                            It is called before flash memory read accesses(in read, compare, verify write, verify erase jobs) and
+                                            before flash memory program operations(in write and erase jobs).<br>
+                                            The purpose of this notification together with MemFinishedFlashAccess, is to ensure that, if needed, no other
+                                            executed code(other tasks, cores, masters) will access the affected flash area simultaneously with the access
+                                            initiated by the driver. For more details, see Integration manual, chapter 5. Module requirements.<br>
+                                            Note: Disable the error notification to have it set as NULL_PTR
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true" />
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false" />
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:7784f5dc-f346-423f-adb8-362085aeff5b" />
+                                    <a:da name="EDITABLE" value="true" />
+                                    <a:da name="DEFAULT" value="Mem_StartFlashAccessNotif" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Invalid name of the Mem Start Flash Access Notification routine. Must be valid C function name." />
+                                        <a:tst
+                                            expr="(not(normalize-space(.) = 'NULL_PTR') and not(normalize-space(.) = 'NULL'))"
+                                            false="Invalid name of the Mem Start Flash Access Notification routine. Must not be NULL_PTR or NULL." />
+                                    </a:da>
+                                </v:var>
+
+                                <!--  -->
+                                <v:var name="MemFinishedFlashAccessNotif" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Mem Finished Flash Access Notifications" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Vendor specific: Finished flash access. If configured, this notification will be called after any flash memory access.<br>
+                                            It is called after flash memory read accesses(in read, compare, verify write, verify erase jobs).<br>
+                                            The purpose of this notification together with MemStartFlashAccess, is to ensure that, if needed, no other
+                                            executed code(other tasks, cores, masters) will access the affected flash area simultaneously with the access
+                                            initiated by the driver. For more details, see Integration manual, chapter 5. Module requirements.<br>
+                                            Note: Disable the error notification to have it set as NULL_PTR
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true" />
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false" />
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:5fb34a14-b0ce-42ec-8933-7958ddce0aa8" />
+                                    <a:da name="EDITABLE" value="true" />
+                                    <a:da name="DEFAULT" value="Mem_FinishedFlashAccessNotif" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Invalid name of the Mem Finished Flash Access Notifications routine. Must be valid C function name." />
+                                        <a:tst
+                                            expr="(not(normalize-space(.) = 'NULL_PTR') and not(normalize-space(.) = 'NULL'))"
+                                            false="Invalid name of the Mem Finished Flash Access Notifications routine. Must not be NULL_PTR or NULL." />
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements MemTimeoutSupervisionEnabled_Object -->
+                                <v:var name="MemTimeoutSupervisionEnabled" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem Timeout Supervision Enabled" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Compile switch to enable timeout supervision.<br>
+                                            true: timeout supervision for read/erase/write/compare jobs enabled.
+                                            false: timeout supervision for read/erase/write/compare jobs disabled.<br>
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:8febaf3a-a0ff-4bef-b610-21c54a1201ba" />
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var>
+
+                                <v:var name="MemTimeoutMethod" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Mem Timeout Method" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html><p>
+                                                Vendor specific: Counter type used in timeout detection for Mem service request.<br>
+                                                Based on selected counter type the timeout value will be interpreted as follows:<br>
+                                                OSIF_COUNTER_DUMMY  - Counts the number of iterations of the waiting loop. The actual timeout depends on many factors: operation type, compiler optimizations, interrupts or other tasks in the system, etc.<br>
+                                                OSIF_COUNTER_SYSTEM - Microseconds.<br>
+                                                OSIF_COUNTER_CUSTOM - Defined by user implementation of timing services<br>
+                                            </p></html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:26b3d1e6-22f7-43ff-a31b-eeee06e20f5b" />
+                                    <a:da name="DEFAULT" value="OSIF_COUNTER_DUMMY" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst
+                                            expr="((node:fallback( ../MemTimeoutSupervisionEnabled, 0 ) = 'true'))" />
+                                    </a:da>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst
+                                            expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseSystemTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_SYSTEM'"
+                                            true="System Timer is not enabled in OsIf (BaseNXP/OsIfGeneral/OsIfUseSystemTimer checkbox)" />
+                                        <a:tst
+                                            expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseCustomTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_CUSTOM'"
+                                            true="Custom Timer is not enabled in OsIf (BaseNXP/OsIfGeneral/OsIfUseCustomTimer checkbox)" />
+                                    </a:da>
+                                    <a:da name="RANGE">
+                                        <a:v>OSIF_COUNTER_DUMMY</a:v>
+                                        <a:v>OSIF_COUNTER_SYSTEM</a:v>
+                                        <a:v>OSIF_COUNTER_CUSTOM</a:v>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- asynchronous timeouts -->
+                                <v:var name="MemAsyncWriteTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Mem Async Write Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[<html><p>
+                                            Vendor specific: Mem Async Write Timeout is the timeout value for write operation in asynchronous mode.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:47e10b60-cc44-49c4-8dd8-b7daf6a49f34" />
+                                    <a:da name="DEFAULT" value="2147483647" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst
+                                            expr="((node:fallback( ../MemTimeoutSupervisionEnabled, 0 ) = 'true'))" />
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=2147483647" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="MemAsyncEraseTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Mem Async Erase Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[<html><p>
+                                            Vendor specific: Mem Async Erase Timeout is the timeout value for erase operation in asynchronous mode.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:44f207ad-c69d-4014-8b68-8e5bde5588bc" />
+                                    <a:da name="DEFAULT" value="2147483647" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst
+                                            expr="((node:fallback( ../MemTimeoutSupervisionEnabled, 0 ) = 'true'))" />
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=2147483647" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <!-- synchronous timeouts -->
+                                <v:var name="MemSyncWriteTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Mem Sync Write Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[<html><p>
+                                        Vendor specific: Mem Sync Write Timeout is the timeout value for write operation in synchronous mode.
+                                    </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:d796fc21-8905-4447-83a4-d56974a230e3" />
+                                    <a:da name="DEFAULT" value="2147483647" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst
+                                            expr="((node:fallback( ../MemTimeoutSupervisionEnabled, 0 ) = 'true'))" />
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=2147483647" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="MemSyncEraseTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Mem Sync Erase Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[<html><p>
+                                            Vendor specific: Mem Sync Erase Timeout is the timeout value for erase operation in synchronous mode.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:208ace61-5530-4dcc-bde1-cf296ec8b3dc" />
+                                    <a:da name="DEFAULT" value="2147483647" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst
+                                            expr="((node:fallback( ../MemTimeoutSupervisionEnabled, 0 ) = 'true'))" />
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=2147483647" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <!-- standalone abort timeout -->
+                                <v:var name="MemAbortTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Mem Async Abort Timeout" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[<html><p>
+                                            Vendor specific: Mem Abort Timeout is the timeout value for aborting an ongoing operation.
+                                            The timeout is used also in Mem_Cancel API and Abort Erase suspend, if enabled and if the flash hardware channel
+                                            does not support an immediate abort feature.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:21aebf69-5503-43e2-87c4-80dc2281b916" />
+                                    <a:da name="DEFAULT" value="32767" />
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst
+                                            expr="((node:fallback( ../MemTimeoutSupervisionEnabled, 0 ) = 'true'))" />
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=2147483647" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                            </v:ctr> <!-- <v:ctr name="MemGeneral" type="IDENTIFIABLE"> -->
+
+
+                            <!-- @implements MemInstance_Object -->
+                            <v:lst name="MemInstance" type="MAP">
+                                <a:da name="MIN" value="1" />
+
+                                <v:ctr name="MemInstance" type="IDENTIFIABLE">
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                        This container includes the Mem driver instance specific configuration parameters.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:2d68c6a9-b97e-4108-ba2a-bfab884fc3f7" />
+
+                                    <!-- @implements MemInstanceId_Object -->
+                                    <v:var name="MemInstanceId" type="INTEGER">
+                                        <a:a name="LABEL" value="Mem Instance Id" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                The unique numeric identifier which is used to
+                                                reference a Mem driver instance in case multiple devices
+                                                of the same type shall be addressed by one Mem driver.
+                                            </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                        <a:a name="SYMBOLICNAMEVALUE" value="true" />
+                                        <a:a name="UUID" value="ECUC:29c41644-e86c-4d08-a623-f89050d9c2d1" />
+                                        <a:da name="DEFAULT" type="XPath">
+                                            <a:tst expr="num:i(node:fallback(../@index, 0))" />
+                                        </a:da>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=65535" />
+                                            <a:tst expr="&gt;=0" />
+                                        </a:da>
+                                        <a:da name="RANGE" type="XPath">
+                                            <a:tst
+                                                expr="text:uniq(text:split(node:fallback(../../*/MemInstanceId, 1)), node:fallback(., 1))"
+                                                false="This ID value is already in use. The instance ID must be unique." />
+                                        </a:da>
+                                    </v:var> <!-- MemInstanceId -->
+
+                                    <!-- @implements MemSectorBatch_Object -->
+                                    <v:lst name="MemSectorBatch" type="MAP">
+                                        <a:da name="MIN" value="1" />
+
+                                        <v:ctr name="MemSectorBatch" type="IDENTIFIABLE">
+                                            <a:a name="REQUIRES-INDEX" value="true" />
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="LABEL" value="Mem Sector Batch" />
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                  Configuration description of a programmable sector or sector batch.
+                                                  Sector batch means that homogenous and coherent sectors can be configured as one MemSector element.
+                                                  It is recommended to group as many identical sectors as possible together.
+                                                </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="UUID" value="ECUC:073ab1c8-6fe8-4b49-bf56-3f9616336251" />
+
+                                            <v:var name="MemPhysicalSector" type="ENUMERATION">
+                                                <a:a name="LABEL" value="Mem Physical Sector"/>
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN: <html><p>
+                                                            Vendor specific: Physical flash device sector.
+                                                        </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="NXP"/>
+                                                <a:a name="SCOPE" value="LOCAL"/>
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                                <a:a name="UUID" value="ECUC:ecf5abe0-40af-4185-a901-d7670d43232d" />
+                                                <a:da name="DEFAULT" type="XPath"
+                                                    expr="
+                                                        text:split( text:replaceAll( concat(' ', text:join(ecu:list('Mem.InFls.Sector.Physical.List'))), ' [0-9a-fA-F]+_', ' ') )[position()-1 = node:fallback(node:current()/../@index, '0')]
+                                                    " />
+                                                <a:da name="RANGE" type="XPath"
+                                                    expr="text:split( text:replaceAll( concat(' ', text:join(ecu:list('Mem.InFls.Sector.Physical.List'))), ' [0-9a-fA-F]+_', ' ') )"/> <!-- expr to remove sector size in Physical List -->
+                                            </v:var>
+
+                                            <!-- @implements MemStartAddress_Object -->
+                                            <v:var name="MemStartAddress" type="INTEGER">
+                                                <a:a name="LABEL" value="Mem Start Address" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Physical start address of the sector (batch).
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                <a:a name="UUID" value="ECUC:107dccf6-af65-45a6-8fe8-38c50f0d6149" />
+                                                <a:a name="DEFAULT_RADIX" value="HEX" />
+                                                <a:da name="DEFAULT" type="XPath">
+                                                    <a:tst expr="
+                                                        num:i(
+                                                            node:when(
+                                                                contains( node:fallback( ../MemPhysicalSector, ' ' ), 'DATA' ) = 'true',
+                                                                num:hextoint( ecu:get('Mem.InFls.DFlashBaseAddr') ) + ( num:hextoint( ecu:get('Mem.InFls.DFlashSectorSize') ) * ( substring-after(node:fallback( ../MemPhysicalSector, ' ' ), '_S') ) ),
+                                                                num:hextoint( ecu:get('Mem.InFls.PFlashBaseAddr') ) + ( num:hextoint( ecu:get('Mem.InFls.PFlashSectorSize') ) * ( substring-after(node:fallback( ../MemPhysicalSector, ' ' ), '_S') ) )
+                                                            )
+                                                        )
+                                                    " />
+                                                </a:da>
+                                                <a:da name="RANGE" type="XPath">
+                                                    <a:tst expr="text:uniq(text:split(node:fallback(../../*/MemStartAddress, 1)), node:fallback(., 1))"
+                                                           false="The sector batch start addresses must be unique." />
+                                                    <a:tst expr="( (.) mod (../MemEraseSectorSize) ) = 0"
+                                                           false="The sector batch start address must be aligned with the physical sector size." />
+                                                    <a:tst expr="
+                                                        node:when(
+                                                            contains( node:fallback( ../MemPhysicalSector, ' ' ), 'DATA' ) = 'true',
+                                                            . = num:hextoint( ecu:get('Mem.InFls.DFlashBaseAddr') ) + ( num:hextoint( ecu:get('Mem.InFls.DFlashSectorSize') ) * ( substring-after(node:fallback( ../MemPhysicalSector, ' ' ), '_S') ) ),
+                                                            . = num:hextoint( ecu:get('Mem.InFls.PFlashBaseAddr') ) + ( num:hextoint( ecu:get('Mem.InFls.PFlashSectorSize') ) * ( substring-after(node:fallback( ../MemPhysicalSector, ' ' ), '_S') ) )
+                                                        )"
+                                                        false="The Start Address of Sector incorrect." />
+                                                </a:da>
+                                                <a:da name="INVALID" type="Range">
+                                                    <!-- EB limitation: supports only the signed 64-bit range for integer values -->
+                                                    <a:tst expr="&lt;=9223372036854775807" />
+                                                    <a:tst expr="&gt;=0" />
+                                                </a:da>
+                                            </v:var>
+
+                                            <!-- @implements MemNumberOfSectors_Object -->
+                                            <v:var name="MemNumberOfSectors" type="INTEGER">
+                                                <a:a name="LABEL" value="Mem Number Of Sectors" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Number of contiguous sectors with identical values for MemSectorSize and MemPageSize.
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                <a:a name="UUID" value="ECUC:ff3ff21c-c31e-4868-a420-515c57bfd4c6" />
+                                                <a:da name="DEFAULT" value="1" />
+                                                <a:da name="INVALID" type="Range">
+                                                    <a:tst expr="&lt;=65535" />
+                                                    <a:tst expr="&gt;=1" />
+                                                </a:da>
+                                                <a:da name="INVALID" type="XPath">
+                                                    <a:tst
+                                                        expr="var:set('EndAddress', ../MemStartAddress + (.) * ../MemEraseSectorSize - 1) and
+                                                             text:uniq
+                                                             (
+                                                                node:foreach
+                                                                (
+                                                                    node:paths(../../*),
+                                                                    'sector',
+                                                                    '($EndAddress &gt;= node:ref($sector)/MemStartAddress) and
+                                                                     ($EndAddress &lt;= node:ref($sector)/MemStartAddress + node:ref($sector)/MemNumberOfSectors * node:ref($sector)/MemEraseSectorSize - 1 )'
+                                                                )
+                                                                , 'true'
+                                                             )"
+                                                        false="The sector batches range cannot overlap each other."
+                                                    />
+                                                </a:da>
+                                            </v:var>
+
+                                            <!-- @implements MemEraseSectorSize_Object -->
+                                            <v:var name="MemEraseSectorSize" type="INTEGER">
+                                                <a:a name="LABEL" value="Mem Erase Sector Size" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Size of this sector in bytes.
+                                                        A sector is the smallest erasable unit.
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                <a:a name="UUID" value="ECUC:60a15b2b-a064-4baa-a39f-53afbb7f5966" />
+                                                <a:a name="DEFAULT_RADIX" value="HEX" />
+                                                <a:da name="DEFAULT" type="XPath"
+                                                    expr="num:hextoint(
+                                                            substring-before(
+                                                                text:grep(
+                                                                    ecu:list('Mem.InFls.Sector.Physical.List'),
+                                                                    concat('^[0-9a-zA-Z]+_', node:fallback(../MemPhysicalSector, substring-after(ecu:list('Mem.InFls.Sector.Physical.List')[1], '_')),'.*')
+                                                                )[1],
+                                                                '_'
+                                                                )
+                                                    )"/>
+                                                <a:da name="INVALID" type="Range">
+                                                    <a:tst expr="&lt;=4294967295" />
+                                                    <a:tst expr="&gt;=1" />
+                                                </a:da>
+                                            </v:var>
+
+                                            <!-- @implements MemReadPageSize_Object -->
+                                            <v:var name="MemReadPageSize" type="INTEGER">
+                                                <a:a name="LABEL" value="Mem Read Page Size" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Size of a read page of this sector in bytes.
+                                                        A read page is the smallest readable unit.
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                <a:a name="UUID" value="ECUC:6bc1c4f2-d874-46a4-95ca-3d7ff5527efe" />
+                                                <a:da name="DEFAULT" value="1" />
+                                                <a:da name="INVALID" type="Range">
+                                                    <a:tst expr="&lt;=4294967295" />
+                                                    <a:tst expr="&gt;=1" />
+                                                </a:da>
+                                            </v:var>
+
+                                            <!-- @implements MemWritePageSize_Object -->
+                                            <v:var name="MemWritePageSize" type="INTEGER">
+                                                <a:a name="LABEL" value="Mem Write Page Size" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Size of a write page of this sector in bytes.
+                                                        A write page is the smallest writeable unit.
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                <a:a name="UUID" value="ECUC:a1efddde-e431-44ab-be70-190a412399d1" />
+                                                <a:da name="DEFAULT" value="8" />
+                                                <a:da name="INVALID" type="Range">
+                                                    <a:tst expr="&lt;=ecu:get('Mem.InFls.WriteSize')" />
+                                                    <a:tst expr="&gt;=1" />
+                                                </a:da>
+                                            </v:var>
+
+                                            <!-- @implements MemSpecifiedEraseCycles_Object -->
+                                            <v:var name="MemSpecifiedEraseCycles" type="INTEGER">
+                                                <a:a name="LABEL" value="Mem Specified Erase Cycles" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Number of erase cycles specified for the memory device
+                                                        (usually given in the device data sheet).
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                <a:a name="UUID" value="ECUC:b4cd2bb7-51fb-48cf-94fc-a9e71f2335ac" />
+                                                <a:da name="DEFAULT" value="0" />
+                                                <a:da name="INVALID" type="Range">
+                                                    <a:tst expr="&lt;=4294967295" />
+                                                    <a:tst expr="&gt;=0" />
+                                                </a:da>
+                                            </v:var>
+
+                                            <!-- @implements MemBurstSettings_Object -->
+                                            <v:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                                </a:a>
+                                                <a:a name="LABEL" value="Mem Burst Settings" />
+                                                <a:a name="DESC">
+                                                    <a:v>
+                                                        <![CDATA[EN:<html><p>
+                                                        Container for burst setting configuration parameters of the Mem driver.
+                                                        A sector burst can be used for improved performance.
+                                                    </p></html>]]>
+                                                    </a:v>
+                                                </a:a>
+                                                <a:a name="UUID" value="ECUC:2330b5c5-c6b0-482d-baa7-f4f27b6309c0" />
+                                                <a:a name="OPTIONAL" value="true" />
+
+                                                <!-- @implements MemEraseBurstSize_Object -->
+                                                <v:var name="MemEraseBurstSize" type="INTEGER">
+                                                    <a:a name="LABEL" value="Mem Erase Burst Size" />
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html><p>
+                                                            Size of sector erase burst in bytes. A sector burst can be used for
+                                                            improved performance and is typically (a subset of) a sector batch.
+                                                            To make use of the sector erase burst feature, the physical start
+                                                            address of the sector batch must be aligned to the sector erase burst size.
+                                                        </p></html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                        type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                    <a:a name="UUID"
+                                                        value="ECUC:df721a3f-8136-44d7-b01e-4d0c705982d1" />
+                                                    <a:da name="DEFAULT" type="XPath"
+                                                        expr="num:i( node:fallback(../../MemEraseSectorSize, 4096) )" />
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;=4294967295" />
+                                                        <a:tst expr="&gt;=1" />
+                                                    </a:da>
+                                                    <a:da name="INVALID" type="XPath">
+                                                        <a:tst expr="((.) mod (../../MemEraseSectorSize)) = 0"
+                                                            false="Erase burst size must be greater than zero and integer multiple of the erase sector size." />
+                                                    </a:da>
+                                                </v:var>
+
+                                                <!-- @implements MemReadBurstSize_Object -->
+                                                <v:var name="MemReadBurstSize" type="INTEGER">
+                                                    <a:a name="LABEL" value="Mem Read Burst Size" />
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html><p>
+                                                            This value specifies the maximum number of bytes the MemAcc
+                                                            module requests within one Mem read request.
+                                                        </p></html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                        type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                    <a:a name="UUID"
+                                                        value="ECUC:9af9d547-2c32-4063-819b-f6dc6c331218" />
+                                                    <a:da name="DEFAULT" type="XPath"
+                                                        expr="num:i( node:fallback(../../MemReadPageSize, 1) )" />
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;=4294967295" />
+                                                        <a:tst expr="&gt;=1" />
+                                                    </a:da>
+                                                    <a:da name="INVALID" type="XPath">
+                                                        <a:tst expr="((.) mod (../../MemReadPageSize)) = 0"
+                                                            false="Read burst size must be greater than zero and integer multiple of the read page size." />
+                                                        <a:tst expr="(.) &lt;= ecu:get('Mem.InFls.DFlashSize')"
+                                                            false="Read burst size must not exceed the hardware capability for one read request." />
+                                                    </a:da>
+                                                </v:var>
+
+                                                <!-- @implements MemWriteBurstSize_Object -->
+                                                <v:var name="MemWriteBurstSize" type="INTEGER">
+                                                    <a:a name="LABEL" value="Mem Write Burst Size" />
+                                                    <a:a name="DESC">
+                                                        <a:v>
+                                                            <![CDATA[EN:<html><p>
+                                                            Size of page write/program burst in bytes. A sector burst can be used
+                                                            for improved performance and is typically (a subset of) a sector batch.
+                                                            To make use of the write burst feature, the physical start address must
+                                                            be aligned to the write burst size.
+                                                        </p></html>]]>
+                                                        </a:v>
+                                                    </a:a>
+                                                    <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                                        type="IMPLEMENTATIONCONFIGCLASS">
+                                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                    </a:a>
+                                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                                    <a:a name="UUID"
+                                                        value="ECUC:c67d2356-f06d-40a9-8273-fd420e6cb79e" />
+                                                    <a:da name="DEFAULT" type="XPath"
+                                                        expr="num:i( node:fallback(../../MemWritePageSize, 1) )" />
+                                                    <a:da name="INVALID" type="Range">
+                                                        <a:tst expr="&lt;=4294967295" />
+                                                        <a:tst expr="&gt;=1" />
+                                                    </a:da>
+                                                    <a:da name="INVALID" type="XPath">
+                                                        <a:tst expr="((.) mod (../../MemWritePageSize)) = 0"
+                                                            false="Write burst size must be greater than zero and integer multiple of the write page size." />
+                                                        <a:tst expr="(.) &lt;= ecu:get('Mem.InFls.DFlashSize')"
+                                                            false="Write burst size must not exceed the hardware capability for one write request." />
+                                                    </a:da>
+                                                </v:var>
+
+                                            </v:ctr> <!--<v:ctr name="MemBurstSettings" type="IDENTIFIABLE">-->
+
+                                        </v:ctr><!--<v:ctr name="MemSectorBatch" type="IDENTIFIABLE">-->
+                                    </v:lst><!--<v:lst name="MemSectorBatch" type="MAP">-->
+
+                                </v:ctr>
+                            </v:lst>
+
+
+                            <!-- implements MemFlashDevice_Object -->
+                            <!-- Vendor specific: Container for the configuration of the available internal flash memory hardware units. -->
+                            <!-- MemDevice -->
+
+
+                            <!-- @implements MemPublishedInformation_Object -->
+                            <v:ctr name="MemPublishedInformation" type="IDENTIFIABLE">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                        Additional published parameters not covered by CommonPublishedInformation container.
+                                        Note that these parameters do not have any configuration class setting, since they are published information.
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:ffbd2c27-d989-40dc-a94f-68b661067a65" />
+
+                                <!-- @implements MemErasedValue_object -->
+                                <v:var name="MemErasedValue" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Mem Erased Value" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            The contents of an erased memory cell.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:927055cc-cbfd-491e-b882-54b1fba089cf" />
+                                    <a:da name="DEFAULT" value="4294967295" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="MemECCValue" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Mem ECC Value" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Vendor specific: The contents of an ECC flash memory line.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:5190a86a-b8c4-4cc1-8b6f-bd49f7b78db2" />
+                                    <a:da name="DEFAULT" value="4294967295" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295" />
+                                        <a:tst expr="&gt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                            </v:ctr><!-- MemPublishedInformation -->
+
+
+                            <!-- @implements CommonPublishedInformation_Object -->
+                            <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="Common Published Information" />
+                                <!-- @remarks Covers BSW00374, BSW00318 -->
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                        <html>
+                                        <p>Common container, aggregated by all modules. It contains published information about vendor and versions.</p>
+                                        </html>
+                                    ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:e6143578-30ab-43ea-b0c2-284a9f273605" />
+
+                                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Major Version" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Major version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:da69da52-2edb-45ca-9fef-b0fd17b28532" />
+                                    <a:da name="DEFAULT" value="4" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=4" />
+                                        <a:tst expr="&lt;=4" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Minor Version" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Minor version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:f8f66ead-2b3b-4592-9b2a-a69d905a0c28" />
+                                    <a:da name="DEFAULT" value="7" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=7" />
+                                        <a:tst expr="&lt;=7" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="AUTOSAR Patch Version" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Patch version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:61a6d657-288e-4761-900e-8b99424940bb" />
+                                    <a:da name="DEFAULT" value="0" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0" />
+                                        <a:tst expr="&lt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="ModuleId" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Numeric Module ID" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Module ID of this module.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:9f0208d4-cfa6-4f04-bc00-42449cedc545" />
+                                    <a:da name="DEFAULT" value="91" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=91" />
+                                        <a:tst expr="&lt;=91" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Major Version" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:9a15609b-c0ec-4828-8005-033d63b77e0e" />
+                                    <a:da name="DEFAULT" value="3" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=3" />
+                                        <a:tst expr="&lt;=3" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Minor Version" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:99ee155a-741c-4d20-94c5-0df8677b23e1" />
+                                    <a:da name="DEFAULT" value="0" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0" />
+                                        <a:tst expr="&lt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Software Patch Version" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:d86c93f8-044d-45d2-9e0b-f5be76b6ac18" />
+                                    <a:da name="DEFAULT" value="0" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=0" />
+                                        <a:tst expr="&lt;=0" />
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                    <a:a name="LABEL" value="Vendor Api Infix" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                            This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                            &lt;ModuleName&gt;_&lt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                            E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                            This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                                            </p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:707aade8-59aa-4d76-a6f7-13f6c2f5aeff" />
+                                    <a:da name="DEFAULT" value="" />
+                                    <a:a name="OPTIONAL" value="true" />
+                                    <a:da name="READONLY" value="true" />
+                                </v:var>
+
+                                <v:var name="VendorId" type="INTEGER_LABEL">
+                                    <a:a name="LABEL" value="Vendor ID" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</p>
+                                            </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                    <a:a name="UUID" value="ECUC:08a58e37-adb5-4dcb-8a82-3595826bc9f2" />
+                                    <a:da name="DEFAULT" value="43" />
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&gt;=43" />
+                                        <a:tst expr="&lt;=43" />
+                                    </a:da>
+                                </v:var>
+
+                            </v:ctr><!-- CommonPublishedInformation -->
+
+                            <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/Mem" />
+
+                        </v:ctr>
+                    </d:chc>
+
+                    <d:chc name="Mem_43_InFls_EcuParameterDefinition" type="AR-ELEMENT"
+                        value="ECU_PARAMETER_DEFINITION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION" />
+                            <a:a name="UUID" value="ECUC:c6185001-9ed8-40c4-b45e-471f2c754d84" />
+                            <d:lst name="MODULE_REF">
+                                <d:ref type="MODULE_REF" value="ASPath:/Mem_43_InFls_TS_T40D34M30I0R0/Mem" />
+                            </d:lst>
+                        </d:ctr>
+                    </d:chc>
+
+                    <d:chc name="Mem_43_InFls_ModuleDescription" type="AR-ELEMENT"
+                        value="BSW_MODULE_DESCRIPTION">
+                        <d:ctr type="AR-ELEMENT">
+                            <a:a name="DEF" value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION" />
+                            <d:var name="MODULE_ID" type="INTEGER">
+                                <a:a name="EDITABLE" value="false" />
+                                <a:a name="IMPORTER_INFO" value="@DEF" />
+                            </d:var>
+                            <d:ref type="RECOMMENDED_CONFIGURATION">
+                                <a:a name="EDITABLE" value="false" />
+                                <a:a name="IMPORTER_INFO" value="@DEF" />
+                            </d:ref>
+                            <d:ref type="PRE_CONFIGURED_CONF">
+                                <a:a name="EDITABLE" value="false" />
+                                <a:a name="IMPORTER_INFO" value="@DEF" />
+                            </d:ref>
+                            <d:ref type="VENDOR_SPECIFIC_MODULE_DEF"
+                                value="ASPath:/Mem_43_InFls_TS_T40D34M30I0R0/Mem" />
+                        </d:ctr>
+                    </d:chc>
+
+                </d:lst>
+            </d:ctr>
+        </d:lst>
+    </d:ctr>
+
+</datamodel>

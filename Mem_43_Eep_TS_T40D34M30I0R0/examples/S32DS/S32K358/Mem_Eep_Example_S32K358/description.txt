@@ -1,0 +1,47 @@
+1. Example Description
+        Mem_Eep Example for SD card
+    1.1 The application software functionality
+            - Initialize clock
+            - Initialize uSDHC controller pins
+            - Install IRQ handler and enable interrupt
+            - Initialize Mem_Eep driver
+            - Erase the testing memory area
+            - Write data to the card
+            - Compare written data in card
+            - Read data from card
+            - Check received data
+        Note:
+            - In case of using ADMA, the data buffers should be placed in the NO_CACHEABLE section to avoid possible coherency issues.
+
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            - Motherboard  : X-S32K3XXX-MB PCB 47386 RevA SCH
+            - Daughter card: XS32K3X8CVB-Q289 PCB 53108 RevX3 SCH RevA1
+            - Silicon      : P32K358GVS 0P14E CTZF2233B
+        2.2.2 Connections
+            - SD card.
+        2.2.3 Debugger
+            - The GDB PEMicro debugger must be connected to J20 JTAG Cortex Debug connector.
+    2.2 Software installation
+        2.2.1 Importing the S32 Design Studio project
+            After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select this example. Then click on "Finish".
+            The project should now be copied into you current workspace.
+
+3. Generating, building and running the example application
+    3.1 Generating the S32 configuration
+        Before running the example a configuration needs to be generated.  First go to Project Explorer View in S32 DS and select the current project. Select the "S32 Configuration Tool" menu then click on the desired configuration tool (Pins, Cocks, Peripherals etc...). Clicking on any one of those will generate all the components. Make the desired changes(if any) then click on the "S32 Configuration Tool->Update Code" button.
+    3.2 Compiling the application
+        Select the configuration to be built: FLASH (Debug_FLASH) by left clicking on the downward arrow corresponding to the build button in eclipse.
+        Use Project > Build to build the project.
+        Wait for the build action to be completed before continuing to the next step. Check the compiler console for error messages; upon completion, the *.elf binary file
+        should be created.
+    3.3 Running the application on the board
+        Go to Run and select Debug Configurations. There will be a debug configuration for this project:
+
+        Configuration Name                                   Description
+        -------------------------------                      -----------------------
+        Mem_Eep_Example_S32K358_Debug_FLASH_S32Debug               Debug the FLASH configuration using S32 debugger
+
+        Select the desired debug configuration and click on Launch. Now the perspective will change to the Debug Perspective.
+        Use the controls to control the program flow.

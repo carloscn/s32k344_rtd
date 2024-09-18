@@ -1,0 +1,41 @@
+1. Example Description
+    The example performs basic functionality of Ocotp driver.
+    1.1 The application software functionality
+            - Initialize clock via the function Clock_Ip_Init
+            - Initialize pins for LPSPI interface via the function Port_Init
+            - Initialize configuration: baudrate, chip select,... of LPSPI through Lpspi_Ip_Init.
+            - Initialize configuration's structure of AE through Aec_Ip_Init.
+            - Init Mem_Otp_Ip
+            - Read data from OSC42M mirror register.
+            - Write an osc_trim value into OSC42M mirror register.
+            - Read again data from OSC42M mirror register to verify data has just been written.
+
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            - XS32M2XXCVB-Q064 PCB 53099 RevX1 SCH RevA
+        2.2.2 Connections
+        2.2.3 Debugger
+            - The debugger must be connected to J25 10-pin JTAG Cortex Debug connector.
+    2.2 Software installation
+        2.2.1 Importing the S32 Design Studio project
+            After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select this example. Then click on "Finish".
+            The project should now be copied into your current workspace.
+
+3. Generating, building, and running the example application
+    3.1 Generating the S32 configuration
+        Before running the example a configuration needs to be generated.  First, go to Project Explorer View in S32 DS and select the current project. Select the "S32 Configuration Tool" menu then click on the desired configuration tool (Pins, Clocks, Peripherals, etc...). Clicking on any one of those will generate all the components. Make the desired changes(if any) then click on the "S32 Configuration Tool-> Update Code" button.
+    3.2 Compiling the application
+        Select the configuration to be built: FLASH (Debug_FLASH) by left-clicking on the downward arrow corresponding to the build button in eclipse.
+        Use Project > Build to build the project.
+        Wait for the build action to be completed before continuing to the next step. Check the compiler console for error messages; upon completion, the *.elf binary file
+        should be created.
+    3.3 Running the application on the board
+        Go to Run and select Debug Configurations. There will be a debug configuration for this project:
+
+        Configuration Name                                Description
+        -------------------------------                   -----------------------
+        Mem_Otp_Ip_Example_S32M276 Debug_FLASH            Debug the FLASH configuration using S32Debugger
+
+        Select the desired debug configuration and click on Launch. Now the perspective will change to the Debug Perspective.
+        Use the controls to control the program flow.

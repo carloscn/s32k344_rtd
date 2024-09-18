@@ -1,0 +1,84 @@
+1. Example Description
+    This application demonstrates the usage of a subset of Real Time Drivers that are included in this code drop. It is not part of the production code deliverables.
+    The application includes an S32DS project that configures the LinTrcv Base Dem EcuC Lin EcuM Platform Mcu and Resource.
+    1.1 The aplication software functionality
+        In this example,It contains LinTrcv and Lin, Master sends a complete LIN frame (header + response) using Lpuart or Flexio.
+    1.2 The aplication software functionality
+            - Mcu_Init, Mcu_InitClock, Mcu_SetMode
+                    Initialize the clock sources, the clock tree and to configure the clock gating of the peripherals.
+            - Port_Init
+                    Initialize the pins used by the application using the Port driver.
+            - Spi_Init
+                    Initialize the Spi driver.
+            - Ae_Init
+                    Initialize the Ae driver.
+            - Platform_Init
+                    Install the ISR for the Lpuart or Flexio
+            - OsIf_Init
+                    Initialize the Osif driver
+            - LinTrcv_Init
+                    Initialize the LinTrcv driver
+            - LinTrcv_GetOpMode, LinTrcv_SetOpMode
+                    Get mode and Set mode for LinTrcv module
+            - Lin_43_LPUART_FLEXIO_InitInit
+                    Initialize the Lin driver
+            - Lin_43_LPUART_FLEXIO_InitWakeupInternal
+                    Wakeup LIN channels for ASR 4.3.1
+            - Lin_43_LPUART_FLEXIO_InitCheckWakeup
+                    Check Lin channel wakeup
+            - Lin_43_LPUART_FLEXIO_InitSendFrame
+                    Send LIN frame
+            - Lin_43_LPUART_FLEXIO_InitGetStatus
+                    Get status of Lin
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            XS32M2XXCVB-Q064 PCB 53099 RevX1 SCH RevA
+            Silicon: S32M276 P32M276LH MKHS 0P73G CTZA2305B (Use for LINTRCV)
+        2.2.2 Connections
+            No pin connection required.
+        2.2.3 Debugger
+            The debugger must be connected to JTAG Cortex Debug connector.
+    2.2 Software installation
+        2.2.1 Tresos Project Installation
+            The following procedure requires that the user has S32DS Studio installed and it is only needed for viewing, updating and generating the driver's configuration.
+            Procedure:
+                - Make sure that all RTD plugins are already installed in the S32DS plugins directory
+                3. Importing the project into the workspace
+        After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select "LinTrcv_MasterFrameTransfer_S32M276". Then click on "Finish".
+        The project should now be copied into you current workspace.
+        Wait for the S32 Configuration was initialized and ready.
+       
+3. Generating, building and running the example application
+    3.1 Importing the project into the workspace
+        After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select "LinTrcv_MasterFrameTransfer_S32M276". Then click on "Finish".
+        The project should now be copied into you current workspace.
+        Wait for the S32 Configuration was initialized and ready.
+    3.2 Generating the S32 configuration
+        The example will run without an active configuration, however if any changes are required, a configuration needs to be generated.
+        The initial configuration will have the same settings as the default example settings.
+        Right click on the current project, then click "S32 Configuration Tool" choose "Open Peripherals".
+        Pay attention to any error and warning message. If any configured value is invalid, they will be shown for user.
+        Make the desired changes (if any) then click "Update Code".
+    3.3 Compiling the application        
+        Select the configuration to be built:RAM (Debug_RAM), or FLASH (Debug_FLASH) by left clicking on the downward arrow corresponding to the build button in eclipse.
+        Use Project > Build to build the project.
+        Wait for the build action to be completed before continuing to the next step. Check the compiler console for error messages; upon completion, the *.elf binary file
+        should be created.
+    3.4 Running the application on the board
+        Go to Run and select Debug Configurations. There will be a debug configuration for this project:
+        
+        Configuration Name                                                       Description
+        -------------------------------                                          -----------------------
+        $Lin_LinTrcv_Lpuart_MasterFrameTransfer_S32M276_debug_ram_pemicro        Debug the RAM configuration using PEmicro probe
+        $Lin_LinTrcv_Lpuart_MasterFrameTransfer_S32M276_debug_flash_pemicro      Debug the FLASH configuration using PEmicro probe
+        
+        Select the desired debug configuration and click on Launch. Now the perspective will change to the Debug Perspective.
+        Use the controls to control the program flow.
+    3.5 Modifying the configuration in Tresos and generating the code
+        Users may change the application configuration according to their needs.
+        Procedure:
+            1. Open the S32DS Studio GUI
+            2. Open previously imported Example Application project
+            3. Use the Tresos Studio GUI to modify configuration parameter values and save the changes.
+            4. Select the Example Application project and click on "Generate" button to generate the configuration files.

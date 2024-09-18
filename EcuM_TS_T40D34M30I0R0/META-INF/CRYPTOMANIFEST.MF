@@ -1,0 +1,15 @@
+
+Name: generate_PC/include/EcuM_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422866662476517059905208422468549363573934466691392
+ 4225279992332901980300905076657126893094924433941765
+
+Name: config/EcuM.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422970909674614286860272306153990830295452277658014
+ 4074349890069915134647048950902092565934463781491427
+

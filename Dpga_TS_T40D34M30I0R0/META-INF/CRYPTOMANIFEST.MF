@@ -1,0 +1,92 @@
+
+Name: generate_PB/include/Dpga_Ip_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377427081895174850258204168021718642345434332261270310
+ 0751044019037196586379060835136990070876573785411060
+
+Name: generate_PB/Dpga_RegOperations.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773969496382882461312116065138550557040402063623999
+ 345829462631793963442433062593158205841300966723500796
+
+Name: generate_PB/include/CDD_Dpga_PBcfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377422258768536761466240356183804827571735220910036036
+ 0413477400830097075362444260321755491478410119095090
+
+Name: generate_PB/src/CDD_Dpga_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594744105879020130193340233447244623493433651844693090
+ 115488157632479451966361924381663529276330035136557637
+
+Name: generate_swcd/swcd/Dpga_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773964406379857642616680404862165793874125452114426
+ 285456784607921801129704363302099231947779297892597419
+
+Name: generate_PC/include/CDD_Dpga_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421409886647948742550451279583695428335597115133577
+ 5858389624313061711888801632878626739240036470644523
+
+Name: generate_PC/include/CDD_Dpga_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594740914612093510642990849436633608834792864639007789
+ 200498646895877702554086472056087808651716130959571809
+
+Name: config/Dpga.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421502998121149874711321383734952738213368968189812
+ 5874071204803418053797386391326267873432668706609733
+
+Name: generate_PC/src/CDD_Dpga_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420666557843142712826244820906546460671894232226929
+ 2539503806527226974267234219477450184735024231469132
+
+Name: generate_PC/include/Dpga_Ip_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773965157810098793752709490069713671303707852476320
+ 168880278262106532228291974136650984819109897811199320
+
+Name: generate_PC/Dpga_RegOperations.m
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594746405756495238229065608700998891853533782639780261
+ 533562749589362713669277377708487213303306042204336512
+
+Name: generate_PB/src/Dpga_Ip_PBcfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420601367435768423346302008205537869437396440752049
+ 5271409284450871088773543124074970041069111971109021
+
+Name: generate_PC/include/Dpga_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377423022672220746566447915857172576529165708828501776
+ 7463259520075058743838754456713416229909668404619258
+

@@ -1,0 +1,1147 @@
+<?xml version='1.0'?>
+<datamodel version="3.0"
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd"
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd"
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd"
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    MemAcc.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR MemAcc - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and MemAcc Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : none
+*   Dependencies         : MemAcc
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   (c) Copyright 2020 - 2023 NXP Semiconductors
+*   All Rights Reserved.
+====================================================================================================
+-->
+
+<d:ctr type="AUTOSAR" factory="autosar"
+    xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+    xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd"
+    xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+        <d:ctr name="TS_T40D34M30I0R0" type="AR-PACKAGE">
+            <a:a name="UUID" value="ECUC:5081a4f3-7ca1-4f39-addc-6370ce50a6f3"/>
+            <d:lst type="ELEMENTS">
+                <!-- @implements Mem_Object -->
+                <d:chc name="MemAcc" type="AR-ELEMENT" value="MODULE-DEF">
+
+                    <v:ctr type="MODULE-DEF">
+                        <a:a name="RELEASE" value="asc:4.7"/>
+                        <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                            <ad:ADMIN-DATA>
+                                <ad:DOC-REVISIONS>
+                                    <ad:DOC-REVISION>
+                                        <ad:REVISION-LABEL>4.6.0</ad:REVISION-LABEL>
+                                        <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                        <ad:DATE>2014-10-31</ad:DATE>
+                                    </ad:DOC-REVISION>
+                                </ad:DOC-REVISIONS>
+                            </ad:ADMIN-DATA>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTSUPPORT" value="true"/>
+                        <a:a name="DESC">
+                            <a:v>
+                                <![CDATA[EN:<html><p>
+                                    Configuration of the MemAcc module.
+                                </p></html>]]>
+                            </a:v>
+                        </a:a>
+                        <a:a name="LOWER-MULTIPLICITY" value="0"/>
+                        <a:a name="UPPER-MULTIPLICITY" value="1"/>
+                        <a:a name="UUID" value="ECUC:fbbd483a-8bbd-4f3c-aec3-1e4a603f9fa1"/>
+
+                        <!--  POST_BUILD_VARIANT_USED -->
+                        <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                            <a:a name="DESC"
+                                value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                            </a:a>
+                            <a:a name="LABEL" value="Post Build Variant Used"/>
+                            <a:a name="ORIGIN" value="EB"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="READONLY" value="FALSE"/>
+                            <a:da name="TOOLTIP"
+                                value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                        </v:var>
+
+                        <!-- @implements IMPLEMENTATION_CONFIG_VARIANT_Object -->
+                        <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                            <a:a name="LABEL" value="Config Variant"/>
+                            <a:a name="UUID" value="ECUC:1e828024-b141-43f8-9df9-54c7e529faaa"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html>
+                                        <p>VariantPostBuild: Mix of precompile and postbuild time configuration parameters.<br>
+                                        If Config Variant = VariantPostBuild, the files MemAcc_Cfg.h and MemAcc_PBcfg.c should be used.<br>
+                                        If Config Variant = VariantPreCompile, the files MemAcc_Cfg.h and MemAcc_Cfg.c should be used.
+                                        </p>
+                                    </html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:da name="DEFAULT" value="VariantPostBuild"/>
+                            <a:da name="RANGE">
+                                <a:v>VariantPostBuild</a:v>
+                                <a:v>VariantPreCompile</a:v>
+                            </a:da>
+                        </v:var>
+
+
+                        <!-- @implements MemAccGeneral_Object -->
+                        <v:ctr name="MemAccGeneral" type="IDENTIFIABLE">
+                            <a:a name="LABEL" value="MemAccGeneral"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                <![CDATA[EN:<html><p>
+                                      Container for general parameters of the flash driver. These parameters are always pre-compile.
+                                </p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:11c5d85e-cab1-4b9d-ad15-a07485e7dabc"/>
+
+                            <!-- @implements MemAccDevErrorDetect_Object -->
+                            <v:var name="MemAccDevErrorDetect" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem Development Error Detect"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable and disable development error detection.<br>
+                                            true : Development error detection enabled.<br>
+                                            false: Development error detection disabled.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:26fa787c-927c-40b9-9be3-bbffb62aabcd"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- @implements MemAccUseMemFuncPtrTable_Object -->
+                            <v:var name="MemAccUseMemFuncPtrTable" type="BOOLEAN">
+                                <a:a name="LABEL" value="MemAcc Use Mem FuncPtr Table"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This parameter defines if the Mem driver functions are called using the Mem function pointer table API.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:26fa787c-aaaa-40b9-9be3-bbffb62aabcd"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- @implements MemAcc64BitSupport_Object -->
+                            <v:var name="MemAcc64BitSupport" type="BOOLEAN">
+                                <a:a name="LABEL" value="MemAcc 64Bit Support"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            If this option is selected, the address type shall be implemented in 64Bit.<br>
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:28fa787c-effe-40b9-9be3-bbffb62aabcd"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- @implements MemAccCompareApi_Object -->
+                            <v:var name="MemAccCompareApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="MemAcc Compare Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This parameter enables/disables the function MemAcc_Compare().<br>
+                                            This function allows to compare data stored in a buffer with data stored in memory.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:28fa787c-aaaa-40b9-9be3-bbffb62aabcd"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- @implements MemAccCompareBufferSize_Object -->
+                            <v:var name="MemAccCompareBufferSize" type="INTEGER">
+                                <a:a name="LABEL" value="MemAcc Compare Buffer Size"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This value specifies the maximum number of bytes the MemAcc
+                                            module requests within one Mem compare request.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:da name="EDITABLE" type="XPath">
+                                    <a:tst expr="(node:value(../MemAccCompareApi))"/>
+                                </a:da>
+                                <a:da name="DEFAULT" value="128"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=1024"/>
+                                    <a:tst expr="&gt;=1"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- @implements MemAccMainFunctionPeriod_Object -->
+                            <v:var name="MemAccMainFunctionPeriod" type="FLOAT">
+                                <a:a name="LABEL" value="MemAcc MainFunction Period"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This value specifies the fixed call cycle for MemAcc_MainFunction().<br>
+                                            Additionally, if a job is ongoing on a Mem, the underlying Mem_MainFunction will be triggered directly by MemAcc at this fixed call cycle.<br>
+                                            MemAcc does not depend on a fixed cycle time; in can be triggered at arbitrary rates.<br>
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:4449efe4-5d5d-41d0-accb-4fb9ad4bae49"/>
+                                <a:da name="DEFAULT" value="0.2"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=1.0"/>
+                                    <a:tst expr="&gt;=0.0001"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- MemAcc timeouts -->
+                            <v:var name="MemAccTimeoutMethod" type="ENUMERATION">
+                                <a:a name="LABEL" value="MemAcc Timeout Method"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html><p>
+                                                Vendor specific: Counter type used in timeout detection for driver operations.<br>
+                                                Based on selected counter type the timeout value will be interpreted as follows:<br>
+                                                OSIF_COUNTER_DUMMY  - Counts the number of iterations of the waiting loop. The actual timeout depends on many factors: operation type, compiler optimizations, interrupts or other tasks in the system, etc.<br>
+                                                OSIF_COUNTER_SYSTEM - Microseconds.<br>
+                                                OSIF_COUNTER_CUSTOM - Defined by user implementation of timing services<br>
+                                                Note: Qspi always uses timeout<br>
+                                            </p></html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:2b1feddb-ff21-1fa8-b2db-0ac369aaac69"/>
+                                <a:da name="DEFAULT" value="OSIF_COUNTER_DUMMY"/>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseSystemTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_SYSTEM'" true="System Timer is not enabled in OsIf (OsIfGeneral/OsIfUseSystemTimer checkbox)"/>
+                                    <a:tst expr="node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/BaseNXP/OsIfGeneral/OsIfUseCustomTimer') = 'false' and node:fallback(.,'OSIF_COUNTER_DUMMY') = 'OSIF_COUNTER_CUSTOM'" true="Custom Timer is not enabled in OsIf (OsIfGeneral/OsIfUseCustomTimer checkbox)"/>
+                                </a:da>
+                                <a:da name="RANGE">
+                                    <a:v>OSIF_COUNTER_DUMMY</a:v>
+                                    <a:v>OSIF_COUNTER_SYSTEM</a:v>
+                                    <a:v>OSIF_COUNTER_CUSTOM</a:v>
+                                </a:da>
+                            </v:var>
+
+                        </v:ctr> <!-- <v:ctr name="MemAccGeneral" type="IDENTIFIABLE"> -->
+
+
+                        <!-- @implements MemAccAddressAreaConfiguration_Object -->
+                        <v:lst name="MemAccAddressAreaConfiguration" type="MAP">
+                            <a:a name="LABEL" value="MemAccAddressArea"/>
+                            <a:da name="MIN" value="1"/>
+                            <a:da name="MAX" value="65535"/>
+
+                            <v:ctr name="MemAccAddressAreaConfiguration" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="MemAccAddressArea"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                    <![CDATA[EN:<html><p>
+                                    This container includes the configuration of AddressArea specific parameters for the MemAcc module.<br>
+                                    An AddressArea is a logical area of memory. Upper layers only use logical addresses to access the address area.<br>
+                                    It is the job of MemAcc to map between logical and physical addresses.<br>
+                                    An AddressArea contains SubAddressAreas and each SubAddressArea is part of a physically continuous memory area (sector batch).<br>
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="REQUIRES-INDEX" value="true"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:d438accf-aa3f-eeee-eeee-49639a48dc6c"/>
+
+                                <!-- @implements MemAccAddressAreaId_Object -->
+                                <v:var name="MemAccAddressAreaId" type="INTEGER">
+                                    <a:a name="LABEL" value="MemAcc AddressArea Id"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This value specifies a unique identifier which is used to reference to an AddressArea.<br>
+                                            This identifier is used as parameter for MemAcc jobs in order to distinguish between several AddressAreas with the same logical addresses.<br>
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:582f386b-55db-5555-dddd-ad658099fb46"/>
+                                    <a:da name="DEFAULT" type="XPath">
+                                        <a:tst expr="num:i(node:fallback(../@index, 0))"/>
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=65535"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                    <a:da name="RANGE" type="XPath">
+                                        <a:tst expr="text:uniq(text:split(node:fallback(../../*/MemAccAddressAreaId, 1)), node:fallback(., 1))"
+                                               false="This ID value is already in use. The ID value must be unique."/>
+                                    </a:da>
+                                </v:var> <!-- MemAccAddressAreaId -->
+
+                                <!-- @implements MemAccAddressAreaPriority_Object -->
+                                <v:var name="MemAccAddressAreaPriority" type="INTEGER">
+                                    <a:a name="LABEL" value="MemAcc AddressArea Priority"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This value specifies the priority of an AddressArea compared to other AddressAreas (0 = lowest priority, 65535 = highest priority).<br>
+                                            For each AddressArea only one job can be processed at a time. MemAcc processes the jobs priority based.<br>
+                                            In case a job with a higher priority is requested by an upper layer, the lower priority jobs are suspended until the higher priority job is completed.<br>
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:584f386b-55db-5555-dddd-ad658099fb46"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=65535"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements MemAccBufferAlignmentValue_Object -->
+                                <v:var name="MemAccBufferAlignmentValue" type="INTEGER">
+                                    <a:a name="LABEL" value="MemAcc Buffer Alignment Value"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Buffer alignment value inherited by MemAcc upper layer modules.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:8207db4f-156f-4018-8c86-99679095d96d"/>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=255"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- @implements MemAccJobEndNotificationName_Object -->
+                                <v:var name="MemAccJobEndNotificationName" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="MemAcc Job End Notification Name"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Job end notification function which is called after MemAcc job completion.<br>
+                                            If this parameter is left empty, no job end notification is triggered and the upper layer module needs to poll the job results.<br>
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:bf476e30-7777-406c-9ed5-850380c1f713"/>
+                                    <!-- <a:da name="DEFAULT" value="Fee_JobEndNotification"/> -->
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                </v:var>
+
+
+                                <!-- @implements MemAccSubAddressAreaConfiguration_Object -->
+                                <v:lst name="MemAccSubAddressAreaConfiguration" type="MAP">
+                                    <a:a name="LABEL" value="MemAccSubAddressArea"/>
+                                    <a:da name="MIN" value="1"/>
+                                    <a:da name="MAX" value="65535"/>
+
+                                    <v:ctr name="MemAccSubAddressAreaConfiguration" type="IDENTIFIABLE">
+                                        <a:a name="LABEL" value="MemAccSubAddressArea"/>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                  This container includes the configuration parameters for a physically continuous area of memory.
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="REQUIRES-INDEX" value="true"/>
+                                        <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="UUID"  value="ECUC:49409fc2-eb73-4dbd-ffff-f5096d63345a"/>
+
+                                        <!-- @implements MemAccLogicalStartAddress_Object -->
+                                        <v:var name="MemAccLogicalStartAddress" type="INTEGER">
+                                            <a:a name="LABEL" value="MemAcc Logical Start Address"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    This value specifies the logical start address of the SubAddressArea.
+                                                </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:582f386C-55db-4923-bb69-ad658099fb48"/>
+                                            <!-- provide the first expression as a string, prefixed with -> -->
+                                            <a:da name="DEFAULT" type="XPath"
+                                                  expr="node:fallback
+                                                        ('->num:i
+                                                            (
+                                                                num:i( (../@index) > 0 ) *
+                                                                (
+                                                                    (node:ref(../../*[@index = (node:current()/../@index - 1 + 1 * num:i(node:current()/../@index = 0) )]/MemAccSectorBatchRef)/MemEraseSectorSize) *
+                                                                    (../../*[@index = (node:current()/../@index - 1 + 1 * num:i(node:current()/../@index = 0) )]/MemAccNumberOfSectors) +
+                                                                    (../../*[@index = (node:current()/../@index - 1 + 1 * num:i(node:current()/../@index = 0) )]/MemAccLogicalStartAddress)
+                                                                )
+                                                            )', num:i(0)
+                                                        )"/>
+                                            <a:da name="RANGE" type="XPath">
+                                                <a:tst expr="(../@index = 0) and (. != 0)"
+                                                       true="Logical start address of the first sub address are shall be 0"/>
+                                                <a:tst expr="text:uniq(../../*/MemAccLogicalStartAddress, .)"
+                                                       false="The Start Address for this sub area is duplicated on another sub area. The sub area Start Addresses must be unique."/>
+                                                <a:tst expr="(  node:fallback( ../@index, 0 ) != 0 and
+                                                                node:fallback( ., 0 ) != (
+                                                                   (node:ref(../../*[@index = (node:current()/../@index - 1)]/MemAccSectorBatchRef) )/MemEraseSectorSize *
+                                                                    (../../*[@index = (node:current()/../@index - 1)]/MemAccNumberOfSectors) +
+                                                                    (../../*[@index = (node:current()/../@index - 1)]/MemAccLogicalStartAddress)
+                                                                                         )
+                                                             )"
+                                                       true="Invalid start address of the sub area. Hit the calc button to calculate correct value."/>
+                                            </a:da>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=9223372036854775807"/><!-- EB limitation: supports only the signed 64-bit range for integer values -->
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccSectorOffset_Object -->
+                                        <v:var name="MemAccSectorOffset" type="INTEGER">
+                                            <a:a name="LABEL" value="MemAcc Sector Offset"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                This value specifies the sector offset of the SubAddressArea in case the SubAddressArea should not start with the first sector of the referenced MemSectorBatch.<br/>
+                                                </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:582f386C-55db-7887-bb89-ad658099fb48"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=4294967295"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccNumberOfSectors_Object -->
+                                        <v:var name="MemAccNumberOfSectors" type="INTEGER">
+                                            <a:a name="LABEL" value="MemAcc Number Sectors"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    This value specifies the number of physical sectors of the SubAddressArea.<br/>
+                                                </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:582f386C-55db-4966-bb8d-ad658099fb48"/>
+                                            <a:da name="DEFAULT" value="1"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=4294967295"/>
+                                                <a:tst expr="&gt;=1"/>
+                                            </a:da>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="(../MemAccSectorOffset + .) &lt;= (node:ref(../MemAccSectorBatchRef)/MemNumberOfSectors)"
+                                                       false="The logical size must not exceed physical size."/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccMemInvocation_Object -->
+                                        <v:var name="MemAccMemInvocation" type="ENUMERATION">
+                                            <a:a name="LABEL" value="MemAcc Mem Invocation"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                <![CDATA[EN:
+                                                <html><p>
+                                                Defines how the Mem driver services are accessed and how the Mem driver is scheduled and activated/initialized.<br>
+                                                DIRECT_STATIC   : Mem driver is linked with application. Mem service functions are directly called by MemAcc. Mem_Init is called by EcuM and Mem_MainFunction is triggered by SchM.<br/>
+                                                INDIRECT_DYNAMIC: Mem driver is linked as a separate binary and is dynamically activated. MemAcc will use Mem driver header table to invoke Mem service functions. Call of Mem_Init and Mem_MainFunction is handled by MemAcc.<br/>
+                                                INDIRECT_STATIC : Mem driver is linked with application. MemAcc will use Mem driver header table to invoke Mem service functions. Call of Mem_Init and Mem_MainFunction is handled by MemAcc.<br/>
+                                                </p></html>
+                                                ]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:788d4e46-4519-4687-5555-c5824866e25d"/>
+                                            <a:da name="RANGE">
+                                                <a:v>DIRECT_STATIC</a:v>
+                                                <a:v>INDIRECT_DYNAMIC</a:v>
+                                                <a:v>INDIRECT_STATIC</a:v>
+                                            </a:da>
+                                            <a:da name="DEFAULT" value="DIRECT_STATIC"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="count(../../../../../../*/MemAccAddressAreaConfiguration/*/MemAccSubAddressAreaConfiguration/*[(MemAccMemNamePrefix = node:current()/../MemAccMemNamePrefix)  and (MemAccMemInvocation != node:current()/../MemAccMemInvocation)]) > 0"
+                                                       true="Because a mem driver has one invocation way so the MemInvocation must be same for all Sub Address Area which are linked to same Mem driver."/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccMemNamePrefix_Object -->
+                                        <v:var name="MemAccMemNamePrefix" type="STRING">
+                                            <a:a name="LABEL" value="MemAcc Mem Name Prefix"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                    Depending on the MemAccUseMemFuncPtrTable configuration, this prefix is either used to reference the Mem driver header structure or the according Mem API function.<br/>
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:722003d6-2f16-46ac-a78f-0682e852f301"/>
+                                            <a:da name="DEFAULT" value="Mem_43_ExFls"/>
+                                            <!-- Attempt to read value of node with config class PostBuild which is not allowed in this context -->
+                                            <!-- <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="node:value(.) != text:split(../MemAccSectorBatchRef, '/')[2]"
+                                                       true="The mem prefix name must match with the referenced Mem driver."/>
+                                            </a:da> -->
+                                        </v:var>
+
+                                        <!-- @implements MemAccNumberOfEraseRetries_Object -->
+                                        <v:var name="MemAccNumberOfEraseRetries" type="INTEGER">
+                                            <a:a name="LABEL" value="MemAcc Number Of Erase Retries"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    This value specifies the number of retries of a failed erase job.
+                                                        0 : No retry, a failed job will be aborted immediately.<br/>
+                                                        >0: Retry the number of times before aborting the job.<br/>
+                                                </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:582f386C-55db-4966-bb89-ad658099fb48"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccNumberOfWriteRetries_Object -->
+                                        <v:var name="MemAccNumberOfWriteRetries" type="INTEGER">
+                                            <a:a name="LABEL" value="MemAcc Number Of Write Retries"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    This value specifies the number of retries of a failed write job.
+                                                        0 : No retry, a failed job will be aborted immediately.<br/>
+                                                        >0: Retry the number of times before aborting the job.<br/>
+                                                </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v class="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="OPTIONAL" value="true"/>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:582f386C-55db-7777-bb89-ad658099fb48"/>
+                                            <a:da name="DEFAULT" value="0"/>
+                                            <a:da name="INVALID" type="Range">
+                                                <a:tst expr="&lt;=255"/>
+                                                <a:tst expr="&gt;=0"/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccUseEraseBurst_Object -->
+                                        <v:var name="MemAccUseEraseBurst" type="BOOLEAN">
+                                            <a:a name="LABEL" value="MemAcc Use Erase Burst"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                    This parameter enables erase bursting for the related sub address area.<br>
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:26fa787c-9999-40b9-9be3-bbffb62a4ec4"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="(. = 'true') and not(node:exists( node:ref(../MemAccSectorBatchRef)/MemBurstSettings ))"
+                                                       true="The burst settings of the sector batch in Mem driver must be configured."/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccUseReadBurst_Object -->
+                                        <v:var name="MemAccUseReadBurst" type="BOOLEAN">
+                                            <a:a name="LABEL" value="MemAcc Use Read Burst"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                    This parameter enables read bursting for the related sub address area.<br>
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:26fa787c-99AB-40b9-9be3-bbffb62a4ec4"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="(. = 'true') and not(node:exists( node:ref(../MemAccSectorBatchRef)/MemBurstSettings ))"
+                                                       true="The burst settings of the sector batch in Mem driver must be configured."/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccUseWriteBurst_Object -->
+                                        <v:var name="MemAccUseWriteBurst" type="BOOLEAN">
+                                            <a:a name="LABEL" value="MemAcc Use Write Burst"/>
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                    This parameter enables write bursting for the related sub address area.<br>
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="SCOPE" value="LOCAL"/>
+                                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                            <a:a name="UUID" value="ECUC:ce7fd247-8bb1-4575-b88f-f9a21ced3a35"/>
+                                            <a:da name="DEFAULT" value="false"/>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="(. = 'true') and not(node:exists( node:ref(../MemAccSectorBatchRef)/MemBurstSettings ))"
+                                                       true="The burst settings of the sector batch in Mem driver must be configured."/>
+                                            </a:da>
+                                        </v:var>
+
+                                        <!-- @implements MemAccSectorBatchRef_Object -->
+                                        <v:ref name="MemAccSectorBatchRef" type="CHOICE-REFERENCE">
+                                            <a:a name="LABEL" value="MemAcc SectorBatch Ref" />
+                                            <a:a name="DESC">
+                                                <a:v>
+                                                    <![CDATA[EN:<html><p>
+                                                    Reference to MemSectorBatch mapped to the SubAddressArea.
+                                                    </p></html>]]>
+                                                </a:v>
+                                            </a:a>
+                                            <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                                <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                            </a:a>
+                                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                            <a:a name="UUID" value="ECUC:6dda909f-accc-426b-8ea9-389156def48f"/>
+                                            <a:a name="REF">
+                                                <a:v>ASPathDataOfSchema:/Mem_43_InFls_TS_T40D34M30I0R0/Mem/MemInstance/MemSectorBatch</a:v>
+                                                <a:v>ASPathDataOfSchema:/Mem_43_ExFls_TS_T40D34M30I0R0/Mem/MemInstance/MemSectorBatch</a:v>
+                                                <a:v>ASPathDataOfSchema:/Mem_43_Eep_TS_T40D34M30I0R0/Mem/MemInstance/MemSectorBatch</a:v>
+                                            </a:a>
+                                            <a:da name="INVALID" type="XPath">
+                                                <a:tst expr="node:refvalid(.)"
+                                                       false="The configured node does not exist or may not be referenced."/>
+                                                <a:tst expr="text:uniq(../../*/MemAccSectorBatchRef, .)"
+                                                       false="Duplicated MemSectorBatch between sub address areas"/>
+                                                <a:tst expr="node:value(../MemAccMemNamePrefix)!= text:split(node:value(.), '/')[2]"
+                                                       true="The mem prefix name (MemAccMemNamePrefix) must match with the referenced Mem driver."/>
+                                            </a:da>
+                                        </v:ref>
+
+                                    </v:ctr><!--<v:ctr name="MemAccSubAddressAreaConfiguration" type="IDENTIFIABLE">-->
+                                </v:lst><!--<v:lst name="MemAccSubAddressAreaConfiguration" type="MAP">-->
+
+                            </v:ctr><!--<v:ctr name="MemAccAddressAreaConfiguration" type="IDENTIFIABLE">-->
+                        </v:lst><!--<v:lst name="MemAccAddressAreaConfiguration" type="MAP">-->
+
+
+                        <!--  AutosarExt -->
+                        <v:ctr name="AutosarExt" type="IDENTIFIABLE">
+                            <a:a name="UUID" value="ECUC:e2e921c1-586e-46c3-b327-461540e507dc"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                            <p>Vendor specific: This container contains the global Non-Autosar configuration parameters of the driver.
+                                               This container is a MultipleConfigurationContainer, i.e. this container and
+                                               its sub-containers exist once per configuration set.</p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+
+                            <!-- @implements MemEnableUserModeSupport_Object -->
+                            <v:var name="MemAccEnableUserModeSupport" type="BOOLEAN">
+                                <a:a name="LABEL" value="MemAcc Enable User Mode Support"/>
+                                <a:a name="DESC">
+                                <a:v>
+                                  <![CDATA[EN:
+                                      <html>
+                                           <p>Vendor specific: When this parameter is enabled, the module will adapt to run from User Mode, with the following measures:</p>
+                                            <p>configuring REG_PROT for IPs so that the registers under protection can be accessed from user mode by setting UAA bit in REG_PROT_GCR to 1</p>
+                                            <p>for more information and availability on this platform, please see chapter User Mode Support in IM</p>
+                                      </html>
+                                  ]]>
+                                </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                  <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:09d1e8b6-7eaf-4963-a8c0-602142d7aaaa"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:da name="EDITABLE" value="false"/>
+                            </v:var>
+
+                        </v:ctr> <!-- <v:ctr name="AutosarExt" type="IDENTIFIABLE"> -->
+
+
+                        <!-- @implements CommonPublishedInformation_Object -->
+                        <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                            <a:a name="LABEL" value="Common Published Information"/>
+                            <!-- @remarks Covers BSW00374, BSW00318 -->
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                        <p>Common container, aggregated by all modules. It contains published information about vendor and versions.</p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:593da3a3-c7d4-4ea4-8102-99e7c09c5faa"/>
+
+                            <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Major Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Major version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:5362e324-524b-1111-a966-932248777165"/>
+                                <a:da name="DEFAULT" value="4"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=4"/>
+                                    <a:tst expr="&lt;=4"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Minor Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Minor version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:21a1d9fd-1111-480a-ae00-c48cad18833d"/>
+                                <a:da name="DEFAULT" value="7"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=7"/>
+                                    <a:tst expr="&lt;=7"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Patch Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Patch version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:5bbb5bdc-1111-4111-9bcf-cec95ed7b530"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="ModuleId" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Numeric Module ID"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Module ID of this module.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:45356676-1111-40cc-9b0a-c12b9f472d24"/>
+                                <a:da name="DEFAULT" value="41"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=41"/>
+                                    <a:tst expr="&lt;=41"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Major Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:38f1453e-1111-4675-8cae-dfb5d64b5d89"/>
+                                <a:da name="DEFAULT" value="3"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=3"/>
+                                    <a:tst expr="&lt;=3"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Minor Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:85df4a54-1222-476b-b25e-80d71a72c459"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Patch Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                               </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:07343f43-2222-41ee-9e1d-e65d54937c9e"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                <a:a name="LABEL" value="Vendor Api Infix"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                            This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                            &lt;ModuleName&gt;_&lt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                            E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                            This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                                            </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                   <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:3237b412-c773-3333-a16b-0cbbc31fdb66"/>
+                                <a:da name="DEFAULT" value=""/>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:da name="READONLY" value="true"/>
+                            </v:var>
+
+                            <v:var name="VendorId" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Vendor ID"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:8eabd8e3-aba0-5555-98e0-e1a538d7f95c"/>
+                                <a:da name="DEFAULT" value="43"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=43"/>
+                                    <a:tst expr="&lt;=43"/>
+                                </a:da>
+                            </v:var>
+
+                        </v:ctr><!-- CommonPublishedInformation -->
+
+                        <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/MemAcc"/>
+
+                    </v:ctr>
+                </d:chc>
+
+                <d:chc name="MemAcc_EcuParameterDefinition"
+                       type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="DEF"
+                             value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                        <a:a name="UUID" value="ECUC:69039338-ef9a-48de-a010-cd7adee800c7"/>
+                        <d:lst name="MODULE_REF">
+                            <d:ref type="MODULE_REF" value="ASPath:/TS_T40D34M30I0R0/MemAcc"/>
+                        </d:lst>
+                    </d:ctr>
+                </d:chc>
+
+                <d:chc name="MemAcc_ModuleDescription"
+                       type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="DEF"
+                             value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                        <d:var name="MODULE_ID" type="INTEGER" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:ref type="RECOMMENDED_CONFIGURATION" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="PRE_CONFIGURED_CONF" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="VENDOR_SPECIFIC_MODULE_DEF"
+                               value="ASPath:/TS_T40D34M30I0R0/MemAcc"/>
+                    </d:ctr>
+                </d:chc>
+
+            </d:lst>
+        </d:ctr>
+    </d:lst>
+</d:ctr>
+
+</datamodel>
+

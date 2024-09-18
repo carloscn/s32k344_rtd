@@ -1,0 +1,2681 @@
+<?xml version='1.0'?>
+<datamodel version="7.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/16/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/16/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    Mem_43_Eep.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Mem_43_Eep - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Mem_43_Eep Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : IPV_USDHC
+*   Dependencies         : 
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   Copyright 2020 - 2023 NXP Semiconductors
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->
+
+
+<d:ctr type="AUTOSAR" factory="autosar"
+    xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd"
+    xmlns:cd="http://www.tresos.de/_projects/DataModel2/08/customdata.xsd" 
+    xmlns:f="http://www.tresos.de/_projects/DataModel2/14/formulaexpr.xsd" 
+    xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+    xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd"  
+    xmlns:variant="http://www.tresos.de/_projects/DataModel2/11/variant.xsd">
+    <d:lst type="TOP-LEVEL-PACKAGES">
+            <d:ctr name="Mem_43_Eep_TS_T40D34M30I0R0" type="AR-PACKAGE">
+            <a:a name="UUID" value="ECUC:13b01487-a247-46d3-a33d-b0a0314620b6"/>
+            <d:lst type="ELEMENTS">
+
+                <d:chc name="Mem" type="AR-ELEMENT" value="MODULE-DEF">
+                    <v:ctr type="MODULE-DEF">
+                        <a:a name="RELEASE" value="asc:4.7.0"/>
+                        <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                            <ad:ADMIN-DATA>
+                                <ad:DOC-REVISIONS>
+                                    <ad:DOC-REVISION>
+                                        <ad:REVISION-LABEL>4.7.0</ad:REVISION-LABEL>
+                                        <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                                        <ad:DATE>2014-10-31</ad:DATE>
+                                    </ad:DOC-REVISION>
+                                </ad:DOC-REVISIONS>
+                            </ad:ADMIN-DATA>
+                        </a:a>
+                        <a:da name="INVALID" type="XPath">
+                            <a:tst expr="ecu:get('Mem_43_Eep.UsdhcSupport') = 'false'" true="uSDHC is not supported in this derivative."/>
+                        </a:da>
+                        <a:a name="POSTBUILDVARIANTSUPPORT" value="false"/>
+                        <a:a name="DESC">
+                            <a:v>
+                                <![CDATA[EN:<html><p>
+                                    Configuration of the Mem_43_Eep (internal or external mem_43_eeprom driver) module.
+                                </p></html>]]>
+                            </a:v>
+                        </a:a>
+                        <a:a name="LOWER-MULTIPLICITY" value="0"/>
+                        <a:a name="UPPER-MULTIPLICITY" value="*"/>
+                        <a:a name="UUID" 
+                             value="ECUC:57cc1256-0976-4d97-badd-6b6d73bf9ecf"/>
+                        <!--  POST_BUILD_VARIANT_USED -->
+                        <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                            <a:a name="DESC"
+                                value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+
+                            <a:a name="LABEL" value="Post Build Variant Used"/>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="EB"/>
+                            <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                            <a:da name="DEFAULT" value="false"/>
+                            <a:da name="READONLY" value="TRUE"/>
+                            <a:da name="TOOLTIP"
+                                value="Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points."/>
+                        </v:var>
+                        <!-- @implements IMPLEMENTATION_CONFIG_VARIANT_Object -->
+                        <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                            <a:a name="LABEL" value="Config Variant"/>
+                            <a:a name="UUID" value="ECUC:1e828024-b141-43f8-9df9-a1c7e529fe45"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html>
+                                        <p>
+                                        If Config Variant = VariantPreCompile, the files Mem_43_Eep_Cfg.h and Mem_43_Eep_Cfg.c should be used.
+                                        </p>
+                                    </html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:da name="DEFAULT" value="VariantPreCompile"/>
+                            <a:da name="RANGE">
+                                <a:v>VariantPreCompile</a:v>
+                            </a:da>
+                        </v:var>
+
+                        <!-- @implements MemGeneral_Object -->
+                        <v:ctr name="MemGeneral" type="IDENTIFIABLE">
+                            <a:a name="LABEL" value="MemGeneral"/>
+                          <a:a name="DESC">
+                            <a:v>
+                            <![CDATA[EN:<html><p>
+                                  Container for general configuration parameters of the mem_eeprom driver. These parameters are always pre-compile.
+                            </p></html>]]>
+                            </a:v>
+                            </a:a>
+                          <a:a name="UUID" value="ECUC:1116deb5-59de-4df3-b9ec-c6462fef84d6"/>
+                        
+                          <!-- @implements MemDevErrorDetect_Object -->
+                          <v:var name="MemDevErrorDetect" type="BOOLEAN">
+                            <a:a name="LABEL" value="Mem Development Error Detect"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html><p>
+                                    Pre-processor switch to enable and disable development error detection.<br>
+                                    true : Development error detection enabled.<br>
+                                    false: Development error detection disabled.
+                                </p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" value="ECUC:8de84e5c-0dcf-4547-a9f0-7e6bda721ed0"/>
+                            <a:da name="DEFAULT" value="true"/>
+                          </v:var>
+                        </v:ctr>
+                      <!-- @implements MemInstance_Object -->
+                      <v:lst name="MemInstance" type="MAP">
+                        <a:da name="MAX" value="65535"/>
+                        <a:da name="MIN" value="1"/>
+                        <v:ctr name="MemInstance" type="IDENTIFIABLE">
+                          <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html><p>
+                                This container includes the Mem driver instance specific configuration parameters.
+                                </p></html>]]>
+                                </a:v>
+                          </a:a>
+                          <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                               type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                          </a:a>
+                          <a:a name="UUID" 
+                               value="ECUC:45582b67-9e4b-4b3e-af8b-ddc8abfa9577"/>
+                               
+                          <!-- @implements MemInstanceId_Object -->
+                          <v:var name="MemInstanceId" type="INTEGER">
+                                        <a:a name="LABEL" value="Mem Instance Id" />
+                            <a:a name="DESC">
+                              <a:v>EN: This value specifies the unique numeric identifier which is used to reference a Mem driver instance in case multiple devices of the same type shall be addressed by one Mem driver. This value will be assigned to the symbolic name derived of the MemInstance container short name.</a:v>
+                              <a:v>EN: Tags: atp.Status=draft</a:v>
+                            </a:a>
+                            <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                 type="IMPLEMENTATIONCONFIGCLASS">
+                              <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            </a:a>
+                            <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                            <a:a name="SCOPE" value="LOCAL"/>
+                            <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                            <a:a name="UUID" 
+                                 value="ECUC:ae5f68a3-da62-434f-9e3e-65f96c715b5c"/>
+                            <a:da name="DEFAULT" value="0"/>
+                            <a:da name="INVALID" type="Range">
+                              <a:tst expr="&lt;=65535"/>
+                              <a:tst expr="&gt;=0"/>
+                            </a:da>
+                          </v:var>
+                          
+                          <!-- @implements MemSectorBatch_Object -->
+                          <v:lst name="MemSectorBatch" type="MAP">
+                            <a:da name="MIN" value="1"/>
+                            <v:ctr name="MemSectorBatch" type="IDENTIFIABLE">
+                              <a:a name="DESC">
+                                <a:v>EN: Configuration description of a programmable sector or sector batch. Sector batch means that homogenous and coherent sectors can be configured as one MemSector element.</a:v>
+                                <a:v>EN: Tags: atp.Status=draft</a:v>
+                              </a:a>
+                              <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                   type="IMPLEMENTATIONCONFIGCLASS">
+                                <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                              </a:a>
+                              <a:a name="UUID" 
+                                   value="ECUC:1451fdb2-63ae-4bb9-b0d2-bf1a509f7039"/>
+                                
+                              <!-- @implements MemEraseSectorSize_Object -->
+                              <v:var name="MemEraseSectorSize" type="INTEGER">
+                                <a:a name="DESC">
+                                  <a:v>EN: Size of this sector in bytes.</a:v>
+                                  <a:v>EN: Tags: atp.Status=draft</a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                     type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" 
+                                     value="ECUC:a1591462-d5d9-4c13-a833-4c7dfb6183f9"/>
+                                <a:da name="DEFAULT" value="512"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=4294967295"/>
+                                  <a:tst expr="&gt;=1"/>
+                                </a:da>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="((.) mod 512) = 0"
+                                    false="Erase sector size must be an integer multiple of 512." />
+                                </a:da>
+                              </v:var>
+                              
+                              <!-- @implements MemNumberOfSectors_Object -->
+                              <v:var name="MemNumberOfSectors" type="INTEGER">
+                                <a:a name="DESC">
+                                  <a:v>EN: Number of contiguous sectors with identical values for MemSectorSize and MemPageSize.</a:v>
+                                  <a:v>EN: Tags: atp.Status=draft</a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                     type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" 
+                                     value="ECUC:ffad263c-8e90-47c1-8248-f104da502ec4"/>
+                                <a:da name="DEFAULT" value="1"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=65535"/>
+                                  <a:tst expr="&gt;=1"/>
+                                </a:da>
+                              </v:var>
+                              
+                              <!-- @implements MemReadPageSize_Object -->
+                              <v:var name="MemReadPageSize" type="INTEGER">
+                                <a:a name="DESC">
+                                  <a:v>EN: Size of a read page of this sector in bytes.</a:v>
+                                  <a:v>EN: Tags: atp.Status=draft</a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                     type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" 
+                                     value="ECUC:9b456ede-6a6a-4144-a1af-ce63f8bafc05"/>
+                                <a:da name="DEFAULT" value="512"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=4294967295"/>
+                                  <a:tst expr="&gt;=1"/>
+                                </a:da>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="((.) mod 512) = 0"
+                                    false="Read page size must be an integer multiple of 512." />
+                                </a:da>
+                              </v:var>
+                              
+                              <!-- @implements MemSpecifiedEraseCycles_Object -->
+                              <v:var name="MemSpecifiedEraseCycles" type="INTEGER">
+                                <a:a name="DESC">
+                                  <a:v>EN: Number of erase cycles specified for the memory device (usually given in the device data sheet).</a:v>
+                                  <a:v>EN: Tags: atp.Status=draft</a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                     type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" 
+                                     value="ECUC:0041e81f-c2b8-45c0-b749-ff4c19bb8272"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=4294967295"/>
+                                  <a:tst expr="&gt;=0"/>
+                                </a:da>
+                              </v:var>
+                              
+                              <!-- @implements MemStartAddress_Object -->
+                              <v:var name="MemStartAddress" type="INTEGER">
+                                <a:a name="DESC">
+                                  <a:v>EN: Physical start address of the sector (batch).</a:v>
+                                  <a:v>EN: Tags: atp.Status=draft</a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                     type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" 
+                                     value="ECUC:3c88655d-61bc-46fa-ba65-e599e3935cee"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=9223372036854775807"/>
+                                  <a:tst expr="&gt;=0"/>
+                                </a:da>
+                              </v:var>
+                              
+                              <!-- @implements MemWritePageSize_Object -->
+                              <v:var name="MemWritePageSize" type="INTEGER">
+                                <a:a name="DESC">
+                                  <a:v>EN: Size of a write page of this sector in bytes.</a:v>
+                                  <a:v>EN: Tags: atp.Status=draft</a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                                     type="IMPLEMENTATIONCONFIGCLASS">
+                                  <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" 
+                                     value="ECUC:4c006240-8c99-499b-9495-e82fec57343e"/>
+                                <a:da name="DEFAULT" value="512"/>
+                                <a:da name="INVALID" type="Range">
+                                  <a:tst expr="&lt;=4294967295"/>
+                                  <a:tst expr="&gt;=1"/>
+                                </a:da>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="((.) mod 512) = 0"
+                                    false="Write page size must be greater than zero and integer multiple of 512." />
+                                </a:da>
+                              </v:var>
+                              
+                                <!-- @implements MemBurstSettings_Object -->
+                                <v:ctr name="MemBurstSettings" type="IDENTIFIABLE">
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="LABEL" value="Mem Burst Settings" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Container for burst setting configuration parameters of the Mem driver.
+                                            A sector burst can be used for improved performance.
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:67bf97ee-3173-42ff-8819-033710e95682"/>
+                                    <a:a name="OPTIONAL" value="true" />
+
+                                    <!-- @implements MemEraseBurstSize_Object -->
+                                    <a:da name="ENABLE" value="false"/>
+                                    <v:var name="MemEraseBurstSize" type="INTEGER">
+                                        <a:a name="LABEL" value="Mem Erase Burst Size" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                Size of sector erase burst in bytes. A sector burst can be used for
+                                                improved performance and is typically (a subset of) a sector batch.
+                                                To make use of the sector erase burst feature, the physical start
+                                                address of the sector batch must be aligned to the sector erase burst size.
+                                            </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                            type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                        <a:a name="UUID"
+                                            value="ECUC:7ff43a6a-2638-4d59-9ff4-57437b7d4be7" />
+                                        <a:da name="DEFAULT" type="XPath"
+                                            expr="num:i( node:fallback(../../MemEraseSectorSize, 4096) )" />
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=4294967295" />
+                                            <a:tst expr="&gt;=1" />
+                                        </a:da>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="((.) mod (../../MemEraseSectorSize)) = 0"
+                                                false="Erase burst size must be greater than zero and integer multiple of the erase sector size." />
+                                        </a:da>
+                                    </v:var>
+
+                                    <!-- @implements MemReadBurstSize_Object -->
+                                    <v:var name="MemReadBurstSize" type="INTEGER">
+                                        <a:a name="LABEL" value="Mem Read Burst Size" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                This value specifies the maximum number of bytes the MemAcc
+                                                module requests within one Mem read request.
+                                            </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                            type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                        <a:a name="UUID"
+                                            value="ECUC:3dfb05c3-58c2-455b-bf25-74337bfa4776"/>
+                                        <a:da name="DEFAULT" type="XPath"
+                                            expr="num:i( node:fallback(../../MemReadPageSize, 1) )" />
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=4294967295" />
+                                            <a:tst expr="&gt;=1" />
+                                        </a:da>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="((.) mod (../../MemReadPageSize)) = 0"
+                                                false="Read burst size must be greater than zero and integer multiple of the read page size." />
+                                        </a:da>
+                                    </v:var>
+
+                                    <!-- @implements MemWriteBurstSize_Object -->
+                                    <v:var name="MemWriteBurstSize" type="INTEGER">
+                                        <a:a name="LABEL" value="Mem Write Burst Size" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                Size of page write/program burst in bytes. A sector burst can be used
+                                                for improved performance and is typically (a subset of) a sector batch.
+                                                To make use of the write burst feature, the physical start address must
+                                                be aligned to the write burst size.
+                                            </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                                            type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="AUTOSAR_ECUC" />
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false" />
+                                        <a:a name="UUID"
+                                            value="ECUC:4936dcfc-a361-413f-86e4-36d43a3b9932"/>
+                                        <a:da name="DEFAULT" type="XPath"
+                                            expr="num:i( node:fallback(../../MemWritePageSize, 1) )" />
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=4294967295" />
+                                            <a:tst expr="&gt;=1" />
+                                        </a:da>
+                                        <a:da name="INVALID" type="XPath">
+                                            <a:tst expr="((.) mod (../../MemWritePageSize)) = 0"
+                                                false="Write burst size must be greater than zero and integer multiple of the write page size." />
+                                        </a:da>
+                                    </v:var>
+
+                                </v:ctr>
+                            </v:ctr>
+                          </v:lst>
+                        </v:ctr>
+                      </v:lst>
+                     
+                        <!-- @implements MemPublishedInformation_Object -->
+                        <v:ctr name="MemPublishedInformation" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html><p>
+                                        Additional published parameters not covered by CommonPublishedInformation container.
+                                        Note that these parameters do not have any configuration class setting, since they are published information.
+                                    </p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:70c12c09-625a-401b-bab0-baa0bc0cdbb0"/>
+
+                            <!-- @implements MemErasedValue_object -->
+                            <v:var name="MemErasedValue" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Mem Erased Value"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            The contents of an erased mem_43_eeprom memory cell.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:98b162ba-18e0-4c72-b4e9-bf923b445292"/>
+                                <a:da name="DEFAULT" value="255"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=255"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+                        </v:ctr>
+
+                        <!-- @implements Mem_43_EepUsdhcControllerCfg_object -->
+                        <v:lst name="Mem_43_EepUsdhcControllerCfg" type="MAP">
+                            <a:a name="LABEL" value="Mem_43_EepUsdhcControllerCfg"/>
+                            <a:da name="MIN" value="1"/>
+                            <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="(num:i(count(./*)) &gt; num:i(count(ecu:list(&apos;Mem_43_Eep.External.HwUnit.List&apos;))))"
+                                          true=" Mem_43_EepUsdhcControllerCfg have max number of External Hw Unit."/>
+                            </a:da>
+
+                            <v:ctr name="Mem_43_EepUsdhcControllerCfg" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="Mem_43_Eep Controller Configuration"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Configuration for low layer ip
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="REQUIRES-INDEX" value="true"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:1b665dd9-0c88-4879-a009-d42616172e69"/>
+
+                                <!-- cardDetectDat3 -->
+                                <v:var name="cardDetectDat3" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Use DAT3 pin as a card detection pin" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Set this field to true if user want to use DAT3 pin as a card detection pin
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12700-0636-47d6-9c1f-5d3d30bd6ec1"/>
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var><!-- cardDetectDat3 -->
+
+                                <!-- EnableAutoCMD12 -->
+                                <v:var name="EnableAutoCMD12" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem_43_Eep Enable Auto CMD12" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Enable auto CMD12. If this field is false, user have to send a "CMD12" command to card after
+                                                each time send/receive data to stop the data transfer. If this field is true, uSDHC will send
+                                                "CMD12" command automatically after data transfer is end.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12700-0636-41d9-9c1f-5d3d30bd6ec1"/>
+                                    <a:da name="DEFAULT" value="true" />
+                                    <a:a name="EDITABLE" value="false"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(../dmaMode ='USDHC_DMA_MODE_ADMA1') and (node:value(.) = 'false')"
+                                            true="AutoCMD12 shall be enabled in AMDA1 mode"/>
+                                    </a:da>
+                                </v:var><!-- EnableAutoCMD12 -->
+
+                                <!-- Mem_43_EepSynchronizeCache -->
+                                <v:var name="Mem_43_EepSynchronizeCache" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem_43_Eep Synchronize Cache" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html> Vendor specific:
+                                                Synchronize the memory by cleaning the cache before tranfering.<p/>
+                                                The MEM_43_EEP driver needs to maintain the memory coherency by means of three methods:<p/>
+                                                    1. Disable data cache, or<p/>
+                                                    2. Configure the mem_43_eep region upon which the driver operates, as non-cacheable, or<p/>
+                                                    3. Enable the Mem_43_EepSynchronizeCache feature.<p/>
+                                                Depending on the application configuration, one option may be more beneficial than other.<p/>
+
+                                                Enabled:    The MEM_43_EEP driver will call Mcl cache API functions in order to clean the cache
+                                                            before transferring , in order
+                                                            to ensure that the cache and the modified memory are in sync.<p/>
+                                                            If enabled, the driver will attempt to clean only the modified lines from the cache.
+                                                            If the size of the region to be clean is greater than half of the cache size, then
+                                                            the entire cache is clean.<p/>
+                                                            <b>Note</b>: If enabled, the MclEnableCache parameter has to be enabled and the MCL plugin included as a dependency.<p/>
+                                                Disabled:   The upper layers have to ensure that the buffers in write/read/compare funcitons upon which the driver operates is not cached.
+                                                            This can be obtained by either disabling the data cache or by configuring the memory region as non-cacheable.
+
+                                            </html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12711-0636-47d6-9c1f-5d3d30bd6ec1"/>
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var><!-- Mem_43_EepSynchronizeCache -->
+
+                                <!-- Mem_43_EepUsdhcIpDevErrorDetect -->
+                                <v:var name="Mem_43_EepUsdhcIpDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem_43_Eep Ip Dev Error Detect" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable and disable development error detection for IP layer.<br>
+                                            true: Development error detection enabled for Ip layer.<br>
+                                            false: Development error detection disabled for Ip layer.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12700-0613-41d9-9c1f-5d3d30bd6ec1"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(../../../MemGeneral/MemDevErrorDetect = 'true') and (node:value(.) = 'false')"
+                                            true="Mem_43_EepUsdhcIpDevErrorDetect should follow MemDevErrorDetect if this node is enabled "/>
+                                    </a:da>
+                                    <a:da name="DEFAULT" value="true" />
+                                </v:var><!-- Mem_43_EepUsdhcIpDevErrorDetect -->
+
+                                <!-- endianMode -->
+                                <v:var name="endianMode" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Endian mode" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Endian mode
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:5eb37c4b-5718-45c9-8f77-d048a7ec5990"/>
+                                    <a:da name="DEFAULT" value="USDHC_ENDIAN_MODE_LITTLE"/>
+                                    <a:da name="RANGE">
+                                        <a:v>USDHC_ENDIAN_MODE_BIG</a:v>
+                                        <a:v>USDHC_ENDIAN_MODE_HALF_WORD_BIG</a:v>
+                                        <a:v>USDHC_ENDIAN_MODE_LITTLE</a:v>
+                                    </a:da>
+                                </v:var><!-- endianMode -->
+
+                                <!-- EnableADMA1Mode -->
+                                <v:var name="EnableADMA1Mode" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Enable ADMA1 mode" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Enable ADMA1 mode. This mode support data transfer of 4KB aligned data in system memory.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12700-0636-47d6-9c23-5d3d30bd6ec1"/>
+                                    <a:da name="DEFAULT" value="false"/>
+                                </v:var><!-- EnableADMA1Mode -->
+
+                                <!-- dmaMode -->
+                                <v:var name="dmaMode" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Dma Mode" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Dma Mode
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:87f9c00f-17c1-45f3-9f10-3652af086aa7"/>
+                                    <a:da name="DEFAULT" value="USDHC_DMA_MODE_NO_DMA"/>
+                                    <a:da name="RANGE">
+                                        <a:v>USDHC_DMA_MODE_NO_DMA</a:v>
+                                        <a:v>USDHC_DMA_MODE_ADMA1</a:v>
+                                        <a:v>USDHC_DMA_MODE_ADMA2</a:v>
+                                    </a:da>
+                                   <a:da name="INVALID" type="XPath" >
+                                       <a:tst expr="((../EnableADMA1Mode='false') and (node:value(.) = 'USDHC_DMA_MODE_ADMA1'))"
+                                           true="Node EnableADMA1Mode must be enabled in order to allow legacy ADMA1 mode"/>
+                                   </a:da>
+                                </v:var><!-- dmaMode -->
+
+                                <!-- admaTable -->
+                                <v:var name="admaTable" type="STRING">
+                                    <a:a name="LABEL" value="ADMA table" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                ADMA table for transferring with ADMA1 and ADMA2 mode.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst expr="(../dmaMode !='USDHC_DMA_MODE_NO_DMA')"/>
+                                    </a:da>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="usdhc1_admaTable0"/>
+                                    <a:a name="UUID" value="ECUC:a2dc7234-378d-4398-a4a4-0676f675ba33"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                        <a:tst expr="text:uniq(../../*/admaTable, .)" false="Duplicate table name"/>
+                                    </a:da>
+                                </v:var><!-- admaTable -->
+
+                                <!-- admaTableSize -->
+                                <v:var name="admaTableSize" type="INTEGER">
+                                    <a:a name="LABEL" value="Size of ADMA table (bytes)"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>The size of ADMA table in bytes.
+                                            <br>For ADMA1, driver needs two tables(8 bytes) per a transfer: one for configure the start address(be 4KB align) and the next table for configure length data;
+                                            Following the setup, driver can transfer maximum 61440 bytes(0xF000 -> align with 4096) of data at the same time.</br>
+                                            For ADMA2, each ADMA table preempt 8 bytes and able to transfer maximum 65532 bytes(0xFFFC -> align with 4) of data at the same time; for configuration, the start address is 32-bit boundary.
+                                            If you need to transfer more data at the same time, you have to use more ADMA table size. Size of ADMA table in range: [8...65535]</p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:da name="EDITABLE" type="XPath">
+                                        <a:tst expr="(../dmaMode !='USDHC_DMA_MODE_NO_DMA')"/>
+                                    </a:da>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:2633d477-2e78-4b9c-857b-c8b450518bd0"/>
+                                    <a:da name="DEFAULT" value="8"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=65535"/>
+                                        <a:tst expr="&gt;=8"/>
+                                    </a:da>
+                                    <a:da name="INVALID" type="XPath" expr="((../dmaMode='USDHC_DMA_MODE_ADMA1') and (. mod 4 = 0)) or ((../dmaMode='USDHC_DMA_MODE_ADMA2') and (. mod 8 = 0)) or (../dmaMode='USDHC_DMA_MODE_NO_DMA')"
+                                        false="TableSize is recommended to be divisible by 4 with ADMA1 and divisible by 8 with ADMA2"/>
+                                </v:var><!-- admaTableSize -->
+
+                                <!-- WriteWatermarkLevel -->
+                                <v:var name="WriteWatermarkLevel" type="INTEGER">
+                                    <a:a name="LABEL" value="Write Watermark Level (words)"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>The size of Write Watermark Level in word.
+                                            <br>For internal DMA it's recommeded to use integer multiple of 16.</br>
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:d10b95cb-7d83-40e2-bb90-c3e765fe0c56"/>
+                                    <a:da name="DEFAULT" value="128"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=128"/>
+                                        <a:tst expr="&gt;0"/>
+                                    </a:da>
+                                    <a:da name="INVALID" type="XPath" expr="text:contains(node:value(../dmaMode), 'USDHC_DMA_MODE_ADMA') and (node:value(.) mod 16 != 0)"
+                                        true="Write Watermark Level should be an integer multiple of 16 in DMA mode"/>
+                                </v:var>
+
+                                <!-- ReadWatermarkLevel -->
+                                <v:var name="ReadWatermarkLevel" type="INTEGER">
+                                    <a:a name="LABEL" value="Read Watermark Level (words)"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>The size of Read Watermark Level in word.
+                                            <br>For internal DMA it's recommeded to use 16.</br>
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:8815b988-6c54-4863-bf1b-0cc37dde15e2"/>
+                                    <a:da name="DEFAULT" value="16"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=128"/>
+                                        <a:tst expr="&gt;0"/>
+                                    </a:da>
+                                    <a:da name="INVALID" type="XPath" expr="text:contains(node:value(../dmaMode), 'USDHC_DMA_MODE_ADMA') and (node:value(.) != 16)"
+                                        true="Read Watermark Level should be 16 in DMA mode"/>
+                                </v:var>
+
+                                <v:var name="Mem_43_EepTimeoutMethod" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Mem_43_Eep Timeout Method"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                                <html><p>
+                                                    Vendor specific: Counter type used in timeout detection for MEM_43_EEP service request.<br>
+                                                    Based on selected counter type the timeout value will be interpreted as follows:<br>
+                                                    OSIF_COUNTER_DUMMY  - Counts the number of iterations of the waiting loop. The actual timeout depends on many factors: operation type, compiler optimizations, interrupts or other tasks in the system, etc.<br>
+                                                    OSIF_COUNTER_SYSTEM - Microseconds.<br>
+                                                    OSIF_COUNTER_CUSTOM - Defined by user implementation of timing services<br>
+                                                </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:2b1fef6b-ff21-1fa8-b2db-f2c369b82c69"/>
+                                    <a:da name="DEFAULT" value="OSIF_COUNTER_DUMMY"/>
+                                    <a:da name="RANGE">
+                                        <a:v>OSIF_COUNTER_SYSTEM</a:v>
+                                        <a:v>OSIF_COUNTER_CUSTOM </a:v>
+                                        <a:v>OSIF_COUNTER_DUMMY</a:v>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- cardActiveTimeout -->
+                                <v:var name="cardActiveTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Card active timeout"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Configures the timeout for card active
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:80b37b93-1afe-4c89-8324-551a39542266"/>
+                                    <a:a name="EDITABLE" value="true"/>
+                                    <a:a name="DEFAULT_RADIX" value="HEX" />
+                                    <a:da name="DEFAULT" value="268435456"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var><!-- cardActiveTimeout -->
+
+                                <!-- SwitchVoltageTimeout -->
+                                <v:var name="SwitchVoltageTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Switch Voltage Timeout"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Configures the timeout for switch votage
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:80b37b20-1afe-4c89-8324-551a39542266"/>
+                                    <a:a name="EDITABLE" value="true"/>
+                                    <a:a name="DEFAULT_RADIX" value="HEX" />
+                                    <a:da name="DEFAULT" value="268435456"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var><!-- SwitchVoltageTimeout -->
+
+                                 <!-- GetPresetStatusTimeout -->
+                                <v:var name="GetPresentStatusTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Get Present Status Timeout"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Configures the timeout for switch votage
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:80b37b43-1afe-4c89-8324-551a39542266"/>
+                                    <a:a name="EDITABLE" value="true"/>
+                                    <a:a name="DEFAULT_RADIX" value="HEX" />
+                                    <a:da name="DEFAULT" value="268435456"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var><!-- GetPresetStatusTimeout -->
+
+                                <!-- AbortTransferTimeout -->
+                                <v:var name="AbortTransferTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Abort Transfer Timeout"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Configures the timeout for aborting trasfer
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:12b37b20-1afe-4c89-8324-551a39542266"/>
+                                    <a:a name="EDITABLE" value="true"/>
+                                    <a:a name="DEFAULT_RADIX" value="HEX" />
+                                    <a:da name="DEFAULT" value="268435456"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var><!-- AbortTransferTimeout -->
+
+                                <!-- setBusClkTimeout -->
+                                <v:var name="setBusClkTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Set bus clock timeout"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Configures the timeout for bus clock set
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:a6693b28-51f3-4feb-9f0a-b1f5bdcca47b"/>
+                                    <a:a name="EDITABLE" value="true"/>
+                                    <a:a name="DEFAULT_RADIX" value="HEX" />
+                                    <a:da name="DEFAULT" value="268435456"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var><!-- setBusClkTimeout -->
+
+                                <!-- ResetUsdhcTimeout -->
+                                <v:var name="ResetUsdhcTimeout" type="INTEGER">
+                                    <a:a name="LABEL" value="Reset Usdhc Timeout"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Reset the uSDHC module
+                                        </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="ECU"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:a6693b11-51f3-4feb-9f0a-b1f5bdcca47b"/>
+                                    <a:a name="EDITABLE" value="true"/>
+                                    <a:a name="DEFAULT_RADIX" value="HEX" />
+                                    <a:da name="DEFAULT" value="268435456"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var><!-- ResetUsdhcTimeout -->
+
+                               <!-- transferSyncTimeout -->
+                               <v:var name="transferSyncTimeout" type="INTEGER">
+                                <a:a name="LABEL" value="Set sync transfer timeout"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                    <![CDATA[EN:<html><p>
+                                        Configures the timeout for sync transfer
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="ECU"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:013294f5-82c9-4410-8627-301187fb0309"/>
+                                <a:a name="EDITABLE" value="true"/>
+                                <a:a name="DEFAULT_RADIX" value="HEX" />
+                                <a:da name="DEFAULT" value="268435456"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                    <a:tst expr="&gt;=1"/>
+                                </a:da>
+                                </v:var><!-- transferSyncTimeout -->
+
+                               <!-- transferAsyncTimeout -->
+                               <v:var name="transferAsyncTimeout" type="INTEGER">
+                                <a:a name="LABEL" value="Set async transfer timeout"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                    <![CDATA[EN:<html><p>
+                                        Configures the timeout for async transfer
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="ECU"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:0048ffce-2643-46a4-b56b-b70cb37d4a84"/>
+                                <a:a name="EDITABLE" value="true"/>
+                                <a:a name="DEFAULT_RADIX" value="HEX" />
+                                <a:da name="DEFAULT" value="268435456"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                    <a:tst expr="&gt;=1"/>
+                                </a:da>
+                                </v:var><!-- transferAsyncTimeout -->
+
+                               <!-- getInterfaceTimeout -->
+                               <v:var name="getInterfaceTimeout" type="INTEGER">
+                                <a:a name="LABEL" value="Get card interface timeout"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                    <![CDATA[EN:<html><p>
+                                        Timeout value to get card interface condition
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="ECU"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:5390999b-5a85-456d-910e-a1266a9fe14a"/>
+                                <a:a name="EDITABLE" value="true"/>
+                                <a:a name="DEFAULT_RADIX" value="HEX" />
+                                <a:da name="DEFAULT" value="268435456"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=0xFFFFFFFF"/>
+                                    <a:tst expr="&gt;=1"/>
+                                </a:da>
+                                </v:var><!-- getInterfaceTimeout -->
+
+                                <!-- Voltage support config -->
+                                <v:ctr name="voltageSupport" type="IDENTIFIABLE">
+                                    <a:a name="LABEL" value="Operating Voltage Selection" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Voltage levels supported on current board
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:0db19328-96d9-4960-86be-a8c2b21d7638"/>
+                                    <!-- 3.3V Support -->
+                                    <v:var name="Support33V" type="BOOLEAN">
+                                        <a:a name="LABEL" value="3.3V Support" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Current board supports 3.3V voltage
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:9a949ff5-c090-4ccd-aabb-ac258c87a1c4"/>
+                                        <a:da name="DEFAULT" value="true" />
+                                    </v:var><!-- 3.3V Support -->
+                                    <!-- 3.0V Support -->
+                                    <v:var name="Support30V" type="BOOLEAN">
+                                        <a:a name="LABEL" value="3.0V Support" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Current board supports 3.0V voltage
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:1ff7b715-a475-40e8-9951-b9db6c2fc1f3"/>
+                                        <a:da name="DEFAULT" value="true" />
+                                    </v:var><!-- 3.0V Support -->
+                                    <!-- 1.8V Support -->
+                                    <v:var name="Support18V" type="BOOLEAN">
+                                        <a:a name="LABEL" value="1.8V Support" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Current board supports 1.8V voltage (HS200 and HS400 mode will be disabled if 1.8V is not available)
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:b302f581-1e08-419d-9e1e-6c9b143a19c5"/>
+                                        <a:da name="DEFAULT" value="false" />
+                                        <a:da name="INVALID" type="XPath" >
+                                            <a:tst expr="(node:value(.) = 'true')" true="uSDHC of the S32K3XX platform does not support switching to 1.8V mode. (HS200 and HS400 modes will not be supported)"/>
+                                        </a:da>
+                                    </v:var><!-- 1.8V Support -->
+                                </v:ctr>
+
+                                <!-- cardInsertCallback -->
+                                <v:var name="cardInsertCallback" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Card insertion callback" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Card insertion callback.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                    <a:a name="UUID" value="ECUC:fb1710bc-df0f-48a2-9dbf-6697c4cef93f"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                    </a:da>
+                                </v:var><!-- cardInsertCallback -->
+
+                                <!-- cardRemoveCallback -->
+                                <v:var name="cardRemoveCallback" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Card removal callback" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Card removal callback.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                    <a:a name="UUID" value="ECUC:0573a112-a5a7-4325-94b3-567b0aea457a"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                    </a:da>
+                                </v:var><!-- cardRemoveCallback -->
+
+                                <!-- transferCompleteCallback -->
+                                <v:var name="transferCompleteCallback" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Transfer complete callback" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Transfer complete callback.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                    <a:a name="UUID" value="ECUC:422bc6e4-ee86-4e1c-9cc5-0bdede28fab7"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                    </a:da>
+                                </v:var><!-- transferCompleteCallback -->
+
+                                <!-- transferErrorCallback -->
+                                <v:var name="transferErrorCallback" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Transfer error callback" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Transfer error callback.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                    <a:a name="UUID" value="ECUC:68a3aefb-9b10-4221-ac28-5a28d0d35372"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                    </a:da>
+                                </v:var><!-- transferErrorCallback -->
+
+                                <!-- blockGapCallback -->
+                                <v:var name="blockGapCallback" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Block gap callback" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Block gap callback.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                    <a:a name="UUID" value="ECUC:f289cf7b-febb-4687-b899-628ab093e6bb"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                    </a:da>
+                                </v:var><!-- blockGapCallback -->
+
+                                <!-- cardIntCallback -->
+                                <v:var name="cardIntCallback" type="FUNCTION-NAME">
+                                    <a:a name="LABEL" value="Card interrupt callback" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Card interrupt callback.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:da name="DEFAULT" value="NULL_PTR"/>
+                                    <a:a name="UUID" value="ECUC:40025f6a-eaba-4091-8817-a2b29f3bbe55"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z][_0-9a-zA-Z]*$')"
+                                            false="Configuration name must be a valid C identifier!"/>
+                                    </a:da>
+                                </v:var><!-- cardIntCallback -->
+                                
+                                <!-- bootFlag Config -->
+                                <v:ctr name="BootHostConfig" type="IDENTIFIABLE">
+                                    <a:a name="LABEL" value="MMC Boot Host Configuration" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Configure flags in mmc boot
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="UUID" value="ECUC:efc12700-0636-47d6-9c1f-5d3d30bd6123"/>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+
+                                    <!-- ackFlag -->
+                                    <v:var name="ackFlag" type="BOOLEAN">
+                                        <a:a name="LABEL" value="Enable ACK For Boot" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Enable the boot ACK
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:d2e18f03-8ad4-41e8-ad76-a779d698eb13"/>
+                                        <a:da name="DEFAULT" value="false" />
+                                    </v:var><!-- ackFlag -->
+
+                                    <!-- ackTimeout -->
+                                    <v:var name="ackTimeout" type="INTEGER">
+                                        <a:a name="LABEL" value="Boot ACK timeout value" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                            /*!< Sets the timeout value for the boot ACK.<br>
+                                                NOTE:<br>
+                                                In register configuration, real timeout is:<br>
+                                                | ackTimeout |   S32V234    |   S32G274A   |   S32R45     |<br>
+                                                |-----------------|-------------------|----------------------|---------------------|<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp0&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^13 | SDCLK x 2^32 | SDCLK x 2^14 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^14 | SDCLK x 2^33 | SDCLK x 2^15 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^15 | SDCLK x 2^18 | SDCLK x 2^16 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^16 | SDCLK x 2^19 | SDCLK x 2^17 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^17 | SDCLK x 2^20 | SDCLK x 2^18 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp5&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^18 | SDCLK x 2^21 | SDCLK x 2^19 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp6&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^19 | SDCLK x 2^22 | SDCLK x 2^20 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp7&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^20 | SDCLK x 2^23 | SDCLK x 2^21 |<br>
+                                                |.....................|........................|..........................|............................|<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp14&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^27 | SDCLK x 2^30 | SDCLK x 2^28 |<br>
+                                                |&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp15&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp| SDCLK x 2^28 | SDCLK x 2^31 | SDCLK x 2^29 |<br>
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:1942bdce-865a-48ff-b28c-696e4933d41a"/>
+                                        <a:da name="DEFAULT" value="0"/>
+                                        <a:da name="RANGE" type="XPath"
+                                                expr="ecu:list('Mem_43_Eep.UsdhcCfg.ackTimeout')"/>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=15"/>
+                                            <a:tst expr="&gt;=0"/>
+                                        </a:da>
+                                    </v:var>
+                                    <!-- ackTimeout -->
+
+                                    <!-- disChkTimeout -->
+                                    <v:var name="disChkTimeout" type="BOOLEAN">
+                                        <a:a name="LABEL" value="Disable check timeout" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Disable check timeout
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:23d12493-5013-4dfb-abd9-1e35ef558e57"/>
+                                        <a:da name="DEFAULT" value="false" />
+                                    </v:var><!-- disChkTimeout -->
+
+                                    <!-- autoBlkGap -->
+                                    <v:var name="autoBlkGap" type="BOOLEAN">
+                                        <a:a name="LABEL" value="Enable auto stop at the block gap" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Enable auto stop at the block gap
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:d53145da-0c65-4045-90c4-4ec4692eb87a"/>
+                                        <a:da name="DEFAULT" value="false" />
+                                    </v:var><!-- autoBlkGap -->
+
+                                    <!-- DDR enable -->
+                                    <v:var name="ddrEnable" type="BOOLEAN">
+                                        <a:a name="LABEL" value="Enable DDR mode" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Enable Double data rate mode
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:5da53468-e180-4344-a010-f9e86756c1e4"/>
+                                        <a:da name="DEFAULT" value="false" />
+                                    </v:var><!-- ddrEnable -->
+
+                                    <!-- bootMode -->
+                                    <v:var name="bootMode" type="ENUMERATION">
+                                        <a:a name="LABEL" value="Boot Mode" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Boot Mode
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:72f3772a-de0f-484a-b1b5-dc8284a9a1f6"/>
+                                        <a:da name="DEFAULT" value="USDHC_NORMAL_MMC_BOOT"/>
+                                        <a:da name="RANGE">
+                                            <a:v>USDHC_NORMAL_MMC_BOOT</a:v>
+                                            <a:v>USDHC_ALTER_MMC_BOOT</a:v>
+                                        </a:da>
+                                    </v:var><!-- bootMode -->
+
+                                    <!-- bootBusWidth -->
+                                    <v:var name="bootBusWidth" type="ENUMERATION">
+                                        <a:a name="LABEL" value="Boot Bus Width" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Boot Bus Width
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:b519d1bf-df21-493e-a97b-4a7bfdab417f"/>
+                                        <a:da name="DEFAULT" value="USDHC_DATA_BUS_WIDTH_1BIT"/>
+                                        <a:da name="RANGE">
+                                            <a:v>USDHC_DATA_BUS_WIDTH_1BIT</a:v>
+                                            <a:v>USDHC_DATA_BUS_WIDTH_4BIT</a:v>
+                                            <a:v>USDHC_DATA_BUS_WIDTH_8BIT</a:v>
+                                        </a:da>
+                                    </v:var><!-- bootBusWidth -->
+
+                                    <!-- stopBlockGapCount -->
+                                    <v:var name="stopBlockGapCount" type="INTEGER">
+                                        <a:a name="LABEL" value="The block count for blockgap in boot process"/>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Configures the block count for blockgap stop in boot process. The value range of this block count is [0 ... 65535]
+                                            </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="ECU"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:627edf03-4c45-4a3c-8960-de18707436af"/>
+                                        <a:da name="DEFAULT" value="0"/>
+                                        <a:a name="EDITABLE" value="true"/>
+                                        <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=65535"/>
+                                            <a:tst expr="&gt;=0"/>
+                                        </a:da>
+                                    </v:var><!-- stopBlockGapCount -->
+                                </v:ctr><!-- bootFlag Config -->
+
+                            </v:ctr><!-- Mem_43_EepUsdhcControllerCfg -->
+                        </v:lst><!-- Mem_43_EepUsdhcControllerCfg -->
+
+                        <v:lst name="Mem_43_EepSdCfg" type="MAP">
+                            <a:a name="LABEL" value="Mem_43_EepSdCfg"/>
+                            <a:da name="MIN" value="1"/>
+                            <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="(num:i(count(./*)) &gt; num:i(count(ecu:list(&apos;Mem_43_Eep.External.HwUnit.List&apos;))))"
+                                          true=" Mem_43_EepSdCfg have max number of External Hw Unit."/>
+                             </a:da>
+
+                            <!-- Mem_43_EepSdCfg -->
+                            <v:ctr name="Mem_43_EepSdCfg" type="IDENTIFIABLE">
+                                <a:a name="LABEL" value="Mem_43_Eep SD Configuration"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            This container is present for SD card configuration structure.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="REQUIRES-INDEX" value="true"/>
+                                <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="UUID" value="ECUC:e4ca0dd3-e868-465e-9420-489bf9cab4f3"/>
+
+                                <!-- Mem_43_EepEnableOperationsOnEmmc -->
+                                <v:var name="Mem_43_EepEnableOperationsOnEmmc" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem_43_Eep Enable Emmc Memory" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Enable: Operations(write/read/erase/compare) are on the Emmc memory
+                                                Disable: Operations(write/read/erase/compare) are on the SD memory
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12700-0738-11d9-9c1f-5d3d30bd6ec1"/>
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var><!-- Mem_43_EepEnableOperationsOnEmmc -->
+
+                                <!-- Mem_43_EepBusWidthMode -->
+                                <v:var name="Mem_43_EepBusWidthMode" type="ENUMERATION">
+                                    <a:a name="LABEL" value="Mem_43_Eep MMC Buswidth Mode"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                                Select bus width mode for eMMC.
+                                                Available modes are 1 bit, 4 bits, 8 bits.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:fa1fcc9b-569f-4752-a81c-87ac330c441f"/>
+                                    <a:a name="EDITABLE" type="XPath">
+                                        <a:tst expr="(node:fallback( ../Mem_43_EepEnableOperationsOnEmmc, 0 ) = 'true')"/>
+                                    </a:a>
+                                    <a:da name="DEFAULT" value="SD_IP_DATABUSWIDTH_4BIT"/>
+                                    <a:da name="RANGE">
+                                        <a:v>SD_IP_DATABUSWIDTH_1BIT</a:v>
+                                        <a:v>SD_IP_DATABUSWIDTH_4BIT</a:v>
+                                        <a:v>SD_IP_DATABUSWIDTH_8BIT</a:v>
+                                        <a:v>SD_IP_DATABUSWIDTH_4BIT_DDR</a:v>
+                                        <a:v>SD_IP_DATABUSWIDTH_8BIT_DDR</a:v>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- Mem_43_EepCardDriverStrength -->
+                                <v:var name="Mem_43_EepCardDriverStrength" type="INTEGER">
+                                    <a:a name="LABEL" value="Card Driver Strength"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html><p>
+                                            Vendor specific:
+                                            Selected the Driver Strength for card pads in HS_TIMING[185].
+                                            (only for eMMC in HS200 or HS400 mode)
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:9059a327-de73-44f0-8b44-f9d17a9aa6c5"/>
+                                    <a:a name="EDITABLE" type="XPath">
+                                        <a:tst expr="(node:fallback( ../Mem_43_EepEnableOperationsOnEmmc, 0) = 'true')"/>
+                                    </a:a>
+                                    <a:da name="DEFAULT" value="0"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <!-- Mem_43_EepSdIpDevErrorDetect -->
+                                <v:var name="Mem_43_EepSdIpDevErrorDetect" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Mem_43_Eep Ip Dev Error Detect" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable and disable development error detection for IP layer.<br>
+                                            true: Development error detection enabled for Ip layer.<br>
+                                            false: Development error detection disabled for Ip layer.
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:efc12700-1323-41d9-9c1f-5d3d30bd6ec1"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="(../../../MemGeneral/MemDevErrorDetect = 'true') and (node:value(.) = 'false')"
+                                            true="Mem_43_EepSdIpDevErrorDetect should follow MemDevErrorDetect if this node is enabled "/>
+                                    </a:da>
+                                    <a:da name="DEFAULT" value="true" />
+                                </v:var>
+
+                                <v:ref name="usdhcCfgReference" type="REFERENCE">
+                                    <a:a name="LABEL" value="Usdhc Configuration Reference"/>
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:
+                                        <html>
+                                            Reference to Usdhc Configuration
+                                        </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:7D303324-6C00-1014-9FB4-934C845A4C16" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                                    </a:da>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/Mem_43_Eep_TS_T40D34M30I0R0/Mem/Mem_43_EepUsdhcControllerCfg" />
+                                </v:ref>
+
+                                <v:var name="afrequencyTable" type="INTEGER">
+                                    <a:a name="LABEL" value="Sd Clock Frequency"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            Vendor specific:
+                                            <h1>Sd Clock Frequency </h1><p>
+                                            Indicates Clock Frequency (in Hz) will be used to transfer data. It must be less than uSDHC source clock. Driver will calculate the maximum frequency which can be used based on this field.
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:bf37baf3-7aef-4ebf-9612-e9e856d88fd5"/>
+                                    <a:da name="DEFAULT" type="XPath" expr="num:i(noderef:value(concat(noderef:ref(node:fallback(../SdClockReference, .)), '/McuClockReferencePointFrequency')))"/>
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="((../u32McuClock) &gt;= node:value(.))" false="Sd Clock Frequency must be less than uSDHC source clock."/>
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295"/>
+                                        <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="Mem_43_EepSdAutoDiscoverFrequency" type="BOOLEAN">
+                                    <a:a name="LABEL" value="Sd Auto Discover Frequency" />
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:<html><p>
+                                            Automatically calculate the maximum of the bus clock based on the configured frequency.
+                                            <br> TRUE : Enable the automatic calculation.</br>
+                                            <br> FALSE: Disable the automatic calculation. Bus clock equals to the configured frequency.</br>
+                                            </p></html>]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:474c233f-39eb-4912-9703-ae2958c15372"/>
+                                    <a:da name="DEFAULT" value="false" />
+                                </v:var>
+
+                                <v:ref name="SdClockReference" type="REFERENCE">
+                                    <a:a name="LABEL" value="Sd Clock Reference"/>
+                                    <a:a name="DESC">
+                                        <a:v><![CDATA[EN:
+                                        <html>
+                                            Reference to a container of the type McuClockReferencePoint, to select an input clock.
+                                        </html>
+                                        ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP" />
+                                    <a:a name="SCOPE" value="LOCAL" />
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:6b08094d-766e-4e25-94d0-f28c0f94495b" />
+                                    <a:da name="INVALID" type="XPath">
+                                        <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                                    </a:da>
+                                    <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Mcu/McuModuleConfiguration/McuClockSettingConfig/McuClockReferencePoint" />
+                                </v:ref>
+
+                                <v:var name="u32McuClock" type="INTEGER">
+                                    <a:a name="LABEL" value="uSDHC Source Clock"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            Vendor specific:
+                                            <h1>SDHC Source Clock </h1><p>
+                                            Indicates source clock for uSDHC in Hz. Derived from MCU configuration.
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:7D6DEC98-6C00-1014-A2E1-E54917179776"/>
+                                    <a:da name="DEFAULT" type="XPath">
+                                        <a:tst expr="num:i(noderef:value(concat(noderef:ref(node:fallback(../SdClockReference, .)), '/McuClockReferencePointFrequency')))"/>
+                                    </a:da>
+                                    <a:da name="RANGE" type="XPath">
+                                        <a:tst expr="node:fallback(., 48000) = num:i(noderef:value(concat(noderef:ref(node:fallback(../SdClockReference, .)), '/McuClockReferencePointFrequency')))" false="uSDHC Clock Value must be calculated based on the Mcu Reference Point. Please press the button to caculate automatically"/>
+                                    </a:da>
+                                    <a:da name="INVALID" type="Range">
+                                            <a:tst expr="&lt;=4294967295"/>
+                                            <a:tst expr="&gt;=0"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SdMaxVoltRetries" type="INTEGER">
+                                    <a:a name="LABEL" value="Sd maximum retries for card voltage check"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>
+                                                Maximum loop count to check the card operation voltage range
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:4cf0f51f-47d2-4ac7-ad0e-fde30e399baa"/>
+                                    <a:da name="DEFAULT" value="100"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SdMaxCmd55Retries" type="INTEGER">
+                                    <a:a name="LABEL" value="Sd maximum retries to check card operation for CMD55"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>
+                                                Maximum loop count to check the SDHC card for cmd55
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:4cf0f51f-47d2-4ac7-ad0e-fde30e399caa"/>
+                                    <a:da name="DEFAULT" value="30"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=255"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:var name="SdMaxSendStatusRetries" type="INTEGER">
+                                    <a:a name="LABEL" value="Sd maximum retries for CMD13 "/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>
+                                                Maximum loop count for Send Status command (CMD13) in Sd_Ip_WaitWriteComplete function
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="ORIGIN" value="NXP"/>
+                                    <a:a name="SCOPE" value="LOCAL"/>
+                                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                    <a:a name="UUID" value="ECUC:5b8a41ac-3424-4dcc-b258-91fbdbb66ffa"/>
+                                    <a:da name="DEFAULT" value="65535"/>
+                                    <a:da name="INVALID" type="Range">
+                                        <a:tst expr="&lt;=4294967295"/>
+                                        <a:tst expr="&gt;=1"/>
+                                    </a:da>
+                                </v:var>
+
+                                <v:ctr name="BootCardConfig" type="IDENTIFIABLE">
+                                    <a:a name="UUID" value="ECUC:3cf7d9b3-4d7f-42b5-b4b2-1d54a6122cc2"/>
+                                    <a:a name="LABEL" value="MMC Boot Card Configuration"/>
+                                    <a:a name="DESC">
+                                        <a:v>
+                                            <![CDATA[EN:
+                                            <html>
+                                            <p>
+                                                This container is present for eMMC Boot Configuration structure.
+                                            </p></html>
+                                            ]]>
+                                        </a:v>
+                                    </a:a>
+                                    <a:a name="OPTIONAL" value="true"/>
+                                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                        <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    </a:a>
+                                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="false"/>
+
+                                    <v:var name="bootPartitionSelect" type="ENUMERATION">
+                                        <a:a name="LABEL" value="Boot partition for boot operation"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    <p>Select boot partition for boot operation.</p>
+                                                    </html>]]>
+                                                </a:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:3a2a6ffd-eac4-4c4d-a86b-a776ade5d250"/>
+                                        <a:da name="DEFAULT" value="SD_IP_MMCBOOT_PARTITION_1"/>
+                                        <a:da name="RANGE">
+                                            <a:v>SD_IP_MMCBOOT_PARTITION_1</a:v>
+                                            <a:v>SD_IP_MMCBOOT_PARTITION_2</a:v>
+                                            <a:v>SD_IP_MMCBOOT_USER_AREA</a:v>
+                                        </a:da>
+                                    </v:var>
+
+                                    <v:var name="ackEnable" type="BOOLEAN">
+                                        <a:a name="LABEL" value="Enable ACK for boot operation"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p></p>
+                                                    Enable ACK for boot operation.<br>
+                                                    true: ACK enable.<br>
+                                                    false: ACK disabled
+                                                    </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:1c498ef3-2edf-4e04-aaae-de8b9b1679d7"/>
+                                        <a:da name="DEFAULT" value="false"/>
+                                    </v:var>
+
+                                    <v:var name="bootSpeed" type="ENUMERATION">
+                                        <a:a name="LABEL" value="Boot speed for boot operation"/>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html>
+                                                    <p>Select boot speed for boot operation.</p>
+                                                    </html>]]>
+                                                </a:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:6dfde6af-4c5d-48ba-8405-ca88f10e2489"/>
+                                        <a:da name="DEFAULT" value="SD_IP_MMCBOOT_SDR_LOW_SPEED"/>
+                                        <a:da name="RANGE">
+                                            <a:v>SD_IP_MMCBOOT_SDR_LOW_SPEED</a:v>
+                                            <a:v>SD_IP_MMCBOOT_SDR_HIGH_SPEED</a:v>
+                                            <a:v>SD_IP_MMCBOOT_DDR</a:v>
+                                        </a:da>
+                                    </v:var>
+
+                                    <!-- bootBusWidth -->
+                                    <v:var name="bootBusWidth" type="ENUMERATION">
+                                        <a:a name="LABEL" value="Boot Bus Width" />
+                                        <a:a name="DESC">
+                                            <a:v>
+                                                <![CDATA[EN:<html><p>
+                                                    Boot Data Bus Width
+                                                </p></html>]]>
+                                            </a:v>
+                                        </a:a>
+                                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                        </a:a>
+                                        <a:a name="ORIGIN" value="NXP"/>
+                                        <a:a name="SCOPE" value="LOCAL"/>
+                                        <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                        <a:a name="UUID" value="ECUC:26b6a53c-47f7-4255-96f1-d9a99b856261"/>
+                                        <a:da name="DEFAULT" value="SD_IP_MMCBOOT_DBW_1BIT"/>
+                                        <a:da name="RANGE">
+                                            <a:v>SD_IP_MMCBOOT_DBW_1BIT</a:v>
+                                            <a:v>SD_IP_MMCBOOT_DBW_4BIT</a:v>
+                                            <a:v>SD_IP_MMCBOOT_DBW_8BIT</a:v>
+                                        </a:da>
+                                    </v:var><!-- bootBusWidth -->
+                                </v:ctr>
+
+                            </v:ctr><!-- Mem_43_EepSdCfg -->
+                        </v:lst>
+
+
+                        <v:ctr name="AutosarExt" type="IDENTIFIABLE">
+                            <a:a name="UUID" value="ECUC:dc9186d3-53e5-45f7-bc95-ea75b2db22ed"/>
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                            <p>Vendor specific: This container contains the global Non-Autosar configuration parameters of the Mem_43_Eep driver.
+                                               This container is a MultipleConfigurationContainer, i.e. this container and
+                                               its sub-containers exist once per configuration set.</p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+
+                            <v:var name="Mem_43_EepSuspendApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Suspend Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_Suspend function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438a9f13-adb7-4b21-a879-f2a55a93a6e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+                
+                            <v:var name="Mem_43_EepResumeApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Resume Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_Resume function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438a9f13-b7-4b21-a879-f2a55a93a6e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+
+                            <v:var name="Mem_43_EepPropageErrorApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep PropageError Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_PropageError function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438f13-adb7-4b21-a879-f2a55a93a6e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+
+                            <v:var name="Mem_43_EepEraseApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Erase Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_Erase function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438a93-adb7-4b21-a879-f2a55a93a6e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+
+                            <v:var name="Mem_43_EepReadApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Read Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_Read function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:9f13-adb7-4b21-a879-f2a55a93a6e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var> 
+
+                            <v:var name="Mem_43_EepWriteApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Write Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_Write function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438a9f13-adb0-4b21-a879-f2a55a93a6e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>            
+
+                            <v:var name="Mem_43_EepBankCheckApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep BankCheck Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_BankCheck function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438a9f13-adb7-4b21-a879-f2a5e5"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+
+                           <!-- @implements Mem_43_EepServiceCompare_Object -->
+                            <v:var name="Mem_43_EepServiceCompare" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep HwSpecificService Compare"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_EepServiceCompare feature.<br>
+                                            true: feature supported / feature provided.<br>
+                                            false:  feature not supported / feature not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:438a9f13-adb7-4b21-a879-f2a55a931234"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+
+                            <v:var name="Mem_43_EepGetJobResultApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Get Job Result Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Compile switch to enable and disable the Mem_43_Eep_GetJobResult function.<br>
+                                            true: API supported / function provided.<br>
+                                            false:  API not supported / function not provided
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:7507c0b2-0-462d-9656-a20a9bbfbf92"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+
+                            <v:var name="Mem_43_EepVersionInfoApi" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Version Info Api"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Pre-processor switch to enable / disable the API to read out the modules version information.<br>
+                                            true: Version info API enabled.<br>
+                                            false:  Version info API disabled.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:819c12f5-90f9-497b-0-d0f797de7dad"/>
+                                <a:da name="DEFAULT" value="true"/>
+                            </v:var>
+                
+                            <v:var name="Mem_43_EepBlockSizeWriteAsynchBehaviorEn" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Block Size Write Asynch"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Vendor specific: Enable asynchronous execution of the write job in the Mem_43_Eep_MainFunction function which doesn't wait (block) for completion of the block size write operation(s).
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:46ed2647-72d1-42be-a2f3-c396c6230b88"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+                
+                            <v:var name="Mem_43_EepBlockSizeEraseAsynchBehaviorEn" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Block Size Erase Asynch"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            Vendor specific: Enable asynchronous execution of the erase job in the Mem_43_Eep_MainFunction function which doesn't wait (block) for completion of the block size erase operation(s).
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:46ed2647-72d1-42be-a2f3-c397c6230b88"/>
+                                <a:da name="DEFAULT" value="false"/>
+                            </v:var>
+
+                            <!-- @implements Mem_43_EepEnableUserModeSupport_Object -->
+                            <v:var name="Mem_43_EepEnableUserModeSupport" type="BOOLEAN">
+                                <a:a name="LABEL" value="Mem_43_Eep Enable User Mode Support"/>
+                                <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                            <p> When this parameter is enabled, the MEM_43_EEP module will adapt to run from User Mode, with the following measures:</p>
+                                            <p>configuring REG_PROT for Mem_43_Eep IPs so that the registers under protection can be accessed from user mode by setting UAA bit in REG_PROT_GCR to 1</p>
+                                            <p>for more information and availability on this platform, please see chapter User Mode Support in IM</p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:fbb4800a-1114-4ef4-9a8b-c56befc654eb"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:da name="READONLY" value="true"/>
+                            </v:var>
+
+                        </v:ctr>
+                        
+                        <!-- @implements Mem_43_EepInitConfiguration_Object -->
+                        <v:ctr name="Mem_43_EepInitConfiguration" type="IDENTIFIABLE">
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:<html><p>
+                                      Container for runtime configuration parameters of the mem_43_eeprom driver.<br>
+                                      Implementation Type: Mem_43_Eep_ConfigType.
+                                    </p></html>]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:7c955003-8f1a-45da-b0bc-a2c4cf578656"/>
+
+                            <!-- @implements Mem_43_EepMaxReadBlockSize_Object -->
+                            <v:var name="Mem_43_EepMaxReadBlockSize" type="INTEGER">
+                                <a:a name="LABEL" value="Mem_43_Eep Max Read Mode"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html><p>
+                                            The maximum number of bytes to read in one cycle of the mem_43_eeprom driver&apos;s job processing function.
+                                        </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:a8740fe8-79f9-46f5-9877-b399a1027705"/>
+                                <a:da name="DEFAULT" value="4096"/>
+                                <a:da name="RANGE" type="XPath">
+                                    <!-- Must be greater than zero -->
+                                   <a:tst expr="node:fallback( ., 4096 ) > 0"
+                                    false="Must be greater than zero"/>
+                                    <!-- DMA1 must align with 4096 byte -->
+                                   <a:tst expr="node:fallback(./../../Mem_43_EepUsdhcControllerCfg/*/dmaMode,'USDHC_DMA_MODE_NO_DMA')='USDHC_DMA_MODE_ADMA1'
+                                    and node:fallback( ., 4096 ) mod 4096 != 0"
+                                    true="Must be greater than integer multiple of 4096 bytes(alignment with data transfer of 4KB aligned data in system memory)"/>
+                                     <!-- DMA2 must align with 4 byte -->
+                                    <a:tst expr="node:fallback(./../../Mem_43_EepUsdhcControllerCfg/*/dmaMode,'USDHC_DMA_MODE_NO_DMA')='USDHC_DMA_MODE_ADMA2'
+                                    and node:fallback( ., 4 ) mod 4 != 0"
+                                    true="Must be greater than integer multiple of 4 bytes(alignment with data transfer of 4 bytes aligned data in system memory)"/>
+                                </a:da>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=4294967295"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <!-- @implements Mem_43_EepMaxWriteBlockSize_Object -->
+                            <v:var name="Mem_43_EepMaxWriteBlockSize" type="INTEGER">
+                                <a:a name="LABEL" value="Mem_43_Eep Max Write Mode"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                    <![CDATA[EN:<html><p>
+                                          The maximum number of bytes to write in one cycle of the mem_43_eeprom driver&apos;s job processing function.
+                                    </p></html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:627edf03-4c45-4a3c-8960-b518707306ae"/>
+                                <a:da name="DEFAULT" value="4096"/>
+                                <a:da name="RANGE" type="XPath">
+                                    <!-- Must be greater than zero -->
+                                   <a:tst expr="node:fallback( ., 4096 ) > 0"
+                                    false="Must be greater than zero"/>
+                                    <!-- DMA1 must align with 4096 byte -->
+                                   <a:tst expr="node:fallback(./../../Mem_43_EepUsdhcControllerCfg/*/dmaMode,'USDHC_DMA_MODE_NO_DMA')='USDHC_DMA_MODE_ADMA1'
+                                    and node:fallback( ., 4096 ) mod 4096 != 0"
+                                    true="Must be greater than integer multiple of 4096 bytes(alignment with data transfer of 4KB aligned data in system memory)"/>
+                                     <!-- DMA2 must align with 4 byte -->
+                                    <a:tst expr="node:fallback(./../../Mem_43_EepUsdhcControllerCfg/*/dmaMode,'USDHC_DMA_MODE_NO_DMA')='USDHC_DMA_MODE_ADMA2'
+                                    and node:fallback( ., 4 ) mod 4 != 0"
+                                    true="Must be greater than integer multiple of 4 bytes(alignment with data transfer of 4 bytes aligned data in system memory)"/>
+                                </a:da>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;=4294967295"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                            </v:var>
+                        </v:ctr>
+
+                        <!-- @implements CommonPublishedInformation_Object -->
+                        <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                            <a:a name="LABEL" value="Common Published Information"/>
+                            <!-- @remarks Covers BSW00374, BSW00318 -->
+                            <a:a name="DESC">
+                                <a:v>
+                                    <![CDATA[EN:
+                                        <html>
+                                        <p>Common container, aggregated by all modules. It contains published information about vendor and versions.</p>
+                                        </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:9956f1f1-bff6-45ea-a7e9-e34070599727"/>
+
+                            <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Major Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Major version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:66b8f123-9bf5-4365-a866-e41bea182a9f"/>
+                                <a:da name="DEFAULT" value="4"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=4"/>
+                                    <a:tst expr="&lt;=4"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Minor Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Minor version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:d21a16d5-553c-4da2-893d-e5edcc80e3f2"/>
+                                <a:da name="DEFAULT" value="7"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=7"/>
+                                    <a:tst expr="&lt;=7"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="AUTOSAR Patch Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Patch version number of AUTOSAR specification on which the appropriate implementation is based on.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:b676214d-048d-4372-9e45-e620274094e9"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="ModuleId" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Numeric Module ID"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor specific: Module ID of this module.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:81e50058-1c3a-464f-88c2-e75a6833f201"/>
+                                <a:da name="DEFAULT" value="90"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=90"/>
+                                    <a:tst expr="&lt;=90"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Major Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Major version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:f7e52441-a341-495d-a311-e8319dbe48ab"/>
+                                <a:da name="DEFAULT" value="3"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=3"/>
+                                    <a:tst expr="&lt;=3"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Minor Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Minor version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:9023bc4f-82f2-4011-bc46-e918805c7e78"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Software Patch Version"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Patch level version number of the vendor specific implementation of the module. The numbering is vendor specific.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                               </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:16c1307a-4de3-4609-82f6-f0fa00f78160"/>
+                                <a:da name="DEFAULT" value="0"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=0"/>
+                                    <a:tst expr="&lt;=0"/>
+                                </a:da>
+                            </v:var>
+
+                            <v:var name="VendorApiInfix" type="STRING_LABEL">
+                                <a:a name="LABEL" value="Vendor Api Infix"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>In driver modules which can be instantiated several times on a single ECU, BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.
+                                            This parameter is used to specify the vendor specific name. In total, the implementation specific name is generated as follows:
+                                            &lt;ModuleName&gt;_&gt;VendorId&gt;_&lt;VendorApiInfix&gt;&lt;Api name from SWS&gt;.
+                                            E.g.  assuming that the VendorId of the implementor is 123 and the implementer chose a VendorApiInfix of &quot;v11r456&quot; a api name Can_Write defined in the SWS will translate to Can_123_v11r456Write.
+                                            This parameter is mandatory for all modules with upper multiplicity &gt; 1. It shall not be used for modules with upper multiplicity =1.
+                                            </p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                   <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:c2017351-3b3d-4fb6-b504-f192754b1fc2"/>
+                                <a:da name="DEFAULT" value="43"/>
+                                <a:a name="OPTIONAL" value="true"/>
+                                <a:da name="READONLY" value="true"/>
+                            </v:var>
+
+                            <v:var name="VendorId" type="INTEGER_LABEL">
+                                <a:a name="LABEL" value="Vendor ID"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:
+                                            <html>
+                                            <p>Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list.</p>
+                                            </html>
+                                        ]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:6e8602ce-59d0-4f63-924d-f28add0fbe7f"/>
+                                <a:da name="DEFAULT" value="43"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&gt;=43"/>
+                                    <a:tst expr="&lt;=43"/>
+                                </a:da>
+                            </v:var>
+                        </v:ctr>
+
+                        <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/Mem"/>
+                    </v:ctr>
+                </d:chc>
+                <d:chc name="Mem_43_Eep_EcuParameterDefinition"
+                       type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="DEF"
+                             value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+                        <a:a name="UUID" value="ECUC:ad7b5825-bfba-4fe6-b529-f309aae46160"/>
+                        <d:lst name="MODULE_REF">
+                            <d:ref type="MODULE_REF" value="ASPath:/Mem_43_Eep_TS_T40D34M30I0R0/Mem"/>
+                        </d:lst>
+                    </d:ctr>
+                </d:chc>
+                <d:chc name="Mem_43_Eep_ModuleDescription"
+                       type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+                    <d:ctr type="AR-ELEMENT">
+                        <a:a name="DEF"
+                             value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+                        <d:var name="MODULE_ID" type="INTEGER" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:var>
+                        <d:ref type="RECOMMENDED_CONFIGURATION" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="PRE_CONFIGURED_CONF" >
+                            <a:a name="EDITABLE" value="false"/>
+                            <a:a name="IMPORTER_INFO" value="@DEF"/>
+                        </d:ref>
+                        <d:ref type="VENDOR_SPECIFIC_MODULE_DEF"
+                               value="ASPath:/Mem_43_Eep_TS_T40D34M30I0R0/Mem"/>
+                    </d:ctr>
+                </d:chc>
+            </d:lst>
+        </d:ctr>
+    </d:lst>
+</d:ctr>
+
+</datamodel>

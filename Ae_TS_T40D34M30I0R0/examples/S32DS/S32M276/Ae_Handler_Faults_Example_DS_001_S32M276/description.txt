@@ -1,0 +1,44 @@
+1. Example Description
+    This application demonstrates the progress how to use the feature faults/events.
+    1.1 The application software functionality
+        - OsIf_Init Initialize timeout
+        - Initialize clock via the function Mcu_Init/Mcu_InitClock/Mcu_DistributePllClock/Mcu_SetMode.
+        - Icu Initialize edge to catch interrupt_out.
+        - Platform Initialize interrupt for Icu and callback function.
+        - Initialize pins for LPSPI interface via the function Port_Init
+        - Initialize configuration: baudrate, chip select,... of LPSPI through Spi_Init.
+        - Initialize configuration's structure of AE through Ae_Init.
+        - Ae_WriteRegister to write a value to register of AE block.
+        - Ae_ReadRegister to read value for a register of AE block.
+2. Installation steps
+    2.1 Hardware installation
+        2.1.1 Supported boards
+            - EVB: XS32M2XXCVB-Q064 PCB 53099 RevX1 SCH RevA. 
+            - Silicon: 
+                - P32M276CH MKHS 0P73G CTZA2305A (E5)
+                - P32M276LH MKHS 0P73G CTZA2305B (E5)
+        2.2.2 Connections
+            NA
+        2.2.3 Debugger
+            The debugger must be connected to J25 10-pin JTAG Cortex Debug connector on Motherboard.
+    2.2 Software installation
+        2.2.1 Importing the S32 Design Studio project
+            After opening S32 Design Studio, go to "File -> New -> S32DS Project From Example" and select "Ae_Handler_Faults_Example_EB_001_S32M276". Then click on "Finish".
+            The project should now be copied into you current workspace.
+3. Generating, building and running the example application
+    3.1 Generating the S32 configuration
+        Before running the example a configuration needs to be generated.  First go to Project Explorer View in S32 DS and select the current project. Select the "S32 Configuration Tool" menu then click on the desired configuration tool (Pins, Cocks, Peripherals etc...). Clicking on any one of those will generate all the components. Make the desired changes(if any) then click on the "S32 Configuration Tool->Update Code" button.
+    3.2 Compiling the application
+        Select the configuration to be built: FLASH (Debug_FLASH) by left clicking on the downward arrow corresponding to the build button in eclipse. 
+        Use Project > Build to build the project.
+        Wait for the build action to be completed before continuing to the next step. Check the compiler console for error messages; upon completion, the *.elf binary file
+        should be created.
+    3.2 Running the application on the board
+        Go to Run and select Debug Configurations. There will be a debug configuration for this project:
+        
+        Configuration Name                  Description
+        -------------------------------     -----------------------
+        $(example)_Debug_FLASH_PNE          Debug the FLASH configuration using PEmicro debugger
+        
+        Select the desired debug configuration and click on Launch. Now the perspective will change to the Debug Perspective.
+        Use the controls to control the program flow.

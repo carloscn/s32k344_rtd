@@ -1,0 +1,2151 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_00050.xsd">
+
+  <AR-PACKAGES>
+    <AR-PACKAGE>
+      <SHORT-NAME>AUTOSAR_Can_43_FLEXCAN</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleDescriptions</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-DESCRIPTION>
+              <SHORT-NAME>Can</SHORT-NAME>
+              <MODULE-ID>80</MODULE-ID>
+              <PROVIDED-ENTRYS>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_AbortMb</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_CheckWakeup</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_DeInit</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_DisableControllerInterrupts</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_EnableControllerInterrupts</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_EnableEgressTimeStamp</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerErrorState</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerRxErrorCounter</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerTxErrorCounter</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetCurrentTime</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetEgressTimeStamp</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetIngressTimeStamp</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetVersionInfo</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_Init</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_ListenOnlyMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_BusOff</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Mode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                [!NOCODE!]
+                [!IF "CanConfigSet/CanController/*/CanRxProcessing = 'POLLING'"!]
+                    [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                    [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'RECEIVE']/CanMainFunctionRWPeriodRef)"!]
+                [!CODE!]
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Read[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                [!ENDCODE!]
+                    [!ENDLOOP!]
+                [!ENDIF!]
+                [!ENDNOCODE!]
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Wakeup</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                [!NOCODE!]
+                [!IF "CanConfigSet/CanController/*/CanTxProcessing = 'POLLING'"!]
+                    [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                    [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'TRANSMIT']/CanMainFunctionRWPeriodRef)"!]
+                [!CODE!]
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Write[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                [!ENDCODE!]
+                    [!ENDLOOP!]
+                [!ENDIF!]
+                [!ENDNOCODE!]
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetBaudrate</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetClockMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetControllerMode</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetCurrentTime</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_Write</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/FlexCAN_Ip_ClearTDCFail</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/FlexCAN_Ip_ManualBusOffRecovery</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_64_95_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_64_95_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_64_95_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN3_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN3_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN3_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN4_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN4_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN4_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN5_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN5_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN5_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN6_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN6_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN6_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN7_ORED_0_31_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN7_ORED_32_63_MB_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                <BSW-MODULE-ENTRY-REF-CONDITIONAL>
+                  <BSW-MODULE-ENTRY-REF DEST="BSW-MODULE-ENTRY">/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN7_ORED_IRQHandler</BSW-MODULE-ENTRY-REF>
+                </BSW-MODULE-ENTRY-REF-CONDITIONAL>
+              </PROVIDED-ENTRYS>
+
+              <INTERNAL-BEHAVIORS>
+                <BSW-INTERNAL-BEHAVIOR>
+                  <SHORT-NAME>InternalBehavior_0</SHORT-NAME>
+                  <EXCLUSIVE-AREAS>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_00</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_01</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_02</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_03</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_04</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_05</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_06</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_07</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_08</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_09</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_10</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_11</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_13</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_14</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_15</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_16</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_17</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_18</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_19</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                    <EXCLUSIVE-AREA>
+                      <SHORT-NAME>CAN_EXCLUSIVE_AREA_20</SHORT-NAME>
+                    </EXCLUSIVE-AREA>
+                  </EXCLUSIVE-AREAS>
+                  <ENTITYS>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_AbortMb</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_11</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_AbortMb</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_CheckWakeup</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_CheckWakeup</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_DeInit</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_02</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_DeInit</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_DisableControllerInterrupts</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_00</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_03</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_06</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_DisableControllerInterrupts</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_EnableControllerInterrupts</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_01</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_03</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_06</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_EnableControllerInterrupts</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_EnableEgressTimeStamp</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_EnableEgressTimeStamp</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetControllerErrorState</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerErrorState</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetControllerMode</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetControllerRxErrorCounter</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerRxErrorCounter</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetControllerTxErrorCounter</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetControllerTxErrorCounter</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetCurrentTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetCurrentTime</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetEgressTimeStamp</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetEgressTimeStamp</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetIngressTimeStamp</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetIngressTimeStamp</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_GetVersionInfo</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_GetVersionInfo</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_Init</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_02</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_08</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_13</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_16</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_17</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_19</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_Init</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_ListenOnlyMode</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_03</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_10</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_ListenOnlyMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_MainFunction_BusOff</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_BusOff</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_MainFunction_Mode</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Mode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    [!NOCODE!]
+                    [!IF "CanConfigSet/CanController/*/CanRxProcessing = 'POLLING'"!]
+                        [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                        [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'RECEIVE']/CanMainFunctionRWPeriodRef)"!]
+                    [!CODE!]
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_MainFunction_Read[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Read[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    [!ENDCODE!]
+                        [!ENDLOOP!]
+                    [!ENDIF!]
+                    [!ENDNOCODE!]
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_MainFunction_Wakeup</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Wakeup</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    [!NOCODE!]
+                    [!IF "CanConfigSet/CanController/*/CanTxProcessing = 'POLLING'"!]
+                        [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                        [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'TRANSMIT']/CanMainFunctionRWPeriodRef)"!]
+                    [!CODE!]
+                    <BSW-SCHEDULABLE-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_MainFunction_Write[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_MainFunction_Write[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</IMPLEMENTED-ENTRY-REF>
+                    </BSW-SCHEDULABLE-ENTITY>
+                    [!ENDCODE!]
+                        [!ENDLOOP!]
+                    [!ENDIF!]
+                    [!ENDNOCODE!]
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_SetBaudrate</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_02</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_14</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_15</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_16</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_17</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetBaudrate</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_SetClockMode</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_03</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_14</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_15</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetClockMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_SetControllerMode</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_02</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_04</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_05</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_06</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_07</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_08</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_10</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_11</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_13</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_14</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_15</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_16</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_17</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_19</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetControllerMode</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_SetCurrentTime</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_SetCurrentTime</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>Can_43_FLEXCAN_Write</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/Can_Write</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>FlexCAN_Ip_ClearTDCFail</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_09</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/FlexCAN_Ip_ClearTDCFail</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-CALLED-ENTITY>
+                      <SHORT-NAME>FlexCAN_Ip_ManualBusOffRecovery</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_20</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/FlexCAN_Ip_ManualBusOffRecovery</IMPLEMENTED-ENTRY-REF>
+                    </BSW-CALLED-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN0_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN0_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN0_ORED_64_95_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_64_95_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN0_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN0_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN1_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN1_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN1_ORED_64_95_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_64_95_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN1_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN1_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN2_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN2_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN2_ORED_64_95_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_64_95_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN2_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN2_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN3_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN3_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN3_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN3_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN3_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN3_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN4_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN4_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN4_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN4_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN4_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN4_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN5_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN5_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN5_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                        <CAN-ENTER-EXCLUSIVE-AREA-REF DEST="EXCLUSIVE-AREA">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/CAN_EXCLUSIVE_AREA_18</CAN-ENTER-EXCLUSIVE-AREA-REF>
+                      </CAN-ENTER-EXCLUSIVE-AREA-REFS>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN5_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN5_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN5_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN6_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN6_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN6_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN6_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN6_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN6_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN7_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN7_ORED_0_31_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN7_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN7_ORED_32_63_MB_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                    <BSW-INTERRUPT-ENTITY>
+                      <SHORT-NAME>CAN7_ORED_IRQHandler</SHORT-NAME>
+                      <MINIMUM-START-INTERVAL>0.0</MINIMUM-START-INTERVAL>
+                      <IMPLEMENTED-ENTRY-REF DEST="BSW-MODULE-ENTRY"
+                        >/AUTOSAR_Can_43_FLEXCAN/BswModuleEntrys/CAN7_ORED_IRQHandler</IMPLEMENTED-ENTRY-REF>
+                      <INTERRUPT-CATEGORY>CAT-2</INTERRUPT-CATEGORY>
+                      <INTERRUPT-SOURCE>Hardware</INTERRUPT-SOURCE>
+                    </BSW-INTERRUPT-ENTITY>
+                  </ENTITYS>
+
+                  <EVENTS>
+                    [!NOCODE!]
+                    [!IF "CanConfigSet/CanController/*/CanBusoffProcessing = 'POLLING'"!]
+                        [!IF "node:exists(CanGeneral/CanMainFunctionBusoffPeriod)"!]
+                    [!CODE!]
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>Can_43_FLEXCAN_TimingEvent_MainFunction_BusOff</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/Can_43_FLEXCAN_MainFunction_BusOff</STARTS-ON-EVENT-REF>
+                      <PERIOD>[!"CanGeneral/CanMainFunctionBusoffPeriod"!]</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    [!ENDCODE!]
+                        [!ENDIF!]
+                    [!ENDIF!]
+                    [!IF "node:exists(CanGeneral/CanMainFunctionModePeriod)"!]
+                    [!CODE!]
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>Can_43_FLEXCAN_TimingEvent_MainFunction_Mode</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/Can_43_FLEXCAN_MainFunction_Mode</STARTS-ON-EVENT-REF>
+                      <PERIOD>[!"CanGeneral/CanMainFunctionModePeriod"!]</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    [!ENDCODE!]
+                    [!ENDIF!]
+                    [!IF "CanConfigSet/CanController/*/CanRxProcessing = 'POLLING'"!]
+                        [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                        [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'RECEIVE']/CanMainFunctionRWPeriodRef)"!]
+                    [!CODE!]
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>Can_43_FLEXCAN_TimingEvent_MainFunction_Read[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/Can_43_FLEXCAN_MainFunction_Read[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</STARTS-ON-EVENT-REF>
+                      <PERIOD>[!"CanMainFunctionPeriod"!]</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    [!ENDCODE!]
+                        [!ENDLOOP!]
+                    [!ENDIF!]
+                    [!IF "CanConfigSet/CanController/*/CanWakeupSupport = 'true'"!]
+                        [!IF "CanConfigSet/CanController/*/CanWakeupProcessing = 'POLLING'"!]
+                            [!IF "node:exists(CanGeneral/CanMainFunctionWakeupPeriod)"!]
+                    [!CODE!]
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>Can_43_FLEXCAN_TimingEvent_MainFunction_Wakeup</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/Can_43_FLEXCAN_MainFunction_Wakeup</STARTS-ON-EVENT-REF>
+                      <PERIOD>[!"CanGeneral/CanMainFunctionWakeupPeriod"!]</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    [!ENDCODE!]
+                            [!ENDIF!]
+                        [!ENDIF!]
+                    [!ENDIF!]
+                    [!IF "CanConfigSet/CanController/*/CanTxProcessing = 'POLLING'"!]
+                        [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                        [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'TRANSMIT']/CanMainFunctionRWPeriodRef)"!]
+                    [!CODE!]
+                    <BSW-TIMING-EVENT>
+                      <SHORT-NAME>Can_43_FLEXCAN_TimingEvent_MainFunction_Write[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</SHORT-NAME>
+                      <STARTS-ON-EVENT-REF DEST="BSW-SCHEDULABLE-ENTITY">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0/Can_43_FLEXCAN_MainFunction_Write[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</STARTS-ON-EVENT-REF>
+                      <PERIOD>[!"CanMainFunctionPeriod"!]</PERIOD>
+                    </BSW-TIMING-EVENT>
+                    [!ENDCODE!]
+                        [!ENDLOOP!]
+                    [!ENDIF!]
+                    [!ENDNOCODE!]
+                  </EVENTS>
+
+                </BSW-INTERNAL-BEHAVIOR>
+              </INTERNAL-BEHAVIORS>
+            </BSW-MODULE-DESCRIPTION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+
+        <AR-PACKAGE>
+          <SHORT-NAME>BswModuleEntrys</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_AbortMb</SHORT-NAME>
+              <SERVICE-ID>0x19</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_CheckWakeup</SHORT-NAME>
+              <SERVICE-ID>0x0b</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_DeInit</SHORT-NAME>
+              <SERVICE-ID>0x10</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_DisableControllerInterrupts</SHORT-NAME>
+              <SERVICE-ID>0x04</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_EnableControllerInterrupts</SHORT-NAME>
+              <SERVICE-ID>0x05</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_EnableEgressTimeStamp</SHORT-NAME>
+              <SERVICE-ID>0x14</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetControllerErrorState</SHORT-NAME>
+              <SERVICE-ID>0x11</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetControllerMode</SHORT-NAME>
+              <SERVICE-ID>0x12</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetControllerRxErrorCounter</SHORT-NAME>
+              <SERVICE-ID>0x30</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetControllerTxErrorCounter</SHORT-NAME>
+              <SERVICE-ID>0x31</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetCurrentTime</SHORT-NAME>
+              <SERVICE-ID>0x13</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetEgressTimeStamp</SHORT-NAME>
+              <SERVICE-ID>0x15</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetIngressTimeStamp</SHORT-NAME>
+              <SERVICE-ID>0x16</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_GetVersionInfo</SHORT-NAME>
+              <SERVICE-ID>0x07</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_Init</SHORT-NAME>
+              <SERVICE-ID>0x00</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_ListenOnlyMode</SHORT-NAME>
+              <SERVICE-ID>0x32</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_MainFunction_BusOff</SHORT-NAME>
+              <SERVICE-ID>0x09</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_MainFunction_Mode</SHORT-NAME>
+              <SERVICE-ID>0x0c</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            [!NOCODE!]
+            [!IF "CanConfigSet/CanController/*/CanRxProcessing = 'POLLING'"!]
+                [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'RECEIVE']/CanMainFunctionRWPeriodRef)"!]
+            [!CODE!]
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_MainFunction_Read[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</SHORT-NAME>
+              <SERVICE-ID>0x08</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            [!ENDCODE!]
+                [!ENDLOOP!]
+            [!ENDIF!]
+            [!ENDNOCODE!]
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_MainFunction_Wakeup</SHORT-NAME>
+              <SERVICE-ID>0x0a</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            [!NOCODE!]
+            [!IF "CanConfigSet/CanController/*/CanTxProcessing = 'POLLING'"!]
+                [!VAR "cnt" = "num:i(count(CanGeneral/CanMainFunctionRWPeriods/*/CanMainFunctionPeriod))"!]
+                [!LOOP "node:refs(CanConfigSet/CanHardwareObject/*[CanObjectType = 'TRANSMIT']/CanMainFunctionRWPeriodRef)"!]
+            [!CODE!]
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_MainFunction_Write[!IF "$cnt>num:i(1)"!]_[!"@name"!][!ENDIF!]</SHORT-NAME>
+              <SERVICE-ID>0x01</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>SCHEDULED</CALL-TYPE>
+              <EXECUTION-CONTEXT>TASK</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            [!ENDCODE!]
+                [!ENDLOOP!]
+            [!ENDIF!]
+            [!ENDNOCODE!]
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_SetBaudrate</SHORT-NAME>
+              <SERVICE-ID>0x0f</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_SetClockMode</SHORT-NAME>
+              <SERVICE-ID>0x18</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_SetControllerMode</SHORT-NAME>
+              <SERVICE-ID>0x03</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>false</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_SetCurrentTime</SHORT-NAME>
+              <SERVICE-ID>0x17</SERVICE-ID>
+              <IS-REENTRANT>true</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>Can_Write</SHORT-NAME>
+              <SERVICE-ID>0x06</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>FlexCAN_Ip_ClearTDCFail</SHORT-NAME>
+              <SERVICE-ID>0x100</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>FlexCAN_Ip_ManualBusOffRecovery</SHORT-NAME>
+              <SERVICE-ID>0x100</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>REGULAR</CALL-TYPE>
+              <EXECUTION-CONTEXT>UNSPECIFIED</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN0_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN0_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN0_ORED_64_95_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN0_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN1_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN1_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN1_ORED_64_95_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN1_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN2_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN2_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN2_ORED_64_95_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN2_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN3_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN3_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN3_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN4_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN4_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN4_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN5_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN5_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN5_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN6_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN6_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN6_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN7_ORED_0_31_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN7_ORED_32_63_MB_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+            <BSW-MODULE-ENTRY>
+              <SHORT-NAME>CAN7_ORED_IRQHandler</SHORT-NAME>
+              <SERVICE-ID>0</SERVICE-ID>
+              <IS-REENTRANT>false</IS-REENTRANT>
+              <IS-SYNCHRONOUS>true</IS-SYNCHRONOUS>
+              <CALL-TYPE>INTERRUPT</CALL-TYPE>
+              <EXECUTION-CONTEXT>INTERRUPT-CAT-2</EXECUTION-CONTEXT>
+              <SW-SERVICE-IMPL-POLICY>STANDARD</SW-SERVICE-IMPL-POLICY>
+            </BSW-MODULE-ENTRY>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+    <AR-PACKAGE>
+      <SHORT-NAME>Can_43_FLEXCAN_TS_T40D34M30I0R0</SHORT-NAME>
+      <AR-PACKAGES>
+        <AR-PACKAGE>
+        <SHORT-NAME>Implementations</SHORT-NAME>
+          <ELEMENTS>
+            <BSW-IMPLEMENTATION>
+              <SHORT-NAME>BswImplementation_0</SHORT-NAME>
+
+              <CODE-DESCRIPTORS>
+                <CODE>
+                <SHORT-NAME>Files</SHORT-NAME>
+                <ARTIFACT-DESCRIPTORS>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>config::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>doc::RTD_CAN_43_FLEXCAN_IM.pdf</SHORT-LABEL>
+                    <CATEGORY>SWDOC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>doc::RTD_CAN_43_FLEXCAN_UM.pdf</SHORT-LABEL>
+                    <CATEGORY>SWDOC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::BaseNXP.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::CanIf.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::EcuC.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::EcuM.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::Mcu.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::Platform.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::generate::epc::Resource.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::.prefs::preferences.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::BaseNXP.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::CanIf.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::EcuC.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::EcuM.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::Mcu.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::Platform.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K358::Can_example_S32K358::TresosProject::Can_example_S32K358::config::Resource.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::BaseNXP.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::CanIf.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::EcuC.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::EcuM.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::Mcu.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::Platform.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::generate::epc::Resource.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::.prefs::preferences.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::BaseNXP.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::CanIf.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::EcuC.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::EcuM.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::Mcu.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::Platform.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K396::Can_example_S32K396::TresosProject::Can_example_S32K396::config::Resource.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::BaseNXP.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::CanIf.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::EcuC.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::EcuM.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::Mcu.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::Platform.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::generate::epc::Resource.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::.prefs::preferences.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::BaseNXP.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::CanIf.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::Can_43_FLEXCAN.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::EcuC.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::EcuM.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::Mcu.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::Platform.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::EBT::S32K3XX::Can_example_S32K344::TresosProject::Can_example_S32K344::config::Resource.xdm</SHORT-LABEL>
+                    <CATEGORY>SWCFG</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::Can_Example_S32K358::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::Can_Example_S32K358::Project_Settings::Startup_Code::exceptions.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::Can_Example_S32K358::Project_Settings::Startup_Code::nvic.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::Can_Example_S32K358::Project_Settings::Startup_Code::startup.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::Can_Example_S32K358::Project_Settings::Startup_Code::system.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::Can_Example_S32K358::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::FlexCAN_Ip_Example_S32K358::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::FlexCAN_Ip_Example_S32K358::Project_Settings::Startup_Code::exceptions.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::FlexCAN_Ip_Example_S32K358::Project_Settings::Startup_Code::nvic.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::FlexCAN_Ip_Example_S32K358::Project_Settings::Startup_Code::startup.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::FlexCAN_Ip_Example_S32K358::Project_Settings::Startup_Code::system.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K358::FlexCAN_Ip_Example_S32K358::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::Can_Example_S32K396::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::Can_Example_S32K396::Project_Settings::Startup_Code::exceptions.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::Can_Example_S32K396::Project_Settings::Startup_Code::nvic.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::Can_Example_S32K396::Project_Settings::Startup_Code::startup.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::Can_Example_S32K396::Project_Settings::Startup_Code::system.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::Can_Example_S32K396::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::FlexCAN_Ip_Example_S32K396::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::FlexCAN_Ip_Example_S32K396::Project_Settings::Startup_Code::exceptions.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::FlexCAN_Ip_Example_S32K396::Project_Settings::Startup_Code::nvic.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::FlexCAN_Ip_Example_S32K396::Project_Settings::Startup_Code::startup.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::FlexCAN_Ip_Example_S32K396::Project_Settings::Startup_Code::system.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K396::FlexCAN_Ip_Example_S32K396::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::Can_Example_S32K344::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::Can_Example_S32K344::Project_Settings::Startup_Code::exceptions.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::Can_Example_S32K344::Project_Settings::Startup_Code::nvic.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::Can_Example_S32K344::Project_Settings::Startup_Code::startup.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::Can_Example_S32K344::Project_Settings::Startup_Code::system.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::Can_Example_S32K344::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::FlexCAN_Ip_Example_S32K344::include::check_example.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::FlexCAN_Ip_Example_S32K344::Project_Settings::Startup_Code::exceptions.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::FlexCAN_Ip_Example_S32K344::Project_Settings::Startup_Code::nvic.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::FlexCAN_Ip_Example_S32K344::Project_Settings::Startup_Code::startup.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::FlexCAN_Ip_Example_S32K344::Project_Settings::Startup_Code::system.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>examples::S32DS::S32K3XX::FlexCAN_Ip_Example_S32K344::src::main.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::Can_43_FLEXCAN.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::Can_43_FLEXCAN_Ipw.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::Can_43_FLEXCAN_Ipw_Irq.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::Can_43_FLEXCAN_Ipw_Types.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::Can_43_FLEXCAN_Irq.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::Can_Flexcan_Types.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip_DeviceReg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip_HwAccess.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip_Irq.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip_TrustedFunctions.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip_Types.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>include::FlexCAN_Ip_Wrapper.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>src::Can_43_FLEXCAN.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>src::Can_43_FLEXCAN_Ipw.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>src::Can_43_FLEXCAN_Irq.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>src::FlexCAN_Ip.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>src::FlexCAN_Ip_HwAccess.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                  <AUTOSAR-ENGINEERING-OBJECT>
+                    <SHORT-LABEL>src::FlexCAN_Ip_Irq.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </AUTOSAR-ENGINEERING-OBJECT>
+                </ARTIFACT-DESCRIPTORS>
+                </CODE>
+              </CODE-DESCRIPTORS>
+
+              <COMPILERS>
+                <COMPILER>
+                  <SHORT-NAME>DIAB_Compiler</SHORT-NAME>
+                  <NAME>Windriver Diab</NAME>
+                  <OPTIONS>-tARMCORTEXM7MG:simple -mthumb -std=c99 -Oz -g -fstandalone-debug -Wstrict-prototypes -Wsign-compare -Wdouble-promotion -Wunknown-pragmas -Wundef -Wextra -Wall -pedantic -Werror=implicit-function-declaration -fno-common -fno-signed-char -fno-trigraphs -V -c -DS32K3XX -D $ (DERIVATIVE) -DDIAB -DUSE_SW_VECTOR_MODE -DD_CACHE_ENABLE -DI_CACHE_ENABLE -DENABLE_FPU -DMCAL_ENABLE_USER_MODE_SUPPORT</OPTIONS>
+                  <VENDOR>Windriver</VENDOR>
+                  <VERSION>Wind River Diab Compiler v7.0.4</VERSION>
+                </COMPILER>
+                <COMPILER>
+                  <SHORT-NAME>GCC_Compiler</SHORT-NAME>
+                  <NAME>GCC Compiler</NAME>
+                  <OPTIONS>-mcpu=cortex-m7 -mthumb -mlittle-endian -mfpu=fpv5-sp-d16 -mfloat-abi=hard -std=c99 -Os -ggdb3 -Wall -Wextra -pedantic -Wstrict-prototypes -Wundef -Wunused -Werror=implicit-function-declaration -Wsign-compare -Wdouble-promotion -fno-short-enums -funsigned-char -funsigned-bitfields -fno-common -fstack-usage -fdump-ipa-all -c -DS32K3XX -D $ (DERIVATIVE) -DGCC -DUSE_SW_VECTOR_MODE -DD_CACHE_ENABLE -DI_CACHE_ENABLE -DENABLE_FPU -DMCAL_ENABLE_USER_MODE_SUPPORT --sysroot=$(NEWLIB_DIR) -specs=nano.specs -specs=nosys.specs</OPTIONS>
+                  <VENDOR>GCC Systems</VENDOR>
+                  <VERSION>NXP GCC 10.2.0 20200723</VERSION>
+                </COMPILER>
+                <COMPILER>
+                  <SHORT-NAME>GHS_Compiler</SHORT-NAME>
+                  <NAME>Green Hills</NAME>
+                  <OPTIONS>-cpu=cortexm7 -thumb -fpu=vfpv5_d16 -fsingle -C99 --ghstd=last -Osize --gnu_asm -dual_debug -G -keeptempfiles -Wimplicit-int -Wshadow -Wtrigraphs -Wundef --unsigned_chars --unsigned_fields --no_commons --no_exceptions --no_slash_comment --prototype_errors --incorrect_pragma_warnings -c -DS32K3XX -D $ (DERIVATIVE) -DGHS -DUSE_SW_VECTOR_MODE -DD_CACHE_ENABLE -DI_CACHE_ENABLE -DENABLE_FPU -DMCAL_ENABLE_USER_MODE_SUPPORT</OPTIONS>
+                  <VENDOR>Green Hills</VENDOR>
+                  <VERSION>Green Hills Multi 7.1.6d / Compiler 2021.1.4</VERSION>
+                </COMPILER>
+                <COMPILER>
+                  <SHORT-NAME>IAR_Compiler</SHORT-NAME>
+                  <NAME>IAR Compiler</NAME>
+                  <OPTIONS>--cpu Cortex-M7 --cpu_mode thumb --endian little --fpu VFPv5-SP -e -Ohz --debug --no_clustering --no_mem_idioms --do_explicit_zero_opt_in_named_sections --require_prototypes --no_wrap_diagnostics --diag_suppress Pa050 -DS32K3XX -D $ (DERIVATIVE) -DIAR -DUSE_SW_VECTOR_MODE -DD_CACHE_ENABLE -DI_CACHE_ENABLE -DENABLE_FPU -DMCAL_ENABLE_USER_MODE_SUPPORT</OPTIONS>
+                  <VENDOR>IAR Systems</VENDOR>
+                  <VERSION>IAR ANSI C/C++ Compiler v.8.50.10 (safety version)</VERSION>
+                </COMPILER>
+              </COMPILERS>
+              <GENERATED-ARTIFACTS>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_Ipw_PBcfg_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PB::include::Can_43_FLEXCAN_Ipw_PBcfg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>EXECUTE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_PBcfg_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PB::include::Can_43_FLEXCAN_PBcfg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>EXECUTE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>FlexCAN_Ip_PBcfg_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PB::include::FlexCAN_Ip_PBcfg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>EXECUTE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_Ipw_PBcfg_c</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PB::src::Can_43_FLEXCAN_Ipw_PBcfg.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>EXECUTE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_PBcfg_c</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PB::src::Can_43_FLEXCAN_PBcfg.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>EXECUTE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>FlexCAN_Ip_PBcfg_c</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PB::src::FlexCAN_Ip_PBcfg.c</SHORT-LABEL>
+                    <CATEGORY>SWSRC</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>EXECUTE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_Cfg_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PC::include::Can_43_FLEXCAN_Cfg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>COMPILE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_Externals_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PC::include::Can_43_FLEXCAN_Externals.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>COMPILE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>Can_43_FLEXCAN_Ipw_Cfg_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PC::include::Can_43_FLEXCAN_Ipw_Cfg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>COMPILE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>FlexCAN_Ip_Cfg_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PC::include::FlexCAN_Ip_Cfg.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>COMPILE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+                <DEPENDENCY-ON-ARTIFACT>
+                  <SHORT-NAME>FlexCAN_Ip_CfgDefines_h</SHORT-NAME>
+                  <ARTIFACT-DESCRIPTOR>
+                    <SHORT-LABEL>generate_PC::include::FlexCAN_Ip_CfgDefines.h</SHORT-LABEL>
+                    <CATEGORY>SWHDR</CATEGORY>
+                  </ARTIFACT-DESCRIPTOR>
+                  <USAGES>
+                    <USAGE>COMPILE</USAGE>
+                  </USAGES>
+                </DEPENDENCY-ON-ARTIFACT>
+              </GENERATED-ARTIFACTS>
+
+              <LINKERS>
+                <LINKER>
+                  <SHORT-NAME>DIAB_Linker</SHORT-NAME>
+                  <NAME>Windriver Diab</NAME>
+                  <OPTIONS>-e Reset_Handler linker_script_file.dld -m30 -Xstack-usage -Xpreprocess-lecl -Llibrary_path -lc -lm -tARMCORTEXM7MG:simple</OPTIONS>
+                  <VENDOR>Windriver</VENDOR>
+                  <VERSION>Wind River Diab Compiler v7.0.4</VERSION>
+                </LINKER>
+                <LINKER>
+                  <SHORT-NAME>GCC_Linker</SHORT-NAME>
+                  <NAME>GCC Compiler</NAME>
+                  <OPTIONS>-Wl,-Map,filename -T linkerfile --entry=Reset_Handler -nostartfiles -mcpu=cortexm7 -mthumb -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mlittle-endian -ggdb3 -lc -lm -lgcc -specs=nano.specs -specs=nosys.specs</OPTIONS>
+                  <VENDOR>GCC Systems</VENDOR>
+                  <VERSION>NXP GCC 10.2.0 20200723</VERSION>
+                </LINKER>
+                <LINKER>
+                  <SHORT-NAME>GHS_Linker</SHORT-NAME>
+                  <NAME>Green Hills</NAME>
+                  <OPTIONS>-e Reset_Handler -T linker_script_file.ld -map -keepmap -Mn -delete -ignore_debug_references -Llibrary_path -larch -lstartup -lind_sd -v -keep=C40_Ip_AccessCode -nostartfiles</OPTIONS>
+                  <VENDOR>Green Hills</VENDOR>
+                  <VERSION>Green Hills Multi 7.1.6d / Compiler 2021.1.4</VERSION>
+                </LINKER>
+                <LINKER>
+                  <SHORT-NAME>IAR_Linker</SHORT-NAME>
+                  <NAME>IAR Compiler</NAME>
+                  <OPTIONS>--map filename --config linkerfile --cpu=Cortex-M7 --fpu VFPv5-SP --entry _start --enable_stack_usage --skip_dynamic_initialization --no_wrap_diagnostics</OPTIONS>
+                  <VENDOR>IAR Systems</VENDOR>
+                  <VERSION>IAR ANSI C/C++ Compiler v.8.50.10 (safety version)</VERSION>
+                </LINKER>
+              </LINKERS> 
+              <PROGRAMMING-LANGUAGE>C</PROGRAMMING-LANGUAGE>
+              <RESOURCE-CONSUMPTION>
+                <SHORT-NAME>ResourceConsumption</SHORT-NAME>
+                <MEMORY-SECTIONS>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_CODE</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CODE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CODE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_CONFIG_DATA_32</SHORT-NAME>
+                    <ALIGNMENT>32</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CONFIG_DATA</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONFIG_DATA_32</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_CONFIG_DATA_8</SHORT-NAME>
+                    <ALIGNMENT>8</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CONFIG_DATA</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONFIG_DATA_8</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_CONFIG_DATA_UNSPECIFIED</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CONFIG_DATA</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONFIG_DATA_UNSPECIFIED</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_CONST_UNSPECIFIED</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/CONST</SW-ADDRMETHOD-REF>
+                    <SYMBOL>CONST_UNSPECIFIED</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_16</SHORT-NAME>
+                    <ALIGNMENT>16</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_16</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_16_NO_CACHEABLE</SHORT-NAME>
+                    <ALIGNMENT>16</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED_NO_CACHEABLE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_16_NO_CACHEABLE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_32</SHORT-NAME>
+                    <ALIGNMENT>32</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_32</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_32_NO_CACHEABLE</SHORT-NAME>
+                    <ALIGNMENT>32</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED_NO_CACHEABLE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_32_NO_CACHEABLE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_8</SHORT-NAME>
+                    <ALIGNMENT>8</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_8</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_8_NO_CACHEABLE</SHORT-NAME>
+                    <ALIGNMENT>8</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED_NO_CACHEABLE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_8_NO_CACHEABLE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_BOOLEAN</SHORT-NAME>
+                    <ALIGNMENT>BOOLEAN</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_BOOLEAN</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_BOOLEAN_NO_CACHEABLE</SHORT-NAME>
+                    <ALIGNMENT>BOOLEAN</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED_NO_CACHEABLE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_BOOLEAN_NO_CACHEABLE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_UNSPECIFIED</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_UNSPECIFIED</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_CLEARED_UNSPECIFIED_NO_CACHEABLE</SHORT-NAME>
+                    <ALIGNMENT>UNSPECIFIED</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_CLEARED_NO_CACHEABLE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_CLEARED_UNSPECIFIED_NO_CACHEABLE</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_INIT_32</SHORT-NAME>
+                    <ALIGNMENT>32</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_INIT</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_32</SYMBOL>
+                  </MEMORY-SECTION>
+                  <MEMORY-SECTION>
+                    <SHORT-NAME>CAN_43_FLEXCAN_VAR_INIT_32_NO_CACHEABLE</SHORT-NAME>
+                    <ALIGNMENT>32</ALIGNMENT>
+                    <SW-ADDRMETHOD-REF DEST="SW-ADDR-METHOD">/AUTOSAR_MemMap/SwAddrMethods/VAR_INIT_NO_CACHEABLE</SW-ADDRMETHOD-REF>
+                    <SYMBOL>VAR_INIT_32_NO_CACHEABLE</SYMBOL>
+                  </MEMORY-SECTION>
+                </MEMORY-SECTIONS>
+              </RESOURCE-CONSUMPTION>
+              <SW-VERSION>3.0.0</SW-VERSION>
+              <VENDOR-ID>43</VENDOR-ID>
+              <AR-RELEASE-VERSION>4.7.0</AR-RELEASE-VERSION>
+
+              <BEHAVIOR-REF DEST="BSW-INTERNAL-BEHAVIOR">/AUTOSAR_Can_43_FLEXCAN/BswModuleDescriptions/Can/InternalBehavior_0</BEHAVIOR-REF>
+              <VENDOR-API-INFIX>FLEXCAN</VENDOR-API-INFIX>
+              <VENDOR-SPECIFIC-MODULE-DEF-REFS>
+                <VENDOR-SPECIFIC-MODULE-DEF-REF DEST="ECUC-MODULE-DEF">/Can_43_FLEXCAN_TS_T40D34M30I0R0/Can</VENDOR-SPECIFIC-MODULE-DEF-REF>
+              </VENDOR-SPECIFIC-MODULE-DEF-REFS>
+            </BSW-IMPLEMENTATION>
+          </ELEMENTS>
+        </AR-PACKAGE>
+      </AR-PACKAGES>
+    </AR-PACKAGE>
+  </AR-PACKAGES>
+</AUTOSAR>

@@ -1,0 +1,1055 @@
+<?xml version='1.0'?>
+<datamodel version="3.0" 
+           xmlns="http://www.tresos.de/_projects/DataModel2/08/root.xsd" 
+           xmlns:a="http://www.tresos.de/_projects/DataModel2/08/attribute.xsd" 
+           xmlns:v="http://www.tresos.de/_projects/DataModel2/06/schema.xsd" 
+           xmlns:d="http://www.tresos.de/_projects/DataModel2/06/data.xsd">
+<!--
+*   @file    Ae.xdm
+*   @version 3.0.0
+*
+*   @brief   AUTOSAR Ae - Tresos Studio plugin schema file
+*   @details This file contains the schema configuration for and Ae Tresos Studio plugin.
+-->
+<!--
+====================================================================================================
+*   Project              : RTD AUTOSAR 4.7
+*   Platform             : CORTEXM
+*   Peripheral           : 
+*   Dependencies         : none
+*
+*   Autosar Version      : 4.7.0
+*   Autosar Revision     : ASR_REL_4_7_REV_0000
+*   Autosar Conf.Variant :
+*   SW Version           : 3.0.0
+*   Build Version        : S32K3_RTD_3_0_0_D2303_ASR_REL_4_7_REV_0000_20230331
+
+*   Copyright 2020 - 2023 NXP Semiconductors
+====================================================================================================
+====================================================================================================
+====================================================================================================
+-->    
+  <d:ctr type="AUTOSAR" factory="autosar" 
+         xmlns:ad="http://www.tresos.de/_projects/DataModel2/08/admindata.xsd" 
+         xmlns:icc="http://www.tresos.de/_projects/DataModel2/08/implconfigclass.xsd" 
+         xmlns:mt="http://www.tresos.de/_projects/DataModel2/11/multitest.xsd" >
+    <d:lst type="TOP-LEVEL-PACKAGES">
+      <d:ctr name="TS_T40D34M30I0R0" type="AR-PACKAGE">
+        <a:a name="UUID" value="ECUC:4c5e3679-f5c4-49bf-9cea-d9be54e123456"/>
+        <d:lst type="ELEMENTS">
+          <!-- /** @implements Ae_Object */ -->
+          <d:chc name="Ae" type="AR-ELEMENT" value="MODULE-DEF">
+            <v:ctr type="MODULE-DEF">
+              <a:a name="ADMIN-DATA" type="ADMIN-DATA">
+                <ad:ADMIN-DATA>
+                  <ad:DOC-REVISIONS>
+                    <ad:DOC-REVISION>
+                      <ad:REVISION-LABEL>4.6.0</ad:REVISION-LABEL>
+                      <ad:ISSUED-BY>AUTOSAR</ad:ISSUED-BY>
+                      <ad:DATE>2014-10-31</ad:DATE>
+                    </ad:DOC-REVISION>
+                  </ad:DOC-REVISIONS>
+                </ad:ADMIN-DATA>
+              </a:a>
+              <a:a name="DESC" 
+                   value="EN: Configuration of the Ae (Application Extension Driver) module."/>
+              <a:a name="LOWER-MULTIPLICITY" value="0"/>
+              <a:a name="RELEASE" value="asc:4.7"/>
+              <a:a name="UPPER-MULTIPLICITY" value="1"/>
+              <a:a name="UUID" value="ECUC:ebb8fd61-9918-4168-1122-12343f5338dd"/>
+              <a:a name="POSTBUILDVARIANTSUPPORT" value="true"/>
+              <a:a name="INVALID" type="XPath">
+                  <a:tst expr="contains(node:value(as:modconf('Resource')[1]/ResourceGeneral/ResourceSubderivative), 's32m27')"
+                            false="AE is just available on S32M27x."/>
+              </a:a>
+              <v:var name="POST_BUILD_VARIANT_USED" type="BOOLEAN">
+                <a:a name="DESC">
+                    <a:v>
+                        <![CDATA[EN:<html>
+                            Indicates whether a module implementation has or plans to have (i.e., introduced at link or post-build time) new post-build variation points.
+                        </html>]]>
+                    </a:v>
+                </a:a>
+                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                </a:a>
+                <a:a name="LABEL" value="Post Build Variant Used"/>
+                <a:a name="ORIGIN" value="EB"/>
+                <a:a name="UUID" value="ECUC:42656996-1122-1234-96e8-545678901aa2"/>
+                <a:da name="DEFAULT" value="true"/>
+              </v:var>
+              <!-- /** @implements IMPLEMENTATION_CONFIG_VARIANT_Object */ -->
+              <v:var name="IMPLEMENTATION_CONFIG_VARIANT" type="ENUMERATION">
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                  </a:a>
+                <a:a name="LABEL" value="Config Variant"/>                
+                <a:a name="UUID" value="ECUC:42656996-1234-4973-baad-2a97d046f3c7"/>
+                <a:da name="DEFAULT" value="VariantPreCompile"/>
+                <a:da name="RANGE">
+                  <a:v>VariantPreCompile</a:v>
+                  <a:v>VariantPostBuild</a:v>
+                </a:da>
+              </v:var>
+              
+              <!-- /** @implements AeGeneral_Object */ -->
+              <v:ctr name="AeGeneral" type="IDENTIFIABLE">
+                <a:a name="LABEL" value="AeGeneral"/>
+                <a:a name="DESC" 
+                     value="EN: General configuration of Ae Driver module."/>
+                <a:a name="UUID" value="ECUC:601d84ff-38c7-1234-9f7d-cb74dafebae4"/>
+
+                <!-- /** @implements AeVersionInfoApi_Object */ -->
+                <v:var name="AeVersionInfoApi" type="BOOLEAN">
+                  <a:a name="LABEL" value="AeVersionInfoApi"/>
+                  <a:a name="DESC" 
+                       value="EN: Enables / Disables Ae_GetVersionInfo API."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:4548795d-6059-49cc-89df-5f6c20e04455"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                
+                <v:var name="AeDevErrorDetect" type="BOOLEAN">
+                  <a:a name="LABEL" value="Development Error Detection"/>
+                  <a:a name="DESC" 
+                       value="EN: Enables / Disables development error detection."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="ORIGIN" value="AUTOSAR_ECUC"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:ba826417-4631-45aa-a826-22337826cce2"/>
+                  <a:da name="DEFAULT" value="true"/>
+                </v:var>
+                
+                <v:var name="AeRawbitEn" type="BOOLEAN">
+                  <a:a name="LABEL" value="AeRawbitEn"/>
+                  <a:a name="DESC" 
+                       value="EN: Enables / Disables read after write"/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                       type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SCOPE" value="LOCAL"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:ba826417-4631-45aa-a826-c2224576cce2"/>
+                  <a:da name="DEFAULT" value="false"/>
+                </v:var>
+
+                <v:ctr name="AeGeneralVendorSpecific" type="IDENTIFIABLE">
+                  <a:a name="LABEL" value="AeGeneralVendorSpecific"/>
+                  <a:a name="DESC" value="EN: General vendor-specific configuration of Ae Driver."/>
+                  <a:a name="UUID" value="ECUC:a240e482-f8b4-4ccb-b0d1-85321639f54c"/>
+                  
+                  <v:var name="AeTimeoutMethod" type="ENUMERATION">
+                    <a:a name="LABEL" value="AeTimeoutMethod"/>
+                    <a:a name="DESC">
+                        <a:v><![CDATA[EN:<html>
+                            Configures the timeout method.<br />
+                            Based on this selection a certain timeout method from OsIf will be used in the driver.<br />
+                            Note: If SystemTimer or CustomTimer are selected make sure the corresponding timer is enabled in OsIf General configuration. <br />
+                            Note: Implementation Specific Parameter.
+                        </html>]]></a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                    </a:a>
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="SCOPE" value="LOCAL"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:7228a335-4003-4639-8e1a-bb3d9678987b"/>
+                    <a:a name="DEFAULT" value="OSIF_COUNTER_DUMMY"/>
+                    <a:da name="INVALID" type="XPath">
+                        <a:tst expr="(node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/Base/OsIfGeneral/OsIfUseCustomTimer') = 'false') and (node:value(.) = 'OSIF_COUNTER_CUSTOM')" true="Custom Timer is not enabled in OsIf (OsIfGeneral/OsIfUseCustomTimer checkbox)"/>
+                        <a:tst expr="(node:refs('ASPathDataOfSchema:/TS_T40D34M30I0R0/Base/OsIfGeneral/OsIfUseSystemTimer') = 'false') and (node:value(.) = 'OSIF_COUNTER_SYSTEM')" true="System Timer is not enabled in OsIf (OsIfGeneral/OsIfUseSystemTimer checkbox)"/>
+                    </a:da>
+                    <a:da name="RANGE">
+                        <a:v>OSIF_COUNTER_SYSTEM</a:v>
+                        <a:v>OSIF_COUNTER_CUSTOM</a:v>
+                        <a:v>OSIF_COUNTER_DUMMY</a:v>
+                    </a:da>
+                  </v:var>
+                  
+                  <v:var name="AeTimeoutDuration" type="INTEGER">
+                    <a:a name="DESC" value="EN: The unit of measurement is given in number of microseconds."/>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" 
+                         type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="SCOPE" value="LOCAL"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:4e68cddf-2c20-4ecb-97a7-a8ddc9def24a"/>
+                    <a:da name="INVALID" type="Range">
+                      <a:tst expr="&lt;=65535"/>
+                      <a:tst expr="&gt;=1"/>
+                    </a:da>
+                    <a:da name="DEFAULT" value="1000"/>
+                  </v:var>
+                </v:ctr> <!-- AeGeneralVendorSpecific -->
+              </v:ctr> <!-- AeGeneral -->
+              
+                <v:ctr name="AeHvmVmConfig" type="IDENTIFIABLE">
+                    <a:a name="LABEL" value="AeHvmVmConfig"/>
+                    <a:a name="DESC" value="EN: General Configuration Volatage Monitor."/>
+                    <a:a name="UUID" value="ECUC:a240e482-f8b4-4ccb-b0d1-85311223354c"/>
+                    <v:var name="AeHvmVoltageMonitorInputSelect" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHvmVoltageMonitorInputSelect"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Select the voltage that is observed by the voltage monitor.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4003-4639-8e1a-bb789009907b"/>
+                        <a:a name="DEFAULT" value="VM_HIGH_VOLTAGE_INPUT"/>
+                        <a:da name="RANGE">
+                            <a:v>VM_HIGH_VOLTAGE_INPUT</a:v>
+                            <a:v>VM_SENSE_VOLTAGE</a:v>
+                        </a:da>
+                    </v:var>
+                    
+                    <v:var name="AeVmHighVoltageDetectInterruptEn" type="BOOLEAN">
+                      <a:a name="LABEL" value="AeVmHighVoltageDetectInterruptEn"/>
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to enable/disable the digital input interrupt of High Voltage Detect.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="EDITABLE" type="XPath" expr="../AeHvmHighVoltageDetectEn = 'true'"/>
+                      <a:a name="UUID" value="ECUC:fe347123-75b9-4e2e-a4bb-378fe231cdbf"/>
+                    </v:var>
+                    
+                    <v:var name="AeVmLowVoltageDetectInterruptEn" type="BOOLEAN">
+                      <a:a name="LABEL" value="AeVmLowVoltageDetectInterruptEn"/>
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to enable/disable the digital input interrupt of Low Voltage Detect.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="EDITABLE" type="XPath" expr="../AeHvmLowVoltageDetectEn = 'true'"/>
+                      <a:a name="UUID" value="ECUC:fe347123-75b9-4e2e-a4bb-378fe67ffee1"/>
+                    </v:var>
+                    
+                    <v:var name="AeHvmHighVoltageDetectEn" type="BOOLEAN">
+                        <a:a name="LABEL" value="AeHvmHighVoltageDetectEn"/>
+                        <a:a name="DESC" 
+                            value="EN: Enables / Disables the voltage monitor for high voltage detection."/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                            type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:ba826417-4631-45aa-a826-557856ffcce2"/>
+                        <a:da name="DEFAULT" value="false"/>
+                    </v:var>
+                    
+                    <v:var name="AeHvmLowVoltageDetectEn" type="BOOLEAN">
+                        <a:a name="LABEL" value="AeHvmLowVoltageDetectEn"/>
+                        <a:a name="DESC" 
+                            value="EN: Enables / Disables the voltage monitor for Low voltage detection."/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                            type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:ba826417-4631-45aa-a826-557851144352"/>
+                        <a:da name="DEFAULT" value="false"/>
+                    </v:var>
+                    
+                    <v:var name="AeHvmLowDetectRefVoltage" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHvmLowDetectRefVoltage"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Configures the reference voltage level for low voltage detection.<br />
+                                This reference voltage level is in datasheet.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4011-5648-8e1a-86213422387b"/>
+                        <a:a name="EDITABLE" type="XPath" expr="../AeHvmLowVoltageDetectEn = 'true'"/>
+                        <a:a name="DEFAULT" value="VM_LBI1"/>
+                        <a:da name="RANGE">
+                            <a:v>VM_LBI1</a:v>
+                            <a:v>VM_LBI2</a:v>
+                            <a:v>VM_LBI3</a:v>
+                            <a:v>VM_LBI4</a:v>
+                        </a:da>
+                    </v:var>
+                    
+                    <v:var name="AeHvmHighDetectRefVoltage" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHvmHighDetectRefVoltage"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Configures the reference voltage level for high voltage detection.<br />
+                                This reference voltage level is in datasheet.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4011-5648-ffff-86213422387b"/>
+                        <a:a name="DEFAULT" value="VM_HBI1"/>
+                        <a:a name="EDITABLE" type="XPath" expr="../AeHvmHighVoltageDetectEn = 'true'"/>
+                        <a:da name="RANGE">
+                            <a:v>VM_HBI1</a:v>
+                            <a:v>VM_HBI2</a:v>
+                        </a:da>
+                    </v:var>
+                </v:ctr> <!-- AeHvmConfig -->
+              
+              <v:ctr name="AeHvmHviConfig" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v>
+                      <![CDATA[EN:<html>
+                          Configuration of High Voltage Input for each instances.<p/>
+                      </html>]]>
+                  </a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:42973955-e8b0-4a04-8441-7011225566cdeb"/>
+                <v:ctr name="AeHvmHviGeneralConfig" type="IDENTIFIABLE">
+                    <a:a name="LABEL" value="AeHvmHviGeneralConfig"/>
+                    <a:a name="UUID" value="ECUC:a0a9e487-a7e9-0412-3478-75a37fe342fa"/>
+                    <v:var name="AeHvmHviAnalogchannel" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHvmHviAnalogchannel"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Configures the Analog channel.<br />
+                                Enable the analog input for one HVI.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4003-4639-8e1a-bb3d1122387b"/>
+                        <a:a name="DEFAULT" value="HVI0_CHANNEL"/>
+                        <a:a name="INVALID" type="XPath">
+                            <a:tst expr="node:containsValue((../../AeHvmHviInstanceConfig/*/AeHvmHviChannelIdx), substring-before(substring-after(node:value(.),'HVI'),'_'))" false="HVI channel selected must be in list (../../AeHvmHviInstanceConfig/*)"/>
+                        </a:a>
+                        <a:da name="RANGE">
+                            <a:v>HVI0_CHANNEL</a:v>
+                            <a:v>HVI1_CHANNEL</a:v>
+                        </a:da>
+                    </v:var>
+                    
+                    <v:var name="AeHvmAnalogInput" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHvmAnalogInput"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Configures the Analog Input.<br />
+                                Select the analog input that is given out on the analog output of the instance that is selected.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4011-5648-8e1a-bb3d1122387b"/>
+                        <a:a name="DEFAULT" value="HVI_ANALOG_INPUT_BUFFERED"/>
+                        <a:da name="RANGE">
+                            <a:v>HVI_ANALOG_OUT_OHMIC</a:v>
+                            <a:v>HVI_ANALOG_INPUT_BUFFERED</a:v>
+                            <a:v>HVI_ANALOG_DIVIDE_DOWN_HIGH_INPUT_BUFFERED</a:v>
+                            <a:v>HVI_ANALOG_INPUT_UNBUFFERED</a:v>
+                        </a:da>
+                    </v:var>
+                    
+                    <v:var name="AeHvmUnderControlIsrCallback" type="BOOLEAN">
+                        <a:a name="LABEL" value="AeHvmUnderControlIsrCallback"/>
+                        <a:a name="DESC" 
+                            value="EN: Enables callback function was handled by user for Hvm_Ip_pfReportCallback, if is disable, driver doesn't do anything, callback function is empty."/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS"
+                            type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:ba826417-4631-45aa-a826-555534fe4352"/>
+                        <a:da name="DEFAULT" value="false"/>
+                    </v:var>
+                </v:ctr> <!-- AeHvmHviGeneralConfig -->
+                <v:lst name="AeHvmHviInstanceConfig" type="MAP">
+                    <a:da name="MIN" value="0"/>
+                    <a:da name="MAX" value="255"/>
+                    <a:da name="INVALID" type="XPath">
+                            <a:tst expr="num:i(count(./*)) &gt; num:i(ecu:get('Ae.HVIInstanceList'))"
+                                   true="The number of elements in this list must be less than or equal to the number of instances of HVI supported by the platform."/>
+                     </a:da>
+
+                  <v:ctr name="AeHvmHviInstanceConfig" type="IDENTIFIABLE">
+                    <a:a name="LABEL" value="AeHvmHviInstanceConfig"/>
+                    <a:a name="DESC">
+                      <a:v>
+                          <![CDATA[EN:<html>
+                              Container information to congiure for each HVI instance.<p/>
+                          </html>]]>
+                      </a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v mclass="PostBuild">VariantPostBuild</icc:v>
+                      <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                    <a:a name="UUID" value="ECUC:a0a9e487-a7e9-0412-3478-75a37901991a"/>
+                    
+                    <v:var name="AeHvmHviChannelIdx" type="INTEGER">
+                        <a:a name="DESC" value="EN: High Voltage Input channel Index "/>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                        </a:a>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:4e68cddf-6734-4ecb-1122-a8ddcb18e24a"/>
+                        <a:da name="INVALID" type="Range">
+                            <a:tst expr="&lt;= num:i(ecu:get('Ae.HVIInstanceList')) - 1"/>
+                            <a:tst expr="&gt;=0"/>
+                        </a:da>
+                        <a:da name="DEFAULT" value="0"/>
+                        <a:a name="INVALID" type="XPath">
+                            <a:tst expr="text:uniq(../../*/AeHvmHviChannelIdx, num:i(.))"
+                                   false="AeHvmHviChannelIdx must be unique across all HVI instances in AeHvmHviInstanceConfig."/>
+                            <a:tst expr="num:i(.) = num:i(../@index)"
+                                                       false="AeHvmHviChannelIdx must correspond to the position of the element within the AeHvmHviInstanceConfig list (This is done so that HVI channel start from 0 and are defined in consecutive order)"/>
+                        </a:a>
+                    </v:var>
+                  
+                    <v:var name="AeHVIInputDigitalEn" type="BOOLEAN">
+                      <a:a name="LABEL" value="AeHVIInputDigitalEn"/>
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to enable/disable the digital input.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="UUID" value="ECUC:fe347123-75b9-4e2e-a4bb-990800fecdbf"/>
+                    </v:var>
+                    
+                    <v:var name="AeHVIInterruptInputDigitalEn" type="BOOLEAN">
+                      <a:a name="LABEL" value="AeHVIInterruptInputDigitalEn"/>
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to enable/disable the digital input interrupt of HVI channel.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="UUID" value="ECUC:fe347123-75b9-4e2e-a4bb-3fe456fecdbf"/>
+                    </v:var>
+                    
+                    <v:var name="AeHviDigitalInputPolarity" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHviDigitalInputPolarity"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Configures the Digital Input Polarity.<br />
+                                Configure whether the high or the low state on the digital input triggers an event.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4011-feef-1122-bb3d1122387b"/>
+                        <a:a name="DEFAULT" value="HVI_DIGITAL_INPUT_POLARITY_PULLDOWN"/>
+                        <a:da name="RANGE">
+                            <a:v>HVI_DIGITAL_INPUT_POLARITY_PULLDOWN</a:v>
+                            <a:v>HVI_DIGITAL_INPUT_POLARITY_PULLUP</a:v>
+                        </a:da>
+                    </v:var>
+                    
+                    <v:var name="AeHviDividerSelect" type="ENUMERATION">
+                        <a:a name="LABEL" value="AeHviDividerSelect"/>
+                        <a:a name="DESC">
+                            <a:v><![CDATA[EN:<html>
+                                Configures the ratio of the voltage division.<br />
+                                The pull down must be enabled to divide by the ratios selectable here. To set a divider ratio of 1, the pull down must be disabled.<br />
+                                Note: Implementation Specific Parameter.
+                            </html>]]></a:v>
+                        </a:a>
+                        <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                            <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        </a:a>
+                        <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                        <a:a name="ORIGIN" value="NXP"/>
+                        <a:a name="SCOPE" value="LOCAL"/>
+                        <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                        <a:a name="UUID" value="ECUC:7228a335-4011-feef-1122-ff224422387b"/>
+                        <a:a name="EDITABLE" type="XPath" expr="../AeHVIPullDownEn = 'true'"/>
+                        <a:a name="DEFAULT" value="HVI_VOLTAGE_DIVISION_2"/>
+                        <a:da name="RANGE">
+                            <a:v>HVI_VOLTAGE_DIVISION_2</a:v>
+                            <a:v>HVI_VOLTAGE_DIVISION_6</a:v>
+                            <a:v>HVI_VOLTAGE_DIVISION_11</a:v>
+                            <a:v>HVI_VOLTAGE_DIVISION_16</a:v>
+                        </a:da>
+                    </v:var>
+                    
+                    <v:var name="AeHVIPullUpEn" type="BOOLEAN">
+                        <a:a name="LABEL" value="AeHVIPullUpEn"/>
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to enable/disable the pull up on the input of each instance HVI.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="UUID" value="ECUC:fe347123-75b9-4e2e-a4bb-990800559034"/>
+                    </v:var>
+                    
+                    <v:var name="AeHVIPullDownEn" type="BOOLEAN">
+                        <a:a name="LABEL" value="AeHVIPullDownEn"/>
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to enable/disable the pull down on the input of each instance HVI.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PostBuild">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="POSTBUILDVARIANTVALUE" value="true"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="UUID" value="ECUC:fe347123-75b9-4e2e-a4bb-990800559034"/>
+                      <a:da name="INVALID" type="XPath" expr="(node:value(../AeHVIPullUpEn) = 'true') and (node:value(.) = 'true')" true="The pull up and pull down cannot be set at the same time."/>
+                    </v:var>
+                    
+                  </v:ctr>
+                </v:lst>
+               </v:ctr>
+              <v:ctr name="AeSpi" type="IDENTIFIABLE">
+                <a:a name="DESC">
+                  <a:v>
+                      <![CDATA[EN:<html>
+                          Configuration of one Application Extension SPI access (if SPI is used).<p/>
+                      </html>]]>
+                  </a:v>
+                </a:a>
+                <a:a name="UUID" value="ECUC:42973955-e8b0-4a04-8441-708fc5fecdeb"/>
+                <a:da name="READONLY" value="true"/>
+                <a:a name="TAB" value="AeSpi"/>
+
+                <v:lst name="AeSpiSequence" type="MAP">
+                  <a:da name="MIN" value="1"/>
+                  <a:da name="MAX" value="255"/>
+                  <a:da name="INVALID" type="XPath">
+                    <a:tst expr="num:i(count(./*)) &gt; 1"
+                           true="Just only one sequence need to refer."/>
+                  </a:da>
+                  <v:ctr name="AeSpiSequence" type="IDENTIFIABLE">
+                    <a:a name="DESC">
+                      <a:v>
+                          <![CDATA[EN:<html>
+                              Container gives Ae driver information about one SPI sequence.<p/>
+                          </html>]]>
+                      </a:v>
+                    </a:a>
+                    <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                      <icc:v mclass="PreCompile">VariantPostBuild</icc:v>
+                      <icc:v mclass="PreCompile">VariantPreCompile</icc:v>
+                    </a:a>
+                    <a:a name="POSTBUILDVARIANTMULTIPLICITY" value="true"/>
+                    <a:a name="UUID" value="ECUC:a0a9e487-a7e9-4174-8b29-75a37901991a"/>
+
+                    <v:var name="AeSpiAccessSynchronous" type="BOOLEAN">
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                This parameter is used to define whether the access to the Spi sequence is synchronous or asynchronous.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                      <a:a name="DEFAULT" value="false"/>
+                      <a:a name="UUID" value="ECUC:2729c6d6-75b9-4e2e-a4bb-990800fecdbf"/>
+                      <a:da name="INVALID" type="XPath">
+                          <a:tst expr="(node:fallback(., 'false') = 'true') and (node:ref(node:value(../AeSpiSequenceName))/../../../SpiGeneral/SpiLevelDelivered = num:i(1))"
+                             true="The SPI level configured doesn't allow synchronous access."/>
+                          <a:tst expr="(node:fallback(., 'false') = 'false') and (node:ref(node:value(../AeSpiSequenceName))/../../../SpiGeneral/SpiLevelDelivered = num:i(0))"
+                             true="The SPI level configured doesn't allow asynchronous access."/>
+                      </a:da>
+                    </v:var>
+
+                    <v:ref name="AeSpiSequenceName" type="REFERENCE">
+                      <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:<html>
+                                Reference to a Spi sequence configuration container.<p/>
+                            </html>]]>
+                        </a:v>
+                      </a:a>
+                      <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                        <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                        <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                      </a:a>
+                      <a:a name="ORIGIN" value="NXP"/>
+                      <a:a name="SCOPE" value="LOCAL"/>
+                      <a:a name="UUID" value="ECUC:52076fb3-014e-423c-bf0f-11111ec2c8cb"/>
+                      <a:da name="REF" value="ASPathDataOfSchema:/AUTOSAR/EcucDefs/Spi/SpiDriver/SpiSequence"/>
+                      <a:a name="INVALID" type="XPath">
+                        <a:tst expr="node:refvalid(.)" false="Invalid or empty reference."/>
+                      </a:a>
+                    </v:ref>
+                  </v:ctr>
+                </v:lst>
+               </v:ctr>
+               <v:ctr name="AeIrqConfig" type="IDENTIFIABLE">
+                    <a:a name="DESC">
+                        <a:v>
+                            <![CDATA[EN:
+                    <html><p>Generic configuration for the interrupts (events, faults).</p></html>]]>
+                        </a:v>
+                    </a:a>
+                    <a:a name="UUID" value="ECUC:be68178a-ba7e-4320-b0a2-809ddeeff449"/>
+                    <a:a name="LABEL" value="EventsFaultsInterruptSettings"/>
+                    <v:lst name="AeIntConfig" type="MAP">
+                        <a:a name="LABEL" value="EventsFaultsInterruptSettings"/>
+                        <a:da name="MIN" type="XPath" expr="node:fallback(ecu:get('Ae.intCountList'), num:i(0))"/>
+                        <a:da name="MAX" type="XPath" expr="ecu:get('Ae.intCountList')"/>
+                        <v:ctr name="AeIntConfig" type="IDENTIFIABLE">
+                        <a:a name="REQUIRES-INDEX" value="true"/>
+                            <a:a name="DESC">
+                                <a:v><![CDATA[EN:
+                                <html> Vendor specific:
+                                Configuration for interrupt requests.
+                                
+                                </html>
+                                    ]]>
+                                </a:v>
+                            </a:a>
+                            <a:a name="UUID" value="ECUC:04ac238a-72f5-480b-b9ec-ffee33100e5b"/>
+                            <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                            <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                            <v:var name="AeIntName" type="ENUMERATION">
+                                <a:a name="LABEL" value="EventorFaultName"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html> Vendor specific:
+                                    Interrupt Name caused by faults or events.
+                                    </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:00a8515c-39fd-499a-9b7f-a1124455663b"/>
+                                <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Ae.intList'))[position()-1=node:fallback(node:current()/../@index,'0')]"/>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="not(text:uniq(../../*/AeIntName,.))" true="This field must be unique."/>
+                                </a:da>
+                                <a:da name="RANGE" type="XPath" expr="ecu:list('Ae.intList')"/>
+                                <a:a name="EDITABLE" value="false"/>                                                                                      
+                            </v:var>
+                            <v:var name="AeIsrEnabled" type="BOOLEAN">
+                                <a:a name="LABEL" value="AeIsrEnabled"/>
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN: <html> Vendor specific: Enable to raise interrupt_out for events/faults which owned by AEC.
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="POSTBUILDVARIANTVALUE" value="false"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:65d5efb4-3c79-4870-adf5-669345142708"/>
+                                <a:da name="DEFAULT" value="false"/>
+                                <a:a name="EDITABLE" type="XPath" expr="(../AeIntName != 'LIN_INT') and (../AeIntName != 'TEMP_WDG_PMC') and (../AeIntName != 'TEMP_WDG_PHY') and (../AeIntName != 'CAN_INT') and
+                                                                        (../AeIntName != 'LVD_VDDC') and (../AeIntName != 'HVI_AE_SUPPLY') and (../AeIntName != 'GDU_INT') and
+                                                                        (../AeIntName != 'DPGA_OC_NEG') and (../AeIntName != 'DPGA_OC_POS') and (../AeIntName != 'PMC_VLS') and (../AeIntName != 'MCU_SUPPLY') and 
+                                                                        (../AeIntName != 'HVD_AE_INTERN')"/>
+                            </v:var>
+                            <v:var name="AeIsrPriority" type="INTEGER">
+                                <a:a name="DESC">
+                                    <a:v>
+                                        <![CDATA[EN:<html>
+                                            Set priority to handle for event or fault which caused interrupt.
+                                            Priority's value smaller that will be handled first.
+                                        </html>]]>
+                                    </a:v>
+                                </a:a>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v vclass="PreCompile">VariantPostBuild</icc:v>
+                                    <icc:v vclass="PreCompile">VariantPreCompile</icc:v>
+                                </a:a>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="true"/>
+                                <a:a name="UUID" value="ECUC:b58895cf-c4c7-4d07-a0be-7180c8667788"/>
+                                <a:da name="DEFAULT" type="XPath" expr="(ecu:list('Ae.intReasonList'))[position()-1=node:fallback(node:current()/../@index,'0')]"/>
+                                <a:da name="INVALID" type="Range">
+                                    <a:tst expr="&lt;= num:i(ecu:get('Ae.intCountList')) - 1"/>
+                                    <a:tst expr="&gt;=0"/>
+                                </a:da>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="not(text:uniq(../../*/AeIsrPriority,.))" true="This field must be unique."/>
+                                </a:da>
+                            </v:var>
+                            <v:var name="AeIntHandler" type="FUNCTION-NAME">
+                                <a:a name="LABEL" value="Handler"/>
+                                <a:a name="DESC" value="Function to be installed as the interrupt handler."/>
+                                <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                                    <icc:v class="PreCompile">VariantPreCompile</icc:v>
+                                    <icc:v class="PreCompile">VariantPostBuild</icc:v>
+                                </a:a>
+                                <a:a name="OPTIONAL" value="false"/>
+                                <a:a name="ORIGIN" value="NXP"/>
+                                <a:a name="SCOPE" value="LOCAL"/>
+                                <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                                <a:a name="UUID" value="ECUC:bdee5480-3705-4c45-aea3-6775b0d7d806"/>
+                                <a:da name="DEFAULT" value="undefined_handler"/>
+                                <a:da name="INVALID" type="XPath">
+                                    <a:tst expr="text:match(normalize-space(.),'^[_a-zA-Z]+[_0-9a-zA-Z]*$') and (node:value(.)!='NULL')" 
+                                        false="Invalid name of the IsrHandler. Must be valid C function name or NULL_PTR."/>
+                                </a:da>
+                            </v:var>
+                        </v:ctr>
+                    </v:lst>
+                </v:ctr>
+
+              <!-- /** @implements CommonPublishedInformation_Object */ -->
+              <v:ctr name="CommonPublishedInformation" type="IDENTIFIABLE">
+                <a:a name="DESC" value="EN: Common container, aggregated by all modules. It contains published information about vendor and versions."/>
+                <a:a name="UUID" value="ECUC:4a4455b9-6a43-4f86-bf73-dad9bd3df43d"/>
+                <!-- /** @implements ModuleId_Object */ -->
+                <v:var name="ModuleId" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Module ID of this module from the BSW Module List."/>             
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:100545fd-f592-4d92-9d32-934b2222095b"/>
+                  <a:da name="DEFAULT" value="250"/>                                         
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=250"/>
+                    <a:tst expr="&lt;=250"/>
+                  </a:da>                    
+                </v:var>
+                <!-- /** @implements VendorId_Object */ -->
+                <v:var name="VendorId" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Vendor ID of the dedicated implementation of this module according to the AUTOSAR vendor list."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                    <a:a name="SCOPE" value="ECU"/>
+                    <a:a name="ORIGIN" value="NXP"/>
+                    <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                    <a:a name="UUID" value="ECUC:a4c6d14e-0812-4a52-8455-3b3e61367cca"/>
+                    <a:da name="DEFAULT" value="43"/>
+                    <a:da name="INVALID" type="Range">
+                      <a:tst expr="&gt;=43"/>
+                      <a:tst expr="&lt;=43"/>
+                    </a:da>                    
+                </v:var>
+                <!-- /** @implements VendorApiInfix_Object */ -->
+                <v:var name="VendorApiInfix" type="STRING_LABEL">
+                  <a:a name="DESC">
+                    <a:v><![CDATA[EN:<html>
+                        In driver modules which can be instantiated several times on a single ECU,
+                        BSW00347 requires that the name of APIs is extended by the VendorId and a vendor specific name.<br/>
+                        This parameter is used to specify the vendor specific name.<br/>
+                        In total, the implementation specific name is generated as follows:
+                        [ModuleName]_[VendorId]_[VendorApiInfix][API name from SWS].<br/>
+                        E.g. Assuming that the VendorId of the implementor is 123 and the implementer chose a
+                        VendorApiInfix of 'v11r456' an API named Can_Write defined in the SWS will translate to Can_123_v11r456Write.<br/>
+                        This parameter is mandatory for all modules with upper multiplicity > 1.<br/>
+                        It shall not be used for modules with upper multiplicity = 1.
+                    </html>]]></a:v>
+                  </a:a>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v class="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v class="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:6a2eb605-a654-427b-93c0-c9d5cb929902"/>
+                  <a:da name="DEFAULT" value=""/>
+                  <a:a name="OPTIONAL" value="true"/>
+                  <a:da name="READONLY" value="false"/>
+                </v:var>
+                <!-- /** @implements ArReleaseMajorVersion_Object */ -->
+                <v:var name="ArReleaseMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Major version number of AUTOSAR specification on which the appropriate implementation is based on."/>           
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:1cf13a57-ad8e-444b-8610-c55643086a60"/>
+                  <a:da name="DEFAULT" value="4"/>                       
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=4"/>
+                    <a:tst expr="&lt;=4"/>
+                  </a:da>                    
+                </v:var>
+                <!-- /** @implements ArReleaseMinorVersion_Object */ -->
+                <v:var name="ArReleaseMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Minor version number of AUTOSAR specification on which the appropriate implementation is based on."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:75722624-3bae-4af9-bebf-ebb5feec8f30"/>
+                  <a:da name="DEFAULT" value="7"/>                       
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=7"/>
+                    <a:tst expr="&lt;=7"/>
+                  </a:da>                    
+                </v:var>
+                <!-- /** @implements ArReleaseRevisionVersion_Object */ -->
+                <v:var name="ArReleaseRevisionVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Revision version number of AUTOSAR specification on which the appropriate implementation is based on."/>
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:987054f3-afce-4681-b8d1-d8f3f5fecd92"/>
+                  <a:da name="DEFAULT" value="0"/>                       
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>                    
+                </v:var>
+                <!-- /** @implements SwMajorVersion_Object */ -->
+                <v:var name="SwMajorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Major version number of the vendor specific implementation of the module. The numbering is vendor specific."/>          
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:d1b8ea5e-0174-4f67-9c67-057556577c8e"/>
+                  <a:da name="DEFAULT" value="3"/>
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=3"/>
+                    <a:tst expr="&lt;=3"/>
+                  </a:da>                    
+                </v:var>
+                <!-- /** @implements SwMinorVersion_Object */ -->
+                <v:var name="SwMinorVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Minor version number of the vendor specific implementation of the module. The numbering is vendor specific."/>          
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:9c1aba23-4ff6-485b-89a7-7a45bd194466"/>
+                  <a:da name="DEFAULT" value="0"/>                     
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>
+                </v:var>
+                <!-- /** @implements SwPatchVersion_Object */ -->
+                <v:var name="SwPatchVersion" type="INTEGER_LABEL">
+                  <a:a name="DESC" value="EN: Patch version number of the vendor specific implementation of the module. The numbering is vendor specific."/>            
+                  <a:a name="IMPLEMENTATIONCONFIGCLASS" type="IMPLEMENTATIONCONFIGCLASS">
+                    <icc:v vclass="PublishedInformation">VariantPostBuild</icc:v>
+                    <icc:v vclass="PublishedInformation">VariantPreCompile</icc:v>
+                  </a:a>
+                  <a:a name="SCOPE" value="ECU"/>
+                  <a:a name="ORIGIN" value="NXP"/>
+                  <a:a name="SYMBOLICNAMEVALUE" value="false"/>
+                  <a:a name="UUID" value="ECUC:702850db-94e5-4e3e-bc4e-923978579075"/>
+                  <a:da name="DEFAULT" value="0"/>                                         
+                  <a:da name="INVALID" type="Range">
+                    <a:tst expr="&gt;=0"/>
+                    <a:tst expr="&lt;=0"/>
+                  </a:da>                    
+                </v:var>
+              </v:ctr> <!-- CommonPublishedInformation -->
+              
+              <d:ref type="REFINED_MODULE_DEF" value="ASPath:/AUTOSAR/EcucDefs/Ae"/>
+            </v:ctr> <!-- MODULE-DEF -->
+          </d:chc> <!-- Ae -->
+          <d:chc name="Ae_EcuParameterDefinition" 
+                 type="AR-ELEMENT" value="ECU_PARAMETER_DEFINITION">
+            <d:ctr type="AR-ELEMENT">
+                 <a:a name="UUID" value="ECUC:c85149b7-c7bb-43ff-a18f-89f69b5fecd0"/>
+              <a:a name="DEF" 
+                   value="ASPath:/AR_PACKAGE_SCHEMA/ECU_PARAMETER_DEFINITION"/>
+              <d:lst name="MODULE_REF">
+                <d:ref type="MODULE_REF" value="ASPath:/TS_T40D34M30I0R0/Ae"/>
+              </d:lst>
+            </d:ctr>
+          </d:chc>
+          <d:chc name="Ae_ModuleDescription" 
+                 type="AR-ELEMENT" value="BSW_MODULE_DESCRIPTION">
+            <d:ctr type="AR-ELEMENT">
+              <a:a name="DEF" 
+                   value="ASPath:/AR_PACKAGE_SCHEMA/BSW_MODULE_DESCRIPTION"/>
+              <d:var name="MODULE_ID" type="INTEGER" >
+                <a:a name="EDITABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:var>
+              <d:ref type="RECOMMENDED_CONFIGURATION" >
+                <a:a name="EDITABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="PRE_CONFIGURED_CONF" >
+                <a:a name="EDITABLE" value="false"/>
+                <a:a name="IMPORTER_INFO" value="@DEF"/>
+              </d:ref>
+              <d:ref type="VENDOR_SPECIFIC_MODULE_DEF" 
+                     value="ASPath:/TS_T40D34M30I0R0/Ae"/>
+            </d:ctr>
+          </d:chc> <!-- Ae_ModuleDescription -->
+        </d:lst> <!-- ELEMENTS -->
+      </d:ctr> <!-- TS_T40D34M30I0R0 -->
+    </d:lst>
+  </d:ctr>
+
+</datamodel>

@@ -1,0 +1,64 @@
+
+Name: config/Mem_43_Eep.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773969716055878207215937105327449700654598323556832
+ 597301008202653461333863338010198164924408013518633750
+
+Name: generate_PC/src/Usdhc_Ip_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421043012682404449781471688496597743878690308878933
+ 3463762335166008317302766448642321038139302755534269
+
+Name: generate_PC/src/Mem_43_Eep_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420611888186031076548408628254329980087286304480291
+ 3631588128152626470623354664278394009003044937283690
+
+Name: generate_PC/include/Usdhc_Ip_DeviceRegisters.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594751856690277874218329046771428489584551512866778116
+ 765329242417623892387816254884612309808010343165885197
+
+Name: generate_PC/include/Mem_43_Eep_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377425117304096026864538895822861594763939143401037863
+ 0768903535894791097522787843179880566467197482635619
+
+Name: generate_PC/include/Usdhc_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377420186245093570523909730736914477574231364170202451
+ 4583054677989136116497511389155399222334607416912064
+
+Name: generate_PC/include/Sd_Emmc_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773967725930615103881969311336530752417271716518493
+ 081668547095459565287559598968409104726966440588991983
+
+Name: generate_PC/src/Sd_Emmc_Ip_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424737243615639053179547597620950742574849778851807
+ 1854910508201724475431138152651374540749368455149948
+
+Name: generate_swcd/swcd/Mem_43_Eep_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594749120615848842385990776458656370660298545611000115
+ 122876933474860763976790268870104554035749551339568440
+

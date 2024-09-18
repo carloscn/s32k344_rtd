@@ -1,0 +1,50 @@
+
+Name: generate_PC/include/Zipwire_Ip_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377426410107539795820786790179980546432276968123270337
+ 9103020930248293674794313065878377804490941981825953
+
+Name: src/Zipwire_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377421671470713662254630834585043214368077527169357144
+ 1948803757567886719726524468311693780626045751495107
+
+Name: include/Zipwire_Cfg.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424785420590038630343017507196672857698537319885665
+ 8789999361176579679371996040570459591480852965353779
+
+Name: config/Zipwire.xdm
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773973892156944148381473812543711615708432450642454
+ 849285100353598915898654396423449487815518559172753604
+
+Name: generate_PC/include/Zipwire_Ip_CfgDefines.h
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594773970771238984701660758675261012801086171723421637
+ 914987458835651711551301660074579733911316162726193065
+
+Name: generate_swcd/swcd/Zipwire_Bswmd.arxml
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 28964594742560725708323944421051426619502075773585124745448
+ 991278545617367866265485324883485309473767012108298583
+
+Name: generate_PC/src/Zipwire_Ip_Cfg.c
+SignatureKeyID: Freescale
+SignatureKeyProviderID: dreisoft.tresos.launcher2.CryptoKeyProvider
+SignatureAlgorithmID: DSA
+Signature: 11313377424518507214274034372365511913577974182060654344271
+ 7545279818205285412665870283478153728906302599063726
+
